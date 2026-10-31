@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>从票据到差旅 — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><article><h1>从票据到差旅：一条可复核的财务运营链怎么跑</h1>
+<blockquote>
+<p>这是一篇场景文，不是产品承诺。文中 4 个插件都是 <strong>public/synthetic、alpha、not counted、not GA</strong>；没有客户数据，也没有“生产可用”结论。</p>
+</blockquote>
+<p>月末财务最耗时的，往往不是“算”，而是把四类材料对齐：</p>
+<ol>
+<li>收到的电子发票（OFD/XML）；</li>
+<li>银行流水（CAMT.053 / MT940 / CSV）；</li>
+<li>采购发票、PO、GRN 三单；</li>
+<li>差旅订单、发票、卡流水。</li>
+</ol>
+<p>这四类材料格式不同、口径不同，最后却要落到同一套可复核的底稿里。下面这条链，目标不是“让 AI 直接给结论”，而是<strong>让每一步都能复算、能指出差异、能留下文件</strong>。</p>
+<h2>0. 先装一个 suite，或者按需拆开</h2>
+<p>一次装齐：</p>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-finops-suite
+</code></pre>
+<p>它只做一件事：把 4 个成员包按精确版本装好，并插入 4 行 Cordis 配置。suite 本身没有代码，也不复制成员的验收数据。</p>
+<p>只想用其中一段，就单独装：</p>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-einvoice
+dsh plugin --profile &lt;profile&gt; add dsh-bankrec
+dsh plugin --profile &lt;profile&gt; add dsh-ap-three-way
+dsh plugin --profile &lt;profile&gt; add dsh-travel-recon
+</code></pre>
+<h2>1. 电子发票：先入库，再谈查询</h2>
+<p><code>dsh-einvoice</code> 处理文件级发票：</p>
+<ul>
+<li><code>invoice.ingest</code>：一个本地 OFD/XML，算 SHA-256，原样存本地，按字节幂等；</li>
+<li><code>invoice.parse</code>：解析旧 OFD 或数电票 XML，返回八个字段、明细行、证据和未知字段；</li>
+<li><code>invoice.dedup</code>：按发票号，或“销售方 + 日期 + 金额”归并重复；</li>
+<li><code>invoice.query</code>：按主体、期间、生命周期或文本查本地票池；</li>
+<li><code>invoice.archive</code> / <code>invoice.check</code> / <code>invoice.restore</code>：生成归档 ZIP，校验，恢复。</li>
+</ul>
+<p>它<strong>不做</strong> OCR、税局查验、回执、申报，也不把本地回执说成“税局已验”。<code>invoice.record_receipt</code> 的 <code>verification_source=local_receipt</code>、<code>tax_verified=false</code> 是明确写死的。</p>
+<p>一个最小动作：</p>
+<pre><code class="language-text">invoice.ingest  -&gt;  invoice.parse  -&gt;  invoice.query
+</code></pre>
+<p>先把票池建起来，再去对账；不要一上来就让模型“读发票图片”。</p>
+<h2>2. 银行流水：三表底稿，先对余额</h2>
+<p><code>dsh-bankrec</code> 接收 CSV/GL、CAMT.053、MT940：</p>
+<ul>
+<li><code>bankrec.ingest</code> / <code>ingest_camt</code> / <code>ingest_mt940</code>；</li>
+<li><code>bankrec.reconcile_camt</code>：期初 + 明细 = 期末；多账户时必须给 <code>account_id</code>；</li>
+<li><code>bankrec.match</code>：银行行与 GL 行 1:1 匹配；</li>
+<li><code>bankrec.export</code>：银行 / GL / 匹配三张表。</li>
+</ul>
+<p>先做余额恒等式，再做 1:1 匹配。余额不平，后面的匹配结果没有意义。它不连银行 API，也不做 PDF/OCR 流水。</p>
+<h2>3. 三单匹配：把“例外”单独拿出来</h2>
+<p><code>dsh-ap-three-way</code> 做发票、PO、GRN 三单匹配：</p>
+<ul>
+<li>价格容差默认 1%，数量单独校验；</li>
+<li><code>ap.match</code> 输出匹配与例外；</li>
+<li><code>ap.export</code> 输出 Matches / Exceptions 两张表。</li>
+</ul>
+<p>这张例外表才是财务要看的：价格超容差、数量不一致、缺 PO、重复发票。它不替人做付款决定，也不写回 ERP。</p>
+<h2>4. 差旅：重复报销和只读政策</h2>
+<p><code>dsh-travel-recon</code> 把订单、发票、卡流水放在一起：</p>
+<ul>
+<li><code>travel.ingest</code> / <code>travel.match</code>：三路对账；</li>
+<li><code>travel.duplicate_check</code>：同一行程的重复发票/卡流水；</li>
+<li><code>travel.policy_check</code>：只读的金额上限、发票缺失检查；</li>
+<li><code>travel.export</code>：台账 xlsx。</li>
+</ul>
+<p>政策检查是只读的：只提示，不审批、不驳回、不记账。</p>
+<h2>5. 这条链的“可复核”在哪里</h2>
+<ul>
+<li>每个插件都输出<strong>文件</strong>（xlsx / JSON / CSV / ZIP），不是只回一段话；</li>
+<li>每个计算都有输入、输出和错误路径；</li>
+<li>每个包的 <code>ACCEPTANCE.csv</code> 都标了 <code>counted=false</code>，只代表公开合成样例通过，不代表客户准确率；</li>
+<li>所有 fixture 都是 public/synthetic 或 MIT/Apache 公开样例；</li>
+<li>不联网、不调用模型，规则算的就是规则算的。</li>
+</ul>
+<h2>6. 边界</h2>
+<p>这条链<strong>不能</strong>做：税局查验/申报、OCR 扫描件、银行直连、ERP 过账、真实客户准确率、GA/生产可用承诺。它适合的场景是：先把“票据→流水→三单→差旅”的本地底稿跑通，确认字段、口径、差异可解释，再决定哪一段值得接入真实系统。</p>
+<p>安装入口：</p>
+<ul>
+<li>suite：<code>dsh plugin --profile &lt;profile&gt; add dsh-finops-suite</code></li>
+<li>索引与文档：<a href="https://perrylink.github.io/dsh-plugins/">https://perrylink.github.io/dsh-plugins/</a></li>
+<li>源码：<a href="https://github.com/PerryLink/dsh-finops-suite">https://github.com/PerryLink/dsh-finops-suite</a></li>
+</ul>
+<p>先跑通一条链，再按需拆开。</p>
+</article></main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="../index.html">索引</a> · <a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a></p></footer>
+</body></html>

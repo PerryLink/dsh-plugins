@@ -59,6 +59,10 @@ dsh plugin --profile <profile> add dsh-ghg
 | [`dsh-pim-lint`](https://github.com/PerryLink/dsh-pim-lint) | PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。 | `0.1.0-alpha.2` | `dsh plugin --profile <profile> add dsh-pim-lint` |
 | [`dsh-eval-pack`](https://github.com/PerryLink/dsh-eval-pack) | 公开/合成 eval-pack lint 与确定性 JSON 评分。 | `0.1.0-alpha.2` | `dsh plugin --profile <profile> add dsh-eval-pack` |
 
+## 场景文章
+
+- [从票据到差旅：一条可复核的财务运营链怎么跑](https://perrylink.github.io/dsh-plugins/articles/finops-suite.html)
+
 ## 一键安装 suite
 
 | Suite | 包含 | 版本 | 安装 |
