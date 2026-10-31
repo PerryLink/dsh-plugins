@@ -3,11 +3,19 @@
 <title>dsh-bankrec — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
 <body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
 <main class="wrap"><div align="center"><h1>dsh-bankrec</h1>
+<blockquote>
+<p><strong>Official repository.</strong> The only official repository of this package, maintained by PerryLink. Same-name repositories under other accounts are not affiliated. Apache-2.0.</p>
+</blockquote>
 <p><a href="https://www.npmjs.com/package/dsh-bankrec"><img src="https://img.shields.io/npm/v/dsh-bankrec" alt="npm"></a>
 <a href="https://github.com/PerryLink/dsh-bankrec/actions"><img src="https://github.com/PerryLink/dsh-bankrec/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License"></a>
 <a href="https://github.com/topics/dsh-plugin"><img src="https://img.shields.io/badge/dsh--plugin-%E2%9C%93-green" alt="dsh-plugin"></a>
-<a href="https://perrylink.github.io/dsh-plugins/"><img src="https://img.shields.io/badge/docs-domain%20index-0b5fff" alt="docs"></a></p>
+<a href="https://perrylink.github.io/dsh-plugins/"><img src="https://img.shields.io/badge/docs-domain%20index-0b5fff" alt="docs"></a>
+<a href="https://gitee.com/perrylink/dsh-plugins"><img src="https://img.shields.io/badge/Gitee-aggregate-c71d23?logo=gitee" alt="Gitee"></a>
+<a href="https://dshfind.com/plugins/PerryLink/dsh-bankrec?ref=badge"><img src="https://dshfind.com/api/badge/PerryLink/dsh-bankrec?metric=downloads" alt="dshfind"></a>
+<a href="https://dsh.market/"><img src="https://raw.githubusercontent.com/2BingLing/dsh-market/master/assets/readme/badge-listed-en.svg" alt="DSH Market"></a>
+<a href="#"><img src="https://img.shields.io/badge/node-24.9%2B-brightgreen" alt="Node"></a>
+<a href="https://www.npmjs.com/package/dsh-bankrec"><img src="https://img.shields.io/npm/dm/dsh-bankrec" alt="npm downloads"></a></p>
 <p><strong>Bank statement ingest, CAMT.053/MT940 reconciliation and 3-sheet workpaper.</strong></p>
 <blockquote>
 <p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim.</p>
@@ -15,7 +23,10 @@
 <p><a href="README.md">English</a> · <a href="README-zh.md">简体中文</a> · <a href="README-es.md">Español</a> · <a href="README-pt.md">Português</a> · <a href="README-hi.md">हिन्दी</a></p>
 <pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-bankrec
 </code></pre>
-</div><p><img src="../assets/dsh-bankrec-flow.svg" alt="Workflow diagram for dsh-bankrec: local input, plugin, local output."></p>
+</div><blockquote>
+<p>⭐ If this helps, a star makes it easier for the next person to find it. Nothing is gated behind it.</p>
+</blockquote>
+<p><img src="../assets/dsh-bankrec-flow.svg" alt="Workflow diagram for dsh-bankrec: local input, plugin, local output."></p>
 <p><em>Workflow: local input → plugin → local output. No model call is required.</em></p>
 <h2>Install</h2>
 <p>Install and verify:</p>
@@ -86,6 +97,46 @@ dsh --profile &lt;profile&gt; --dump-config | grep dsh-bankrec
 <pre><code class="language-sh">pnpm install --frozen-lockfile
 pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test
 </code></pre>
+<h2>Compatibility</h2>
+<table>
+<thead>
+<tr>
+<th>Surface</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Harness</td>
+<td><code>dsh &gt;=0.2.1-rc.3 &lt;0.3.0</code></td>
+</tr>
+<tr>
+<td>Node</td>
+<td><code>&gt;=24.9.0 &lt;25</code></td>
+</tr>
+<tr>
+<td>Platforms</td>
+<td>All; local files only</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>No network, no model call, no upload</td>
+</tr>
+</tbody></table>
+<h2>Permissions &amp; data</h2>
+<ul>
+<li>Runs locally; no network, no model call, no upload.</li>
+<li>Public/synthetic fixtures only; no customer data, no customer evidence.</li>
+<li>Alpha/partial; not counted, no GA or production-readiness claim.</li>
+<li>Frozen packages stay installable; no new features, only genuine breakage fixes.</li>
+</ul>
+<h2>Related work</h2>
+<p>Sibling packages and family indexes: <a href="https://github.com/PerryLink/dsh-einvoice">dsh-einvoice</a> · <a href="https://github.com/PerryLink/dsh-ap-three-way">dsh-ap-three-way</a> · <a href="https://github.com/PerryLink/dsh-travel-recon">dsh-travel-recon</a> · <a href="https://github.com/PerryLink/dsh-finops-suite">dsh-finops-suite</a></p>
+<ul>
+<li><a href="https://perrylink.github.io/dsh-plugins/">Domain index</a></li>
+<li><a href="https://perrylink.github.io/zh/checkers/">Checker family</a></li>
+<li><a href="https://github.com/PerryLink/dsh-kit">Mainline family</a></li>
+<li><a href="https://perrylink.github.io/dsh-plugins/articles/finops-suite.html">Scenario article</a></li>
+</ul>
 <h2>Family</h2>
 <details>
 <summary>DSH domain plugin family (15 packages + 2 suites)</summary><table>
