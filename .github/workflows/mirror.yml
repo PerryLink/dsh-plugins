@@ -1,0 +1,48 @@
+name: mirror
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 14 * * *' # 22:30 Asia/Shanghai
+
+permissions:
+  contents: read
+
+jobs:
+  gitee:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        repo: [dsh-hs-candidate, dsh-ghg, dsh-einvoice, dsh-bankrec, dsh-ifc-qto]
+    steps:
+      - name: Mirror to Gitee
+        shell: bash
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: |
+          set -euo pipefail
+          git clone --quiet "https://github.com/PerryLink/${{ matrix.repo }}.git" repo
+          cd repo
+          git -c credential.helper='!f() { echo username=perrylink; echo "password=$GITEE_TOKEN"; }; f' \
+            push "https://gitee.com/perrylink/${{ matrix.repo }}.git" HEAD:main --tags
+
+  gitcode:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        repo: [dsh-bankrec, dsh-docx-redline, dsh-einvoice]
+    steps:
+      - name: Mirror to GitCode
+        shell: bash
+        env:
+          GITCODE_TOKEN: ${{ secrets.GITCODE_TOKEN }}
+        run: |
+          set -euo pipefail
+          git clone --quiet "https://github.com/PerryLink/${{ matrix.repo }}.git" repo
+          cd repo
+          git -c credential.helper='!f() { echo username=PerryLink; echo "password=$GITCODE_TOKEN"; }; f' \
+            push "https://gitcode.com/PerryLink/${{ matrix.repo }}.git" HEAD:main --tags
