@@ -80,6 +80,52 @@ dsh --profile &lt;profile&gt; --dump-config | grep dsh-bankrec
 </ul>
 <h2>Public sample</h2>
 <p>MIT CAMT.053 and MT940 samples; <code>ACCEPTANCE.csv</code> lists 7 public checks.</p>
+<h2>中文说明</h2>
+<p>银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。<strong>公开/合成、alpha、非 GA</strong>；没有客户银行数据。</p>
+<h3>安装</h3>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-bankrec
+</code></pre>
+<h3>工具</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bankrec.ingest</code></td>
+<td>银行 CSV/GL 入库</td>
+</tr>
+<tr>
+<td><code>bankrec.ingest_camt</code></td>
+<td>CAMT.053 XML 入库</td>
+</tr>
+<tr>
+<td><code>bankrec.ingest_mt940</code></td>
+<td>MT940 对账单入库</td>
+</tr>
+<tr>
+<td><code>bankrec.reconcile_camt</code></td>
+<td>期初 + 明细 = 期末；多账户必须给 <code>account_id</code></td>
+</tr>
+<tr>
+<td><code>bankrec.match</code></td>
+<td>银行行与 GL 行 1:1 匹配</td>
+</tr>
+<tr>
+<td><code>bankrec.export</code></td>
+<td>银行 / GL / 匹配三张表</td>
+</tr>
+</tbody></table>
+<h3>输入 / 输出</h3>
+<p>输入银行 CSV/GL、CAMT.053 或 MT940；输出匹配/未匹配行和三表对账底稿。</p>
+<h3>边界</h3>
+<ul>
+<li>不连银行 API，不做 PDF/OCR 流水，不自动写回银行/ERP。</li>
+<li>只做 1:1 匹配，不做模糊多对多对账引擎。</li>
+<li>无 Client，无客户银行数据。</li>
+</ul>
 <h2>Development</h2>
 <pre><code class="language-sh">pnpm install --frozen-lockfile
 pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku06
@@ -87,5 +133,5 @@ pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &
 <h2>License</h2>
 <p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
 </main>
-<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="../index.html">索引</a> · <a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
 </body></html>

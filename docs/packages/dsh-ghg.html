@@ -3,6 +3,11 @@
 <title>dsh-ghg — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
 <body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
 <main class="wrap"><h1>dsh-ghg</h1>
+<blockquote>
+<p>🧊 <strong>FROZEN — 2026-10-31. No new features.</strong> This public/synthetic S1 demo is not GA; it stays installable and only genuine breakage is fixed.</p>
+</blockquote>
+<h2>Maintenance status: 🧊 FROZEN</h2>
+<p>Frozen on 2026-10-31. This repository is a public/synthetic S1 demo, not a validated product. The npm package stays installable; no new features are planned.</p>
 <p>Electricity activity ingest, location-based GHG calculation, row verification, workpaper and partial ESRS pack for DeepSeek Harness.</p>
 <blockquote>
 <p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
@@ -107,6 +112,68 @@ dsh --profile &lt;profile&gt; --dump-config | grep dsh-ghg
 </ul>
 <h2>Public sample</h2>
 <p>31-row MIT daily kWh sample and a synthetic text PDF; <code>ACCEPTANCE.csv</code> lists 8 public checks.</p>
+<h2>中文说明</h2>
+<p>用电活动入库、基于位置的 GHG 计算、逐行复算、三表底稿与<strong>部分</strong> ESRS 包。<strong>公开/合成、alpha、非 GA</strong>，不是 assurance-grade。</p>
+<h3>安装</h3>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-ghg
+</code></pre>
+<h3>工具</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ghg.facility_import</code></td>
+<td>导入设施边界元数据</td>
+</tr>
+<tr>
+<td><code>ghg.ingest</code></td>
+<td>用电 CSV（<code>date/month,kwh</code>），拒绝 MWh/单位不一致</td>
+</tr>
+<tr>
+<td><code>ghg.ingest_pdf</code></td>
+<td>从文本型 PDF 提取日期/kWh；无 OCR</td>
+</tr>
+<tr>
+<td><code>ghg.match_factor</code></td>
+<td>返回电力 location factor 与公开来源</td>
+</tr>
+<tr>
+<td><code>ghg.factor_import</code></td>
+<td>导入版本化公开/合成因子</td>
+</tr>
+<tr>
+<td><code>ghg.scope_import</code></td>
+<td>为部分 ESRS 包导入公开/合成 Scope 1/3</td>
+</tr>
+<tr>
+<td><code>ghg.calculate</code></td>
+<td>kWh × 因子 → tCO2e 行</td>
+</tr>
+<tr>
+<td><code>ghg.verify_row</code></td>
+<td>全量复算，返回差异</td>
+</tr>
+<tr>
+<td><code>ghg.export_workpaper</code></td>
+<td>3-sheet xlsx：Facilities / Activities / Emissions</td>
+</tr>
+<tr>
+<td><code>ghg.export_esrs</code> / <code>export_esrs_pack</code></td>
+<td>部分 ESRS E1 视图 / 4-sheet 包</td>
+</tr>
+</tbody></table>
+<h3>输入 / 输出</h3>
+<p>输入用电 CSV 或文本 PDF、设施元数据、公开因子、可选公开/合成 Scope 1/3；输出计算行、3 表底稿和部分 ESRS 工作簿。</p>
+<h3>边界</h3>
+<ul>
+<li>PDF 只支持文本型；无 OCR/扫描件。</li>
+<li>ESRS 是部分包（Scope 2 + 可选公开/合成 Scope 1/3），不含 review/lock/restate，不是 assurance-grade。</li>
+<li>默认因子 0.5703 kgCO2e/kWh 是公开参考，不是客户/鉴证因子。</li>
+</ul>
 <h2>Development</h2>
 <pre><code class="language-sh">pnpm install --frozen-lockfile
 pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku02
@@ -114,5 +181,5 @@ pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &
 <h2>License</h2>
 <p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
 </main>
-<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="../index.html">索引</a> · <a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
 </body></html>

@@ -107,6 +107,66 @@ dsh --profile &lt;profile&gt; --dump-config | grep dsh-einvoice
 </ul>
 <h2>Public sample</h2>
 <p>Synthetic invoice XML/OFD fixtures; <code>ACCEPTANCE.csv</code> lists 7 public checks (one is <code>out_of_scope</code>). No real invoice is included.</p>
+<h2>中文说明</h2>
+<p>文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。<strong>公开/合成、alpha、非 GA</strong>；没有客户发票，也没有税局查验/申报能力。</p>
+<h3>安装</h3>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-einvoice
+</code></pre>
+<h3>工具</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>invoice.ingest</code></td>
+<td>一个本地 OFD/XML 入库，算 SHA-256，原样存本地，按字节幂等</td>
+</tr>
+<tr>
+<td><code>invoice.parse</code></td>
+<td>解析旧 OFD 或数电票 XML，返回八个字段、明细行、证据与未知字段</td>
+</tr>
+<tr>
+<td><code>invoice.query</code></td>
+<td>按主体、期间、生命周期或文本查本地票池</td>
+</tr>
+<tr>
+<td><code>invoice.dedup</code></td>
+<td>按发票号或“销售方 + 日期 + 金额”归并重复</td>
+</tr>
+<tr>
+<td><code>invoice.review_queue</code></td>
+<td>手工复核队列，可标 buyer-tax-id 不一致</td>
+</tr>
+<tr>
+<td><code>invoice.record_receipt</code></td>
+<td>记录本地回执，<code>verification_source=local_receipt</code>、<code>tax_verified=false</code></td>
+</tr>
+<tr>
+<td><code>invoice.redlink</code></td>
+<td>红票绑定蓝票，保存差额</td>
+</tr>
+<tr>
+<td><code>invoice.archive</code></td>
+<td>生成 manifest + 原件 + 回执 ZIP</td>
+</tr>
+<tr>
+<td><code>invoice.check</code> / <code>invoice.restore</code></td>
+<td>校验归档 / 恢复到本地目录</td>
+</tr>
+</tbody></table>
+<h3>输入 / 输出</h3>
+<p>一次 <code>invoice.ingest</code> 处理一个本地 OFD/XML；输出本地票池、复核/回执状态、红蓝绑定和归档 ZIP。</p>
+<h3>边界</h3>
+<ul>
+<li>不做 OCR/扫描件、税局查验/回执/申报、30 年合规、真实发票准确率。</li>
+<li>回执只是本地记录，不是税局回执。</li>
+<li>不连 IMAP、不写 ERP、不做电子签章法律意见，无 Client UI。</li>
+</ul>
+<h3>配置</h3>
+<p><code>DSH_EINVOICE_HOME</code>（本地票池与归档目录）、<code>DSH_EINVOICE_INPUT_ROOTS</code>（输入白名单）。</p>
 <h2>Development</h2>
 <pre><code class="language-sh">pnpm install --frozen-lockfile
 pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku04
@@ -114,5 +174,5 @@ pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &
 <h2>License</h2>
 <p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
 </main>
-<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="../index.html">索引</a> · <a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
 </body></html>

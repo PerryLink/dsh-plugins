@@ -3,6 +3,11 @@
 <title>dsh-docx-redline — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
 <body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
 <main class="wrap"><h1>dsh-docx-redline</h1>
+<blockquote>
+<p>🧊 <strong>FROZEN — 2026-10-31. No new features.</strong> This public/synthetic S1 demo is not GA; it stays installable and only genuine breakage is fixed.</p>
+</blockquote>
+<h2>Maintenance status: 🧊 FROZEN</h2>
+<p>Frozen on 2026-10-31. This repository is a public/synthetic S1 demo, not a validated product. The npm package stays installable; no new features are planned.</p>
 <p>DOCX structure inspection, byte-exact roundtrip and limited exact-run text replace for DeepSeek Harness.</p>
 <blockquote>
 <p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
@@ -76,6 +81,44 @@ dsh --profile &lt;profile&gt; --dump-config | grep dsh-docx-redline
 </ul>
 <h2>Public sample</h2>
 <p>8 MIT DOCX samples from <code>python-docx</code>; structure/roundtrip/replace tests. No customer document is included.</p>
+<h2>中文说明</h2>
+<p>DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。<strong>公开/合成、alpha、非 GA</strong>；没有客户文档。</p>
+<h3>安装</h3>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-docx-redline
+</code></pre>
+<h3>工具</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>doc.inspect</code></td>
+<td>读 DOCX ZIP/XML，存原件，报告部件 SHA-256 与结构计数（段落、表格、页眉页脚、脚注、批注、域、书签、编号、节、样式）</td>
+</tr>
+<tr>
+<td><code>doc.roundtrip</code></td>
+<td>逐字节复制并比对每个部件 hash，返回零差异报告</td>
+</tr>
+<tr>
+<td><code>doc.replace_text</code></td>
+<td>只替换一个精确 <code>w:t</code> run；不唯一/跨 run 就失败关闭</td>
+</tr>
+<tr>
+<td><code>redline.diff</code></td>
+<td>两个已检查 DOCX 的段落级文本 diff，不写 OOXML</td>
+</tr>
+</tbody></table>
+<h3>输入 / 输出</h3>
+<p>输入本地 <code>.docx</code>；输出结构报告 JSON、roundtrip 报告、有限替换副本或段落 diff。替换路径保留批注/页眉页脚/域，但不编辑它们。</p>
+<h3>边界</h3>
+<ul>
+<li>不接受/拒绝修订、不渲染 redline、不调 Word/LibreOffice、不做通用 OOXML 写。</li>
+<li>只替换一个精确 <code>w:t</code> run；多 run 或重复文本失败关闭。</li>
+<li>只有 <code>.docx</code> ZIP；加密/宏文档失败关闭；无 Client/Skill/Bundle/MCP。</li>
+</ul>
 <h2>Development</h2>
 <pre><code class="language-sh">pnpm install --frozen-lockfile
 pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku01
@@ -83,5 +126,5 @@ pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &
 <h2>License</h2>
 <p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
 </main>
-<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="../index.html">索引</a> · <a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
 </body></html>
