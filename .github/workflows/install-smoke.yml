@@ -1,0 +1,56 @@
+name: install-smoke
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 1' # Monday 11:00 Asia/Shanghai
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Install DSH and pnpm
+        run: npm install -g @deepseek-ai/dsh@0.2.1-rc.5 pnpm@11.28.5
+      - name: Install every published package into a fresh profile
+        shell: bash
+        run: |
+          fail=0
+          for spec in \
+            dsh-ap-three-way@0.1.0-alpha.3
+            dsh-bankrec@0.1.0-alpha.6
+            dsh-contract-suite@0.1.0-alpha.0
+            dsh-docx-redline@0.1.0-alpha.5
+            dsh-eval-pack@0.1.0-alpha.2
+            dsh-einvoice@0.2.0-alpha.3
+            dsh-finops-suite@0.1.0-alpha.0
+            dsh-freight-audit@0.1.0-alpha.5
+            dsh-ghg@0.1.0-alpha.8
+            dsh-hs-candidate@0.1.0-alpha.4
+            dsh-ifc-qto@0.1.0-alpha.5
+            dsh-legal-clause@0.1.0-alpha.4
+            dsh-legal-intake@0.1.0-alpha.2
+            dsh-pim-lint@0.1.0-alpha.2
+            dsh-policy-ledger@0.2.0-alpha.3
+            dsh-qms-capa@0.1.0-alpha.4
+            dsh-travel-recon@0.1.0-alpha.4
+          do
+            export DSH_HOME="$(mktemp -d)"
+            echo "== $spec"
+            if dsh plugin --profile web add "$spec" >/tmp/dsh-add.log 2>&1 && \
+               dsh --profile web --dump-config 2>/dev/null | grep -q "${spec%@*}"; then
+              echo "OK $spec"
+            else
+              echo "FAIL $spec"
+              tail -30 /tmp/dsh-add.log || true
+              fail=1
+            fi
+            rm -rf "$DSH_HOME"
+          done
+          exit "$fail"
