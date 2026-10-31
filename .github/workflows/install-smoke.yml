@@ -37,7 +37,7 @@ jobs:
             "dsh-legal-clause@0.1.0-alpha.5"
             "dsh-legal-intake@0.1.0-alpha.3"
             "dsh-pim-lint@0.1.0-alpha.3"
-            "dsh-policy-ledger@0.2.0-alpha.4"
+            "dsh-policy-ledger@0.2.0-alpha.5"
             "dsh-qms-capa@0.1.0-alpha.5"
             "dsh-travel-recon@0.1.0-alpha.5"
           )
