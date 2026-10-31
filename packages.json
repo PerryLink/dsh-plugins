@@ -197,5 +197,35 @@
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     }
+  ],
+  "suites": [
+    {
+      "name": "dsh-finops-suite",
+      "version": "0.1.0-alpha.0",
+      "description": "One-command install for dsh-einvoice, dsh-bankrec, dsh-ap-three-way and dsh-travel-recon.",
+      "repo": "https://github.com/PerryLink/dsh-finops-suite",
+      "npm": "https://www.npmjs.com/package/dsh-finops-suite",
+      "release": "https://github.com/PerryLink/dsh-finops-suite/releases/tag/v0.1.0-alpha.0",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-finops-suite.html",
+      "members": [
+        "dsh-einvoice",
+        "dsh-bankrec",
+        "dsh-ap-three-way",
+        "dsh-travel-recon"
+      ]
+    },
+    {
+      "name": "dsh-contract-suite",
+      "version": "0.1.0-alpha.0",
+      "description": "One-command install for dsh-legal-intake and dsh-legal-clause.",
+      "repo": "https://github.com/PerryLink/dsh-contract-suite",
+      "npm": "https://www.npmjs.com/package/dsh-contract-suite",
+      "release": "https://github.com/PerryLink/dsh-contract-suite/releases/tag/v0.1.0-alpha.0",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-contract-suite.html",
+      "members": [
+        "dsh-legal-intake",
+        "dsh-legal-clause"
+      ]
+    }
   ]
 }
