@@ -216,7 +216,7 @@
   "suites": [
     {
       "name": "dsh-finops-suite",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0-alpha.2",
       "description": "One-command install for dsh-einvoice, dsh-bankrec, dsh-ap-three-way and dsh-travel-recon.",
       "repo": "https://github.com/PerryLink/dsh-finops-suite",
       "npm": "https://www.npmjs.com/package/dsh-finops-suite",
@@ -235,7 +235,7 @@
     },
     {
       "name": "dsh-contract-suite",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0-alpha.2",
       "description": "One-command install for dsh-legal-intake and dsh-legal-clause.",
       "repo": "https://github.com/PerryLink/dsh-contract-suite",
       "npm": "https://www.npmjs.com/package/dsh-contract-suite",

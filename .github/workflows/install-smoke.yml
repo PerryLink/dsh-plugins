@@ -25,11 +25,11 @@ jobs:
           specs=(
             "dsh-ap-three-way@0.1.0-alpha.4"
             "dsh-bankrec@0.1.0-alpha.7"
-            "dsh-contract-suite@0.1.0-alpha.1"
+            "dsh-contract-suite@0.1.0-alpha.2"
             "dsh-docx-redline@0.1.0-alpha.6"
             "dsh-eval-pack@0.1.0-alpha.3"
             "dsh-einvoice@0.2.0-alpha.4"
-            "dsh-finops-suite@0.1.0-alpha.1"
+            "dsh-finops-suite@0.1.0-alpha.2"
             "dsh-freight-audit@0.1.0-alpha.6"
             "dsh-ghg@0.1.0-alpha.9"
             "dsh-hs-candidate@0.1.0-alpha.5"

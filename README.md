@@ -69,8 +69,8 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | Suite | 包含 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-finops-suite`](https://github.com/PerryLink/dsh-finops-suite) | `dsh-einvoice` + `dsh-bankrec` + `dsh-ap-three-way` + `dsh-travel-recon` | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-finops-suite` |
-| [`dsh-contract-suite`](https://github.com/PerryLink/dsh-contract-suite) | `dsh-legal-intake` + `dsh-legal-clause` | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-contract-suite` |
+| [`dsh-finops-suite`](https://github.com/PerryLink/dsh-finops-suite) | `dsh-einvoice` + `dsh-bankrec` + `dsh-ap-three-way` + `dsh-travel-recon` | `0.1.0-alpha.2` | `dsh plugin --profile <profile> add dsh-finops-suite` |
+| [`dsh-contract-suite`](https://github.com/PerryLink/dsh-contract-suite) | `dsh-legal-intake` + `dsh-legal-clause` | `0.1.0-alpha.2` | `dsh plugin --profile <profile> add dsh-contract-suite` |
 
 ## 平台
 
