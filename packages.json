@@ -10,7 +10,10 @@
       "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.2",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-fin-invoice-core",
-      "description": "文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。"
+      "description": "文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-einvoice.html",
+      "gitee": "https://gitee.com/perrylink/dsh-einvoice",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-einvoice"
     },
     {
       "name": "@perrylink/dsh-bankrec",
@@ -20,7 +23,10 @@
       "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.5",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-bankrec",
-      "description": "银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。"
+      "description": "银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-bankrec.html",
+      "gitee": "https://gitee.com/perrylink/dsh-bankrec",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-bankrec"
     },
     {
       "name": "@perrylink/dsh-ap-three-way",
@@ -30,7 +36,10 @@
       "release": "https://github.com/PerryLink/dsh-ap-three-way/releases/tag/v0.1.0-alpha.2",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-ap-three-way",
-      "description": "发票/PO/GRN 三单匹配、容差与例外底稿。"
+      "description": "发票/PO/GRN 三单匹配、容差与例外底稿。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ap-three-way.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-travel-recon",
@@ -40,7 +49,10 @@
       "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0-alpha.3",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-travel-recon",
-      "description": "差旅订单/发票/卡流水对账、去重与只读政策检查。"
+      "description": "差旅订单/发票/卡流水对账、去重与只读政策检查。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-travel-recon.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-legal-intake",
@@ -50,7 +62,10 @@
       "release": "https://github.com/PerryLink/dsh-legal-intake/releases/tag/v0.1.0-alpha.1",
       "family": "法务运营 Legal Ops",
       "dir": "dsh-legal-intake",
-      "description": "法务需求 EML 收件、线程去重与台账导出。"
+      "description": "法务需求 EML 收件、线程去重与台账导出。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-legal-intake.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-legal-clause",
@@ -60,7 +75,10 @@
       "release": "https://github.com/PerryLink/dsh-legal-clause/releases/tag/v0.1.0-alpha.3",
       "family": "法务运营 Legal Ops",
       "dir": "dsh-legal-clause",
-      "description": "合同条款树、playbook 映射与未解决报告。"
+      "description": "合同条款树、playbook 映射与未解决报告。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-legal-clause.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-ghg",
@@ -70,7 +88,10 @@
       "release": "https://github.com/PerryLink/dsh-ghg/releases/tag/v0.1.0-alpha.7",
       "family": "可持续与质量 ESG & Quality",
       "dir": "dsh-ghg",
-      "description": "用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。"
+      "description": "用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ghg.html",
+      "gitee": "https://gitee.com/perrylink/dsh-ghg",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-qms-capa",
@@ -80,7 +101,10 @@
       "release": "https://github.com/PerryLink/dsh-qms-capa/releases/tag/v0.1.0-alpha.3",
       "family": "可持续与质量 ESG & Quality",
       "dir": "dsh-qms-capa",
-      "description": "QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。"
+      "description": "QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-qms-capa.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-hs-candidate",
@@ -90,7 +114,10 @@
       "release": "https://github.com/PerryLink/dsh-hs-candidate/releases/tag/v0.1.0-alpha.3",
       "family": "关务与物流 Trade & Logistics",
       "dir": "dsh-hs-candidate",
-      "description": "HS Top3 候选、12 要素完整性、RVC 与税则版本门。"
+      "description": "HS Top3 候选、12 要素完整性、RVC 与税则版本门。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-hs-candidate.html",
+      "gitee": "https://gitee.com/perrylink/dsh-hs-candidate",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-freight-audit",
@@ -100,7 +127,10 @@
       "release": "https://github.com/PerryLink/dsh-freight-audit/releases/tag/v0.1.0-alpha.4",
       "family": "关务与物流 Trade & Logistics",
       "dir": "dsh-freight-audit",
-      "description": "运费 ratecard 版本、账单审计、recovery 汇总与差异导出。"
+      "description": "运费 ratecard 版本、账单审计、recovery 汇总与差异导出。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-freight-audit.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-docx-redline",
@@ -110,7 +140,10 @@
       "release": "https://github.com/PerryLink/dsh-docx-redline/releases/tag/v0.1.0-alpha.4",
       "family": "文档与模型 Docs & Models",
       "dir": "dsh-docx-redline",
-      "description": "DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。"
+      "description": "DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-docx-redline.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-docx-redline"
     },
     {
       "name": "@perrylink/dsh-ifc-qto",
@@ -120,7 +153,10 @@
       "release": "https://github.com/PerryLink/dsh-ifc-qto/releases/tag/v0.1.0-alpha.4",
       "family": "文档与模型 Docs & Models",
       "dir": "dsh-ifc-qto",
-      "description": "IFC 构件/工程量清单与 CSV 导出。"
+      "description": "IFC 构件/工程量清单与 CSV 导出。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ifc-qto.html",
+      "gitee": "https://gitee.com/perrylink/dsh-ifc-qto",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-policy-ledger",
@@ -130,7 +166,10 @@
       "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0-alpha.2",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-policy-ledger",
-      "description": "只读安装诊断：能力快照、tarball 断言与安装日志分类。"
+      "description": "只读安装诊断：能力快照、tarball 断言与安装日志分类。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-policy-ledger.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-pim-lint",
@@ -140,7 +179,10 @@
       "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0-alpha.1",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-pim-lint",
-      "description": "PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。"
+      "description": "PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-pim-lint.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     },
     {
       "name": "@perrylink/dsh-eval-harness",
@@ -150,7 +192,10 @@
       "release": "https://github.com/PerryLink/dsh-eval-harness/releases/tag/v0.1.0-alpha.1",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-eval-harness",
-      "description": "公开/合成 eval-pack lint 与确定性 JSON 评分。"
+      "description": "公开/合成 eval-pack lint 与确定性 JSON 评分。",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-eval-harness.html",
+      "gitee": "https://gitee.com/perrylink/dsh-plugins",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-plugins"
     }
   ]
 }

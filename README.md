@@ -65,9 +65,9 @@ dsh plugin --profile <profile> add @perrylink/dsh-ghg
 |---|---|---|
 | GitHub | https://github.com/PerryLink/dsh-plugins | 本索引 + 各包仓 |
 | npm | https://www.npmjs.com/org/perrylink | 15 个 `@perrylink/dsh-*` 包 |
-| Gitee | https://gitee.com/perrylink/dsh-plugins | 中文只读镜像（待建） |
-| GitCode | https://gitcode.com/PerryLink/dsh-plugins | 中文聚合（待建） |
-| 文档 | https://perrylink.github.io/ | 15 个包页（待建） |
+| Gitee | https://gitee.com/perrylink/dsh-plugins | 中文索引 + 5 个旗舰镜像 |
+| GitCode | https://gitcode.com/PerryLink/dsh-plugins | 中文索引 + 3 个旗舰镜像 |
+| 文档 | https://perrylink.github.io/dsh-plugins/ | 15 个包页 + 索引 |
 
 ## 边界
 
