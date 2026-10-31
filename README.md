@@ -18,7 +18,7 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-einvoice`](https://github.com/PerryLink/dsh-einvoice) | 文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 | `0.2.0-alpha.5` | `dsh plugin --profile <profile> add dsh-einvoice` |
+| [`dsh-einvoice`](https://github.com/PerryLink/dsh-einvoice) | 文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 | `0.2.0-alpha.4` | `dsh plugin --profile <profile> add dsh-einvoice` |
 | [`dsh-bankrec`](https://github.com/PerryLink/dsh-bankrec) | 银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。 | `0.1.0-alpha.7` | `dsh plugin --profile <profile> add dsh-bankrec` |
 | [`dsh-ap-three-way`](https://github.com/PerryLink/dsh-ap-three-way) | 发票/PO/GRN 三单匹配、容差与例外底稿。 | `0.1.0-alpha.4` | `dsh plugin --profile <profile> add dsh-ap-three-way` |
 | [`dsh-travel-recon`](https://github.com/PerryLink/dsh-travel-recon) | 差旅订单/发票/卡流水对账、去重与只读政策检查。 | `0.1.0-alpha.5` | `dsh plugin --profile <profile> add dsh-travel-recon` |

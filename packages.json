@@ -4,7 +4,7 @@
   "packages": [
     {
       "name": "dsh-einvoice",
-      "version": "0.2.0-alpha.5",
+      "version": "0.2.0-alpha.4",
       "repo": "https://github.com/PerryLink/dsh-einvoice",
       "npm": "https://www.npmjs.com/package/dsh-einvoice",
       "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.4",
