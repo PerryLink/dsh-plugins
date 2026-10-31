@@ -212,7 +212,9 @@
         "dsh-bankrec",
         "dsh-ap-three-way",
         "dsh-travel-recon"
-      ]
+      ],
+      "gitee": "https://gitee.com/perrylink/dsh-finops-suite",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-finops-suite"
     },
     {
       "name": "dsh-contract-suite",
@@ -225,7 +227,9 @@
       "members": [
         "dsh-legal-intake",
         "dsh-legal-clause"
-      ]
+      ],
+      "gitee": "https://gitee.com/perrylink/dsh-contract-suite",
+      "gitcode": "https://gitcode.com/PerryLink/dsh-contract-suite"
     }
   ]
 }
