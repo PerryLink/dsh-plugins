@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-travel-recon — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-travel-recon</h1>
+<p>Travel order/invoice/card ingest, dedupe, three-way match, read-only policy check and ledger export for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-travel-recon
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-travel-recon
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>差旅订单/发票/卡流水对账、去重、只读政策检查与台账导出。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-travel-recon</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>travel.ingest</code></td>
+<td>Ingest travel order/invoice/card rows</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>travel.match</code></td>
+<td>Three-way match order/invoice/card</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>travel.duplicate_check</code></td>
+<td>Detect duplicate invoice/card per trip</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>travel.policy_check</code></td>
+<td>Read-only max-amount and invoice-presence policy check</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>travel.export</code></td>
+<td>Export the reconciliation ledger xlsx</td>
+<td>R1 local write</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> travel order, invoice and card rows. <strong>Output:</strong> matched/unmatched rows, duplicate findings, read-only policy findings, and an xlsx ledger.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Env</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DSH_TRAVEL_HOME</code></td>
+<td><code>$DSH_HOME/storages/dsh-travel-recon</code></td>
+<td>local domain and exports</td>
+</tr>
+</tbody></table>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>No OTA/airline/hotel adapters, PDF/OCR invoice extraction, or policy engine.</li>
+<li>Policy checks are read-only; no approval, rejection, or reimbursement posting.</li>
+<li>No Client surface and no customer traveler data.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>Synthetic travel order/invoice/card fixtures; <code>ACCEPTANCE.csv</code> lists 5 public checks.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku15
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-docx-redline — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-docx-redline</h1>
+<p>DOCX structure inspection, byte-exact roundtrip and limited exact-run text replace for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-docx-redline
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-docx-redline
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-docx-redline</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>doc.inspect</code></td>
+<td>Read a local <code>.docx</code> ZIP/XML, store the original, and report part SHA-256 plus structure counts (paragraphs, tables, headers/footers, footnotes, comments, fields, bookmarks, numbering, sections, styles)</td>
+<td>R0 read + local store</td>
+</tr>
+<tr>
+<td><code>doc.roundtrip</code></td>
+<td>Copy the original byte-for-byte and compare every part hash; return a zero-diff report</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>doc.replace_text</code></td>
+<td>Replace one exact <code>w:t</code> run; fail closed when the text is not unique or spans runs</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>redline.diff</code></td>
+<td>Text-level paragraph diff between two inspected DOCX files; no OOXML writing</td>
+<td>R0</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> local <code>.docx</code> ZIP packages. <strong>Output:</strong> a structure report (JSON), a byte-exact roundtrip report, a limited text-replaced copy, or a paragraph-level diff. Comments, headers/footers and fields are preserved by the replace path; they are not edited.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Env</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DSH_DOCX_HOME</code></td>
+<td><code>$DSH_HOME/storages/dsh-docx-redline</code></td>
+<td>originals and roundtrip output</td>
+</tr>
+<tr>
+<td><code>DSH_DOCX_INPUT_ROOTS</code></td>
+<td><code>current working directory</code></td>
+<td><code>path.delimiter</code>-separated allowlist for input paths</td>
+</tr>
+</tbody></table>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>No accept/reject revisions, no rendered redline, no Word/LibreOffice automation, and no general OOXML writing.</li>
+<li><code>doc.replace_text</code> only replaces one exact <code>w:t</code> run; multi-run or repeated text fails closed.</li>
+<li>Only <code>.docx</code> ZIP packages; encrypted or macro-only documents fail closed.</li>
+<li>No Client, Skill, Bundle, or MCP surface.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>8 MIT DOCX samples from <code>python-docx</code>; structure/roundtrip/replace tests. No customer document is included.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku01
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>

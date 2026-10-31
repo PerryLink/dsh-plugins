@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-ghg — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-ghg</h1>
+<p>Electricity activity ingest, location-based GHG calculation, row verification, workpaper and partial ESRS pack for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-ghg
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-ghg
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>用电活动入库、基于位置的 GHG 计算、逐行复算、底稿与部分 ESRS 包导出。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-ghg</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ghg.facility_import</code></td>
+<td>Import facility boundary metadata</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ghg.ingest</code></td>
+<td>Ingest electricity CSV (<code>date/month,kwh</code>); reject MWh/unit mismatch</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ghg.ingest_pdf</code></td>
+<td>Extract date/kWh rows from a text-based PDF; no OCR or scanned PDF</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ghg.match_factor</code></td>
+<td>Return the electricity location factor and its public source</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>ghg.factor_import</code></td>
+<td>Import a versioned public/synthetic factor</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ghg.scope_import</code></td>
+<td>Import public/synthetic Scope 1/3 values for the partial ESRS pack</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ghg.calculate</code></td>
+<td>Multiply kWh by a factor (default or imported) into tCO2e lines</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>ghg.verify_row</code></td>
+<td>Recalculate all lines and return mismatches/diffs</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>ghg.export_workpaper</code></td>
+<td>Export a 3-sheet xlsx: Facilities / Activities / Emissions</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ghg.export_esrs</code></td>
+<td>Export a partial ESRS E1 view; not assurance-grade</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ghg.export_esrs_pack</code></td>
+<td>Export a 4-sheet partial ESRS E1 workbook</td>
+<td>R1 local write</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> electricity activity CSV or text-based PDF, facility metadata, a public factor, and optional public/synthetic Scope 1/3 values. <strong>Output:</strong> calculated tCO2e lines, a 3-sheet workpaper, and a partial ESRS E1 workbook. The default factor is a public reference, not assurance-grade.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Env</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DSH_GHG_HOME</code></td>
+<td><code>$DSH_HOME/storages/dsh-ghg</code></td>
+<td>local domain and exports</td>
+</tr>
+</tbody></table>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>PDF path is <strong>text-based only</strong>; no OCR, scanned PDF, or image extraction.</li>
+<li>ESRS export is <strong>partial</strong> (Scope 2 plus optional public/synthetic Scope 1/3); it is not assurance-grade and does not include review/lock/restate.</li>
+<li>No Scope 2 certificates, no tax/utility bill verification, no Client surface.</li>
+<li>The default factor <code>electricity-location-cn-2022-v1</code> = 0.5703 kgCO2e/kWh is a public reference, not a customer or assurance factor.</li>
+<li>All activity and Scope 1/3 values are public/synthetic; no customer data is included.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>31-row MIT daily kWh sample and a synthetic text PDF; <code>ACCEPTANCE.csv</code> lists 8 public checks.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku02
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>

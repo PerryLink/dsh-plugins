@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-eval-harness — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-eval-harness</h1>
+<p>Public/synthetic eval-pack lint and deterministic JSON grader for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-eval-harness
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-eval-harness
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>公开/合成 eval-pack lint 与确定性 JSON 评分。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-eval-harness</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>eval.pack_lint</code></td>
+<td>Validate eval-pack name/version and unique task ids</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>eval.grade</code></td>
+<td>Deterministic JSON equality grade</td>
+<td>R0</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> an eval pack (JSON) and a candidate JSON answer. <strong>Output:</strong> pack lint findings or a deterministic pass/fail grade. No model is called.</p>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>Not a validated Proofbench, not a benchmark runner, and not a replacement for SKU-11.</li>
+<li>No partner failure sessions, customer data, or model/provider execution.</li>
+<li>Deterministic JSON equality only; no semantic or LLM judge.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>Public/synthetic eval packs; <code>ACCEPTANCE.csv</code> lists 3 public checks.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>

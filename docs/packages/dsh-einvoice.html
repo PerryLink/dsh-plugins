@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-einvoice — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-einvoice</h1>
+<p>File-level Chinese e-invoice (OFD/XML) ingest, parse, dedup and local archive for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-einvoice
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-einvoice
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-einvoice</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>invoice.ingest</code></td>
+<td>Ingest one local OFD/XML, compute SHA-256, store the original, idempotent by bytes</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>invoice.parse</code></td>
+<td>Parse old OFD <code>Attachs/original_invoice.xml</code> or 数电票 <code>Tags/CustomTag.xml</code>; return eight fields, lines, evidence and unknown fields</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>invoice.query</code></td>
+<td>Query the local pool by entity, period, lifecycle or text</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>invoice.dedup</code></td>
+<td>Group duplicates by invoice number or seller + date + total</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>invoice.review_queue</code></td>
+<td>Queue parsed invoices for manual local review; optional buyer-tax-id mismatch flags</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>invoice.record_receipt</code></td>
+<td>Hash a local receipt, append it and move lifecycle; <code>verification_source=local_receipt</code>, <code>tax_verified=false</code></td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>invoice.redlink</code></td>
+<td>Bind a negative red invoice to its blue invoice and store deltas</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>invoice.archive</code></td>
+<td>Build a manifest + originals + receipts ZIP under the local archive directory</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>invoice.check</code></td>
+<td>Verify manifest/member hashes, missing files and traversal</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>invoice.restore</code></td>
+<td>Restore a verified archive into the local restore root</td>
+<td>R1 local write</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> one local OFD/XML invoice per <code>invoice.ingest</code> call. <strong>Output:</strong> a local invoice pool, review/receipt state, red/blue links, and a deterministic archive ZIP. <code>invoice.check</code> verifies the archive; <code>invoice.restore</code> restores it locally.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Env</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DSH_EINVOICE_HOME</code></td>
+<td><code>$DSH_HOME/storages/dsh-einvoice</code></td>
+<td>originals directory and local pool base</td>
+</tr>
+<tr>
+<td><code>DSH_EINVOICE_INPUT_ROOTS</code></td>
+<td><code>current working directory</code></td>
+<td><code>path.delimiter</code>-separated allowlist for <code>invoice.ingest</code></td>
+</tr>
+</tbody></table>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>No OCR/scanning, tax-bureau verification/receipt, tax filing, 30-year archive compliance, or real-invoice accuracy claim.</li>
+<li><code>invoice.record_receipt</code> is local-only: <code>verification_source=local_receipt</code>, <code>tax_verified=false</code>.</li>
+<li>No IMAP/email fetching, ERP posting, e-signature legal opinion, or Client UI.</li>
+<li>S1 accepts one local file per <code>invoice.ingest</code>; directory batches are not part of this package.</li>
+<li>Public samples with PII are kept outside the tarball; do not paste raw invoice output into logs or public issues.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>Synthetic invoice XML/OFD fixtures; <code>ACCEPTANCE.csv</code> lists 7 public checks (one is <code>out_of_scope</code>). No real invoice is included.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku04
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>

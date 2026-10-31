@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-bankrec — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-bankrec</h1>
+<p>Bank CSV/GL/CAMT.053/MT940 ingest, matching and a 3-sheet reconciliation workpaper for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-bankrec
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-bankrec
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-bankrec</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>bankrec.ingest</code></td>
+<td>Ingest bank CSV/GL rows</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>bankrec.ingest_camt</code></td>
+<td>Ingest CAMT.053 XML</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>bankrec.ingest_mt940</code></td>
+<td>Ingest MT940 statements</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>bankrec.reconcile_camt</code></td>
+<td>Reconcile CAMT opening + entries = closing; require <code>account_id</code> when ambiguous</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>bankrec.match</code></td>
+<td>1:1 match bank rows to GL rows</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>bankrec.export</code></td>
+<td>Export a 3-sheet xlsx: Bank / GL / Matches</td>
+<td>R1 local write</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> bank CSV/GL rows, CAMT.053 XML, or MT940 statements. <strong>Output:</strong> matched/unmatched rows and a 3-sheet reconciliation workpaper. Multi-account CAMT reconciliation requires <code>account_id</code> when the account cannot be inferred.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Env</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DSH_BANKREC_HOME</code></td>
+<td><code>$DSH_HOME/storages/dsh-bankrec</code></td>
+<td>local domain and exports</td>
+</tr>
+</tbody></table>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>No bank API, PDF/OCR statement parsing, or automatic write-back to a bank/ERP.</li>
+<li>1:1 matching only; no fuzzy multi-to-many reconciliation engine.</li>
+<li>No Client surface and no customer bank data.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>MIT CAMT.053 and MT940 samples; <code>ACCEPTANCE.csv</code> lists 7 public checks.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku06
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>

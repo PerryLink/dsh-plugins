@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-ap-three-way — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-ap-three-way</h1>
+<p>AP invoice/PO/GRN three-way match with tolerance policy and exception workpaper for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-ap-three-way
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-ap-three-way
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>发票/PO/GRN 三单匹配、容差与例外底稿。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-ap-three-way</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ap.import</code></td>
+<td>Import invoice, PO and GRN rows</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ap.import_invoice_xml</code></td>
+<td>Import an invoice XML fixture</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ap.match</code></td>
+<td>Three-way match with a 1% default price tolerance and quantity checks</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>ap.export</code></td>
+<td>Export Matches/Exceptions xlsx</td>
+<td>R1 local write</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> invoice, purchase-order and goods-receipt rows (CSV or invoice XML). <strong>Output:</strong> matched rows and an exceptions workpaper. Price tolerance defaults to 1% and is explicit in the result.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Env</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DSH_AP_HOME</code></td>
+<td><code>$DSH_HOME/storages/dsh-ap-three-way</code></td>
+<td>local domain and exports</td>
+</tr>
+</tbody></table>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>No PDF/OCR invoice extraction, ERP posting, or supplier portal integration.</li>
+<li>No multi-currency/FX engine and no Client surface.</li>
+<li>Synthetic invoice/PO/GRN fixtures only; no customer data.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>MIT synthetic invoice/PO/GRN scenarios; <code>ACCEPTANCE.csv</code> lists 5 public checks.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku05
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>

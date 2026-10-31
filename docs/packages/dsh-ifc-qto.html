@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-ifc-qto — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-ifc-qto</h1>
+<p>IFC (ISO-10303-21) element/quantity inventory and CSV takeoff for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-ifc-qto
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-ifc-qto
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>IFC 构件/工程量清单与 CSV 导出。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-ifc-qto</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ifc.ingest</code></td>
+<td>Parse an IFC file and inventory elements and quantity properties</td>
+<td>R1 local write</td>
+</tr>
+<tr>
+<td><code>ifc.export_csv</code></td>
+<td>Export the element/quantity inventory as CSV</td>
+<td>R1 local write</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> an IFC (ISO-10303-21) file. <strong>Output:</strong> an element/quantity inventory and a CSV takeoff. Quantities depend on the properties present in the IFC file; missing quantities are reported as missing, not guessed.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Env</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DSH_IFC_HOME</code></td>
+<td><code>$DSH_HOME/storages/dsh-ifc-qto</code></td>
+<td>local domain and exports</td>
+</tr>
+</tbody></table>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>No geometry engine, WASM kernel, rendering, or 50k-element performance claim.</li>
+<li>No BCF, model federation, or Client surface.</li>
+<li>Public MIT/Apache IFC samples only; no customer model.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>4 MIT/Apache IFC samples with quantity-bearing models; <code>ACCEPTANCE.csv</code> lists 5 public checks.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku07
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>

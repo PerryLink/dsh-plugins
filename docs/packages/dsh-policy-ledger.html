@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@perrylink/dsh-policy-ledger — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
+<main class="wrap"><h1>@perrylink/dsh-policy-ledger</h1>
+<p>Read-only capability snapshot, tarball assert and install diagnosis for DeepSeek Harness.</p>
+<blockquote>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
+</blockquote>
+<h2>Install</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-policy-ledger
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-policy-ledger
+</code></pre>
+<p>CLI:</p>
+<pre><code class="language-sh">dsh-policy-ledger doctor ./some-package.tgz --json
+</code></pre>
+<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<details>
+<summary>中文摘要</summary><p>只读安装诊断：能力快照、tarball 断言与安装日志分类。 安装：<code>dsh plugin --profile &lt;profile&gt; add @perrylink/dsh-policy-ledger</code>。公开/合成、alpha、非 GA。</p>
+</details><h2>Tools</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it does</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>trust.capability_snapshot</code></td>
+<td>Extract declared capabilities and R0–R3 risk from a local npm <code>.tgz</code>: tools, bundle/client/bin/skill, build scripts, outbound hosts, credential references</td>
+<td>R0 local read</td>
+</tr>
+<tr>
+<td><code>trust.diff</code></td>
+<td>Compare two stored snapshots: added/removed capabilities, risk escalation, blockers</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>trust.assert_tarball</code></td>
+<td>Re-read a tarball and compare it with a stored snapshot: pass/missing/extra/changed/unknown</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>install.diagnose</code></td>
+<td>Classify an install log into stage, root cause and three actions; return unknown rather than guess</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>install.probe</code></td>
+<td>Check disk free, write permission, proxy, optional registry RTT, node/pnpm</td>
+<td>R0</td>
+</tr>
+<tr>
+<td><code>install.bundle</code></td>
+<td>Write a redacted incident ZIP (diagnosis + evidence lines)</td>
+<td>R1 local write</td>
+</tr>
+</tbody></table>
+<h2>Input / output</h2>
+<p><strong>Input:</strong> a local npm <code>.tgz</code>, a stored snapshot, an install log, or the local environment. <strong>Output:</strong> a capability snapshot, snapshot diff, tarball assert result, install diagnosis, environment probe, or redacted incident ZIP. The CLI exposes <code>dsh-policy-ledger doctor &lt;tgz&gt; --json</code>.</p>
+<h2>Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Env</th>
+<th>Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>DSH_TRUST_HOME</code></td>
+<td><code>$DSH_HOME/storages/dsh-policy-ledger</code></td>
+<td>bundles and local storage</td>
+</tr>
+<tr>
+<td><code>DSH_TRUST_INPUT_ROOTS</code></td>
+<td><code>current working directory</code></td>
+<td>tarball allowlist</td>
+</tr>
+</tbody></table>
+<h2>Limits / non-claims</h2>
+<ul>
+<li>This is <strong>not</strong> a policy ledger, Gate, ledger, rollback, retry, or profile five-state product; the package name is retained for npm continuity.</li>
+<li>No signing root, no policy evaluation/apply/rollback/receipt, no Client, Skill, or Bundle surface.</li>
+<li>No customer profile, registry token, or private package is included.</li>
+<li><code>install.bundle</code> writes a local redacted ZIP; it does not upload anything.</li>
+<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+</ul>
+<h2>Public sample</h2>
+<p>Public/synthetic tarballs and install-log fixtures; <code>ACCEPTANCE.csv</code> lists 4 public checks. No customer profile is included.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku03
+</code></pre>
+<h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/org/perrylink">npm</a></p></footer>
+</body></html>
