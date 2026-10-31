@@ -18,46 +18,46 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-einvoice`](https://github.com/PerryLink/dsh-einvoice) | 文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 | `0.2.0-alpha.3` | `dsh plugin --profile <profile> add dsh-einvoice` |
-| [`dsh-bankrec`](https://github.com/PerryLink/dsh-bankrec) | 银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。 | `0.1.0-alpha.6` | `dsh plugin --profile <profile> add dsh-bankrec` |
-| [`dsh-ap-three-way`](https://github.com/PerryLink/dsh-ap-three-way) | 发票/PO/GRN 三单匹配、容差与例外底稿。 | `0.1.0-alpha.3` | `dsh plugin --profile <profile> add dsh-ap-three-way` |
-| [`dsh-travel-recon`](https://github.com/PerryLink/dsh-travel-recon) | 差旅订单/发票/卡流水对账、去重与只读政策检查。 | `0.1.0-alpha.4` | `dsh plugin --profile <profile> add dsh-travel-recon` |
+| [`dsh-einvoice`](https://github.com/PerryLink/dsh-einvoice) | 文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 | `0.2.0-alpha.4` | `dsh plugin --profile <profile> add dsh-einvoice` |
+| [`dsh-bankrec`](https://github.com/PerryLink/dsh-bankrec) | 银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。 | `0.1.0-alpha.7` | `dsh plugin --profile <profile> add dsh-bankrec` |
+| [`dsh-ap-three-way`](https://github.com/PerryLink/dsh-ap-three-way) | 发票/PO/GRN 三单匹配、容差与例外底稿。 | `0.1.0-alpha.4` | `dsh plugin --profile <profile> add dsh-ap-three-way` |
+| [`dsh-travel-recon`](https://github.com/PerryLink/dsh-travel-recon) | 差旅订单/发票/卡流水对账、去重与只读政策检查。 | `0.1.0-alpha.5` | `dsh plugin --profile <profile> add dsh-travel-recon` |
 
 ### 法务运营 Legal Ops
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-legal-intake`](https://github.com/PerryLink/dsh-legal-intake) | 法务需求 EML 收件、线程去重与台账导出。 | `0.1.0-alpha.2` | `dsh plugin --profile <profile> add dsh-legal-intake` |
-| [`dsh-legal-clause`](https://github.com/PerryLink/dsh-legal-clause) | 合同条款树、playbook 映射与未解决报告。 | `0.1.0-alpha.4` | `dsh plugin --profile <profile> add dsh-legal-clause` |
+| [`dsh-legal-intake`](https://github.com/PerryLink/dsh-legal-intake) | 法务需求 EML 收件、线程去重与台账导出。 | `0.1.0-alpha.3` | `dsh plugin --profile <profile> add dsh-legal-intake` |
+| [`dsh-legal-clause`](https://github.com/PerryLink/dsh-legal-clause) | 合同条款树、playbook 映射与未解决报告。 | `0.1.0-alpha.5` | `dsh plugin --profile <profile> add dsh-legal-clause` |
 
 ### 可持续与质量 ESG & Quality
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-ghg`] 🧊(https://github.com/PerryLink/dsh-ghg) | 用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。 | `0.1.0-alpha.8` | `dsh plugin --profile <profile> add dsh-ghg` |
-| [`dsh-qms-capa`] 🧊(https://github.com/PerryLink/dsh-qms-capa) | QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。 | `0.1.0-alpha.4` | `dsh plugin --profile <profile> add dsh-qms-capa` |
+| [`dsh-ghg`](https://github.com/PerryLink/dsh-ghg) 🧊 | 用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。 | `0.1.0-alpha.9` | `dsh plugin --profile <profile> add dsh-ghg` |
+| [`dsh-qms-capa`](https://github.com/PerryLink/dsh-qms-capa) 🧊 | QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。 | `0.1.0-alpha.5` | `dsh plugin --profile <profile> add dsh-qms-capa` |
 
 ### 关务与物流 Trade & Logistics
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-hs-candidate`] 🧊(https://github.com/PerryLink/dsh-hs-candidate) | HS Top3 候选、12 要素完整性、RVC 与税则版本门。 | `0.1.0-alpha.4` | `dsh plugin --profile <profile> add dsh-hs-candidate` |
-| [`dsh-freight-audit`] 🧊(https://github.com/PerryLink/dsh-freight-audit) | 运费 ratecard 版本、账单审计、recovery 汇总与差异导出。 | `0.1.0-alpha.5` | `dsh plugin --profile <profile> add dsh-freight-audit` |
+| [`dsh-hs-candidate`](https://github.com/PerryLink/dsh-hs-candidate) 🧊 | HS Top3 候选、12 要素完整性、RVC 与税则版本门。 | `0.1.0-alpha.5` | `dsh plugin --profile <profile> add dsh-hs-candidate` |
+| [`dsh-freight-audit`](https://github.com/PerryLink/dsh-freight-audit) 🧊 | 运费 ratecard 版本、账单审计、recovery 汇总与差异导出。 | `0.1.0-alpha.6` | `dsh plugin --profile <profile> add dsh-freight-audit` |
 
 ### 文档与模型 Docs & Models
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-docx-redline`] 🧊(https://github.com/PerryLink/dsh-docx-redline) | DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。 | `0.1.0-alpha.5` | `dsh plugin --profile <profile> add dsh-docx-redline` |
-| [`dsh-ifc-qto`] 🧊(https://github.com/PerryLink/dsh-ifc-qto) | IFC 构件/工程量清单与 CSV 导出。 | `0.1.0-alpha.5` | `dsh plugin --profile <profile> add dsh-ifc-qto` |
+| [`dsh-docx-redline`](https://github.com/PerryLink/dsh-docx-redline) 🧊 | DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。 | `0.1.0-alpha.6` | `dsh plugin --profile <profile> add dsh-docx-redline` |
+| [`dsh-ifc-qto`](https://github.com/PerryLink/dsh-ifc-qto) 🧊 | IFC 构件/工程量清单与 CSV 导出。 | `0.1.0-alpha.6` | `dsh plugin --profile <profile> add dsh-ifc-qto` |
 
 ### 校验工具 Verify Utilities
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-policy-ledger`](https://github.com/PerryLink/dsh-policy-ledger) | 只读安装诊断：能力快照、tarball 断言与安装日志分类。 | `0.2.0-alpha.3` | `dsh plugin --profile <profile> add dsh-policy-ledger` |
-| [`dsh-pim-lint`] 🧊(https://github.com/PerryLink/dsh-pim-lint) | PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。 | `0.1.0-alpha.2` | `dsh plugin --profile <profile> add dsh-pim-lint` |
-| [`dsh-eval-pack`](https://github.com/PerryLink/dsh-eval-pack) | 公开/合成 eval-pack lint 与确定性 JSON 评分。 | `0.1.0-alpha.2` | `dsh plugin --profile <profile> add dsh-eval-pack` |
+| [`dsh-policy-ledger`](https://github.com/PerryLink/dsh-policy-ledger) | 只读安装诊断：能力快照、tarball 断言与安装日志分类。 | `0.2.0-alpha.4` | `dsh plugin --profile <profile> add dsh-policy-ledger` |
+| [`dsh-pim-lint`](https://github.com/PerryLink/dsh-pim-lint) 🧊 | PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。 | `0.1.0-alpha.3` | `dsh plugin --profile <profile> add dsh-pim-lint` |
+| [`dsh-eval-pack`](https://github.com/PerryLink/dsh-eval-pack) | 公开/合成 eval-pack lint 与确定性 JSON 评分。 | `0.1.0-alpha.3` | `dsh plugin --profile <profile> add dsh-eval-pack` |
 
 两个 suite 也有 Gitee / GitCode 镜像：[dsh-finops-suite](https://gitee.com/perrylink/dsh-finops-suite) / [dsh-contract-suite](https://gitee.com/perrylink/dsh-contract-suite)。
 
@@ -69,8 +69,8 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | Suite | 包含 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-finops-suite`](https://github.com/PerryLink/dsh-finops-suite) | `dsh-einvoice` + `dsh-bankrec` + `dsh-ap-three-way` + `dsh-travel-recon` | `0.1.0-alpha.0` | `dsh plugin --profile <profile> add dsh-finops-suite` |
-| [`dsh-contract-suite`](https://github.com/PerryLink/dsh-contract-suite) | `dsh-legal-intake` + `dsh-legal-clause` | `0.1.0-alpha.0` | `dsh plugin --profile <profile> add dsh-contract-suite` |
+| [`dsh-finops-suite`](https://github.com/PerryLink/dsh-finops-suite) | `dsh-einvoice` + `dsh-bankrec` + `dsh-ap-three-way` + `dsh-travel-recon` | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-finops-suite` |
+| [`dsh-contract-suite`](https://github.com/PerryLink/dsh-contract-suite) | `dsh-legal-intake` + `dsh-legal-clause` | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-contract-suite` |
 
 ## 平台
 

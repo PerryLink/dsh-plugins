@@ -2,29 +2,44 @@
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>dsh-qms-capa — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
 <body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
-<main class="wrap"><h1>dsh-qms-capa</h1>
+<main class="wrap"><div align="center"><h1>dsh-qms-capa</h1>
+<p><a href="https://www.npmjs.com/package/dsh-qms-capa"><img src="https://img.shields.io/npm/v/dsh-qms-capa" alt="npm"></a>
+<a href="https://github.com/PerryLink/dsh-qms-capa/actions"><img src="https://github.com/PerryLink/dsh-qms-capa/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License"></a>
+<a href="https://github.com/topics/dsh-plugin"><img src="https://img.shields.io/badge/dsh--plugin-%E2%9C%93-green" alt="dsh-plugin"></a>
+<a href="https://perrylink.github.io/dsh-plugins/"><img src="https://img.shields.io/badge/docs-domain%20index-0b5fff" alt="docs"></a></p>
+<p><strong>QMS NCR ingest, batch alias resolution, impact evaluation, CAPA and 8D state.</strong></p>
 <blockquote>
-<p>🧊 <strong>FROZEN — 2026-10-31. No new features.</strong> This public/synthetic S1 demo is not GA; it stays installable and only genuine breakage is fixed.</p>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim.</p>
+</blockquote>
+<blockquote>
+<p>🧊 <strong>FROZEN — 2026-10-31. No new features.</strong> Installable; only genuine breakage is fixed.</p>
 </blockquote>
 <h2>Maintenance status: 🧊 FROZEN</h2>
-<p>Frozen on 2026-10-31. This repository is a public/synthetic S1 demo, not a validated product. The npm package stays installable; no new features are planned.</p>
-<p>QMS NCR ingest, batch alias resolution, impact evaluation, CAPA and 8D state for DeepSeek Harness.</p>
-<blockquote>
-<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim. All acceptance rows are <code>counted=false</code>.</p>
-</blockquote>
+<p>Frozen on 2026-10-31; the package stays installable, but feature work stops.</p>
+<p><a href="README.md">English</a> · <a href="README-zh.md">简体中文</a> · <a href="README-es.md">Español</a> · <a href="README-pt.md">Português</a> · <a href="README-hi.md">हिन्दी</a></p>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-qms-capa
+</code></pre>
+</div><p><img src="../assets/dsh-qms-capa-flow.svg" alt="Workflow diagram for dsh-qms-capa: local input, plugin, local output."></p>
+<p><em>Workflow: local input → plugin → local output. No model call is required.</em></p>
 <h2>Install</h2>
+<p>Install and verify:</p>
 <pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-qms-capa
 dsh --profile &lt;profile&gt; --dump-config | grep dsh-qms-capa
 </code></pre>
-<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
-<details>
-<summary>中文摘要</summary><p>QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。 安装：<code>dsh plugin --profile &lt;profile&gt; add dsh-qms-capa</code>。公开/合成、alpha、非 GA。</p>
-</details><h2>Tools</h2>
+<p>Uninstall:</p>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; remove dsh-qms-capa
+</code></pre>
+<h2>What it does</h2>
+<p>QMS NCR ingest, batch alias resolution, impact evaluation, CAPA and 8D state. Runs locally on DeepSeek Harness. The table below is the exact tool surface; the examples use the real command surface.</p>
+<p>Input and output stay local; nothing is uploaded.</p>
+<h2>Tools</h2>
+<p>Tool names and descriptions are kept in English to match the runtime output.</p>
 <table>
 <thead>
 <tr>
 <th>Tool</th>
-<th>What it does</th>
+<th>Purpose</th>
 <th>Risk</th>
 </tr>
 </thead>
@@ -54,22 +69,102 @@ dsh --profile &lt;profile&gt; --dump-config | grep dsh-qms-capa
 <td>R1 local write</td>
 </tr>
 </tbody></table>
-<h2>Input / output</h2>
-<p><strong>Input:</strong> NCR rows and batch aliases. <strong>Output:</strong> an impact report, CAPA state, and D1–D8 8D evidence/state. The package records local state; it does not operate a full QMS.</p>
-<h2>Limits / non-claims</h2>
+<h2>Quick start</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-qms-capa
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-qms-capa
+</code></pre>
+<h2>Limits</h2>
 <ul>
-<li>No full CAPA/8D ledger, approval workflow, e-signature, or Client surface.</li>
-<li>No ERP/MES integration and no automatic disposition.</li>
-<li>One MIT redacted NCR sample only; no customer plant data.</li>
-<li>No customer evidence, customer data, or production-readiness claim; all fixtures are public/synthetic.</li>
+<li>Public/synthetic only; no customer data or customer evidence.</li>
+<li>Alpha/partial, not counted, no GA or production-readiness claim.</li>
+<li>No model or network call unless a tool explicitly says so.</li>
+<li>The exact per-tool boundaries are in the table and <code>ACCEPTANCE.csv</code>.</li>
 </ul>
 <h2>Public sample</h2>
-<p>MIT redacted NCR sample; <code>ACCEPTANCE.csv</code> lists 6 public checks.</p>
+<p>Public/synthetic fixtures live in <code>test/fixtures/</code>; <code>ACCEPTANCE.csv</code> records the public checks with <code>counted=false</code>.</p>
 <h2>Development</h2>
 <pre><code class="language-sh">pnpm install --frozen-lockfile
-pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test &amp;&amp; pnpm gate:sku08
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test
 </code></pre>
-<h2>License</h2>
+<h2>Family</h2>
+<details>
+<summary>DSH domain plugin family (15 packages + 2 suites)</summary><table>
+<thead>
+<tr>
+<th>Package</th>
+<th>npm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-einvoice">dsh-einvoice</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-einvoice">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-docx-redline">dsh-docx-redline</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-docx-redline">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-policy-ledger">dsh-policy-ledger</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-policy-ledger">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ghg">dsh-ghg</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ghg">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-bankrec">dsh-bankrec</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-bankrec">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ap-three-way">dsh-ap-three-way</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ap-three-way">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ifc-qto">dsh-ifc-qto</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ifc-qto">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-qms-capa">dsh-qms-capa</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-qms-capa">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-legal-intake">dsh-legal-intake</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-legal-intake">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-legal-clause">dsh-legal-clause</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-legal-clause">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-freight-audit">dsh-freight-audit</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-freight-audit">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-hs-candidate">dsh-hs-candidate</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-hs-candidate">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-travel-recon">dsh-travel-recon</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-travel-recon">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-pim-lint">dsh-pim-lint</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-pim-lint">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-eval-pack">dsh-eval-pack</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-eval-pack">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-finops-suite">dsh-finops-suite</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-finops-suite">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-contract-suite">dsh-contract-suite</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-contract-suite">npm</a></td>
+</tr>
+</tbody></table>
+</details><h2>License</h2>
 <p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
 </main>
 <footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="../index.html">索引</a> · <a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>

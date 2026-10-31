@@ -2,49 +2,149 @@
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>dsh-contract-suite — PerryLink DSH 领域插件</title><link rel="stylesheet" href="../assets/style.css"></head>
 <body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic · not GA</span></header>
-<main class="wrap"><h1>dsh-contract-suite</h1>
-<p>One-command install for the <strong>法务运营</strong> family: <code>dsh-legal-intake</code> + <code>dsh-legal-clause</code>.</p>
+<main class="wrap"><div align="center"><h1>dsh-contract-suite</h1>
+<p><a href="https://www.npmjs.com/package/dsh-contract-suite"><img src="https://img.shields.io/npm/v/dsh-contract-suite" alt="npm"></a>
+<a href="https://github.com/PerryLink/dsh-contract-suite/actions"><img src="https://github.com/PerryLink/dsh-contract-suite/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License"></a>
+<a href="https://github.com/topics/dsh-plugin"><img src="https://img.shields.io/badge/dsh--plugin-%E2%9C%93-green" alt="dsh-plugin"></a>
+<a href="https://perrylink.github.io/dsh-plugins/"><img src="https://img.shields.io/badge/docs-domain%20index-0b5fff" alt="docs"></a></p>
+<p><strong>One-command install for dsh-legal-intake and dsh-legal-clause.</strong></p>
 <blockquote>
-<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> This is a bundle layer only; it has no code of its own. Member packages keep their own versions, README, acceptance rows and licenses.</p>
+<p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim.</p>
 </blockquote>
+<p><a href="README.md">English</a> · <a href="README-zh.md">简体中文</a> · <a href="README-es.md">Español</a> · <a href="README-pt.md">Português</a> · <a href="README-hi.md">हिन्दी</a></p>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-contract-suite
+</code></pre>
+</div><p><img src="../assets/dsh-contract-suite-flow.svg" alt="Workflow diagram for dsh-contract-suite: local input, plugin, local output."></p>
+<p><em>Workflow: local input → plugin → local output. No model call is required.</em></p>
 <h2>Install</h2>
+<p>Install and verify:</p>
 <pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-contract-suite
 dsh --profile &lt;profile&gt; --dump-config | grep dsh-contract-suite
 </code></pre>
-<p>Requires DSH <code>&gt;=0.2.1-rc.3 &lt;0.3.0</code> and Node <code>&gt;=24.9 &lt;25</code>.</p>
+<p>Uninstall:</p>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; remove dsh-contract-suite
+</code></pre>
+<h2>What it does</h2>
+<p>One-command install for dsh-legal-intake and dsh-legal-clause. Runs locally on DeepSeek Harness. The table below is the exact tool surface; the examples use the real command surface.</p>
+<p>Input and output stay local; nothing is uploaded.</p>
 <h2>Members</h2>
+<p>Tool names and descriptions are kept in English to match the runtime output.</p>
 <table>
 <thead>
 <tr>
-<th>Package</th>
+<th>Member</th>
 <th align="right">Version</th>
-<th>Install alone</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><code>dsh-legal-intake</code></td>
 <td align="right"><code>0.1.0-alpha.2</code></td>
-<td><code>dsh plugin --profile &lt;profile&gt; add dsh-legal-intake</code></td>
 </tr>
 <tr>
 <td><code>dsh-legal-clause</code></td>
 <td align="right"><code>0.1.0-alpha.4</code></td>
-<td><code>dsh plugin --profile &lt;profile&gt; add dsh-legal-clause</code></td>
 </tr>
 </tbody></table>
-<p>The suite pins exact member versions. It inserts one Cordis row per member; it does not copy their code, acceptance rows, or fixtures.</p>
-<h2>Limits / non-claims</h2>
-<ul>
-<li>No customer evidence, customer data, or production-readiness claim.</li>
-<li>Not a GA bundle; member packages are alpha/public-synthetic.</li>
-<li>Does not add tools of its own; install a member alone if you need only that tool.</li>
-<li>No Gitee/GitCode/npm mirror of member code in this package; it is a bundle manifest.</li>
-</ul>
-<h2>Development</h2>
-<pre><code class="language-sh">npm pack --dry-run
+<h2>Quick start</h2>
+<pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-contract-suite
+dsh --profile &lt;profile&gt; --dump-config | grep dsh-contract-suite
 </code></pre>
-<h2>License</h2>
-<p>Apache-2.0. See <code>LICENSE</code> and member packages&#39; notices.</p>
+<p><img src="../assets/dsh-contract-suite-install.gif" alt="Terminal demo: real dsh-contract-suite install output"></p>
+<p><em>Real <code>dsh plugin add dsh-finops-suite</code> output in a temporary profile; the path is temporary.</em></p>
+<h2>Limits</h2>
+<ul>
+<li>Public/synthetic only; no customer data or customer evidence.</li>
+<li>Alpha/partial, not counted, no GA or production-readiness claim.</li>
+<li>No model or network call unless a tool explicitly says so.</li>
+<li>The exact per-tool boundaries are in the table and <code>ACCEPTANCE.csv</code>.</li>
+</ul>
+<h2>Public sample</h2>
+<p>Public/synthetic fixtures live in <code>test/fixtures/</code>; <code>ACCEPTANCE.csv</code> records the public checks with <code>counted=false</code>.</p>
+<h2>Development</h2>
+<pre><code class="language-sh">pnpm install --frozen-lockfile
+pnpm build &amp;&amp; pnpm lint &amp;&amp; pnpm typecheck &amp;&amp; pnpm test
+</code></pre>
+<h2>Family</h2>
+<details>
+<summary>DSH domain plugin family (15 packages + 2 suites)</summary><table>
+<thead>
+<tr>
+<th>Package</th>
+<th>npm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-einvoice">dsh-einvoice</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-einvoice">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-docx-redline">dsh-docx-redline</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-docx-redline">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-policy-ledger">dsh-policy-ledger</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-policy-ledger">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ghg">dsh-ghg</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ghg">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-bankrec">dsh-bankrec</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-bankrec">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ap-three-way">dsh-ap-three-way</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ap-three-way">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ifc-qto">dsh-ifc-qto</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ifc-qto">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-qms-capa">dsh-qms-capa</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-qms-capa">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-legal-intake">dsh-legal-intake</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-legal-intake">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-legal-clause">dsh-legal-clause</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-legal-clause">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-freight-audit">dsh-freight-audit</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-freight-audit">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-hs-candidate">dsh-hs-candidate</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-hs-candidate">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-travel-recon">dsh-travel-recon</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-travel-recon">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-pim-lint">dsh-pim-lint</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-pim-lint">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-eval-pack">dsh-eval-pack</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-eval-pack">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-finops-suite">dsh-finops-suite</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-finops-suite">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-contract-suite">dsh-contract-suite</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-contract-suite">npm</a></td>
+</tr>
+</tbody></table>
+</details><h2>License</h2>
+<p>Apache-2.0. See <code>LICENSE</code>, <code>NOTICE</code>, <code>THIRD-PARTY-NOTICES</code>.</p>
 </main>
 <footer class="foot"><p>Public/synthetic alpha demos. No customer evidence, no customer data, no GA claim. Apache-2.0.</p><p><a href="../index.html">索引</a> · <a href="https://github.com/PerryLink/dsh-plugins">GitHub</a> · <a href="https://www.npmjs.com/~perrylink">npm</a> · <a href="https://gitee.com/perrylink/dsh-plugins">Gitee</a> · <a href="https://gitcode.com/PerryLink/dsh-plugins">GitCode</a></p></footer>
 </body></html>
