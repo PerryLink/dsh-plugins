@@ -100,6 +100,9 @@ the next version from `origin/main` rather than the stale local clone.
 | `dsh-ap-three-way` | `ap.duplicate_check` — duplicate invoice lines before matching | AP controls | 11/11 | `0.1.0-alpha.9` |
 | `dsh-travel-recon` | `travel.daily_limit_check` — per-employee daily cap with overage | travel policy practice | 9/9 | `0.1.0-alpha.11` |
 
+| `dsh-legal-clause` | `legal.coverage_check` — 12-key playbook coverage ratio | playbook practice | 11/11 | `0.1.0-alpha.10` |
+| `dsh-policy-ledger` | `trust.risk_matrix` — fleet R0-R3 counts and review list | risk model | 10/10 | `0.2.0-alpha.11` |
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
