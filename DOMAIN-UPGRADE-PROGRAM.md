@@ -60,7 +60,15 @@ better stability, without copying third-party code.
 
 ## 5. Progress
 
+Remaining: 8 packages still need P1 capability work (legal-intake, qms-capa, hs-candidate, freight-audit, docx-redline, ifc-qto, policy-ledger, eval-pack). ACCEPTANCE rows and captures are produced at the release step (P3).
+
 | Date | Package | Change | Evidence |
 |---|---|---|---|
 | 2026-11-01 | `dsh-ghg` | new `ghg.period_coverage`: covered/missing months, rows, kWh, tCO2e for a reporting year (completeness check) | `node --test test/ghg.test.mjs` → 9/9 pass |
+| 2026-11-01 | `dsh-bankrec` | new `bankrec.iban_check`: ISO 13616 IBAN validation (charset, country BBAN length, ISO 7064 mod 97-10) | `node --test test/*.test.mjs` → 12/12 pass |
+| 2026-11-01 | `dsh-pim-lint` | new `pim.gtin_structure` (GTIN-14 indicator / variable measure, GS1), duplicate-GTIN and price-precision rules | `node --test test/pim.test.mjs` → 5/5 pass |
+| 2026-11-01 | `dsh-einvoice` | new `invoice.tax_id_check`: USCC mod-31 check character (GB 32100-2015) | `node --test test/*.test.mjs` → 27/27 pass |
+| 2026-11-01 | `dsh-ap-three-way` | new `ap.tolerance_match`: price/quantity/amount tolerances in basis points, explicit exception reasons, header-only GRN handled | `node --test test/*.test.mjs` → 8/8 pass |
+| 2026-11-01 | `dsh-travel-recon` | new `travel.reuse_check`: cross-trip invoice/card reuse (double claim) before ingest | `node --test test/*.test.mjs` → 7/7 pass |
+| 2026-11-01 | `dsh-legal-clause` | new `legal.clause_integrity`: duplicate / missing / out-of-order clause numbers | `node --test test/*.test.mjs` → 8/8 pass |
 | 2026-11-01 | all 15 + 2 suites | frozen status removed; all active | `check-docs` / `check-taxonomy` green |
