@@ -62,3 +62,33 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 - External directories (dshfind, dsh.market, awesome-*) will pick up the new versions/categories on their own crawl or on the next submission; no new third-party PR was opened in this pass.
 - Legacy mainline PRIVACY/icon/five-language debt is tracked; it is deliberately not bulk-rewritten.
 - `dsh-policy-ledger` / `dsh-docx-redline` / `dsh-ghg` keep their npm names; the marketplace display names now qualify them (Install Doctor, DOCX Inspect & Text Diff, Electricity GHG Scope 2).
+
+## Follow-up — taxonomy, roster, mirrors and Dependabot
+
+### Live catalog
+
+- All 126 catalog items now use the **12-category** vocabulary in `categories` (business-ops, compliance, content, data, developer-tools, integrations, interface, observability, platform, research, security, workflow).
+- The archetype/domain projection is the **`/v1/taxonomy` sidecar** (`dsh-taxonomy-sidecar/1`, 126 packages, 12 categories, 16 archetypes), generated beside the v1 page so the provider schema stays valid.
+- `dsh-catalog` CI, deploy and the `/v1/taxonomy` live-smoke pass; the deployed payload was verified through a commit-pinned jsDelivr read as 126 items / 12 categories.
+
+### Roster closure
+
+- [ROSTER.md](../../ROSTER.md) defines the exact three surfaces: 125 family rows (107/15/3), 92 `dsh-kit` install specs (39 default + 53 opt-in), and 126 catalog records (122 shared + 3 family-only infrastructure + 4 catalog-only).
+- `family.json` now carries `installScope`; the generated taxonomy page has an install-scope filter and 125 per-package pages.
+
+### Mirrors
+
+- Gitee: new releases and assets for 5 flagships (einvoice, bankrec, ghg, hs-candidate, ifc-qto) plus both suites.
+- GitCode: new releases and assets for 3 flagships (einvoice, bankrec, docx-redline) plus both suites.
+- Both aggregates were updated to the latest docs/roster commit.
+
+### Dependabot
+
+- Audited 432 PerryLink repos; **191** had `.github/dependabot.yml`; all 191 are now absent on the branch ref.
+- Open Dependabot PRs: **0**; all remaining Dependabot PR records are closed history (GitHub does not expose PR deletion).
+- **356+** `dependabot/*` branches deleted.
+- Automated security updates were not enabled on the repos where the API was queried; vulnerability alerts were left intact.
+
+### Remaining external blocker
+
+- GitHub Pages deployments for the 125 per-package pages are built (docs CI green, files reachable through jsDelivr) but the Pages deploy is blocked by a stale `b412d6b` in-progress deployment lock. The repo Pages source has been switched to the Actions workflow; a retry is pending after the lock clears.
