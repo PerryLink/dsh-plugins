@@ -2065,7 +2065,7 @@
       "repo": "PerryLink/dsh-auto-review",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-autotier",
@@ -2083,7 +2083,7 @@
       "repo": "PerryLink/dsh-autotier",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-budget",
@@ -2100,7 +2100,7 @@
       "repo": "PerryLink/dsh-budget",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-cert-mcp",
@@ -2118,7 +2118,7 @@
       "repo": "PerryLink/dsh-cert-mcp",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-checkpoint-rewind",
@@ -2135,7 +2135,7 @@
       "repo": "PerryLink/dsh-checkpoint-rewind",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-claude-move",
@@ -2152,7 +2152,7 @@
       "repo": "PerryLink/dsh-claude-move",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-click",
@@ -2170,7 +2170,7 @@
       "repo": "PerryLink/dsh-click",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-composer-history",
@@ -2187,7 +2187,7 @@
       "repo": "PerryLink/dsh-composer-history",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-data-quality",
@@ -2204,7 +2204,7 @@
       "repo": "PerryLink/dsh-data-quality",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-defend",
@@ -2221,7 +2221,7 @@
       "repo": "PerryLink/dsh-defend",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-doublecheck",
@@ -2238,7 +2238,7 @@
       "repo": "PerryLink/dsh-doublecheck",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-draw",
@@ -2255,7 +2255,7 @@
       "repo": "PerryLink/dsh-draw",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-fast",
@@ -2272,7 +2272,7 @@
       "repo": "PerryLink/dsh-fast",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-fund-research",
@@ -2289,7 +2289,7 @@
       "repo": "PerryLink/dsh-fund-research",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-industry-research",
@@ -2306,7 +2306,7 @@
       "repo": "PerryLink/dsh-industry-research",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-laya",
@@ -2323,7 +2323,7 @@
       "repo": "laya-family/dsh-laya",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-library",
@@ -2340,7 +2340,7 @@
       "repo": "PerryLink/dsh-library",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-local-ai",
@@ -2357,7 +2357,7 @@
       "repo": "PerryLink/dsh-local-ai",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-lsp-actions",
@@ -2374,7 +2374,7 @@
       "repo": "PerryLink/dsh-lsp-actions",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-mask",
@@ -2391,7 +2391,7 @@
       "repo": "PerryLink/dsh-mask",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-mcp-panel",
@@ -2408,7 +2408,7 @@
       "repo": "PerryLink/dsh-mcp-panel",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-memento",
@@ -2425,7 +2425,7 @@
       "repo": "PerryLink/dsh-memento",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-observe",
@@ -2442,7 +2442,7 @@
       "repo": "PerryLink/dsh-observe",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-output-styles",
@@ -2459,7 +2459,7 @@
       "repo": "PerryLink/dsh-output-styles",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-permission-rules",
@@ -2476,7 +2476,7 @@
       "repo": "PerryLink/dsh-permission-rules",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-plugin-guide",
@@ -2493,7 +2493,7 @@
       "repo": "PerryLink/dsh-plugin-guide",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-plugin-upgrade",
@@ -2510,7 +2510,7 @@
       "repo": "PerryLink/dsh-plugin-upgrade",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-reach",
@@ -2527,7 +2527,7 @@
       "repo": "PerryLink/dsh-reach",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-research-report",
@@ -2544,7 +2544,7 @@
       "repo": "PerryLink/dsh-research-report",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-score",
@@ -2561,7 +2561,7 @@
       "repo": "PerryLink/dsh-score",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-session-sync",
@@ -2578,7 +2578,7 @@
       "repo": "PerryLink/dsh-session-sync",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-talk",
@@ -2595,7 +2595,7 @@
       "repo": "PerryLink/dsh-talk",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-test-drive",
@@ -2612,7 +2612,7 @@
       "repo": "PerryLink/dsh-test-drive",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-translate",
@@ -2629,7 +2629,7 @@
       "repo": "PerryLink/dsh-translate",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-github",
@@ -2646,7 +2646,7 @@
       "repo": "PerryLink/dsh-github",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-plugin-doctor",
@@ -2663,7 +2663,7 @@
       "repo": "PerryLink/dsh-plugin-doctor",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-plugin-kit",
@@ -2680,7 +2680,7 @@
       "repo": "PerryLink/dsh-plugin-kit",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-skill-pack-security-provider",
@@ -2697,7 +2697,7 @@
       "repo": "PerryLink/dsh-skill-pack-security-provider",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-ticktick",
@@ -2714,7 +2714,7 @@
       "repo": "PerryLink/dsh-ticktick",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "provisional"
+      "mappingConfidence": "reviewed"
     },
     {
       "id": "dsh-community-bench",

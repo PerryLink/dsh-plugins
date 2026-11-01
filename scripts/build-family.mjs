@@ -117,7 +117,7 @@ for (const id of mainline) {
     repo: id === 'dsh-laya' ? 'laya-family/dsh-laya' : `PerryLink/${id}`,
     source: 'dsh-kit/plugins.txt',
     installScope: 'mainline-default',
-    mappingConfidence: 'provisional',
+    mappingConfidence: 'reviewed',
   });
 }
 
