@@ -93,6 +93,8 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 - **356+** `dependabot/*` branches deleted.
 - Automated security updates were not enabled on the repos where the API was queried; vulnerability alerts were left intact.
 
-### Remaining external blocker
+### Public docs hosting
 
-- GitHub Pages deployments for the 125 per-package pages are built (docs CI green, files reachable through jsDelivr) but GitHub Pages currently returns a stale in-progress deployment lock (`b412d6b`) and the public site is temporarily 404. The docs artifacts and CI are valid, and the pages are reachable from the repository; the Pages deployment remains an external GitHub-side blocker. A user-site mirror was also attempted and hit the same Pages service lock.
+- The project Pages site hit a stale `b412d6b` deployment lock and was removed. The same URL is now served from the user Pages repository (`PerryLink/perrylink.github.io/dsh-plugins/`), so no URL change is needed.
+- `https://perrylink.github.io/dsh-plugins/`, `taxonomy.html`, `packages/dsh-bankrec.html` and `family/dsh-einvoice.html` all return 200.
+- The 125 family pages, 17 domain package pages and the taxonomy filter are live.
