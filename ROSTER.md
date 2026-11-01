@@ -14,7 +14,7 @@
 | `domain` | 17 | 15 domain packages + 2 domain suites; installed from the domain index or a suite |
 | `excluded-retired` | 3 | `dsh-background-agents`, `dsh-session-pin`, `dsh-team-rooms`; never installed by a fresh setup |
 | `infrastructure` | 3 | `dsh-kit`, `dsh-catalog`, `dsh-plugin-certification`; support surfaces, not runtime plugins |
-| **Total** | **125** | **107 active / 15 frozen / 3 retired** |
+| **Total** | **125** | **114 active / 8 frozen / 3 retired** |
 
 ## 2. `dsh-kit` — 96 install specs
 
@@ -55,6 +55,8 @@ The 4 catalog-only rows are intentionally visible because they are installable o
 | Domain packages without a suite | 9 | install individually from the [domain index](https://perrylink.github.io/dsh-plugins/) |
 | Catalog-only compliance tools | 10 | install the exact npm package; they are not in `plugins.txt` |
 | Retired | 0 | never installed by a fresh setup |
+
+> **Status note (2026-11-01):** all 15 domain packages and both suites are `active`. The 8 remaining `frozen` rows are legacy mainline utilities (`dsh-autotier`, `dsh-budget`, `dsh-cert-mcp`, `dsh-claude-move`, `dsh-defend`, `dsh-draw`, `dsh-reach`) plus `dsh-community-bench`.
 
 ## 5. Rules
 

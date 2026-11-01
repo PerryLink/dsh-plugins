@@ -1,0 +1,66 @@
+# Domain upgrade program — 2026-11-01
+
+**Scope:** the 15 domain packages + 2 suites in [RELEASE-MANIFEST.md](../RELEASE-MANIFEST.md).
+**Goal:** each package must carry at least the capability set its category expects, plus more depth and
+better stability, without copying third-party code.
+
+## 1. Intellectual-property rules (non-negotiable)
+
+1. **Clean room.** Implement from public *specifications and standards*, not from another project's source.
+   Do not read a competitor's implementation to transcribe it.
+2. **No code, comments, identifiers, fixtures or test data lifted** from MIT/Apache/other projects.
+3. **Spec-first provenance.** Every new capability records the standard and clause it implements in
+   `CHANGELOG.md` (e.g. "EN 16931 §BG-25", "GHG Protocol Scope 2 ch. 6").
+4. **Own fixtures only.** Tests use our own public/synthetic fixtures; no third-party sample files.
+5. **No licence drift.** Our packages stay Apache-2.0 and contain no borrowed licence headers or NOTICE
+   entries. If a third-party runtime dependency is unavoidable, pin it and record it in
+   `THIRD-PARTY-NOTICES` — never vendor its source into our tree.
+6. **No scraped competitor data** in fixtures, docs, screenshots or marketing copy.
+
+## 2. Standard anchors per package
+
+| Package | Public standard / spec to implement against |
+|---|---|
+| `dsh-einvoice` | EN 16931-1 (UBL/CII), PEPPOL BIS 3.0, XRechnung 3.x, Factur-X/ZUGFeRD |
+| `dsh-bankrec` | ISO 20022 camt.053/054, MT940, IBAN ISO 13616 + mod-97, ISO 4217 |
+| `dsh-ap-three-way` | PO–GR–invoice tolerance model, ISO 20022 pain.001 |
+| `dsh-travel-recon` | Card/expense statement matching, ISO 4217, merchant normalisation |
+| `dsh-legal-intake` | Matter intake fields, conflicts/duplicate-party checks |
+| `dsh-legal-clause` | Clause taxonomy + playbook deviation rules |
+| `dsh-ghg` | GHG Protocol Scope 2 guidance, ESRS E1, national grid factor tables |
+| `dsh-qms-capa` | ISO 9001:2015 §8.5.6/§10.2, 8D / 5-Why structure |
+| `dsh-hs-candidate` | HS 2022 nomenclature, RVC/regional-value rules |
+| `dsh-freight-audit` | Rate-card versioning, accessorials, net/gross charge model |
+| `dsh-docx-redline` | OOXML WML (ISO/IEC 29500), tracked-change semantics |
+| `dsh-ifc-qto` | IFC 4.3 (ISO 16739-1), quantity-take-off model |
+| `dsh-pim-lint` | GS1 GTIN rules, EAN-13/UPC check digit, attribute completeness |
+| `dsh-policy-ledger` | Policy versioning, attestation and evidence chain |
+| `dsh-eval-pack` | Deterministic eval harness, pass@k / rubric scoring |
+
+## 3. Phases
+
+- **P1 Capability parity** — close the functional gaps in §2; one tool or handler per gap, with tests.
+- **P2 Stability** — explicit limits (row/size caps), deterministic ordering, stable error codes
+  (`E_*`), no silent coercion, round-trip checks.
+- **P3 Evidence** — one `ACCEPTANCE.csv` row per new capability, a real command capture (no generated
+  cards) and a `screenshots.json` entry naming the command and pass count.
+- **P4 Release** — version bump, npm publish with provenance, GitHub pre-release, mirror assets,
+  docs + roster + manifest refresh.
+
+## 4. Definition of done (per package)
+
+```text
+[ ] every P1 gap closed with a test that fails before and passes after
+[ ] P2 limits/errors covered by tests
+[ ] ACCEPTANCE.csv rows updated (public/synthetic, partial, not counted)
+[ ] real terminal capture replaces any generated card
+[ ] CHANGELOG names the standard + clause for each new capability
+[ ] npm latest + GitHub pre-release + docs page agree on the version
+```
+
+## 5. Progress
+
+| Date | Package | Change | Evidence |
+|---|---|---|---|
+| 2026-11-01 | `dsh-ghg` | new `ghg.period_coverage`: covered/missing months, rows, kWh, tCO2e for a reporting year (completeness check) | `node --test test/ghg.test.mjs` → 9/9 pass |
+| 2026-11-01 | all 15 + 2 suites | frozen status removed; all active | `check-docs` / `check-taxonomy` green |

@@ -162,7 +162,7 @@
         "emissions",
         "energy"
       ],
-      "status": "frozen"
+      "status": "active"
     },
     {
       "name": "dsh-qms-capa",
@@ -185,7 +185,7 @@
         "quality",
         "manufacturing"
       ],
-      "status": "frozen"
+      "status": "active"
     },
     {
       "name": "dsh-hs-candidate",
@@ -208,7 +208,7 @@
         "trade",
         "customs"
       ],
-      "status": "frozen"
+      "status": "active"
     },
     {
       "name": "dsh-freight-audit",
@@ -231,7 +231,7 @@
         "logistics",
         "freight"
       ],
-      "status": "frozen"
+      "status": "active"
     },
     {
       "name": "dsh-docx-redline",
@@ -253,7 +253,7 @@
       "domains": [
         "documents"
       ],
-      "status": "frozen"
+      "status": "active"
     },
     {
       "name": "dsh-ifc-qto",
@@ -276,7 +276,7 @@
         "construction",
         "bim"
       ],
-      "status": "frozen"
+      "status": "active"
     },
     {
       "name": "dsh-policy-ledger",
@@ -322,7 +322,7 @@
         "retail",
         "pim"
       ],
-      "status": "frozen"
+      "status": "active"
     },
     {
       "name": "dsh-eval-pack",
