@@ -1,8 +1,8 @@
 # DSH Plugin Taxonomy v1 — draft
 
-**Status:** proposal for review, 2026-11-01. Not yet wired into the published catalog.  
+**Status:** v1 draft, implemented 2026-11-01 in the docs view and catalog metadata. The live catalog has 126 npm records; this taxonomy has 125 family rows.  
 **Companion analysis:** [DSH-PLUGIN-PORTFOLIO-ANALYSIS-2026-11-01.md](docs/analysis/DSH-PLUGIN-PORTFOLIO-ANALYSIS-2026-11-01.md)  
-**Machine-readable seed:** [taxonomy.v1.json](taxonomy.v1.json) · **Validator:** `node scripts/check-taxonomy.mjs`
+**Machine-readable seed:** [taxonomy.v1.json](taxonomy.v1.json) · **Validator:** `node scripts/check-taxonomy.mjs` · **Execution record:** [EXECUTION-2026-11-01.md](docs/analysis/EXECUTION-2026-11-01.md)
 
 ## 1. Why four axes
 

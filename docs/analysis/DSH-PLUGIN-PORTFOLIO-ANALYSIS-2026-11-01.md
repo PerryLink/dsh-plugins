@@ -3,6 +3,7 @@
 **日期**：2026-11-01 · **范围**：PerryLink 名下 DSH 插件家族（profile 口径 125 个仓 / 107 active / 15 frozen / 3 retired）＋ 本地可核对的 62 个合规插件、17 个领域包/套件、54 个主线插件目录。  
 **边界**：只使用公开仓库、npm 元数据、README、`packages.json`、`dsh-catalog` 与本地静态站点；不引用客户数据，不把 alpha 写成 GA。  
 **配套分类文件**：[TAXONOMY.md](../../TAXONOMY.md) · [taxonomy.v1.json](../../taxonomy.v1.json) · [validator](../../scripts/check-taxonomy.mjs)  
+**执行记录**：[EXECUTION-2026-11-01.md](EXECUTION-2026-11-01.md)  
 **结论先行**：新一批领域项目**不应并入原来的 checker 分类**；它们应作为独立的 **Domain Operations** 产品线，用 `archetype=checker` 做交叉标签，而不是把“能核对”当成“属于 checker 家族”。
 
 ---
