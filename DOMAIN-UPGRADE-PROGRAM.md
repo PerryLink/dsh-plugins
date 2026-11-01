@@ -103,6 +103,18 @@ the next version from `origin/main` rather than the stale local clone.
 | `dsh-legal-clause` | `legal.coverage_check` — 12-key playbook coverage ratio | playbook practice | 11/11 | `0.1.0-alpha.10` |
 | `dsh-policy-ledger` | `trust.risk_matrix` — fleet R0-R3 counts and review list | risk model | 10/10 | `0.2.0-alpha.11` |
 
+## 5c. State at 2026-11-01 22:10 CST
+
+Every one of the 15 domain packages now carries **two tested capabilities** (a core domain check plus a
+second orthogonal one), its own `ACCEPTANCE.csv` rows, two real captures, a published release with npm
+provenance and a GitHub pre-release, and entries in `packages.json` / `RELEASE-MANIFEST.md` / the docs
+site. Totals: **202 tests**, **111 acceptance rows**, **30 captures**, 17 releases (15 packages + 2
+suites). Freeze labels: 0 on every live surface.
+
+Known gaps for a deeper pass (deliberately out of scope here): full EN 16931 rule engine for e-invoice,
+camt.056/ISO 20022 pain.001 for bankrec, ESRS datapoints beyond partial E1 for ghg, GS1 prefix-length
+tables, and IFC property-set traversal for quantity take-off.
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
