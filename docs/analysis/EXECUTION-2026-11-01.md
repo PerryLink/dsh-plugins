@@ -107,7 +107,7 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 - `dsh-wechat` is a third-party bridge and was deliberately excluded.
 - Result on local disk: **54/54** have five READMEs, `PRIVACY`, `icon`, `SECURITY`, `CONTRIBUTING`, `CHANGELOG`, `screenshots.json`, flow SVG and GIF.
 - `dsh-wechat` is a third-party fork; its docs explicitly say so and do not claim PerryLink ownership or a separate npm release.
-- Generated cards/GIFs are explicitly captioned as documentation baselines, not test evidence. The four support dirs use short localized landing pages, not full translations.
+- The six legacy packages that previously had generated cards/GIFs were replaced with real command output on 2026-11-01; each `screenshots.json` names the command, pass count and whether it was a full or selected suite. Generated support/local-only cards remain for non-package directories. The four support dirs use short localized landing pages, not full translations.
 
 ### External directory (1024Store)
 
