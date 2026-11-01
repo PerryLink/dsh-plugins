@@ -85,6 +85,9 @@ the next version from `origin/main` rather than the stale local clone.
 
 | `dsh-einvoice` | `invoice.code_check` — ISO 4217 currency, ISO 3166-1 country, EN 16931 BR-CL-17 VAT category | EN 16931 | 31/31 | `0.2.0-alpha.9` |
 
+| `dsh-pim-lint` | `pim.sscc_check` — SSCC 18-digit GS1 mod-10 | GS1 General Specifications | 8/8 | `0.1.0-alpha.9` |
+| `dsh-docx-redline` | `doc.relationship_check` — OOXML relationship integrity | ISO/IEC 29500 package model | 22/22 | `0.1.0-alpha.11` |
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
