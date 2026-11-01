@@ -88,6 +88,9 @@ the next version from `origin/main` rather than the stale local clone.
 | `dsh-pim-lint` | `pim.sscc_check` — SSCC 18-digit GS1 mod-10 | GS1 General Specifications | 8/8 | `0.1.0-alpha.9` |
 | `dsh-docx-redline` | `doc.relationship_check` — OOXML relationship integrity | ISO/IEC 29500 package model | 22/22 | `0.1.0-alpha.11` |
 
+| `dsh-qms-capa` | `qms.capa_effectiveness` — close-readiness: state gate, overdue, recurrence | ISO 9001:2015 10.2 | 13/13 | `0.1.0-alpha.10` |
+| `dsh-freight-audit` | `freight.accessorial_check` — charge types, duplicates, agreed list, cap | freight audit practice | 13/13 | `0.1.0-alpha.11` |
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
