@@ -102,10 +102,11 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 
 ### Legacy mainline documentation sweep
 
-- 49 remote repositories received a documentation commit: 44 publishable packages + 5 support repositories.
+- 50 remote repositories received a documentation commit: 44 publishable packages + 5 support repositories + the third-party `dsh-wechat` fork.
 - 4 local-only support directories (`dsh-handbook`, `dsh-plan-tracker`, `dsh-ticktick-handoff`, `dsh-wechat-handoff`) also received local docs; they have no standalone remote repository.
 - `dsh-wechat` is a third-party bridge and was deliberately excluded.
-- Result on local disk: 53/54 have five READMEs, `PRIVACY`, `icon`, `SECURITY`, `CONTRIBUTING`, `CHANGELOG`, `screenshots.json`, flow SVG and GIF; the only missing row is `dsh-wechat` by ownership.
+- Result on local disk: **54/54** have five READMEs, `PRIVACY`, `icon`, `SECURITY`, `CONTRIBUTING`, `CHANGELOG`, `screenshots.json`, flow SVG and GIF.
+- `dsh-wechat` is a third-party fork; its docs explicitly say so and do not claim PerryLink ownership or a separate npm release.
 - Generated cards/GIFs are explicitly captioned as documentation baselines, not test evidence. The four support dirs use short localized landing pages, not full translations.
 
 ### External directory (1024Store)
