@@ -23,6 +23,6 @@ jobs:
       - name: Rebuild taxonomy page
         run: node scripts/build-docs.mjs
       - name: Verify checked-in generated files
-        run: git diff --exit-code -- family.json views docs/taxonomy.html
+        run: git diff --exit-code -- family.json views docs/taxonomy.html docs/family
       - name: Verify package/docs metadata
         run: node scripts/check-docs.mjs

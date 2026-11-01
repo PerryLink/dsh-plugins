@@ -44,6 +44,10 @@ for (const p of [...packages.packages, ...packages.suites]) {
   if (!index.includes(`packages/${p.name}.html`)) errors.push(`docs/index.html: no card for ${p.name}`);
 }
 if (!fs.existsSync(path.join(root, 'docs', 'taxonomy.html'))) errors.push('docs/taxonomy.html missing');
+for (const item of family.items) {
+  if (!fs.existsSync(path.join(root, 'docs', 'family', `${item.id}.html`))) errors.push(`docs/family: missing ${item.id}.html`);
+}
+
 if (!read(path.join(root, 'docs', 'taxonomy.html')).includes(`${family.counts.total} rows`)) errors.push('taxonomy page count does not match family.json');
 const activeMedia = ['dsh-einvoice','dsh-bankrec','dsh-ap-three-way','dsh-travel-recon','dsh-legal-intake','dsh-legal-clause','dsh-policy-ledger','dsh-eval-pack'];
 for (const name of activeMedia) {
@@ -78,6 +82,11 @@ if (family.counts.total !== 125) errors.push(`family.json: expected 125 rows, go
 if (family.counts.active !== 107) errors.push(`family.json: expected 107 active, got ${family.counts.active}`);
 if (family.counts.frozen !== 15) errors.push(`family.json: expected 15 frozen, got ${family.counts.frozen}`);
 if (family.counts.retired !== 3) errors.push(`family.json: expected 3 retired, got ${family.counts.retired}`);
+const scopeCounts = {};
+for (const item of family.items) scopeCounts[item.installScope] = (scopeCounts[item.installScope] || 0) + 1;
+const expectedScopes = { 'mainline-default':39, 'mainline-opt-in':53, 'catalog-only':10, domain:17, 'excluded-retired':3, infrastructure:3 };
+for (const [k, v] of Object.entries(expectedScopes)) if (scopeCounts[k] !== v) errors.push(`family.json: installScope ${k} ${scopeCounts[k]} != ${v}`);
+
 
 const cats = new Set(taxonomy.categories.map((x) => x.id));
 const arches = new Set(taxonomy.archetypes.map((x) => x.id));

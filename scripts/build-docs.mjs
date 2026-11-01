@@ -30,11 +30,12 @@ const statusBadge = (s) => `<span class="status ${esc(s)}">${esc(s)}</span>`;
 const body = rows.map((x) => {
   const name = x.displayName || x.id;
   const repo = x.repo?.startsWith('http') ? x.repo : `https://github.com/${x.repo}`;
-  return `<tr data-category="${esc(x.category)}" data-archetype="${esc(x.archetype)}" data-status="${esc(x.status)}" data-collection="${esc(x.collection)}">
-<td><a href="${esc(repo)}">${esc(x.id)}</a><br><small>${esc(name)}</small></td>
+  return `<tr data-category="${esc(x.category)}" data-archetype="${esc(x.archetype)}" data-status="${esc(x.status)}" data-collection="${esc(x.collection)}" data-scope="${esc(x.installScope)}">
+<td><a href="family/${esc(x.id)}.html">${esc(x.id)}</a><br><small>${esc(name)}</small></td>
 <td>${esc(collections.get(x.collection)?.id ?? x.collection)}</td>
 <td>${esc(catLabel(x.category))}</td>
 <td><code>${esc(x.archetype)}</code></td>
+<td><code>${esc(x.installScope)}</code></td>
 <td>${esc((x.domains || []).join(', '))}</td>
 <td>${statusBadge(x.status)}</td></tr>`;
 }).join('\n');
@@ -52,10 +53,11 @@ const html = `<!doctype html>
 <label>Category <select id="f-category"><option value="">all</option>${option([...new Set(rows.map((x) => x.category))].sort(), catLabel)}</select></label>
 <label>Archetype <select id="f-archetype"><option value="">all</option>${option([...new Set(rows.map((x) => x.archetype))].sort(), archLabel)}</select></label>
 <label>Status <select id="f-status"><option value="">all</option>${option(['active', 'frozen', 'retired'], (v) => v)}</select></label>
+<label>Install scope <select id="f-scope"><option value="">all</option>${option([...new Set(rows.map((x) => x.installScope))].sort(), (v) => v)}</select></label>
 <span id="count" class="meta"></span>
 </div>
 <noscript><p class="note">JavaScript is off; the full table is shown.</p></noscript>
-<table id="family"><thead><tr><th>Package</th><th>Collection</th><th>Category</th><th>Archetype</th><th>Domains</th><th>Status</th></tr></thead>
+<table id="family"><thead><tr><th>Package</th><th>Collection</th><th>Category</th><th>Archetype</th><th>Install scope</th><th>Domains</th><th>Status</th></tr></thead>
 <tbody>
 ${body}
 </tbody></table>
@@ -64,7 +66,7 @@ ${body}
 <footer class="foot"><p>Public/synthetic alpha family. No customer evidence, no GA claim. Apache-2.0.</p><p><a href="index.html">索引</a> · <a href="../TAXONOMY.md">TAXONOMY.md</a> · <a href="../family.json">family.json</a></p></footer>
 <script>
 const rows = [...document.querySelectorAll('#family tbody tr')];
-const fields = ['collection','category','archetype','status'];
+const fields = ['collection','category','archetype','status','scope'];
 const selects = Object.fromEntries(fields.map(f => [f, document.getElementById('f-'+f)]));
 function apply(){
   const active = Object.fromEntries(fields.map(f => [f, selects[f].value]));
@@ -83,3 +85,47 @@ apply();
 `;
 fs.writeFileSync(path.join(root, 'docs', 'taxonomy.html'), html);
 console.log(`wrote docs/taxonomy.html (${rows.length} rows)`);
+// Full family pages. These are deliberately metadata pages, not copies of
+// each README: the package README stays the source for tool-level detail.
+const familyDir = path.join(root, 'docs', 'family');
+fs.mkdirSync(familyDir, { recursive: true });
+for (const x of rows) {
+  const repo = x.repo?.startsWith('http') ? x.repo : `https://github.com/${x.repo}`;
+  const npm = x.npm ? `https://www.npmjs.com/package/${x.npm}` : null;
+  const members = Array.isArray(x.members) && x.members.length
+    ? `<h2>Members</h2><table><thead><tr><th>Member</th><th>Pinned version</th></tr></thead><tbody>${x.members.map((m) => `<tr><td><code>${esc(m.id)}</code></td><td><code>${esc(m.version)}</code></td></tr>`).join('')}</tbody></table>`
+    : '';
+  const related = Array.isArray(x.relatedCheckers) && x.relatedCheckers.length
+    ? `<h2>Related checkers</h2><ul>${x.relatedCheckers.map((id) => `<li><a href="${esc(id)}.html"><code>${esc(id)}</code></a></li>`).join('')}</ul>`
+    : '';
+  const relatedTools = Array.isArray(x.relatedTools) && x.relatedTools.length
+    ? `<h2>Related tools</h2><ul>${x.relatedTools.map((id) => `<li><a href="${esc(id)}.html"><code>${esc(id)}</code></a></li>`).join('')}</ul>`
+    : '';
+  const positioning = x.positioning || (x.collection === 'mainline'
+    ? 'A mainline PerryLink DSH package. See the repository README for its tool surface and boundary.'
+    : x.collection === 'infrastructure'
+      ? 'Family infrastructure; not a runtime plugin.'
+      : 'A PerryLink DSH family package. See the repository README for its tool surface and boundary.');
+  const html = `<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(x.id)} — DSH family</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../taxonomy.html">DSH family taxonomy</a><span class="badge">${esc(x.status)}</span></header>
+<main class="wrap">
+<p class="meta"><a href="../index.html">index</a> / <a href="../taxonomy.html">taxonomy</a> / ${esc(x.collection)}</p>
+<h1>${esc(x.id)}</h1>
+<p class="lead">${esc(x.displayName || x.id)}</p>
+<p>${esc(positioning)}</p>
+<p class="meta">Category: <code>${esc(x.category)}</code> · Archetype: <code>${esc(x.archetype)}</code> · Domains: ${(x.domains || []).map((d) => `<code>${esc(d)}</code>`).join(', ') || '—'} · Collection: <code>${esc(x.collection)}</code> · Install scope: <code>${esc(x.installScope)}</code> · Status: <code>${esc(x.status)}</code></p>
+<p><a href="${esc(repo)}">Repository</a>${npm ? ` · <a href="${esc(npm)}">npm</a>` : ''}${x.docs ? ` · <a href="${esc(x.docs)}">docs</a>` : ''}${x.suite ? ` · suite: <code>${esc(x.suite)}</code>` : ''}</p>
+${members}
+${related}
+${relatedTools}
+<p class="note">Public/synthetic alpha family metadata. No customer evidence, no GA claim. Apache-2.0.</p>
+</main>
+<footer class="foot"><p><a href="../taxonomy.html">taxonomy</a> · <a href="../index.html">index</a> · <a href="../../TAXONOMY.md">TAXONOMY.md</a></p></footer>
+</body></html>
+`;
+  fs.writeFileSync(path.join(familyDir, `${x.id}.html`), html);
+}
+console.log(`wrote docs/family (${rows.length} pages)`);
+

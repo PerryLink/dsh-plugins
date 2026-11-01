@@ -86,11 +86,17 @@ const mainlineMeta = {
 
 const items = [];
 for (const t of taxonomy.items) {
+  const installScope = t.collection === 'domain-ops'
+    ? 'domain'
+    : t.collection === 'compliance'
+      ? (t.roster === false ? 'catalog-only' : 'mainline-opt-in')
+      : (t.collection === 'infrastructure' ? 'infrastructure' : 'catalog-only');
   items.push({
     ...t,
     repo: t.repo ?? `PerryLink/${t.id}`,
     npm: t.npm ?? t.id,
     source: 'taxonomy.v1.json',
+    installScope,
   });
 }
 
@@ -110,6 +116,7 @@ for (const id of mainline) {
     npm: scoped.get(id) ?? id,
     repo: id === 'dsh-laya' ? 'laya-family/dsh-laya' : `PerryLink/${id}`,
     source: 'dsh-kit/plugins.txt',
+    installScope: 'mainline-default',
     mappingConfidence: 'provisional',
   });
 }
@@ -128,6 +135,7 @@ for (const [id, collection, category, archetype, domains, status, repo] of edge)
     id, kind: id.startsWith('dsh-kit') || id === 'dsh-catalog' || id === 'dsh-plugin-certification' ? 'infrastructure' : 'plugin',
     collection, category, archetype, domains, status, release: status === 'retired' ? 'retired' : 'stable',
     npm: id, repo, source: 'documented edge set',
+    installScope: status === 'retired' ? 'excluded-retired' : (collection === 'infrastructure' ? 'infrastructure' : 'catalog-only'),
   });
 }
 

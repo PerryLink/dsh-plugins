@@ -36,7 +36,8 @@
       ],
       "repo": "PerryLink/dsh-einvoice",
       "npm": "dsh-einvoice",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-bankrec",
@@ -64,7 +65,8 @@
       ],
       "repo": "PerryLink/dsh-bankrec",
       "npm": "dsh-bankrec",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-ap-three-way",
@@ -92,7 +94,8 @@
       ],
       "repo": "PerryLink/dsh-ap-three-way",
       "npm": "dsh-ap-three-way",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-travel-recon",
@@ -120,7 +123,8 @@
       ],
       "repo": "PerryLink/dsh-travel-recon",
       "npm": "dsh-travel-recon",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-legal-intake",
@@ -148,7 +152,8 @@
       ],
       "repo": "PerryLink/dsh-legal-intake",
       "npm": "dsh-legal-intake",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-legal-clause",
@@ -177,7 +182,8 @@
       ],
       "repo": "PerryLink/dsh-legal-clause",
       "npm": "dsh-legal-clause",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-ghg",
@@ -206,7 +212,8 @@
       ],
       "repo": "PerryLink/dsh-ghg",
       "npm": "dsh-ghg",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-qms-capa",
@@ -236,7 +243,8 @@
       ],
       "repo": "PerryLink/dsh-qms-capa",
       "npm": "dsh-qms-capa",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-hs-candidate",
@@ -265,7 +273,8 @@
       ],
       "repo": "PerryLink/dsh-hs-candidate",
       "npm": "dsh-hs-candidate",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-freight-audit",
@@ -294,7 +303,8 @@
       ],
       "repo": "PerryLink/dsh-freight-audit",
       "npm": "dsh-freight-audit",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-docx-redline",
@@ -322,7 +332,8 @@
       ],
       "repo": "PerryLink/dsh-docx-redline",
       "npm": "dsh-docx-redline",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-ifc-qto",
@@ -351,7 +362,8 @@
       ],
       "repo": "PerryLink/dsh-ifc-qto",
       "npm": "dsh-ifc-qto",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-policy-ledger",
@@ -380,7 +392,8 @@
       ],
       "repo": "PerryLink/dsh-policy-ledger",
       "npm": "dsh-policy-ledger",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-pim-lint",
@@ -410,7 +423,8 @@
       ],
       "repo": "PerryLink/dsh-pim-lint",
       "npm": "dsh-pim-lint",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-eval-pack",
@@ -438,7 +452,8 @@
       ],
       "repo": "PerryLink/dsh-eval-pack",
       "npm": "dsh-eval-pack",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-customs-doc-check",
@@ -461,7 +476,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-customs-doc-check",
       "npm": "dsh-customs-doc-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-demurrage-ledger",
@@ -484,7 +500,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-demurrage-ledger",
       "npm": "dsh-demurrage-ledger",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-export-ctl-check",
@@ -507,7 +524,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-export-ctl-check",
       "npm": "dsh-export-ctl-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-forecast-penalty",
@@ -530,7 +548,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-forecast-penalty",
       "npm": "dsh-forecast-penalty",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-hs-classify",
@@ -553,7 +572,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-hs-classify",
       "npm": "dsh-hs-classify",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-lc-doc-check",
@@ -576,7 +596,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-lc-doc-check",
       "npm": "dsh-lc-doc-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-origin-rvc-check",
@@ -599,7 +620,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-origin-rvc-check",
       "npm": "dsh-origin-rvc-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-railway-window",
@@ -622,7 +644,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-railway-window",
       "npm": "dsh-railway-window",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-fmea-table-check",
@@ -645,7 +668,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-fmea-table-check",
       "npm": "dsh-fmea-table-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-ota-review-check",
@@ -668,7 +692,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-ota-review-check",
       "npm": "dsh-ota-review-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-pipeline-check",
@@ -691,7 +716,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-pipeline-check",
       "npm": "dsh-pipeline-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-ppap-check",
@@ -714,7 +740,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-ppap-check",
       "npm": "dsh-ppap-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-repair-order-qc",
@@ -737,7 +764,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-repair-order-qc",
       "npm": "dsh-repair-order-qc",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-review-reply-check",
@@ -760,7 +788,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-review-reply-check",
       "npm": "dsh-review-reply-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-spc-gbt-adapter",
@@ -783,7 +812,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-spc-gbt-adapter",
       "npm": "dsh-spc-gbt-adapter",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-warranty-calc",
@@ -806,7 +836,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-warranty-calc",
       "npm": "dsh-warranty-calc",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-aqua-input-check",
@@ -829,7 +860,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-aqua-input-check",
       "npm": "dsh-aqua-input-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-drill-script-check",
@@ -852,7 +884,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-drill-script-check",
       "npm": "dsh-drill-script-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-emergency-plan",
@@ -875,7 +908,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-emergency-plan",
       "npm": "dsh-emergency-plan",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-hazchem-check",
@@ -898,7 +932,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-hazchem-check",
       "npm": "dsh-hazchem-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-hidden-risk-map",
@@ -921,7 +956,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-hidden-risk-map",
       "npm": "dsh-hidden-risk-map",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-power-loss-split",
@@ -944,7 +980,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-power-loss-split",
       "npm": "dsh-power-loss-split",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-power-ticket-check",
@@ -967,7 +1004,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-power-ticket-check",
       "npm": "dsh-power-ticket-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-bid-ca-precheck",
@@ -990,7 +1028,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-bid-ca-precheck",
       "npm": "dsh-bid-ca-precheck",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-bid-qual-check",
@@ -1013,7 +1052,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-bid-qual-check",
       "npm": "dsh-bid-qual-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-contract-stance",
@@ -1036,7 +1076,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-contract-stance",
       "npm": "dsh-contract-stance",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-protest-deadline",
@@ -1059,7 +1100,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-protest-deadline",
       "npm": "dsh-protest-deadline",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-rulefile-check",
@@ -1082,7 +1124,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-rulefile-check",
       "npm": "dsh-rulefile-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-tender-extract",
@@ -1105,7 +1148,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-tender-extract",
       "npm": "dsh-tender-extract",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-tender-matrix",
@@ -1128,7 +1172,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-tender-matrix",
       "npm": "dsh-tender-matrix",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-eia-guide-check",
@@ -1151,7 +1196,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-eia-guide-check",
       "npm": "dsh-eia-guide-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-guard-plan-qc",
@@ -1174,7 +1220,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-guard-plan-qc",
       "npm": "dsh-guard-plan-qc",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-hazplan-check",
@@ -1197,7 +1244,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-hazplan-check",
       "npm": "dsh-hazplan-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-permit-report-check",
@@ -1220,7 +1268,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-permit-report-check",
       "npm": "dsh-permit-report-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-safety-brief-check",
@@ -1243,7 +1292,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-safety-brief-check",
       "npm": "dsh-safety-brief-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-site-log-check",
@@ -1266,7 +1316,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-site-log-check",
       "npm": "dsh-site-log-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-soilwater-check",
@@ -1289,7 +1340,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-soilwater-check",
       "npm": "dsh-soilwater-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-essay-rubric-check",
@@ -1312,7 +1364,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-essay-rubric-check",
       "npm": "dsh-essay-rubric-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-learning-gap-check",
@@ -1335,7 +1388,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-learning-gap-check",
       "npm": "dsh-learning-gap-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-nsfc-form-check",
@@ -1358,7 +1412,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-nsfc-form-check",
       "npm": "dsh-nsfc-form-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-paper-doc-adapter",
@@ -1381,7 +1436,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-paper-doc-adapter",
       "npm": "dsh-paper-doc-adapter",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-policy-brief-draft",
@@ -1404,7 +1460,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-policy-brief-draft",
       "npm": "dsh-policy-brief-draft",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-archive-check",
@@ -1427,7 +1484,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-archive-check",
       "npm": "dsh-archive-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-gongwen-flow-check",
@@ -1450,7 +1508,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-gongwen-flow-check",
       "npm": "dsh-gongwen-flow-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-gongwen-word-check",
@@ -1473,7 +1532,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-gongwen-word-check",
       "npm": "dsh-gongwen-word-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-evidence-check",
@@ -1496,7 +1556,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-evidence-check",
       "npm": "dsh-evidence-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-lawcite-adapter",
@@ -1519,7 +1580,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-lawcite-adapter",
       "npm": "dsh-lawcite-adapter",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-pleading-draft",
@@ -1542,7 +1604,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-pleading-draft",
       "npm": "dsh-pleading-draft",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-icd-rule-check",
@@ -1565,7 +1628,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-icd-rule-check",
       "npm": "dsh-icd-rule-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-medrec-qc",
@@ -1588,7 +1652,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-medrec-qc",
       "npm": "dsh-medrec-qc",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-nurse-record-check",
@@ -1611,7 +1676,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-nurse-record-check",
       "npm": "dsh-nurse-record-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-soe-decision-check",
@@ -1634,7 +1700,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-soe-decision-check",
       "npm": "dsh-soe-decision-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-sop-sync-check",
@@ -1657,7 +1724,8 @@
       "suite": null,
       "repo": "PerryLink/dsh-sop-sync-check",
       "npm": "dsh-sop-sync-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "mainline-opt-in"
     },
     {
       "id": "dsh-bid-health-check",
@@ -1683,7 +1751,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-bid-health-check",
       "npm": "dsh-bid-health-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-canteen-retention-check",
@@ -1710,7 +1779,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-canteen-retention-check",
       "npm": "dsh-canteen-retention-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-construction-doc-check",
@@ -1736,7 +1806,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-construction-doc-check",
       "npm": "dsh-construction-doc-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-excel-reconcile",
@@ -1762,7 +1833,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-excel-reconcile",
       "npm": "dsh-excel-reconcile",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-invoice-ledger",
@@ -1788,7 +1860,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-invoice-ledger",
       "npm": "dsh-invoice-ledger",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-payroll-audit",
@@ -1815,7 +1888,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-payroll-audit",
       "npm": "dsh-payroll-audit",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-safety-ledger-check",
@@ -1842,7 +1916,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-safety-ledger-check",
       "npm": "dsh-safety-ledger-check",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-table-ingest",
@@ -1868,7 +1943,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-table-ingest",
       "npm": "dsh-table-ingest",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-tender-requirements",
@@ -1894,7 +1970,8 @@
       "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
       "repo": "PerryLink/dsh-tender-requirements",
       "npm": "dsh-tender-requirements",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-finops-suite",
@@ -1935,7 +2012,8 @@
       ],
       "repo": "PerryLink/dsh-finops-suite",
       "npm": "dsh-finops-suite",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-contract-suite",
@@ -1968,7 +2046,8 @@
       ],
       "repo": "PerryLink/dsh-contract-suite",
       "npm": "dsh-contract-suite",
-      "source": "taxonomy.v1.json"
+      "source": "taxonomy.v1.json",
+      "installScope": "domain"
     },
     {
       "id": "dsh-auto-review",
@@ -1985,6 +2064,7 @@
       "npm": "dsh-auto-review",
       "repo": "PerryLink/dsh-auto-review",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2002,6 +2082,7 @@
       "npm": "dsh-autotier",
       "repo": "PerryLink/dsh-autotier",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2018,6 +2099,7 @@
       "npm": "dsh-budget",
       "repo": "PerryLink/dsh-budget",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2035,6 +2117,7 @@
       "npm": "dsh-cert-mcp",
       "repo": "PerryLink/dsh-cert-mcp",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2051,6 +2134,7 @@
       "npm": "dsh-checkpoint-rewind",
       "repo": "PerryLink/dsh-checkpoint-rewind",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2067,6 +2151,7 @@
       "npm": "dsh-claude-move",
       "repo": "PerryLink/dsh-claude-move",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2084,6 +2169,7 @@
       "npm": "dsh-click",
       "repo": "PerryLink/dsh-click",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2100,6 +2186,7 @@
       "npm": "dsh-composer-history",
       "repo": "PerryLink/dsh-composer-history",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2116,6 +2203,7 @@
       "npm": "dsh-data-quality",
       "repo": "PerryLink/dsh-data-quality",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2132,6 +2220,7 @@
       "npm": "dsh-defend",
       "repo": "PerryLink/dsh-defend",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2148,6 +2237,7 @@
       "npm": "dsh-doublecheck",
       "repo": "PerryLink/dsh-doublecheck",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2164,6 +2254,7 @@
       "npm": "dsh-draw",
       "repo": "PerryLink/dsh-draw",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2180,6 +2271,7 @@
       "npm": "dsh-fast",
       "repo": "PerryLink/dsh-fast",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2196,6 +2288,7 @@
       "npm": "dsh-fund-research",
       "repo": "PerryLink/dsh-fund-research",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2212,6 +2305,7 @@
       "npm": "dsh-industry-research",
       "repo": "PerryLink/dsh-industry-research",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2228,6 +2322,7 @@
       "npm": "dsh-laya",
       "repo": "laya-family/dsh-laya",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2244,6 +2339,7 @@
       "npm": "dsh-library",
       "repo": "PerryLink/dsh-library",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2260,6 +2356,7 @@
       "npm": "dsh-local-ai",
       "repo": "PerryLink/dsh-local-ai",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2276,6 +2373,7 @@
       "npm": "dsh-lsp-actions",
       "repo": "PerryLink/dsh-lsp-actions",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2292,6 +2390,7 @@
       "npm": "dsh-mask",
       "repo": "PerryLink/dsh-mask",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2308,6 +2407,7 @@
       "npm": "dsh-mcp-panel",
       "repo": "PerryLink/dsh-mcp-panel",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2324,6 +2424,7 @@
       "npm": "dsh-memento",
       "repo": "PerryLink/dsh-memento",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2340,6 +2441,7 @@
       "npm": "dsh-observe",
       "repo": "PerryLink/dsh-observe",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2356,6 +2458,7 @@
       "npm": "dsh-output-styles",
       "repo": "PerryLink/dsh-output-styles",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2372,6 +2475,7 @@
       "npm": "dsh-permission-rules",
       "repo": "PerryLink/dsh-permission-rules",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2388,6 +2492,7 @@
       "npm": "dsh-plugin-guide",
       "repo": "PerryLink/dsh-plugin-guide",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2404,6 +2509,7 @@
       "npm": "dsh-plugin-upgrade",
       "repo": "PerryLink/dsh-plugin-upgrade",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2420,6 +2526,7 @@
       "npm": "dsh-reach",
       "repo": "PerryLink/dsh-reach",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2436,6 +2543,7 @@
       "npm": "dsh-research-report",
       "repo": "PerryLink/dsh-research-report",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2452,6 +2560,7 @@
       "npm": "dsh-score",
       "repo": "PerryLink/dsh-score",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2468,6 +2577,7 @@
       "npm": "dsh-session-sync",
       "repo": "PerryLink/dsh-session-sync",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2484,6 +2594,7 @@
       "npm": "dsh-talk",
       "repo": "PerryLink/dsh-talk",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2500,6 +2611,7 @@
       "npm": "dsh-test-drive",
       "repo": "PerryLink/dsh-test-drive",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2516,6 +2628,7 @@
       "npm": "dsh-translate",
       "repo": "PerryLink/dsh-translate",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2532,6 +2645,7 @@
       "npm": "@perrylink/dsh-github",
       "repo": "PerryLink/dsh-github",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2548,6 +2662,7 @@
       "npm": "@perrylink/dsh-plugin-doctor",
       "repo": "PerryLink/dsh-plugin-doctor",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2564,6 +2679,7 @@
       "npm": "@perrylink/dsh-plugin-kit",
       "repo": "PerryLink/dsh-plugin-kit",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2580,6 +2696,7 @@
       "npm": "@perrylink/dsh-skill-pack-security-provider",
       "repo": "PerryLink/dsh-skill-pack-security-provider",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2596,6 +2713,7 @@
       "npm": "@perrylink/dsh-ticktick",
       "repo": "PerryLink/dsh-ticktick",
       "source": "dsh-kit/plugins.txt",
+      "installScope": "mainline-default",
       "mappingConfidence": "provisional"
     },
     {
@@ -2611,7 +2729,8 @@
       "release": "stable",
       "npm": "dsh-community-bench",
       "repo": "PerryLink/dsh-community-bench",
-      "source": "documented edge set"
+      "source": "documented edge set",
+      "installScope": "catalog-only"
     },
     {
       "id": "dsh-background-agents",
@@ -2626,7 +2745,8 @@
       "release": "retired",
       "npm": "dsh-background-agents",
       "repo": "PerryLink/dsh-background-agents",
-      "source": "documented edge set"
+      "source": "documented edge set",
+      "installScope": "excluded-retired"
     },
     {
       "id": "dsh-session-pin",
@@ -2641,7 +2761,8 @@
       "release": "retired",
       "npm": "dsh-session-pin",
       "repo": "PerryLink/dsh-session-pin",
-      "source": "documented edge set"
+      "source": "documented edge set",
+      "installScope": "excluded-retired"
     },
     {
       "id": "dsh-team-rooms",
@@ -2656,7 +2777,8 @@
       "release": "retired",
       "npm": "dsh-team-rooms",
       "repo": "PerryLink/dsh-team-rooms",
-      "source": "documented edge set"
+      "source": "documented edge set",
+      "installScope": "excluded-retired"
     },
     {
       "id": "dsh-kit",
@@ -2671,7 +2793,8 @@
       "release": "stable",
       "npm": "dsh-kit",
       "repo": "PerryLink/dsh-kit",
-      "source": "documented edge set"
+      "source": "documented edge set",
+      "installScope": "infrastructure"
     },
     {
       "id": "dsh-catalog",
@@ -2686,7 +2809,8 @@
       "release": "stable",
       "npm": "dsh-catalog",
       "repo": "PerryLink/dsh-catalog",
-      "source": "documented edge set"
+      "source": "documented edge set",
+      "installScope": "infrastructure"
     },
     {
       "id": "dsh-plugin-certification",
@@ -2701,7 +2825,8 @@
       "release": "stable",
       "npm": "dsh-plugin-certification",
       "repo": "PerryLink/dsh-plugin-certification",
-      "source": "documented edge set"
+      "source": "documented edge set",
+      "installScope": "infrastructure"
     }
   ]
 }
