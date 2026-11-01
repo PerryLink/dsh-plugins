@@ -150,4 +150,4 @@ The 9 newer tools are **catalog-only**: they are not in `dsh-kit/plugins.txt` (t
 - **Phase 0:** fix suite member versions, `packages.json` release URLs, npm-relative fixture links, profile count sentence.
 - **Phase 1:** publish this taxonomy and a `family.json` covering 62 + 17; generate views.
 - **Phase 2:** add screenshots/GIF and troubleshooting for active domain packages; add related-checker links.
-- **Phase 3:** backfill legacy mainline `PRIVACY`/icon/five-language debt only when touched.
+- **Phase 3:** backfill legacy mainline `PRIVACY`/icon/five-language debt only when touched. The measured backlog is in [LEGACY-DEBT.md](LEGACY-DEBT.md).
