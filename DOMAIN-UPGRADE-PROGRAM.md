@@ -60,7 +60,7 @@ better stability, without copying third-party code.
 
 ## 5. Progress
 
-Remaining: 2 packages still need P1 capability work (freight-audit, policy-ledger). ACCEPTANCE rows and captures are produced at the release step (P3).
+Remaining: P1 capability work is complete for all 15 packages. Next: P3 evidence — ACCEPTANCE rows, real captures and releases. ACCEPTANCE rows and captures are produced at the release step (P3).
 
 | Date | Package | Change | Evidence |
 |---|---|---|---|
@@ -77,4 +77,6 @@ Remaining: 2 packages still need P1 capability work (freight-audit, policy-ledge
 | 2026-11-01 | `dsh-ifc-qto` | new `ifc.qto_summary`: totals/count/min/max per measurement kind, type distribution, non-positive detection | `node --test test/*.test.mjs` → 9/9 pass |
 | 2026-11-01 | `dsh-docx-redline` | new `doc.change_summary`: tracked insertions/deletions and per-author totals (OOXML WML) | `node --test test/*.test.mjs` → 18/18 pass |
 | 2026-11-01 | `dsh-eval-pack` | new `eval.summary` + canonical-JSON grading (key order insensitive) | `node --test test/*.test.mjs` → 7/7 pass |
+| 2026-11-01 | `dsh-freight-audit` | new `freight.ratecard_validate`: money/fuel/window checks plus per-carrier version overlap | `node --test test/*.test.mjs` → 9/9 pass |
+| 2026-11-01 | `dsh-policy-ledger` | new `trust.risk_report`: per-factor risk breakdown behind the R0-R3 verdict | `node --test test/*.test.mjs` → 7/7 pass |
 | 2026-11-01 | all 15 + 2 suites | frozen status removed; all active | `check-docs` / `check-taxonomy` green |
