@@ -135,7 +135,7 @@ for (const [id, collection, category, archetype, domains, status, repo] of edge)
     id, kind: id.startsWith('dsh-kit') || id === 'dsh-catalog' || id === 'dsh-plugin-certification' ? 'infrastructure' : 'plugin',
     collection, category, archetype, domains, status, release: status === 'retired' ? 'retired' : 'stable',
     npm: id, repo, source: 'documented edge set',
-    installScope: status === 'retired' ? 'excluded-retired' : (collection === 'infrastructure' ? 'infrastructure' : 'catalog-only'),
+    installScope: status === 'retired' ? 'excluded-retired' : (collection === 'infrastructure' ? 'infrastructure' : (id === 'dsh-community-bench' ? 'mainline-default' : 'catalog-only')),
   });
 }
 

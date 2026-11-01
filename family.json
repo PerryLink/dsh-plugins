@@ -2730,7 +2730,7 @@
       "npm": "dsh-community-bench",
       "repo": "PerryLink/dsh-community-bench",
       "source": "documented edge set",
-      "installScope": "catalog-only"
+      "installScope": "mainline-default"
     },
     {
       "id": "dsh-background-agents",

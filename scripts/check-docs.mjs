@@ -84,7 +84,7 @@ if (family.counts.frozen !== 15) errors.push(`family.json: expected 15 frozen, g
 if (family.counts.retired !== 3) errors.push(`family.json: expected 3 retired, got ${family.counts.retired}`);
 const scopeCounts = {};
 for (const item of family.items) scopeCounts[item.installScope] = (scopeCounts[item.installScope] || 0) + 1;
-const expectedScopes = { 'mainline-default':39, 'mainline-opt-in':53, 'catalog-only':10, domain:17, 'excluded-retired':3, infrastructure:3 };
+const expectedScopes = { 'mainline-default':40, 'mainline-opt-in':53, 'catalog-only':9, domain:17, 'excluded-retired':3, infrastructure:3 };
 for (const [k, v] of Object.entries(expectedScopes)) if (scopeCounts[k] !== v) errors.push(`family.json: installScope ${k} ${scopeCounts[k]} != ${v}`);
 
 

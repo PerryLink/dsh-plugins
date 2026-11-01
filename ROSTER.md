@@ -8,25 +8,27 @@
 
 | installScope | Rows | Meaning |
 |---|---:|---|
-| `mainline-default` | 39 | Mainline packages installed by `dsh-kit/install-all.*` without a flag |
+| `mainline-default` | 40 | Family rows installed by `install-family.*`; `install-all.*` adds 3 non-family specs (see §2) |
 | `mainline-opt-in` | 53 | Core compliance checkers; installed only with `--include-checkers` / `-IncludeCheckers` |
-| `catalog-only` | 10 | 9 newer compliance tools + `dsh-community-bench`; visible in the catalog, not in the mainline installer |
+| `catalog-only` | 9 | The 9 newer compliance tools; visible in the catalog, not in the mainline installer |
 | `domain` | 17 | 15 domain packages + 2 domain suites; installed from the domain index or a suite |
 | `excluded-retired` | 3 | `dsh-background-agents`, `dsh-session-pin`, `dsh-team-rooms`; never installed by a fresh setup |
 | `infrastructure` | 3 | `dsh-kit`, `dsh-catalog`, `dsh-plugin-certification`; support surfaces, not runtime plugins |
 | **Total** | **125** | **107 active / 15 frozen / 3 retired** |
 
-## 2. `dsh-kit` — 92 install specs
+## 2. `dsh-kit` — 96 install specs
 
 `dsh-kit/plugins.txt` is deliberately the **mainline installer**, not the whole family:
 
 ```text
-92 = 39 mainline-default + 53 mainline-opt-in
+96 = 43 default + 53 opt-in
+43 = 40 family mainline-default + 3 non-family default rows
+   (dsh-checkers, dsh-phocinae, dsh-phone-inbox)
 ```
 
-- `install-all.sh` / `install-all.ps1` install the 39 by default.
+- `install-all.sh` / `install-all.ps1` install the 43 by default.
 - `--include-checkers` / `-IncludeCheckers` adds the 53 core checkers.
-- It does **not** include the 10 catalog-only rows or the 17 domain rows. That is a scope decision, not a missing count.
+- It does **not** include the 9 catalog-only rows or the 17 domain rows. That is a scope decision, not a missing count.
 
 ## 3. npm catalog — 126 records
 
@@ -45,12 +47,13 @@ The 4 catalog-only rows are intentionally visible because they are installable o
 
 | Surface | Count | Command |
 |---|---:|---|
-| Mainline default | 39 | `./install-all.sh <profile>` |
-| Mainline + core checkers | 92 | `./install-all.sh <profile> --include-checkers` |
+| Mainline default | 43 | `./install-all.sh <profile>` |
+| Mainline + core checkers | 96 | `./install-all.sh <profile> --include-checkers` |
 | Finance suite | 4 members + suite | `dsh plugin --profile <profile> add dsh-finops-suite` |
 | Contract suite | 2 members + suite | `dsh plugin --profile <profile> add dsh-contract-suite` |
+| Family install (no suites) | 117 | `./install-family.sh <profile>` |
 | Domain packages without a suite | 9 | install individually from the [domain index](https://perrylink.github.io/dsh-plugins/) |
-| Catalog-only compliance tools | 10 | install the exact npm package; they are not in `plugins.txt` |
+| Catalog-only compliance tools | 9 | install the exact npm package; they are not in `plugins.txt` |
 | Retired | 0 | never installed by a fresh setup |
 
 ## 5. Rules
