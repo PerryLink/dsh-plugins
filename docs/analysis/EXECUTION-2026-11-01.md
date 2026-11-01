@@ -73,7 +73,8 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 
 ### Roster closure
 
-- [ROSTER.md](../../ROSTER.md) defines the exact three surfaces: 125 family rows (107/15/3), 92 `dsh-kit` install specs (39 default + 53 opt-in), and 126 catalog records (122 shared + 3 family-only infrastructure + 4 catalog-only).
+- [ROSTER.md](../../ROSTER.md) defines the exact three surfaces: 125 family rows (107/15/3), 96 `dsh-kit` install specs (43 default + 53 opt-in), and 126 catalog records (122 shared + 3 family-only infrastructure + 4 catalog-only).
+- `dsh-kit/family.txt` adds a separate 117-package family installer (39 + 53 + 10 + 15); it excludes the two domain suites, 3 retired packages and 3 support repositories.
 - `family.json` now carries `installScope`; the generated taxonomy page has an install-scope filter and 125 per-package pages.
 
 ### Mirrors
