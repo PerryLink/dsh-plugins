@@ -46,7 +46,7 @@
     },
     {
       "name": "dsh-travel-recon",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "repo": "https://github.com/PerryLink/dsh-travel-recon",
       "npm": "https://www.npmjs.com/package/dsh-travel-recon",
       "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0-alpha.5",
@@ -172,7 +172,7 @@
     },
     {
       "name": "dsh-policy-ledger",
-      "version": "0.2.0-alpha.7",
+      "version": "0.2.0-alpha.8",
       "repo": "https://github.com/PerryLink/dsh-policy-ledger",
       "npm": "https://www.npmjs.com/package/dsh-policy-ledger",
       "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0-alpha.4",
@@ -186,7 +186,7 @@
     },
     {
       "name": "dsh-pim-lint",
-      "version": "0.1.0-alpha.5",
+      "version": "0.1.0-alpha.6",
       "repo": "https://github.com/PerryLink/dsh-pim-lint",
       "npm": "https://www.npmjs.com/package/dsh-pim-lint",
       "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0-alpha.3",
@@ -200,7 +200,7 @@
     },
     {
       "name": "dsh-eval-pack",
-      "version": "0.1.0-alpha.5",
+      "version": "0.1.0-alpha.6",
       "repo": "https://github.com/PerryLink/dsh-eval-pack",
       "npm": "https://www.npmjs.com/package/dsh-eval-pack",
       "release": "https://github.com/PerryLink/dsh-eval-pack/releases/tag/v0.1.0-alpha.3",
@@ -216,7 +216,7 @@
   "suites": [
     {
       "name": "dsh-finops-suite",
-      "version": "0.1.0-alpha.4",
+      "version": "0.1.0-alpha.5",
       "description": "One-command install for dsh-einvoice, dsh-bankrec, dsh-ap-three-way and dsh-travel-recon.",
       "repo": "https://github.com/PerryLink/dsh-finops-suite",
       "npm": "https://www.npmjs.com/package/dsh-finops-suite",
