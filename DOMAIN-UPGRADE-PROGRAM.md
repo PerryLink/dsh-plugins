@@ -94,6 +94,9 @@ the next version from `origin/main` rather than the stale local clone.
 | `dsh-hs-candidate` | `hs.rvc_report` — simple ratio / build-down / build-up RVC | WTO/WCO rules of origin | 11/11 | `0.1.0-alpha.10` |
 | `dsh-ifc-qto` | `ifc.unit_check` — unit assignment before trusting a take-off | IFC 4.3 IfcUnitAssignment | 12/12 | `0.1.0-alpha.11` |
 
+| `dsh-legal-intake` | `legal.conflict_check` — opposing-side and both-sides party detection | conflicts-check practice | 11/11 | `0.1.0-alpha.8` |
+| `dsh-eval-pack` | `eval.pass_at_k` — unbiased pass@k with exact binomials | pass@k estimator definition | 12/12 | `0.1.0-alpha.9` |
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
