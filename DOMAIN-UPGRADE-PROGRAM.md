@@ -114,7 +114,15 @@ einvoice release needed its version gate in `scripts/lint.mjs` aligned before th
 workflow now commits the sidecar; a fresh refresh PR passed CI, merged (`61ddf3a`) and deployed, and the
 live snapshot carries all 15 new versions.
 
-Remaining: mirror assets (Gitee/GitCode). ACCEPTANCE rows and captures are produced at the release step (P3).
+**Mirrors (2026-11-01 late):** Gitee now carries the new release for all five flagships
+(`dsh-einvoice v0.2.0-alpha.8`, `dsh-bankrec v0.1.0-alpha.11`, `dsh-ghg v0.1.0-alpha.13`,
+`dsh-hs-candidate v0.1.0-alpha.9`, `dsh-ifc-qto v0.1.0-alpha.10`), each with the npm tarball, source
+zip/tar.gz, `ACCEPTANCE.csv` and `SHA256SUMS`; both suites had their `main` synced. GitCode carries the
+new tag and release record for `dsh-einvoice v0.2.0-alpha.8`, `dsh-bankrec v0.1.0-alpha.11` and
+`dsh-docx-redline v0.1.0-alpha.10`; its public API exposes no route to attach custom binary assets
+(`attach_files` returns 404 for every prefix), so the GitCode releases rely on the built-in source
+archives. Gitee also auto-attaches its own source archives, so those releases show a duplicate zip/tar.gz
+pair next to the uploaded files listed in `SHA256SUMS`. ACCEPTANCE rows and captures are produced at the release step (P3).
 
 | Date | Package | Change | Evidence |
 |---|---|---|---|
