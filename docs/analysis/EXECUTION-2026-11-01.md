@@ -84,6 +84,10 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 
 ### Dependabot
 
+- Audited 432 repos / 191 configs; all configs removed on the branch refs.
+- Open Dependabot PRs: 0; 373 `dependabot/*` branches deleted; historical closed PR records remain because GitHub does not expose PR deletion.
+- Vulnerability alerts were left intact; automated security updates were not enabled where queried.
+
 - Audited 432 PerryLink repos; **191** had `.github/dependabot.yml`; all 191 are now absent on the branch ref.
 - Open Dependabot PRs: **0**; all remaining Dependabot PR records are closed history (GitHub does not expose PR deletion).
 - **356+** `dependabot/*` branches deleted.
@@ -91,4 +95,4 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 
 ### Remaining external blocker
 
-- GitHub Pages deployments for the 125 per-package pages are built (docs CI green, files reachable through jsDelivr) but the Pages deploy is blocked by a stale `b412d6b` in-progress deployment lock. The repo Pages source has been switched to the Actions workflow; a retry is pending after the lock clears.
+- GitHub Pages deployments for the 125 per-package pages are built (docs CI green, files reachable through jsDelivr) but GitHub Pages currently returns a stale in-progress deployment lock (`b412d6b`) and the public site is temporarily 404. The docs artifacts and CI are valid, and the pages are reachable from the repository; the Pages deployment remains an external GitHub-side blocker. A user-site mirror was also attempted and hit the same Pages service lock.
