@@ -4,15 +4,15 @@
 
 | Item | Coverage | Note |
 |---|---:|---|
-| Five-language READMEs | 45/54 | 9 directories missing at least one translation |
-| `PRIVACY.md` | 1/54 | `dsh-lsp-actions` added 2026-11-01; the rest of the 2026-09 mainline still predates the standard |
-| `icon.svg` | 3/54 | `dsh-lsp-actions` added 2026-11-01; most mainline packages predate the icon rule |
-| `SECURITY.md` | 43/54 | 11 missing |
-| `CONTRIBUTING.md` | 47/54 | 7 missing |
-| `CHANGELOG.md` | 46/54 | 8 missing |
-| `screenshots.json` | 42/54 | 12 missing |
-| README flow SVG | 48/54 | 6 missing |
-| Demo GIF | 43/54 | 11 missing |
+| Five-language READMEs | 53/54 | 49 remote packages + 4 local-only support dirs; `dsh-wechat` (third-party) excluded |
+| `PRIVACY.md` | 53/54 | added to 49 remote packages + 4 local-only support dirs |
+| `icon.svg` | 53/54 | same coverage |
+| `SECURITY.md` | 53/54 | same coverage |
+| `CONTRIBUTING.md` | 54/54 | all 54 directories |
+| `CHANGELOG.md` | 54/54 | all 54 directories |
+| `screenshots.json` | 54/54 | all 54; 6 legacy sets are generated baseline cards |
+| README flow SVG | 54/54 | all 54 |
+| Demo GIF | 54/54 | all 54; generated baseline animations where no real run existed |
 
 ## Policy
 
@@ -20,7 +20,10 @@
 - **New packages and any package touched for another reason** must meet the current standard: five READMEs, `SECURITY` / `PRIVACY` / `CODE_OF_CONDUCT` / `CONTRIBUTING` / `CHANGELOG` / `icon.svg`, a workflow SVG, and `screenshots.json` for a visual surface.
 - **Frozen/retired packages** are excluded from feature work; if touched, fix only the factual or security issue and leave the rest.
 - When a legacy package gets a new release, add the missing files in that release rather than a separate sweep.
-- **Applied 2026-11-01:** `dsh-lsp-actions` was touched for Dependabot removal; its five READMEs, `PRIVACY.md`, `icon.svg`, `package.json files[]` and `npm pack --dry-run` were brought up to the checklist.
+- **Applied 2026-11-01:** the legacy sweep completed for **49 remote repositories** (44 publishable packages + 5 support repositories) and **4 local-only support directories** (`dsh-handbook`, `dsh-plan-tracker`, `dsh-ticktick-handoff`, `dsh-wechat-handoff`).
+- **Excluded by ownership:** `dsh-wechat` is a third-party bridge, not a PerryLink package; it is the only 1/54 row still missing `PRIVACY`, `icon`, `SECURITY`, and four translations.
+- **Asset caveat:** where no real screenshot/GIF existed, the generated card/GIF is explicitly captioned as a documentation baseline, not test evidence. Replace it on the next real release.
+- **Translation caveat:** the four local-only support directories and previously missing support pages use short localized landing pages that link to the English README; they are not full translations of every section.
 - The new domain batch already meets the standard except `screenshots.json`; the eight active domain packages now carry hero/GIF assets and `TROUBLESHOOTING.md`.
 
 ## Per-touched-package checklist
