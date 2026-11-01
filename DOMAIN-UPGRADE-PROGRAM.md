@@ -71,7 +71,26 @@ total, all `public/synthetic` / `counted=false`).
 (15 images, 465 KB). Each `screenshots.json` names the exact command, test count and caveat; the seven
 packages that had no `screenshots.json` at all (the previously frozen set) now have one.
 
-Remaining P3 work: version bumps, npm/GitHub pre-releases, mirror assets and the docs/manifest refresh. ACCEPTANCE rows and captures are produced at the release step (P3).
+## 6. Release recipe (verified on 2026-11-01)
+
+Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
+(tag `v*` → tests, `pnpm gate`, tag/ancestry checks → `npm publish --provenance` → GitHub pre-release
+with tarball, SBOM, ACCEPTANCE and SHA256SUMS).
+
+```text
+1. git -C <pkg> fetch origin && git worktree add /tmp/<pkg>-rel origin/main -b release/alpha
+2. copy the changed src/test/scripts/docs files into the worktree
+3. bump package.json version AND the hardcoded version inside scripts/lint.mjs
+4. retitle CHANGELOG "## [Unreleased]" to "## [x.y.z] — <date>"
+5. build / typecheck / lint / test / gate / npm pack --dry-run (check files[])
+6. commit, push HEAD:refs/heads/main, tag -a v<x.y.z>, push refs/tags/v<x.y.z>
+7. watch the publish run; verify npm <pkg>@<version> attestations and the pre-release assets
+8. update packages.json (version, release URL, frozen=false) and RELEASE-MANIFEST.md
+```
+
+Released this way: `dsh-pim-lint 0.1.0-alpha.8`, `dsh-eval-pack 0.1.0-alpha.8` (both with provenance).
+
+Remaining P3 work: the other 13 packages, mirror assets and the docs/manifest refresh. ACCEPTANCE rows and captures are produced at the release step (P3).
 
 | Date | Package | Change | Evidence |
 |---|---|---|---|
