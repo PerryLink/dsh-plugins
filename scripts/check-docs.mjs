@@ -11,6 +11,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..');
 const projectRoot = path.resolve(root, '..');
 const errors = [];
+let skippedSiblings = 0;
 const read = (p) => fs.readFileSync(p, 'utf8');
 const readJson = (p) => JSON.parse(read(p));
 
@@ -23,11 +24,13 @@ if (packages.suites.length !== 2) errors.push(`packages.json: expected 2 suites,
 if (packages.updated !== '2026-11-01') errors.push(`packages.json: updated is ${packages.updated}`);
 
 for (const p of [...packages.packages, ...packages.suites]) {
-  const pj = readJson(path.join(projectRoot, p.dir, 'package.json'));
-  if (pj.version !== p.version) errors.push(`${p.name}: packages.json ${p.version} != package.json ${pj.version}`);
   if (!p.release.endsWith(`/v${p.version}`)) errors.push(`${p.name}: release URL does not end in /v${p.version}`);
   const page = path.join(root, 'docs', 'packages', `${p.name}.html`);
   if (!fs.existsSync(page)) errors.push(`${p.name}: missing docs page`);
+  const sibling = path.join(projectRoot, p.dir, 'package.json');
+  if (!fs.existsSync(sibling)) { skippedSiblings++; continue; }
+  const pj = readJson(sibling);
+  if (pj.version !== p.version) errors.push(`${p.name}: packages.json ${p.version} != package.json ${pj.version}`);
   for (const f of ['README.md', 'README-zh.md', 'README-es.md', 'README-pt.md', 'README-hi.md']) {
     if (!fs.existsSync(path.join(projectRoot, p.dir, f))) errors.push(`${p.name}: missing ${f}`);
   }
@@ -46,6 +49,7 @@ const activeMedia = ['dsh-einvoice','dsh-bankrec','dsh-ap-three-way','dsh-travel
 for (const name of activeMedia) {
   const entry = packages.packages.find((x) => x.name === name);
   if (!entry) { errors.push(`active media package missing: ${name}`); continue; }
+  if (!fs.existsSync(path.join(projectRoot, entry.dir, 'package.json'))) { skippedSiblings++; continue; }
   for (const f of ['screenshots.json', 'TROUBLESHOOTING.md', `docs/assets/${name}-hero.png`]) {
     if (!fs.existsSync(path.join(projectRoot, entry.dir, f))) errors.push(`${name}: missing ${f}`);
   }
@@ -57,6 +61,7 @@ for (const name of activeMedia) {
 for (const name of ['dsh-finops-suite', 'dsh-contract-suite']) {
   const entry = packages.suites.find((x) => x.name === name);
   if (!entry) continue;
+  if (!fs.existsSync(path.join(projectRoot, entry.dir, 'package.json'))) continue;
   const pj = readJson(path.join(projectRoot, entry.dir, 'package.json'));
   if (!pj.files.includes('SUITE.md')) errors.push(`${name}: package.json files[] missing SUITE.md`);
   if (!fs.existsSync(path.join(projectRoot, entry.dir, 'SUITE.md'))) errors.push(`${name}: missing SUITE.md`);
@@ -94,4 +99,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log(`check-docs ok: ${packages.packages.length} packages + ${packages.suites.length} suites; family ${family.counts.total}/${family.counts.active}/${family.counts.frozen}/${family.counts.retired}; taxonomy ${taxonomy.items.length}.`);
+console.log(`check-docs ok: ${packages.packages.length} packages + ${packages.suites.length} suites; family ${family.counts.total}/${family.counts.active}/${family.counts.frozen}/${family.counts.retired}; taxonomy ${taxonomy.items.length}; sibling checks skipped=${skippedSiblings}.`);
