@@ -103,3 +103,7 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 ### Touched legacy package
 
 - `dsh-lsp-actions` was touched for the Dependabot cleanup; it now also has `PRIVACY.md`, `icon.svg`, five README links and `package.json files[]`, verified with `npm pack --dry-run` and `readme-sync`. The other 53 legacy directories remain tracked in `LEGACY-DEBT.md`, not bulk-rewritten.
+
+### External directory (1024Store)
+
+- Submitted `dsh-ghg` as one catalog entry to `imsai-sh/awesome-deepseek-harness-plugins`; static review passed and PR #781 merged. This is an additional domain entry beyond the earlier checker submissions.
