@@ -4,7 +4,7 @@
   "packages": [
     {
       "name": "dsh-einvoice",
-      "version": "0.2.0-alpha.5",
+      "version": "0.2.0-alpha.6",
       "repo": "https://github.com/PerryLink/dsh-einvoice",
       "npm": "https://www.npmjs.com/package/dsh-einvoice",
       "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.4",
@@ -18,7 +18,7 @@
     },
     {
       "name": "dsh-bankrec",
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.9",
       "repo": "https://github.com/PerryLink/dsh-bankrec",
       "npm": "https://www.npmjs.com/package/dsh-bankrec",
       "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.7",
@@ -32,7 +32,7 @@
     },
     {
       "name": "dsh-ap-three-way",
-      "version": "0.1.0-alpha.5",
+      "version": "0.1.0-alpha.6",
       "repo": "https://github.com/PerryLink/dsh-ap-three-way",
       "npm": "https://www.npmjs.com/package/dsh-ap-three-way",
       "release": "https://github.com/PerryLink/dsh-ap-three-way/releases/tag/v0.1.0-alpha.4",
@@ -46,7 +46,7 @@
     },
     {
       "name": "dsh-travel-recon",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-travel-recon",
       "npm": "https://www.npmjs.com/package/dsh-travel-recon",
       "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0-alpha.5",
@@ -60,7 +60,7 @@
     },
     {
       "name": "dsh-legal-intake",
-      "version": "0.1.0-alpha.4",
+      "version": "0.1.0-alpha.5",
       "repo": "https://github.com/PerryLink/dsh-legal-intake",
       "npm": "https://www.npmjs.com/package/dsh-legal-intake",
       "release": "https://github.com/PerryLink/dsh-legal-intake/releases/tag/v0.1.0-alpha.3",
@@ -74,7 +74,7 @@
     },
     {
       "name": "dsh-legal-clause",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-legal-clause",
       "npm": "https://www.npmjs.com/package/dsh-legal-clause",
       "release": "https://github.com/PerryLink/dsh-legal-clause/releases/tag/v0.1.0-alpha.5",
@@ -88,7 +88,7 @@
     },
     {
       "name": "dsh-ghg",
-      "version": "0.1.0-alpha.10",
+      "version": "0.1.0-alpha.11",
       "repo": "https://github.com/PerryLink/dsh-ghg",
       "npm": "https://www.npmjs.com/package/dsh-ghg",
       "release": "https://github.com/PerryLink/dsh-ghg/releases/tag/v0.1.0-alpha.9",
@@ -102,7 +102,7 @@
     },
     {
       "name": "dsh-qms-capa",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-qms-capa",
       "npm": "https://www.npmjs.com/package/dsh-qms-capa",
       "release": "https://github.com/PerryLink/dsh-qms-capa/releases/tag/v0.1.0-alpha.5",
@@ -116,7 +116,7 @@
     },
     {
       "name": "dsh-hs-candidate",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-hs-candidate",
       "npm": "https://www.npmjs.com/package/dsh-hs-candidate",
       "release": "https://github.com/PerryLink/dsh-hs-candidate/releases/tag/v0.1.0-alpha.5",
@@ -130,7 +130,7 @@
     },
     {
       "name": "dsh-freight-audit",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "repo": "https://github.com/PerryLink/dsh-freight-audit",
       "npm": "https://www.npmjs.com/package/dsh-freight-audit",
       "release": "https://github.com/PerryLink/dsh-freight-audit/releases/tag/v0.1.0-alpha.6",
@@ -144,7 +144,7 @@
     },
     {
       "name": "dsh-docx-redline",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "repo": "https://github.com/PerryLink/dsh-docx-redline",
       "npm": "https://www.npmjs.com/package/dsh-docx-redline",
       "release": "https://github.com/PerryLink/dsh-docx-redline/releases/tag/v0.1.0-alpha.6",
@@ -158,7 +158,7 @@
     },
     {
       "name": "dsh-ifc-qto",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "repo": "https://github.com/PerryLink/dsh-ifc-qto",
       "npm": "https://www.npmjs.com/package/dsh-ifc-qto",
       "release": "https://github.com/PerryLink/dsh-ifc-qto/releases/tag/v0.1.0-alpha.6",
@@ -172,7 +172,7 @@
     },
     {
       "name": "dsh-policy-ledger",
-      "version": "0.2.0-alpha.6",
+      "version": "0.2.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-policy-ledger",
       "npm": "https://www.npmjs.com/package/dsh-policy-ledger",
       "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0-alpha.4",
@@ -186,7 +186,7 @@
     },
     {
       "name": "dsh-pim-lint",
-      "version": "0.1.0-alpha.4",
+      "version": "0.1.0-alpha.5",
       "repo": "https://github.com/PerryLink/dsh-pim-lint",
       "npm": "https://www.npmjs.com/package/dsh-pim-lint",
       "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0-alpha.3",
@@ -200,7 +200,7 @@
     },
     {
       "name": "dsh-eval-pack",
-      "version": "0.1.0-alpha.4",
+      "version": "0.1.0-alpha.5",
       "repo": "https://github.com/PerryLink/dsh-eval-pack",
       "npm": "https://www.npmjs.com/package/dsh-eval-pack",
       "release": "https://github.com/PerryLink/dsh-eval-pack/releases/tag/v0.1.0-alpha.3",
@@ -216,7 +216,7 @@
   "suites": [
     {
       "name": "dsh-finops-suite",
-      "version": "0.1.0-alpha.3",
+      "version": "0.1.0-alpha.4",
       "description": "One-command install for dsh-einvoice, dsh-bankrec, dsh-ap-three-way and dsh-travel-recon.",
       "repo": "https://github.com/PerryLink/dsh-finops-suite",
       "npm": "https://www.npmjs.com/package/dsh-finops-suite",
@@ -235,7 +235,7 @@
     },
     {
       "name": "dsh-contract-suite",
-      "version": "0.1.0-alpha.3",
+      "version": "0.1.0-alpha.4",
       "description": "One-command install for dsh-legal-intake and dsh-legal-clause.",
       "repo": "https://github.com/PerryLink/dsh-contract-suite",
       "npm": "https://www.npmjs.com/package/dsh-contract-suite",
