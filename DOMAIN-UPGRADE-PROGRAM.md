@@ -90,7 +90,25 @@ with tarball, SBOM, ACCEPTANCE and SHA256SUMS).
 
 Released this way: `dsh-pim-lint 0.1.0-alpha.8`, `dsh-eval-pack 0.1.0-alpha.8` (both with provenance).
 
-Remaining P3 work: the other 13 packages, mirror assets and the docs/manifest refresh. ACCEPTANCE rows and captures are produced at the release step (P3).
+**Released (2026-11-01 late):** all 15 packages are on npm with provenance and a GitHub pre-release
+carrying the tarball, SBOM, ACCEPTANCE and SHA256SUMS:
+
+```text
+dsh-einvoice 0.2.0-alpha.8   dsh-bankrec 0.1.0-alpha.11   dsh-ghg 0.1.0-alpha.13
+dsh-ap-three-way 0.1.0-alpha.8   dsh-travel-recon 0.1.0-alpha.10
+dsh-legal-intake 0.1.0-alpha.7   dsh-legal-clause 0.1.0-alpha.9
+dsh-qms-capa 0.1.0-alpha.9   dsh-hs-candidate 0.1.0-alpha.9
+dsh-freight-audit 0.1.0-alpha.10   dsh-docx-redline 0.1.0-alpha.10
+dsh-ifc-qto 0.1.0-alpha.10   dsh-pim-lint 0.1.0-alpha.8
+dsh-policy-ledger 0.2.0-alpha.10   dsh-eval-pack 0.1.0-alpha.8
+```
+
+Two release-pipeline defects were found and fixed on the way: `git add -A` was committing the local
+`node_modules` symlink (the `.gitignore` entry `node_modules/` only matches a directory), and the
+einvoice release needed its version gate in `scripts/lint.mjs` aligned before the tag would publish.
+`scripts/release-package.mjs` now does the whole flow and strips the symlink after staging.
+
+Remaining: mirror assets (Gitee/GitCode) and the catalog refresh. ACCEPTANCE rows and captures are produced at the release step (P3).
 
 | Date | Package | Change | Evidence |
 |---|---|---|---|
