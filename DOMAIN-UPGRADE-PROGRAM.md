@@ -91,6 +91,9 @@ the next version from `origin/main` rather than the stale local clone.
 | `dsh-qms-capa` | `qms.capa_effectiveness` — close-readiness: state gate, overdue, recurrence | ISO 9001:2015 10.2 | 13/13 | `0.1.0-alpha.10` |
 | `dsh-freight-audit` | `freight.accessorial_check` — charge types, duplicates, agreed list, cap | freight audit practice | 13/13 | `0.1.0-alpha.11` |
 
+| `dsh-hs-candidate` | `hs.rvc_report` — simple ratio / build-down / build-up RVC | WTO/WCO rules of origin | 11/11 | `0.1.0-alpha.10` |
+| `dsh-ifc-qto` | `ifc.unit_check` — unit assignment before trusting a take-off | IFC 4.3 IfcUnitAssignment | 12/12 | `0.1.0-alpha.11` |
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
