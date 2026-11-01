@@ -1,0 +1,915 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>分类视图 — PerryLink DSH family</title><link rel="stylesheet" href="assets/style.css"></head>
+<body><header class="top"><a href="index.html">PerryLink DSH 领域插件</a><span class="badge">taxonomy v1 · draft</span></header>
+<main class="wrap">
+<h1>DSH family taxonomy</h1>
+<p class="lead">125 rows · 107 active · 15 frozen · 3 retired. One primary category, one archetype, optional domain tags.</p>
+<p class="note">This is a proposal view. It does not replace <a href="https://github.com/PerryLink/dsh-kit">dsh-kit</a> install semantics or any package's own README. Source: <a href="../family.json">family.json</a> · <a href="../TAXONOMY.md">TAXONOMY.md</a>.</p>
+<div class="filters">
+<label>Collection <select id="f-collection"><option value="">all</option><option value="mainline">mainline</option><option value="compliance">compliance</option><option value="domain-ops">domain-ops</option><option value="infrastructure">infrastructure</option></select></label>
+<label>Category <select id="f-category"><option value="">all</option><option value="business-ops">业务运营 / business-ops</option><option value="compliance">合规与核查 / compliance</option><option value="content">内容与文档 / content</option><option value="data">数据与分析 / data</option><option value="developer-tools">开发者工具 / developer-tools</option><option value="integrations">集成与消息 / integrations</option><option value="interface">界面与体验 / interface</option><option value="observability">可观测与成本 / observability</option><option value="platform">平台与基础设施 / platform</option><option value="research">研究与知识 / research</option><option value="security">安全与隐私 / security</option><option value="workflow">工作流与自动化 / workflow</option></select></label>
+<label>Archetype <select id="f-archetype"><option value="">all</option><option value="assistant">assistant</option><option value="calculator">calculator</option><option value="catalog">catalog</option><option value="checker">checker</option><option value="doctor">doctor</option><option value="drafter">drafter</option><option value="extractor">extractor</option><option value="ingest">ingest</option><option value="inspector">inspector</option><option value="integration">integration</option><option value="ledger">ledger</option><option value="reconciler">reconciler</option><option value="runtime">runtime</option><option value="suite">suite</option><option value="ui">ui</option><option value="validator">validator</option></select></label>
+<label>Status <select id="f-status"><option value="">all</option><option value="active">active</option><option value="frozen">frozen</option><option value="retired">retired</option></select></label>
+<span id="count" class="meta"></span>
+</div>
+<noscript><p class="note">JavaScript is off; the full table is shown.</p></noscript>
+<table id="family"><thead><tr><th>Package</th><th>Collection</th><th>Category</th><th>Archetype</th><th>Domains</th><th>Status</th></tr></thead>
+<tbody>
+<tr data-category="content" data-archetype="extractor" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-library">dsh-library</a><br><small>dsh-library</small></td>
+<td>mainline</td>
+<td>内容与文档 / content</td>
+<td><code>extractor</code></td>
+<td>knowledge</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="content" data-archetype="ui" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-talk">dsh-talk</a><br><small>dsh-talk</small></td>
+<td>mainline</td>
+<td>内容与文档 / content</td>
+<td><code>ui</code></td>
+<td>chat</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="content" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-translate">dsh-translate</a><br><small>dsh-translate</small></td>
+<td>mainline</td>
+<td>内容与文档 / content</td>
+<td><code>assistant</code></td>
+<td>translation</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="validator" data-status="frozen" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-community-bench">dsh-community-bench</a><br><small>dsh-community-bench</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>validator</code></td>
+<td>benchmark</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="developer-tools" data-archetype="validator" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-data-quality">dsh-data-quality</a><br><small>dsh-data-quality</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>validator</code></td>
+<td>data</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="integration" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-lsp-actions">dsh-lsp-actions</a><br><small>dsh-lsp-actions</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>integration</code></td>
+<td>lsp</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="integration" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-mcp-panel">dsh-mcp-panel</a><br><small>dsh-mcp-panel</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>integration</code></td>
+<td>mcp</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="doctor" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-plugin-doctor">dsh-plugin-doctor</a><br><small>dsh-plugin-doctor</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>doctor</code></td>
+<td>plugin-install</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-plugin-guide">dsh-plugin-guide</a><br><small>dsh-plugin-guide</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>assistant</code></td>
+<td>plugin-dev</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="catalog" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-plugin-kit">dsh-plugin-kit</a><br><small>dsh-plugin-kit</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>catalog</code></td>
+<td>plugin-dev</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-score">dsh-score</a><br><small>dsh-score</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>assistant</code></td>
+<td>evaluation</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="integrations" data-archetype="ingest" data-status="frozen" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-claude-move">dsh-claude-move</a><br><small>dsh-claude-move</small></td>
+<td>mainline</td>
+<td>集成与消息 / integrations</td>
+<td><code>ingest</code></td>
+<td>migration</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="integrations" data-archetype="integration" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/laya-family/dsh-laya">dsh-laya</a><br><small>dsh-laya</small></td>
+<td>mainline</td>
+<td>集成与消息 / integrations</td>
+<td><code>integration</code></td>
+<td>automation</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="integrations" data-archetype="integration" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-local-ai">dsh-local-ai</a><br><small>dsh-local-ai</small></td>
+<td>mainline</td>
+<td>集成与消息 / integrations</td>
+<td><code>integration</code></td>
+<td>local-model</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="integrations" data-archetype="integration" data-status="frozen" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-reach">dsh-reach</a><br><small>dsh-reach</small></td>
+<td>mainline</td>
+<td>集成与消息 / integrations</td>
+<td><code>integration</code></td>
+<td>messaging</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="integrations" data-archetype="integration" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-ticktick">dsh-ticktick</a><br><small>dsh-ticktick</small></td>
+<td>mainline</td>
+<td>集成与消息 / integrations</td>
+<td><code>integration</code></td>
+<td>tasks</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="interface" data-archetype="ui" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-click">dsh-click</a><br><small>dsh-click</small></td>
+<td>mainline</td>
+<td>界面与体验 / interface</td>
+<td><code>ui</code></td>
+<td>desktop, ocr</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="interface" data-archetype="ui" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-composer-history">dsh-composer-history</a><br><small>dsh-composer-history</small></td>
+<td>mainline</td>
+<td>界面与体验 / interface</td>
+<td><code>ui</code></td>
+<td>input</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="interface" data-archetype="ui" data-status="frozen" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-draw">dsh-draw</a><br><small>dsh-draw</small></td>
+<td>mainline</td>
+<td>界面与体验 / interface</td>
+<td><code>ui</code></td>
+<td>visual</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="interface" data-archetype="ui" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-output-styles">dsh-output-styles</a><br><small>dsh-output-styles</small></td>
+<td>mainline</td>
+<td>界面与体验 / interface</td>
+<td><code>ui</code></td>
+<td>output</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="interface" data-archetype="ui" data-status="retired" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-session-pin">dsh-session-pin</a><br><small>dsh-session-pin</small></td>
+<td>mainline</td>
+<td>界面与体验 / interface</td>
+<td><code>ui</code></td>
+<td>sessions</td>
+<td><span class="status retired">retired</span></td></tr>
+<tr data-category="observability" data-archetype="runtime" data-status="frozen" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-autotier">dsh-autotier</a><br><small>dsh-autotier</small></td>
+<td>mainline</td>
+<td>可观测与成本 / observability</td>
+<td><code>runtime</code></td>
+<td>model-routing, cost</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="observability" data-archetype="calculator" data-status="frozen" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-budget">dsh-budget</a><br><small>dsh-budget</small></td>
+<td>mainline</td>
+<td>可观测与成本 / observability</td>
+<td><code>calculator</code></td>
+<td>cost</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="observability" data-archetype="runtime" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-fast">dsh-fast</a><br><small>dsh-fast</small></td>
+<td>mainline</td>
+<td>可观测与成本 / observability</td>
+<td><code>runtime</code></td>
+<td>performance</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="observability" data-archetype="runtime" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-observe">dsh-observe</a><br><small>dsh-observe</small></td>
+<td>mainline</td>
+<td>可观测与成本 / observability</td>
+<td><code>runtime</code></td>
+<td>telemetry</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="platform" data-archetype="catalog" data-status="frozen" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-cert-mcp">dsh-cert-mcp</a><br><small>dsh-cert-mcp</small></td>
+<td>mainline</td>
+<td>平台与基础设施 / platform</td>
+<td><code>catalog</code></td>
+<td>certification, mcp</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="research" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-fund-research">dsh-fund-research</a><br><small>dsh-fund-research</small></td>
+<td>mainline</td>
+<td>研究与知识 / research</td>
+<td><code>assistant</code></td>
+<td>funds</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="research" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-industry-research">dsh-industry-research</a><br><small>dsh-industry-research</small></td>
+<td>mainline</td>
+<td>研究与知识 / research</td>
+<td><code>assistant</code></td>
+<td>industry</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="research" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-research-report">dsh-research-report</a><br><small>dsh-research-report</small></td>
+<td>mainline</td>
+<td>研究与知识 / research</td>
+<td><code>assistant</code></td>
+<td>research</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="security" data-archetype="runtime" data-status="frozen" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-defend">dsh-defend</a><br><small>dsh-defend</small></td>
+<td>mainline</td>
+<td>安全与隐私 / security</td>
+<td><code>runtime</code></td>
+<td>prompt-injection</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="security" data-archetype="runtime" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-mask">dsh-mask</a><br><small>dsh-mask</small></td>
+<td>mainline</td>
+<td>安全与隐私 / security</td>
+<td><code>runtime</code></td>
+<td>secrets</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="security" data-archetype="runtime" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-permission-rules">dsh-permission-rules</a><br><small>dsh-permission-rules</small></td>
+<td>mainline</td>
+<td>安全与隐私 / security</td>
+<td><code>runtime</code></td>
+<td>permissions</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="security" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-skill-pack-security-provider">dsh-skill-pack-security-provider</a><br><small>dsh-skill-pack-security-provider</small></td>
+<td>mainline</td>
+<td>安全与隐私 / security</td>
+<td><code>assistant</code></td>
+<td>security-audit</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-auto-review">dsh-auto-review</a><br><small>dsh-auto-review</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>assistant</code></td>
+<td>approval, security</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="runtime" data-status="retired" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-background-agents">dsh-background-agents</a><br><small>dsh-background-agents</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>runtime</code></td>
+<td>agents</td>
+<td><span class="status retired">retired</span></td></tr>
+<tr data-category="workflow" data-archetype="runtime" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-checkpoint-rewind">dsh-checkpoint-rewind</a><br><small>dsh-checkpoint-rewind</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>runtime</code></td>
+<td>sessions</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-doublecheck">dsh-doublecheck</a><br><small>dsh-doublecheck</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>assistant</code></td>
+<td>quality-gate</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="integration" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-github">dsh-github</a><br><small>dsh-github</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>integration</code></td>
+<td>github</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="runtime" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-memento">dsh-memento</a><br><small>dsh-memento</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>runtime</code></td>
+<td>memory</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="integration" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-plugin-upgrade">dsh-plugin-upgrade</a><br><small>dsh-plugin-upgrade</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>integration</code></td>
+<td>upgrade</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="runtime" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-session-sync">dsh-session-sync</a><br><small>dsh-session-sync</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>runtime</code></td>
+<td>sessions</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="runtime" data-status="retired" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-team-rooms">dsh-team-rooms</a><br><small>dsh-team-rooms</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>runtime</code></td>
+<td>agents</td>
+<td><span class="status retired">retired</span></td></tr>
+<tr data-category="workflow" data-archetype="assistant" data-status="active" data-collection="mainline">
+<td><a href="https://github.com/PerryLink/dsh-test-drive">dsh-test-drive</a><br><small>dsh-test-drive</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>assistant</code></td>
+<td>testing</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="extractor" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-tender-requirements">dsh-tender-requirements</a><br><small>dsh-tender-requirements</small></td>
+<td>compliance</td>
+<td>业务运营 / business-ops</td>
+<td><code>extractor</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-aqua-input-check">dsh-aqua-input-check</a><br><small>dsh-aqua-input-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>safety, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-archive-check">dsh-archive-check</a><br><small>dsh-archive-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>government, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-bid-ca-precheck">dsh-bid-ca-precheck</a><br><small>dsh-bid-ca-precheck</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-bid-health-check">dsh-bid-health-check</a><br><small>dsh-bid-health-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-bid-qual-check">dsh-bid-qual-check</a><br><small>dsh-bid-qual-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-canteen-retention-check">dsh-canteen-retention-check</a><br><small>dsh-canteen-retention-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>safety, food-service, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-construction-doc-check">dsh-construction-doc-check</a><br><small>dsh-construction-doc-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-contract-stance">dsh-contract-stance</a><br><small>dsh-contract-stance</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-customs-doc-check">dsh-customs-doc-check</a><br><small>dsh-customs-doc-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>trade, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="ledger" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-demurrage-ledger">dsh-demurrage-ledger</a><br><small>dsh-demurrage-ledger</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>ledger</code></td>
+<td>trade, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-drill-script-check">dsh-drill-script-check</a><br><small>dsh-drill-script-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>safety, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-eia-guide-check">dsh-eia-guide-check</a><br><small>dsh-eia-guide-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-emergency-plan">dsh-emergency-plan</a><br><small>dsh-emergency-plan</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>safety, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-essay-rubric-check">dsh-essay-rubric-check</a><br><small>dsh-essay-rubric-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>research, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-evidence-check">dsh-evidence-check</a><br><small>dsh-evidence-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>legal, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-export-ctl-check">dsh-export-ctl-check</a><br><small>dsh-export-ctl-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>trade, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-fmea-table-check">dsh-fmea-table-check</a><br><small>dsh-fmea-table-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>quality, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="calculator" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-forecast-penalty">dsh-forecast-penalty</a><br><small>dsh-forecast-penalty</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>calculator</code></td>
+<td>trade, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-gongwen-flow-check">dsh-gongwen-flow-check</a><br><small>dsh-gongwen-flow-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>government, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-gongwen-word-check">dsh-gongwen-word-check</a><br><small>dsh-gongwen-word-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>government, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-guard-plan-qc">dsh-guard-plan-qc</a><br><small>dsh-guard-plan-qc</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-hazchem-check">dsh-hazchem-check</a><br><small>dsh-hazchem-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>safety, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-hazplan-check">dsh-hazplan-check</a><br><small>dsh-hazplan-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-hidden-risk-map">dsh-hidden-risk-map</a><br><small>dsh-hidden-risk-map</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>safety, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-hs-classify">dsh-hs-classify</a><br><small>dsh-hs-classify</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>trade, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-icd-rule-check">dsh-icd-rule-check</a><br><small>dsh-icd-rule-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>medical, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-invoice-ledger">dsh-invoice-ledger</a><br><small>dsh-invoice-ledger</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>finance, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="extractor" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-lawcite-adapter">dsh-lawcite-adapter</a><br><small>dsh-lawcite-adapter</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>extractor</code></td>
+<td>legal, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-lc-doc-check">dsh-lc-doc-check</a><br><small>dsh-lc-doc-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>trade, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-learning-gap-check">dsh-learning-gap-check</a><br><small>dsh-learning-gap-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>research, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-medrec-qc">dsh-medrec-qc</a><br><small>dsh-medrec-qc</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>medical, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-nsfc-form-check">dsh-nsfc-form-check</a><br><small>dsh-nsfc-form-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>research, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-nurse-record-check">dsh-nurse-record-check</a><br><small>dsh-nurse-record-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>medical, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-origin-rvc-check">dsh-origin-rvc-check</a><br><small>dsh-origin-rvc-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>trade, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-ota-review-check">dsh-ota-review-check</a><br><small>dsh-ota-review-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>quality, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="extractor" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-paper-doc-adapter">dsh-paper-doc-adapter</a><br><small>dsh-paper-doc-adapter</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>extractor</code></td>
+<td>research, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-payroll-audit">dsh-payroll-audit</a><br><small>dsh-payroll-audit</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>finance, hr, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-permit-report-check">dsh-permit-report-check</a><br><small>dsh-permit-report-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-pipeline-check">dsh-pipeline-check</a><br><small>dsh-pipeline-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>quality, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="drafter" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-pleading-draft">dsh-pleading-draft</a><br><small>dsh-pleading-draft</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>drafter</code></td>
+<td>legal, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="drafter" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-policy-brief-draft">dsh-policy-brief-draft</a><br><small>dsh-policy-brief-draft</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>drafter</code></td>
+<td>research, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="calculator" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-power-loss-split">dsh-power-loss-split</a><br><small>dsh-power-loss-split</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>calculator</code></td>
+<td>safety, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-power-ticket-check">dsh-power-ticket-check</a><br><small>dsh-power-ticket-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>safety, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-ppap-check">dsh-ppap-check</a><br><small>dsh-ppap-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>quality, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="calculator" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-protest-deadline">dsh-protest-deadline</a><br><small>dsh-protest-deadline</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>calculator</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="calculator" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-railway-window">dsh-railway-window</a><br><small>dsh-railway-window</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>calculator</code></td>
+<td>trade, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-repair-order-qc">dsh-repair-order-qc</a><br><small>dsh-repair-order-qc</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>quality, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-review-reply-check">dsh-review-reply-check</a><br><small>dsh-review-reply-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>quality, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-rulefile-check">dsh-rulefile-check</a><br><small>dsh-rulefile-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-safety-brief-check">dsh-safety-brief-check</a><br><small>dsh-safety-brief-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-safety-ledger-check">dsh-safety-ledger-check</a><br><small>dsh-safety-ledger-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, safety, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-site-log-check">dsh-site-log-check</a><br><small>dsh-site-log-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-soe-decision-check">dsh-soe-decision-check</a><br><small>dsh-soe-decision-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>governance, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-soilwater-check">dsh-soilwater-check</a><br><small>dsh-soilwater-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>construction, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-sop-sync-check">dsh-sop-sync-check</a><br><small>dsh-sop-sync-check</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>governance, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="calculator" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-spc-gbt-adapter">dsh-spc-gbt-adapter</a><br><small>dsh-spc-gbt-adapter</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>calculator</code></td>
+<td>quality, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="extractor" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-tender-extract">dsh-tender-extract</a><br><small>dsh-tender-extract</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>extractor</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-tender-matrix">dsh-tender-matrix</a><br><small>dsh-tender-matrix</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td>tender, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="calculator" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-warranty-calc">dsh-warranty-calc</a><br><small>dsh-warranty-calc</small></td>
+<td>compliance</td>
+<td>合规与核查 / compliance</td>
+<td><code>calculator</code></td>
+<td>quality, china</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="data" data-archetype="reconciler" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-excel-reconcile">dsh-excel-reconcile</a><br><small>dsh-excel-reconcile</small></td>
+<td>compliance</td>
+<td>数据与分析 / data</td>
+<td><code>reconciler</code></td>
+<td>data, finance</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="data" data-archetype="extractor" data-status="active" data-collection="compliance">
+<td><a href="https://github.com/PerryLink/dsh-table-ingest">dsh-table-ingest</a><br><small>dsh-table-ingest</small></td>
+<td>compliance</td>
+<td>数据与分析 / data</td>
+<td><code>extractor</code></td>
+<td>data, documents</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-ap-three-way">dsh-ap-three-way</a><br><small>AP three-way match</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>reconciler</code></td>
+<td>finance, accounts-payable</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-bankrec">dsh-bankrec</a><br><small>Bank statement reconciliation</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>reconciler</code></td>
+<td>finance, banking</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="suite" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-contract-suite">dsh-contract-suite</a><br><small>Contract ops suite</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>suite</code></td>
+<td>legal</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="ingest" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-einvoice">dsh-einvoice</a><br><small>China e-invoice (file-level)</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>ingest</code></td>
+<td>finance, china-einvoice</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="suite" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-finops-suite">dsh-finops-suite</a><br><small>Finance ops suite</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>suite</code></td>
+<td>finance</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="checker" data-status="frozen" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-freight-audit">dsh-freight-audit</a><br><small>Freight bill audit</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>checker</code></td>
+<td>logistics, freight</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="business-ops" data-archetype="calculator" data-status="frozen" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-ghg">dsh-ghg</a><br><small>Electricity GHG (Scope 2)</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>calculator</code></td>
+<td>esg, emissions, energy</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="business-ops" data-archetype="checker" data-status="frozen" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-hs-candidate">dsh-hs-candidate</a><br><small>HS candidate precheck</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>checker</code></td>
+<td>trade, customs</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="business-ops" data-archetype="checker" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-legal-clause">dsh-legal-clause</a><br><small>Contract clause &amp; playbook review</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>checker</code></td>
+<td>legal, contracts</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="ingest" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-legal-intake">dsh-legal-intake</a><br><small>Legal request intake</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>ingest</code></td>
+<td>legal, intake</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="ledger" data-status="frozen" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-qms-capa">dsh-qms-capa</a><br><small>QMS NCR, CAPA &amp; 8D</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>ledger</code></td>
+<td>quality, manufacturing</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-travel-recon">dsh-travel-recon</a><br><small>Travel reconciliation &amp; policy check</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>reconciler</code></td>
+<td>finance, travel-expense</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="content" data-archetype="inspector" data-status="frozen" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-docx-redline">dsh-docx-redline</a><br><small>DOCX inspect &amp; text diff</small></td>
+<td>domain-ops</td>
+<td>内容与文档 / content</td>
+<td><code>inspector</code></td>
+<td>documents</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="data" data-archetype="extractor" data-status="frozen" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-ifc-qto">dsh-ifc-qto</a><br><small>IFC quantity takeoff</small></td>
+<td>domain-ops</td>
+<td>数据与分析 / data</td>
+<td><code>extractor</code></td>
+<td>construction, bim</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="data" data-archetype="validator" data-status="frozen" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-pim-lint">dsh-pim-lint</a><br><small>PIM catalog lint</small></td>
+<td>domain-ops</td>
+<td>数据与分析 / data</td>
+<td><code>validator</code></td>
+<td>retail, pim</td>
+<td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="developer-tools" data-archetype="validator" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-eval-pack">dsh-eval-pack</a><br><small>Eval pack lint &amp; grader</small></td>
+<td>domain-ops</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>validator</code></td>
+<td>evaluation</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="doctor" data-status="active" data-collection="domain-ops">
+<td><a href="https://github.com/PerryLink/dsh-policy-ledger">dsh-policy-ledger</a><br><small>Install doctor</small></td>
+<td>domain-ops</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>doctor</code></td>
+<td>plugin-install, supply-chain</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="platform" data-archetype="catalog" data-status="active" data-collection="infrastructure">
+<td><a href="https://github.com/PerryLink/dsh-catalog">dsh-catalog</a><br><small>dsh-catalog</small></td>
+<td>infrastructure</td>
+<td>平台与基础设施 / platform</td>
+<td><code>catalog</code></td>
+<td>market</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="platform" data-archetype="catalog" data-status="active" data-collection="infrastructure">
+<td><a href="https://github.com/PerryLink/dsh-kit">dsh-kit</a><br><small>dsh-kit</small></td>
+<td>infrastructure</td>
+<td>平台与基础设施 / platform</td>
+<td><code>catalog</code></td>
+<td>install</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="platform" data-archetype="catalog" data-status="active" data-collection="infrastructure">
+<td><a href="https://github.com/PerryLink/dsh-plugin-certification">dsh-plugin-certification</a><br><small>dsh-plugin-certification</small></td>
+<td>infrastructure</td>
+<td>平台与基础设施 / platform</td>
+<td><code>catalog</code></td>
+<td>certification</td>
+<td><span class="status active">active</span></td></tr>
+</tbody></table>
+<p class="meta">Generated from family.json; do not edit this page by hand. Run <code>node scripts/build-docs.mjs</code>.</p>
+</main>
+<footer class="foot"><p>Public/synthetic alpha family. No customer evidence, no GA claim. Apache-2.0.</p><p><a href="index.html">索引</a> · <a href="../TAXONOMY.md">TAXONOMY.md</a> · <a href="../family.json">family.json</a></p></footer>
+<script>
+const rows = [...document.querySelectorAll('#family tbody tr')];
+const fields = ['collection','category','archetype','status'];
+const selects = Object.fromEntries(fields.map(f => [f, document.getElementById('f-'+f)]));
+function apply(){
+  const active = Object.fromEntries(fields.map(f => [f, selects[f].value]));
+  let n = 0;
+  for (const row of rows) {
+    const ok = fields.every(f => !active[f] || row.dataset[f] === active[f]);
+    row.hidden = !ok;
+    if (ok) n++;
+  }
+  document.getElementById('count').textContent = n + ' / ' + rows.length + ' shown';
+}
+for (const s of Object.values(selects)) s.addEventListener('change', apply);
+apply();
+</script>
+</body></html>

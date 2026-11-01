@@ -1,0 +1,1945 @@
+{
+  "schemaVersion": "1.0.0-draft",
+  "updated": "2026-11-01",
+  "status": "proposal",
+  "description": "Four-axis taxonomy for PerryLink DSH plugins. counts are derived from this file, not hand-written.",
+  "axes": {
+    "collection": "product line",
+    "category": "user job",
+    "archetype": "functional contract",
+    "domain": "business subject"
+  },
+  "collections": [
+    {
+      "id": "mainline",
+      "description": "Runtime, workflow, UX, research, integrations and developer experience.",
+      "seeded": false
+    },
+    {
+      "id": "compliance",
+      "description": "53 core China compliance checkers plus 9 newer compliance tools.",
+      "seeded": true
+    },
+    {
+      "id": "domain-ops",
+      "description": "15 public/synthetic domain tools and 2 one-command suites.",
+      "seeded": true
+    },
+    {
+      "id": "infrastructure",
+      "description": "dsh-kit, dsh-catalog, certification and portal.",
+      "seeded": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "security",
+      "en": "Security & privacy",
+      "zh": "安全与隐私",
+      "description": "Protect secrets, permissions, approvals and the local runtime."
+    },
+    {
+      "id": "workflow",
+      "en": "Workflow & automation",
+      "zh": "工作流与自动化",
+      "description": "Repeatable engineering and operations workflows."
+    },
+    {
+      "id": "developer-tools",
+      "en": "Developer tools",
+      "zh": "开发者工具",
+      "description": "Build, diagnose, test and evaluate DSH plugins."
+    },
+    {
+      "id": "integrations",
+      "en": "Integrations & messaging",
+      "zh": "集成与消息",
+      "description": "Connect external services, people and inboxes."
+    },
+    {
+      "id": "research",
+      "en": "Research & knowledge",
+      "zh": "研究与知识",
+      "description": "Search, read, synthesize and publish research."
+    },
+    {
+      "id": "content",
+      "en": "Content & documents",
+      "zh": "内容与文档",
+      "description": "Inspect, transform and produce documents and content."
+    },
+    {
+      "id": "data",
+      "en": "Data & analytics",
+      "zh": "数据与分析",
+      "description": "Clean, align, extract and analyze structured data."
+    },
+    {
+      "id": "observability",
+      "en": "Observability & cost",
+      "zh": "可观测与成本",
+      "description": "See what the harness is doing and what it costs."
+    },
+    {
+      "id": "interface",
+      "en": "Interface & experience",
+      "zh": "界面与体验",
+      "description": "Change interaction, output style and visual surfaces."
+    },
+    {
+      "id": "business-ops",
+      "en": "Business operations",
+      "zh": "业务运营",
+      "description": "Run finance, legal, ESG, quality, trade and logistics operations."
+    },
+    {
+      "id": "compliance",
+      "en": "Compliance & verification",
+      "zh": "合规与核查",
+      "description": "Check a register or record set against a versioned rule pack."
+    },
+    {
+      "id": "platform",
+      "en": "Platform & infrastructure",
+      "zh": "平台与基础设施",
+      "description": "Install, discover, certify and serve plugins."
+    }
+  ],
+  "archetypes": [
+    {
+      "id": "checker",
+      "description": "Versioned rule pack/record set -> findings with locator and evidence; read-only."
+    },
+    {
+      "id": "validator",
+      "description": "Schema/format/check-digit validation without a versioned regulatory pack."
+    },
+    {
+      "id": "doctor",
+      "description": "Diagnose install, runtime or capability state."
+    },
+    {
+      "id": "inspector",
+      "description": "Inspect structure, hashes or diffs without adjudicating compliance."
+    },
+    {
+      "id": "ingest",
+      "description": "Import, parse, dedupe and archive source material."
+    },
+    {
+      "id": "extractor",
+      "description": "Pull structured fields out of documents or models."
+    },
+    {
+      "id": "assistant",
+      "description": "Model-assisted analysis, candidates or advice."
+    },
+    {
+      "id": "reconciler",
+      "description": "Match two or more sources and produce a workpaper."
+    },
+    {
+      "id": "calculator",
+      "description": "Compute derived values or conversions."
+    },
+    {
+      "id": "ledger",
+      "description": "Track a stateful register or workflow."
+    },
+    {
+      "id": "drafter",
+      "description": "Generate or complete a document draft."
+    },
+    {
+      "id": "integration",
+      "description": "Bridge an external service or channel."
+    },
+    {
+      "id": "ui",
+      "description": "Change UI, output style or interaction."
+    },
+    {
+      "id": "runtime",
+      "description": "Change permissions, memory, routing or hooks."
+    },
+    {
+      "id": "suite",
+      "description": "Install members only; no tool surface."
+    },
+    {
+      "id": "catalog",
+      "description": "Catalog, certification or install infrastructure."
+    }
+  ],
+  "domains": [
+    "accounts-payable",
+    "banking",
+    "bim",
+    "china",
+    "china-einvoice",
+    "construction",
+    "contracts",
+    "customs",
+    "data",
+    "documents",
+    "emissions",
+    "energy",
+    "esg",
+    "evaluation",
+    "finance",
+    "food-service",
+    "freight",
+    "governance",
+    "government",
+    "hr",
+    "intake",
+    "legal",
+    "logistics",
+    "manufacturing",
+    "medical",
+    "pim",
+    "plugin-install",
+    "quality",
+    "research",
+    "retail",
+    "safety",
+    "supply-chain",
+    "tender",
+    "trade",
+    "travel-expense"
+  ],
+  "rules": [
+    "Each item has exactly one category and one archetype.",
+    "checker=true requires all five checker tests to pass.",
+    "category=compliance only when archetype=checker or collection=compliance.",
+    "kind=suite only when archetype=suite and members.length > 0.",
+    "A collection is not a marketplace category.",
+    "Counts must be generated from this file."
+  ],
+  "items": [
+    {
+      "id": "dsh-einvoice",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "ingest",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "finance",
+        "china-einvoice"
+      ],
+      "displayName": "China e-invoice (file-level)",
+      "displayNameZh": "中国电子发票（文件级）",
+      "positioning": "File-level OFD/XML invoice ingest, parse, dedupe and local archive; not tax-authority verification.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-finops-suite",
+      "version": "0.2.0-alpha.7",
+      "relatedCheckers": [
+        "dsh-invoice-ledger",
+        "dsh-excel-reconcile"
+      ]
+    },
+    {
+      "id": "dsh-bankrec",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "finance",
+        "banking"
+      ],
+      "displayName": "Bank statement reconciliation",
+      "displayNameZh": "银行流水对账",
+      "positioning": "CAMT.053/MT940/GL ingest, 1:1 bank-to-GL match and a three-sheet workpaper.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-finops-suite",
+      "version": "0.1.0-alpha.10",
+      "relatedCheckers": [
+        "dsh-excel-reconcile",
+        "dsh-invoice-ledger"
+      ]
+    },
+    {
+      "id": "dsh-ap-three-way",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "finance",
+        "accounts-payable"
+      ],
+      "displayName": "AP three-way match",
+      "displayNameZh": "AP 三单匹配",
+      "positioning": "Invoice/PO/GRN three-way match with a 1% default price tolerance and exception workpaper.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-finops-suite",
+      "version": "0.1.0-alpha.7",
+      "relatedCheckers": [
+        "dsh-invoice-ledger",
+        "dsh-excel-reconcile"
+      ]
+    },
+    {
+      "id": "dsh-travel-recon",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "facet",
+      "domains": [
+        "finance",
+        "travel-expense"
+      ],
+      "displayName": "Travel reconciliation & policy check",
+      "displayNameZh": "差旅对账与政策检查",
+      "positioning": "Order/invoice/card three-way match, duplicate check and a read-only amount/invoice policy check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-finops-suite",
+      "version": "0.1.0-alpha.9",
+      "relatedCheckers": [
+        "dsh-invoice-ledger",
+        "dsh-excel-reconcile"
+      ]
+    },
+    {
+      "id": "dsh-legal-intake",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "legal",
+      "archetype": "ingest",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "legal",
+        "intake"
+      ],
+      "displayName": "Legal request intake",
+      "displayNameZh": "法务需求收件",
+      "positioning": "EML legal-request parse, classification, thread dedupe and ledger export.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-contract-suite",
+      "version": "0.1.0-alpha.6",
+      "relatedCheckers": [
+        "dsh-contract-stance",
+        "dsh-evidence-check"
+      ]
+    },
+    {
+      "id": "dsh-legal-clause",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "legal",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "adjacent",
+      "domains": [
+        "legal",
+        "contracts"
+      ],
+      "displayName": "Contract clause & playbook review",
+      "displayNameZh": "合同条款与 playbook 审查",
+      "positioning": "Clause tree plus a versioned 12-key playbook comparison and unresolved report; no legal conclusion.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-contract-suite",
+      "version": "0.1.0-alpha.8",
+      "relatedCheckers": [
+        "dsh-contract-stance",
+        "dsh-lawcite-adapter",
+        "dsh-evidence-check"
+      ]
+    },
+    {
+      "id": "dsh-ghg",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "esg",
+      "archetype": "calculator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "esg",
+        "emissions",
+        "energy"
+      ],
+      "displayName": "Electricity GHG (Scope 2)",
+      "displayNameZh": "用电碳排放（范围二）",
+      "positioning": "Electricity activity ingest, location-based factor calculation, row verification and a partial ESRS E1 pack.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.12",
+      "relatedCheckers": [
+        "dsh-eia-guide-check",
+        "dsh-soilwater-check"
+      ]
+    },
+    {
+      "id": "dsh-qms-capa",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "quality",
+      "archetype": "ledger",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "quality",
+        "manufacturing"
+      ],
+      "displayName": "QMS NCR, CAPA & 8D",
+      "displayNameZh": "QMS NCR、CAPA 与 8D",
+      "positioning": "NCR ingest/dedupe, batch alias resolution, impact evaluation and CAPA/8D state tracking.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.8",
+      "relatedCheckers": [
+        "dsh-fmea-table-check",
+        "dsh-ppap-check",
+        "dsh-spc-gbt-adapter",
+        "dsh-sop-sync-check"
+      ]
+    },
+    {
+      "id": "dsh-hs-candidate",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "adjacent",
+      "domains": [
+        "trade",
+        "customs"
+      ],
+      "displayName": "HS candidate precheck",
+      "displayNameZh": "HS 候选预检",
+      "positioning": "HS Top-3 candidates, 12-element completeness, simple RVC and tariff-version gate; not a binding classification.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.8",
+      "relatedCheckers": [
+        "dsh-hs-classify",
+        "dsh-origin-rvc-check",
+        "dsh-customs-doc-check"
+      ]
+    },
+    {
+      "id": "dsh-freight-audit",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "logistics",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "strong",
+      "domains": [
+        "logistics",
+        "freight"
+      ],
+      "displayName": "Freight bill audit",
+      "displayNameZh": "运费账单审计",
+      "positioning": "Versioned ratecard, carrier-bill audit, recovery summary and variance export.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.9",
+      "relatedCheckers": [
+        "dsh-demurrage-ledger",
+        "dsh-lc-doc-check",
+        "dsh-customs-doc-check"
+      ]
+    },
+    {
+      "id": "dsh-docx-redline",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "content",
+      "subcategory": "documents",
+      "archetype": "inspector",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "documents"
+      ],
+      "displayName": "DOCX inspect & text diff",
+      "displayNameZh": "DOCX 检查与文本差异",
+      "positioning": "DOCX structure/hash inspection, byte-exact roundtrip, one exact-run replacement and text-level diff; not a tracked-changes writer.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.9",
+      "relatedCheckers": [
+        "dsh-gongwen-word-check",
+        "dsh-archive-check",
+        "dsh-paper-doc-adapter"
+      ]
+    },
+    {
+      "id": "dsh-ifc-qto",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "data",
+      "subcategory": "construction",
+      "archetype": "extractor",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "construction",
+        "bim"
+      ],
+      "displayName": "IFC quantity takeoff",
+      "displayNameZh": "IFC 工程量清单",
+      "positioning": "IFC element/quantity inventory and CSV takeoff.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.9",
+      "relatedCheckers": [
+        "dsh-construction-doc-check",
+        "dsh-pipeline-check",
+        "dsh-site-log-check"
+      ]
+    },
+    {
+      "id": "dsh-policy-ledger",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "developer-tools",
+      "subcategory": "plugin-install",
+      "archetype": "doctor",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "plugin-install",
+        "supply-chain"
+      ],
+      "displayName": "Install doctor",
+      "displayNameZh": "安装诊断",
+      "positioning": "Read-only install doctor: capability snapshot, tarball assertion and install-log diagnosis; not a policy gate or ledger.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.2.0-alpha.9",
+      "relatedCheckers": [],
+      "relatedTools": [
+        "dsh-plugin-doctor",
+        "dsh-plugin-kit"
+      ]
+    },
+    {
+      "id": "dsh-pim-lint",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "data",
+      "subcategory": "retail",
+      "archetype": "validator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "retail",
+        "pim"
+      ],
+      "displayName": "PIM catalog lint",
+      "displayNameZh": "PIM 目录 lint",
+      "positioning": "CSV catalog lint for required fields, duplicate SKU, GTIN check digit and price.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.7",
+      "relatedCheckers": [
+        "dsh-excel-reconcile"
+      ],
+      "relatedTools": [
+        "dsh-data-quality"
+      ]
+    },
+    {
+      "id": "dsh-eval-pack",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "developer-tools",
+      "subcategory": "evaluation",
+      "archetype": "validator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "evaluation"
+      ],
+      "displayName": "Eval pack lint & grader",
+      "displayNameZh": "Eval pack 校验与评分",
+      "positioning": "Public/synthetic eval-pack structure lint and deterministic JSON grading; not a validated benchmark.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.7",
+      "relatedCheckers": [
+        "dsh-score",
+        "dsh-doublecheck",
+        "dsh-test-drive"
+      ]
+    },
+    {
+      "id": "dsh-customs-doc-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-demurrage-ledger",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "ledger",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-export-ctl-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-forecast-penalty",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-hs-classify",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-lc-doc-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-origin-rvc-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-railway-window",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-fmea-table-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-ota-review-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-pipeline-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-ppap-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-repair-order-qc",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-review-reply-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-spc-gbt-adapter",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-warranty-calc",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-aqua-input-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-drill-script-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-emergency-plan",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-hazchem-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-hidden-risk-map",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-power-loss-split",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-power-ticket-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-bid-ca-precheck",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-bid-qual-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-contract-stance",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-protest-deadline",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-rulefile-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-tender-extract",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "extractor",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-tender-matrix",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-eia-guide-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-guard-plan-qc",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-hazplan-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-permit-report-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-safety-brief-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-site-log-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-soilwater-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-essay-rubric-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-learning-gap-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-nsfc-form-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-paper-doc-adapter",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "extractor",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-policy-brief-draft",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "drafter",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-archive-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "government",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "government",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-gongwen-flow-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "government",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "government",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-gongwen-word-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "government",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "government",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-evidence-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "legal",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "legal",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-lawcite-adapter",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "legal",
+      "archetype": "extractor",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "legal",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-pleading-draft",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "legal",
+      "archetype": "drafter",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "legal",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-icd-rule-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "medical",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "medical",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-medrec-qc",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "medical",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "medical",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-nurse-record-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "medical",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "medical",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-soe-decision-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "governance",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "governance",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-sop-sync-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "governance",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "governance",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null
+    },
+    {
+      "id": "dsh-bid-health-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Bid requirement coverage/locator check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-canteen-retention-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "safety",
+        "food-service",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Canteen retention ledger check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.2.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-construction-doc-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Construction document directory/version/empty-file check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.1",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-excel-reconcile",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "data",
+      "subcategory": "data",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "workbench",
+      "domains": [
+        "data",
+        "finance"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Two-table reconciliation by key and tolerance.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.1",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-invoice-ledger",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "finance",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "finance",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Invoice ledger duplicate/arithmetic/party/date check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-payroll-audit",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "finance",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "finance",
+        "hr",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Payroll parameter and arithmetic audit.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-safety-ledger-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "construction",
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Construction safety qualification ledger check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-table-ingest",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "data",
+      "subcategory": "data",
+      "archetype": "extractor",
+      "checker": false,
+      "checkerRole": "workbench",
+      "domains": [
+        "data",
+        "documents"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "DOCX/XLSX/CSV to table JSON for checkers.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.2.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-tender-requirements",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "business-ops",
+      "subcategory": "tender",
+      "archetype": "extractor",
+      "checker": false,
+      "checkerRole": "workbench",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Tender document key-information extraction with retrieval status.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.2.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow."
+    },
+    {
+      "id": "dsh-finops-suite",
+      "kind": "suite",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "suite",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "finance"
+      ],
+      "displayName": "Finance ops suite",
+      "displayNameZh": "财务运营套件",
+      "positioning": "Installer only: dsh-einvoice + dsh-bankrec + dsh-ap-three-way + dsh-travel-recon.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.6",
+      "members": [
+        {
+          "id": "dsh-einvoice",
+          "version": "0.2.0-alpha.7"
+        },
+        {
+          "id": "dsh-bankrec",
+          "version": "0.1.0-alpha.10"
+        },
+        {
+          "id": "dsh-ap-three-way",
+          "version": "0.1.0-alpha.7"
+        },
+        {
+          "id": "dsh-travel-recon",
+          "version": "0.1.0-alpha.9"
+        }
+      ]
+    },
+    {
+      "id": "dsh-contract-suite",
+      "kind": "suite",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "legal",
+      "archetype": "suite",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "legal"
+      ],
+      "displayName": "Contract ops suite",
+      "displayNameZh": "合同法务套件",
+      "positioning": "Installer only: dsh-legal-intake + dsh-legal-clause.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.5",
+      "members": [
+        {
+          "id": "dsh-legal-intake",
+          "version": "0.1.0-alpha.6"
+        },
+        {
+          "id": "dsh-legal-clause",
+          "version": "0.1.0-alpha.8"
+        }
+      ]
+    }
+  ],
+  "scope": "Phase 1 seed: 62 compliance tools + 15 domain plugins + 2 suites. The mainline and infrastructure collections are defined but not populated in this file yet."
+}

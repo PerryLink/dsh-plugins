@@ -1,0 +1,2707 @@
+{
+  "schemaVersion": "1.0.0-draft",
+  "updated": "2026-11-01",
+  "status": "proposal",
+  "scope": "125-row working roster: 92 install specs + 9 newer compliance tools + 17 domain packages/suites + dsh-community-bench + 3 retired + 3 infrastructure rows.",
+  "counts": {
+    "total": 125,
+    "active": 107,
+    "frozen": 15,
+    "retired": 3
+  },
+  "items": [
+    {
+      "id": "dsh-einvoice",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "ingest",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "finance",
+        "china-einvoice"
+      ],
+      "displayName": "China e-invoice (file-level)",
+      "displayNameZh": "中国电子发票（文件级）",
+      "positioning": "File-level OFD/XML invoice ingest, parse, dedupe and local archive; not tax-authority verification.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-finops-suite",
+      "version": "0.2.0-alpha.7",
+      "relatedCheckers": [
+        "dsh-invoice-ledger",
+        "dsh-excel-reconcile"
+      ],
+      "repo": "PerryLink/dsh-einvoice",
+      "npm": "dsh-einvoice",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-bankrec",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "finance",
+        "banking"
+      ],
+      "displayName": "Bank statement reconciliation",
+      "displayNameZh": "银行流水对账",
+      "positioning": "CAMT.053/MT940/GL ingest, 1:1 bank-to-GL match and a three-sheet workpaper.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-finops-suite",
+      "version": "0.1.0-alpha.10",
+      "relatedCheckers": [
+        "dsh-excel-reconcile",
+        "dsh-invoice-ledger"
+      ],
+      "repo": "PerryLink/dsh-bankrec",
+      "npm": "dsh-bankrec",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-ap-three-way",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "finance",
+        "accounts-payable"
+      ],
+      "displayName": "AP three-way match",
+      "displayNameZh": "AP 三单匹配",
+      "positioning": "Invoice/PO/GRN three-way match with a 1% default price tolerance and exception workpaper.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-finops-suite",
+      "version": "0.1.0-alpha.7",
+      "relatedCheckers": [
+        "dsh-invoice-ledger",
+        "dsh-excel-reconcile"
+      ],
+      "repo": "PerryLink/dsh-ap-three-way",
+      "npm": "dsh-ap-three-way",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-travel-recon",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "facet",
+      "domains": [
+        "finance",
+        "travel-expense"
+      ],
+      "displayName": "Travel reconciliation & policy check",
+      "displayNameZh": "差旅对账与政策检查",
+      "positioning": "Order/invoice/card three-way match, duplicate check and a read-only amount/invoice policy check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-finops-suite",
+      "version": "0.1.0-alpha.9",
+      "relatedCheckers": [
+        "dsh-invoice-ledger",
+        "dsh-excel-reconcile"
+      ],
+      "repo": "PerryLink/dsh-travel-recon",
+      "npm": "dsh-travel-recon",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-legal-intake",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "legal",
+      "archetype": "ingest",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "legal",
+        "intake"
+      ],
+      "displayName": "Legal request intake",
+      "displayNameZh": "法务需求收件",
+      "positioning": "EML legal-request parse, classification, thread dedupe and ledger export.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-contract-suite",
+      "version": "0.1.0-alpha.6",
+      "relatedCheckers": [
+        "dsh-contract-stance",
+        "dsh-evidence-check"
+      ],
+      "repo": "PerryLink/dsh-legal-intake",
+      "npm": "dsh-legal-intake",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-legal-clause",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "legal",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "adjacent",
+      "domains": [
+        "legal",
+        "contracts"
+      ],
+      "displayName": "Contract clause & playbook review",
+      "displayNameZh": "合同条款与 playbook 审查",
+      "positioning": "Clause tree plus a versioned 12-key playbook comparison and unresolved report; no legal conclusion.",
+      "status": "active",
+      "release": "alpha",
+      "suite": "dsh-contract-suite",
+      "version": "0.1.0-alpha.8",
+      "relatedCheckers": [
+        "dsh-contract-stance",
+        "dsh-lawcite-adapter",
+        "dsh-evidence-check"
+      ],
+      "repo": "PerryLink/dsh-legal-clause",
+      "npm": "dsh-legal-clause",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-ghg",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "esg",
+      "archetype": "calculator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "esg",
+        "emissions",
+        "energy"
+      ],
+      "displayName": "Electricity GHG (Scope 2)",
+      "displayNameZh": "用电碳排放（范围二）",
+      "positioning": "Electricity activity ingest, location-based factor calculation, row verification and a partial ESRS E1 pack.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.12",
+      "relatedCheckers": [
+        "dsh-eia-guide-check",
+        "dsh-soilwater-check"
+      ],
+      "repo": "PerryLink/dsh-ghg",
+      "npm": "dsh-ghg",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-qms-capa",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "quality",
+      "archetype": "ledger",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "quality",
+        "manufacturing"
+      ],
+      "displayName": "QMS NCR, CAPA & 8D",
+      "displayNameZh": "QMS NCR、CAPA 与 8D",
+      "positioning": "NCR ingest/dedupe, batch alias resolution, impact evaluation and CAPA/8D state tracking.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.8",
+      "relatedCheckers": [
+        "dsh-fmea-table-check",
+        "dsh-ppap-check",
+        "dsh-spc-gbt-adapter",
+        "dsh-sop-sync-check"
+      ],
+      "repo": "PerryLink/dsh-qms-capa",
+      "npm": "dsh-qms-capa",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-hs-candidate",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "adjacent",
+      "domains": [
+        "trade",
+        "customs"
+      ],
+      "displayName": "HS candidate precheck",
+      "displayNameZh": "HS 候选预检",
+      "positioning": "HS Top-3 candidates, 12-element completeness, simple RVC and tariff-version gate; not a binding classification.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.8",
+      "relatedCheckers": [
+        "dsh-hs-classify",
+        "dsh-origin-rvc-check",
+        "dsh-customs-doc-check"
+      ],
+      "repo": "PerryLink/dsh-hs-candidate",
+      "npm": "dsh-hs-candidate",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-freight-audit",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "logistics",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "strong",
+      "domains": [
+        "logistics",
+        "freight"
+      ],
+      "displayName": "Freight bill audit",
+      "displayNameZh": "运费账单审计",
+      "positioning": "Versioned ratecard, carrier-bill audit, recovery summary and variance export.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.9",
+      "relatedCheckers": [
+        "dsh-demurrage-ledger",
+        "dsh-lc-doc-check",
+        "dsh-customs-doc-check"
+      ],
+      "repo": "PerryLink/dsh-freight-audit",
+      "npm": "dsh-freight-audit",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-docx-redline",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "content",
+      "subcategory": "documents",
+      "archetype": "inspector",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "documents"
+      ],
+      "displayName": "DOCX inspect & text diff",
+      "displayNameZh": "DOCX 检查与文本差异",
+      "positioning": "DOCX structure/hash inspection, byte-exact roundtrip, one exact-run replacement and text-level diff; not a tracked-changes writer.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.9",
+      "relatedCheckers": [
+        "dsh-gongwen-word-check",
+        "dsh-archive-check",
+        "dsh-paper-doc-adapter"
+      ],
+      "repo": "PerryLink/dsh-docx-redline",
+      "npm": "dsh-docx-redline",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-ifc-qto",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "data",
+      "subcategory": "construction",
+      "archetype": "extractor",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "construction",
+        "bim"
+      ],
+      "displayName": "IFC quantity takeoff",
+      "displayNameZh": "IFC 工程量清单",
+      "positioning": "IFC element/quantity inventory and CSV takeoff.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.9",
+      "relatedCheckers": [
+        "dsh-construction-doc-check",
+        "dsh-pipeline-check",
+        "dsh-site-log-check"
+      ],
+      "repo": "PerryLink/dsh-ifc-qto",
+      "npm": "dsh-ifc-qto",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-policy-ledger",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "developer-tools",
+      "subcategory": "plugin-install",
+      "archetype": "doctor",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "plugin-install",
+        "supply-chain"
+      ],
+      "displayName": "Install doctor",
+      "displayNameZh": "安装诊断",
+      "positioning": "Read-only install doctor: capability snapshot, tarball assertion and install-log diagnosis; not a policy gate or ledger.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.2.0-alpha.9",
+      "relatedCheckers": [],
+      "relatedTools": [
+        "dsh-plugin-doctor",
+        "dsh-plugin-kit"
+      ],
+      "repo": "PerryLink/dsh-policy-ledger",
+      "npm": "dsh-policy-ledger",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-pim-lint",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "data",
+      "subcategory": "retail",
+      "archetype": "validator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "retail",
+        "pim"
+      ],
+      "displayName": "PIM catalog lint",
+      "displayNameZh": "PIM 目录 lint",
+      "positioning": "CSV catalog lint for required fields, duplicate SKU, GTIN check digit and price.",
+      "status": "frozen",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.7",
+      "relatedCheckers": [
+        "dsh-excel-reconcile"
+      ],
+      "relatedTools": [
+        "dsh-data-quality"
+      ],
+      "repo": "PerryLink/dsh-pim-lint",
+      "npm": "dsh-pim-lint",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-eval-pack",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "developer-tools",
+      "subcategory": "evaluation",
+      "archetype": "validator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "evaluation"
+      ],
+      "displayName": "Eval pack lint & grader",
+      "displayNameZh": "Eval pack 校验与评分",
+      "positioning": "Public/synthetic eval-pack structure lint and deterministic JSON grading; not a validated benchmark.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.7",
+      "relatedCheckers": [
+        "dsh-score",
+        "dsh-doublecheck",
+        "dsh-test-drive"
+      ],
+      "repo": "PerryLink/dsh-eval-pack",
+      "npm": "dsh-eval-pack",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-customs-doc-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-customs-doc-check",
+      "npm": "dsh-customs-doc-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-demurrage-ledger",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "ledger",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-demurrage-ledger",
+      "npm": "dsh-demurrage-ledger",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-export-ctl-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-export-ctl-check",
+      "npm": "dsh-export-ctl-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-forecast-penalty",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-forecast-penalty",
+      "npm": "dsh-forecast-penalty",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-hs-classify",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-hs-classify",
+      "npm": "dsh-hs-classify",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-lc-doc-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-lc-doc-check",
+      "npm": "dsh-lc-doc-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-origin-rvc-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-origin-rvc-check",
+      "npm": "dsh-origin-rvc-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-railway-window",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "trade",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-railway-window",
+      "npm": "dsh-railway-window",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-fmea-table-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-fmea-table-check",
+      "npm": "dsh-fmea-table-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-ota-review-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-ota-review-check",
+      "npm": "dsh-ota-review-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-pipeline-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-pipeline-check",
+      "npm": "dsh-pipeline-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-ppap-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-ppap-check",
+      "npm": "dsh-ppap-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-repair-order-qc",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-repair-order-qc",
+      "npm": "dsh-repair-order-qc",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-review-reply-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-review-reply-check",
+      "npm": "dsh-review-reply-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-spc-gbt-adapter",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-spc-gbt-adapter",
+      "npm": "dsh-spc-gbt-adapter",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-warranty-calc",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "quality",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "quality",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-warranty-calc",
+      "npm": "dsh-warranty-calc",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-aqua-input-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-aqua-input-check",
+      "npm": "dsh-aqua-input-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-drill-script-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-drill-script-check",
+      "npm": "dsh-drill-script-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-emergency-plan",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-emergency-plan",
+      "npm": "dsh-emergency-plan",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-hazchem-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-hazchem-check",
+      "npm": "dsh-hazchem-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-hidden-risk-map",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-hidden-risk-map",
+      "npm": "dsh-hidden-risk-map",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-power-loss-split",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-power-loss-split",
+      "npm": "dsh-power-loss-split",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-power-ticket-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-power-ticket-check",
+      "npm": "dsh-power-ticket-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-bid-ca-precheck",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-bid-ca-precheck",
+      "npm": "dsh-bid-ca-precheck",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-bid-qual-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-bid-qual-check",
+      "npm": "dsh-bid-qual-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-contract-stance",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-contract-stance",
+      "npm": "dsh-contract-stance",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-protest-deadline",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "calculator",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-protest-deadline",
+      "npm": "dsh-protest-deadline",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-rulefile-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-rulefile-check",
+      "npm": "dsh-rulefile-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-tender-extract",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "extractor",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-tender-extract",
+      "npm": "dsh-tender-extract",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-tender-matrix",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-tender-matrix",
+      "npm": "dsh-tender-matrix",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-eia-guide-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-eia-guide-check",
+      "npm": "dsh-eia-guide-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-guard-plan-qc",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-guard-plan-qc",
+      "npm": "dsh-guard-plan-qc",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-hazplan-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-hazplan-check",
+      "npm": "dsh-hazplan-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-permit-report-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-permit-report-check",
+      "npm": "dsh-permit-report-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-safety-brief-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-safety-brief-check",
+      "npm": "dsh-safety-brief-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-site-log-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-site-log-check",
+      "npm": "dsh-site-log-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-soilwater-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-soilwater-check",
+      "npm": "dsh-soilwater-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-essay-rubric-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-essay-rubric-check",
+      "npm": "dsh-essay-rubric-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-learning-gap-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-learning-gap-check",
+      "npm": "dsh-learning-gap-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-nsfc-form-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-nsfc-form-check",
+      "npm": "dsh-nsfc-form-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-paper-doc-adapter",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "extractor",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-paper-doc-adapter",
+      "npm": "dsh-paper-doc-adapter",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-policy-brief-draft",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "research",
+      "archetype": "drafter",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "research",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-policy-brief-draft",
+      "npm": "dsh-policy-brief-draft",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-archive-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "government",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "government",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-archive-check",
+      "npm": "dsh-archive-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-gongwen-flow-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "government",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "government",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-gongwen-flow-check",
+      "npm": "dsh-gongwen-flow-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-gongwen-word-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "government",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "government",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-gongwen-word-check",
+      "npm": "dsh-gongwen-word-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-evidence-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "legal",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "legal",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-evidence-check",
+      "npm": "dsh-evidence-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-lawcite-adapter",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "legal",
+      "archetype": "extractor",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "legal",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-lawcite-adapter",
+      "npm": "dsh-lawcite-adapter",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-pleading-draft",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "legal",
+      "archetype": "drafter",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "legal",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-pleading-draft",
+      "npm": "dsh-pleading-draft",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-icd-rule-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "medical",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "medical",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-icd-rule-check",
+      "npm": "dsh-icd-rule-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-medrec-qc",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "medical",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "medical",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-medrec-qc",
+      "npm": "dsh-medrec-qc",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-nurse-record-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "medical",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "medical",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-nurse-record-check",
+      "npm": "dsh-nurse-record-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-soe-decision-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "governance",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "governance",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-soe-decision-check",
+      "npm": "dsh-soe-decision-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-sop-sync-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "governance",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "core",
+      "domains": [
+        "governance",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "China compliance checker with a versioned rule pack and citation gate.",
+      "status": "active",
+      "release": "stable",
+      "suite": null,
+      "repo": "PerryLink/dsh-sop-sync-check",
+      "npm": "dsh-sop-sync-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-bid-health-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "tender",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Bid requirement coverage/locator check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-bid-health-check",
+      "npm": "dsh-bid-health-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-canteen-retention-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "safety",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "safety",
+        "food-service",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Canteen retention ledger check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.2.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-canteen-retention-check",
+      "npm": "dsh-canteen-retention-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-construction-doc-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "construction",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Construction document directory/version/empty-file check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.1",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-construction-doc-check",
+      "npm": "dsh-construction-doc-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-excel-reconcile",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "data",
+      "subcategory": "data",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "workbench",
+      "domains": [
+        "data",
+        "finance"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Two-table reconciliation by key and tolerance.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.1",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-excel-reconcile",
+      "npm": "dsh-excel-reconcile",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-invoice-ledger",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "finance",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "finance",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Invoice ledger duplicate/arithmetic/party/date check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-invoice-ledger",
+      "npm": "dsh-invoice-ledger",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-payroll-audit",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "finance",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "finance",
+        "hr",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Payroll parameter and arithmetic audit.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-payroll-audit",
+      "npm": "dsh-payroll-audit",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-safety-ledger-check",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "compliance",
+      "subcategory": "construction",
+      "archetype": "checker",
+      "checker": true,
+      "checkerRole": "new",
+      "domains": [
+        "construction",
+        "safety",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Construction safety qualification ledger check.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-safety-ledger-check",
+      "npm": "dsh-safety-ledger-check",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-table-ingest",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "data",
+      "subcategory": "data",
+      "archetype": "extractor",
+      "checker": false,
+      "checkerRole": "workbench",
+      "domains": [
+        "data",
+        "documents"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "DOCX/XLSX/CSV to table JSON for checkers.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.2.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-table-ingest",
+      "npm": "dsh-table-ingest",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-tender-requirements",
+      "kind": "plugin",
+      "collection": "compliance",
+      "category": "business-ops",
+      "subcategory": "tender",
+      "archetype": "extractor",
+      "checker": false,
+      "checkerRole": "workbench",
+      "domains": [
+        "tender",
+        "china"
+      ],
+      "displayName": null,
+      "displayNameZh": null,
+      "positioning": "Tender document key-information extraction with retrieval status.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.2.0",
+      "roster": false,
+      "rosterNote": "Catalog-only; not in dsh-kit/plugins.txt. Install the exact npm package or use the compliance workflow.",
+      "repo": "PerryLink/dsh-tender-requirements",
+      "npm": "dsh-tender-requirements",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-finops-suite",
+      "kind": "suite",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "suite",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "finance"
+      ],
+      "displayName": "Finance ops suite",
+      "displayNameZh": "财务运营套件",
+      "positioning": "Installer only: dsh-einvoice + dsh-bankrec + dsh-ap-three-way + dsh-travel-recon.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.6",
+      "members": [
+        {
+          "id": "dsh-einvoice",
+          "version": "0.2.0-alpha.7"
+        },
+        {
+          "id": "dsh-bankrec",
+          "version": "0.1.0-alpha.10"
+        },
+        {
+          "id": "dsh-ap-three-way",
+          "version": "0.1.0-alpha.7"
+        },
+        {
+          "id": "dsh-travel-recon",
+          "version": "0.1.0-alpha.9"
+        }
+      ],
+      "repo": "PerryLink/dsh-finops-suite",
+      "npm": "dsh-finops-suite",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-contract-suite",
+      "kind": "suite",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "legal",
+      "archetype": "suite",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "legal"
+      ],
+      "displayName": "Contract ops suite",
+      "displayNameZh": "合同法务套件",
+      "positioning": "Installer only: dsh-legal-intake + dsh-legal-clause.",
+      "status": "active",
+      "release": "alpha",
+      "suite": null,
+      "version": "0.1.0-alpha.5",
+      "members": [
+        {
+          "id": "dsh-legal-intake",
+          "version": "0.1.0-alpha.6"
+        },
+        {
+          "id": "dsh-legal-clause",
+          "version": "0.1.0-alpha.8"
+        }
+      ],
+      "repo": "PerryLink/dsh-contract-suite",
+      "npm": "dsh-contract-suite",
+      "source": "taxonomy.v1.json"
+    },
+    {
+      "id": "dsh-auto-review",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "assistant",
+      "domains": [
+        "approval",
+        "security"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-auto-review",
+      "repo": "PerryLink/dsh-auto-review",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-autotier",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "observability",
+      "archetype": "runtime",
+      "domains": [
+        "model-routing",
+        "cost"
+      ],
+      "status": "frozen",
+      "release": "stable",
+      "npm": "dsh-autotier",
+      "repo": "PerryLink/dsh-autotier",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-budget",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "observability",
+      "archetype": "calculator",
+      "domains": [
+        "cost"
+      ],
+      "status": "frozen",
+      "release": "stable",
+      "npm": "dsh-budget",
+      "repo": "PerryLink/dsh-budget",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-cert-mcp",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "platform",
+      "archetype": "catalog",
+      "domains": [
+        "certification",
+        "mcp"
+      ],
+      "status": "frozen",
+      "release": "stable",
+      "npm": "dsh-cert-mcp",
+      "repo": "PerryLink/dsh-cert-mcp",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-checkpoint-rewind",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "runtime",
+      "domains": [
+        "sessions"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-checkpoint-rewind",
+      "repo": "PerryLink/dsh-checkpoint-rewind",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-claude-move",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "integrations",
+      "archetype": "ingest",
+      "domains": [
+        "migration"
+      ],
+      "status": "frozen",
+      "release": "stable",
+      "npm": "dsh-claude-move",
+      "repo": "PerryLink/dsh-claude-move",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-click",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "interface",
+      "archetype": "ui",
+      "domains": [
+        "desktop",
+        "ocr"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-click",
+      "repo": "PerryLink/dsh-click",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-composer-history",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "interface",
+      "archetype": "ui",
+      "domains": [
+        "input"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-composer-history",
+      "repo": "PerryLink/dsh-composer-history",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-data-quality",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "developer-tools",
+      "archetype": "validator",
+      "domains": [
+        "data"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-data-quality",
+      "repo": "PerryLink/dsh-data-quality",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-defend",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "security",
+      "archetype": "runtime",
+      "domains": [
+        "prompt-injection"
+      ],
+      "status": "frozen",
+      "release": "stable",
+      "npm": "dsh-defend",
+      "repo": "PerryLink/dsh-defend",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-doublecheck",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "assistant",
+      "domains": [
+        "quality-gate"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-doublecheck",
+      "repo": "PerryLink/dsh-doublecheck",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-draw",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "interface",
+      "archetype": "ui",
+      "domains": [
+        "visual"
+      ],
+      "status": "frozen",
+      "release": "stable",
+      "npm": "dsh-draw",
+      "repo": "PerryLink/dsh-draw",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-fast",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "observability",
+      "archetype": "runtime",
+      "domains": [
+        "performance"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-fast",
+      "repo": "PerryLink/dsh-fast",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-fund-research",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "research",
+      "archetype": "assistant",
+      "domains": [
+        "funds"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-fund-research",
+      "repo": "PerryLink/dsh-fund-research",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-industry-research",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "research",
+      "archetype": "assistant",
+      "domains": [
+        "industry"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-industry-research",
+      "repo": "PerryLink/dsh-industry-research",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-laya",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "integrations",
+      "archetype": "integration",
+      "domains": [
+        "automation"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-laya",
+      "repo": "laya-family/dsh-laya",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-library",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "content",
+      "archetype": "extractor",
+      "domains": [
+        "knowledge"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-library",
+      "repo": "PerryLink/dsh-library",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-local-ai",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "integrations",
+      "archetype": "integration",
+      "domains": [
+        "local-model"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-local-ai",
+      "repo": "PerryLink/dsh-local-ai",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-lsp-actions",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "developer-tools",
+      "archetype": "integration",
+      "domains": [
+        "lsp"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-lsp-actions",
+      "repo": "PerryLink/dsh-lsp-actions",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-mask",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "security",
+      "archetype": "runtime",
+      "domains": [
+        "secrets"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-mask",
+      "repo": "PerryLink/dsh-mask",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-mcp-panel",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "developer-tools",
+      "archetype": "integration",
+      "domains": [
+        "mcp"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-mcp-panel",
+      "repo": "PerryLink/dsh-mcp-panel",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-memento",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "runtime",
+      "domains": [
+        "memory"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-memento",
+      "repo": "PerryLink/dsh-memento",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-observe",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "observability",
+      "archetype": "runtime",
+      "domains": [
+        "telemetry"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-observe",
+      "repo": "PerryLink/dsh-observe",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-output-styles",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "interface",
+      "archetype": "ui",
+      "domains": [
+        "output"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-output-styles",
+      "repo": "PerryLink/dsh-output-styles",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-permission-rules",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "security",
+      "archetype": "runtime",
+      "domains": [
+        "permissions"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-permission-rules",
+      "repo": "PerryLink/dsh-permission-rules",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-plugin-guide",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "developer-tools",
+      "archetype": "assistant",
+      "domains": [
+        "plugin-dev"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-plugin-guide",
+      "repo": "PerryLink/dsh-plugin-guide",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-plugin-upgrade",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "integration",
+      "domains": [
+        "upgrade"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-plugin-upgrade",
+      "repo": "PerryLink/dsh-plugin-upgrade",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-reach",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "integrations",
+      "archetype": "integration",
+      "domains": [
+        "messaging"
+      ],
+      "status": "frozen",
+      "release": "stable",
+      "npm": "dsh-reach",
+      "repo": "PerryLink/dsh-reach",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-research-report",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "research",
+      "archetype": "assistant",
+      "domains": [
+        "research"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-research-report",
+      "repo": "PerryLink/dsh-research-report",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-score",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "developer-tools",
+      "archetype": "assistant",
+      "domains": [
+        "evaluation"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-score",
+      "repo": "PerryLink/dsh-score",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-session-sync",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "runtime",
+      "domains": [
+        "sessions"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-session-sync",
+      "repo": "PerryLink/dsh-session-sync",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-talk",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "content",
+      "archetype": "ui",
+      "domains": [
+        "chat"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-talk",
+      "repo": "PerryLink/dsh-talk",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-test-drive",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "assistant",
+      "domains": [
+        "testing"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-test-drive",
+      "repo": "PerryLink/dsh-test-drive",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-translate",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "content",
+      "archetype": "assistant",
+      "domains": [
+        "translation"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-translate",
+      "repo": "PerryLink/dsh-translate",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-github",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "integration",
+      "domains": [
+        "github"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "@perrylink/dsh-github",
+      "repo": "PerryLink/dsh-github",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-plugin-doctor",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "developer-tools",
+      "archetype": "doctor",
+      "domains": [
+        "plugin-install"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "@perrylink/dsh-plugin-doctor",
+      "repo": "PerryLink/dsh-plugin-doctor",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-plugin-kit",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "developer-tools",
+      "archetype": "catalog",
+      "domains": [
+        "plugin-dev"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "@perrylink/dsh-plugin-kit",
+      "repo": "PerryLink/dsh-plugin-kit",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-skill-pack-security-provider",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "security",
+      "archetype": "assistant",
+      "domains": [
+        "security-audit"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "@perrylink/dsh-skill-pack-security-provider",
+      "repo": "PerryLink/dsh-skill-pack-security-provider",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-ticktick",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "integrations",
+      "archetype": "integration",
+      "domains": [
+        "tasks"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "@perrylink/dsh-ticktick",
+      "repo": "PerryLink/dsh-ticktick",
+      "source": "dsh-kit/plugins.txt",
+      "mappingConfidence": "provisional"
+    },
+    {
+      "id": "dsh-community-bench",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "developer-tools",
+      "archetype": "validator",
+      "domains": [
+        "benchmark"
+      ],
+      "status": "frozen",
+      "release": "stable",
+      "npm": "dsh-community-bench",
+      "repo": "PerryLink/dsh-community-bench",
+      "source": "documented edge set"
+    },
+    {
+      "id": "dsh-background-agents",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "runtime",
+      "domains": [
+        "agents"
+      ],
+      "status": "retired",
+      "release": "retired",
+      "npm": "dsh-background-agents",
+      "repo": "PerryLink/dsh-background-agents",
+      "source": "documented edge set"
+    },
+    {
+      "id": "dsh-session-pin",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "interface",
+      "archetype": "ui",
+      "domains": [
+        "sessions"
+      ],
+      "status": "retired",
+      "release": "retired",
+      "npm": "dsh-session-pin",
+      "repo": "PerryLink/dsh-session-pin",
+      "source": "documented edge set"
+    },
+    {
+      "id": "dsh-team-rooms",
+      "kind": "plugin",
+      "collection": "mainline",
+      "category": "workflow",
+      "archetype": "runtime",
+      "domains": [
+        "agents"
+      ],
+      "status": "retired",
+      "release": "retired",
+      "npm": "dsh-team-rooms",
+      "repo": "PerryLink/dsh-team-rooms",
+      "source": "documented edge set"
+    },
+    {
+      "id": "dsh-kit",
+      "kind": "infrastructure",
+      "collection": "infrastructure",
+      "category": "platform",
+      "archetype": "catalog",
+      "domains": [
+        "install"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-kit",
+      "repo": "PerryLink/dsh-kit",
+      "source": "documented edge set"
+    },
+    {
+      "id": "dsh-catalog",
+      "kind": "infrastructure",
+      "collection": "infrastructure",
+      "category": "platform",
+      "archetype": "catalog",
+      "domains": [
+        "market"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-catalog",
+      "repo": "PerryLink/dsh-catalog",
+      "source": "documented edge set"
+    },
+    {
+      "id": "dsh-plugin-certification",
+      "kind": "infrastructure",
+      "collection": "infrastructure",
+      "category": "platform",
+      "archetype": "catalog",
+      "domains": [
+        "certification"
+      ],
+      "status": "active",
+      "release": "stable",
+      "npm": "dsh-plugin-certification",
+      "repo": "PerryLink/dsh-plugin-certification",
+      "source": "documented edge set"
+    }
+  ]
+}

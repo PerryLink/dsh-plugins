@@ -8,7 +8,7 @@
 </blockquote>
 <p><a href="https://www.npmjs.com/package/dsh-eval-pack"><img src="https://img.shields.io/npm/v/dsh-eval-pack" alt="npm"></a>
 <a href="https://github.com/PerryLink/dsh-eval-pack/actions"><img src="https://github.com/PerryLink/dsh-eval-pack/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-<a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License"></a>
+<a href="https://github.com/PerryLink/dsh-eval-pack/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License"></a>
 <a href="https://github.com/topics/dsh-plugin"><img src="https://img.shields.io/badge/dsh--plugin-%E2%9C%93-green" alt="dsh-plugin"></a>
 <a href="https://perrylink.github.io/dsh-plugins/"><img src="https://img.shields.io/badge/docs-domain%20index-0b5fff" alt="docs"></a>
 <a href="https://gitee.com/perrylink/dsh-plugins"><img src="https://img.shields.io/badge/Gitee-aggregate-c71d23?logo=gitee" alt="Gitee"></a>
@@ -19,8 +19,9 @@
 <p><strong>Public/synthetic eval-pack lint and deterministic JSON grader; not a validated benchmark.</strong></p>
 <blockquote>
 <p><strong>Status: alpha / public-synthetic / partial / not counted / not GA.</strong> No customer evidence, customer data, or production-readiness claim.</p>
+<p class="meta">Category: <code>developer-tools</code> · Archetype: <code>validator</code> · Domains: <code>evaluation</code> · Status: <code>active</code></p>
 </blockquote>
-<p><a href="README.md">English</a> · <a href="README-zh.md">简体中文</a> · <a href="README-es.md">Español</a> · <a href="README-pt.md">Português</a> · <a href="README-hi.md">हिन्दी</a></p>
+<p><a href="https://github.com/PerryLink/dsh-eval-pack/blob/main/README.md">English</a> · <a href="https://github.com/PerryLink/dsh-eval-pack/blob/main/README-zh.md">简体中文</a> · <a href="https://github.com/PerryLink/dsh-eval-pack/blob/main/README-es.md">Español</a> · <a href="https://github.com/PerryLink/dsh-eval-pack/blob/main/README-pt.md">Português</a> · <a href="https://github.com/PerryLink/dsh-eval-pack/blob/main/README-hi.md">हिन्दी</a></p>
 <pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-eval-pack
 </code></pre>
 </div><blockquote>
@@ -28,6 +29,8 @@
 </blockquote>
 <p><img src="../assets/dsh-eval-pack-flow.svg" alt="Workflow diagram for dsh-eval-pack: local input, plugin, local output."></p>
 <p><em>Workflow: local input → plugin → local output. No model call is required.</em></p>
+<p><img src="../assets/dsh-eval-pack-hero.png" alt="Real dsh-eval-pack terminal output"></p>
+<p><em>Real local test run; no model or network call.</em></p>
 <h2>Install</h2>
 <p>Install and verify:</p>
 <pre><code class="language-sh">dsh plugin --profile &lt;profile&gt; add dsh-eval-pack
@@ -74,7 +77,7 @@ dsh --profile &lt;profile&gt; --dump-config | grep dsh-eval-pack
 </code></pre>
 <h2>Examples</h2>
 <h3>Fixture-backed example</h3>
-<p>Input: <a href="ACCEPTANCE.csv"><code>ACCEPTANCE.csv</code></a></p>
+<p>Input: <a href="https://github.com/PerryLink/dsh-eval-pack/blob/main/ACCEPTANCE.csv"><code>ACCEPTANCE.csv</code></a></p>
 <p>Command: <code>pnpm test</code></p>
 <p>Acceptance row:</p>
 <table>

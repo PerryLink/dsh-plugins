@@ -1,0 +1,159 @@
+{
+  "assistant": [
+    "dsh-auto-review",
+    "dsh-doublecheck",
+    "dsh-fund-research",
+    "dsh-industry-research",
+    "dsh-plugin-guide",
+    "dsh-research-report",
+    "dsh-score",
+    "dsh-skill-pack-security-provider",
+    "dsh-test-drive",
+    "dsh-translate"
+  ],
+  "calculator": [
+    "dsh-budget",
+    "dsh-forecast-penalty",
+    "dsh-ghg",
+    "dsh-power-loss-split",
+    "dsh-protest-deadline",
+    "dsh-railway-window",
+    "dsh-spc-gbt-adapter",
+    "dsh-warranty-calc"
+  ],
+  "catalog": [
+    "dsh-catalog",
+    "dsh-cert-mcp",
+    "dsh-kit",
+    "dsh-plugin-certification",
+    "dsh-plugin-kit"
+  ],
+  "checker": [
+    "dsh-aqua-input-check",
+    "dsh-archive-check",
+    "dsh-bid-ca-precheck",
+    "dsh-bid-health-check",
+    "dsh-bid-qual-check",
+    "dsh-canteen-retention-check",
+    "dsh-construction-doc-check",
+    "dsh-contract-stance",
+    "dsh-customs-doc-check",
+    "dsh-drill-script-check",
+    "dsh-eia-guide-check",
+    "dsh-emergency-plan",
+    "dsh-essay-rubric-check",
+    "dsh-evidence-check",
+    "dsh-export-ctl-check",
+    "dsh-fmea-table-check",
+    "dsh-freight-audit",
+    "dsh-gongwen-flow-check",
+    "dsh-gongwen-word-check",
+    "dsh-guard-plan-qc",
+    "dsh-hazchem-check",
+    "dsh-hazplan-check",
+    "dsh-hidden-risk-map",
+    "dsh-hs-candidate",
+    "dsh-hs-classify",
+    "dsh-icd-rule-check",
+    "dsh-invoice-ledger",
+    "dsh-lc-doc-check",
+    "dsh-learning-gap-check",
+    "dsh-legal-clause",
+    "dsh-medrec-qc",
+    "dsh-nsfc-form-check",
+    "dsh-nurse-record-check",
+    "dsh-origin-rvc-check",
+    "dsh-ota-review-check",
+    "dsh-payroll-audit",
+    "dsh-permit-report-check",
+    "dsh-pipeline-check",
+    "dsh-power-ticket-check",
+    "dsh-ppap-check",
+    "dsh-repair-order-qc",
+    "dsh-review-reply-check",
+    "dsh-rulefile-check",
+    "dsh-safety-brief-check",
+    "dsh-safety-ledger-check",
+    "dsh-site-log-check",
+    "dsh-soe-decision-check",
+    "dsh-soilwater-check",
+    "dsh-sop-sync-check",
+    "dsh-tender-matrix"
+  ],
+  "doctor": [
+    "dsh-plugin-doctor",
+    "dsh-policy-ledger"
+  ],
+  "drafter": [
+    "dsh-pleading-draft",
+    "dsh-policy-brief-draft"
+  ],
+  "extractor": [
+    "dsh-ifc-qto",
+    "dsh-lawcite-adapter",
+    "dsh-library",
+    "dsh-paper-doc-adapter",
+    "dsh-table-ingest",
+    "dsh-tender-extract",
+    "dsh-tender-requirements"
+  ],
+  "ingest": [
+    "dsh-claude-move",
+    "dsh-einvoice",
+    "dsh-legal-intake"
+  ],
+  "inspector": [
+    "dsh-docx-redline"
+  ],
+  "integration": [
+    "dsh-github",
+    "dsh-laya",
+    "dsh-local-ai",
+    "dsh-lsp-actions",
+    "dsh-mcp-panel",
+    "dsh-plugin-upgrade",
+    "dsh-reach",
+    "dsh-ticktick"
+  ],
+  "ledger": [
+    "dsh-demurrage-ledger",
+    "dsh-qms-capa"
+  ],
+  "reconciler": [
+    "dsh-ap-three-way",
+    "dsh-bankrec",
+    "dsh-excel-reconcile",
+    "dsh-travel-recon"
+  ],
+  "runtime": [
+    "dsh-autotier",
+    "dsh-background-agents",
+    "dsh-checkpoint-rewind",
+    "dsh-defend",
+    "dsh-fast",
+    "dsh-mask",
+    "dsh-memento",
+    "dsh-observe",
+    "dsh-permission-rules",
+    "dsh-session-sync",
+    "dsh-team-rooms"
+  ],
+  "suite": [
+    "dsh-contract-suite",
+    "dsh-finops-suite"
+  ],
+  "ui": [
+    "dsh-click",
+    "dsh-composer-history",
+    "dsh-draw",
+    "dsh-output-styles",
+    "dsh-session-pin",
+    "dsh-talk"
+  ],
+  "validator": [
+    "dsh-community-bench",
+    "dsh-data-quality",
+    "dsh-eval-pack",
+    "dsh-pim-lint"
+  ]
+}
