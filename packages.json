@@ -1,226 +1,360 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "boundary": "public/synthetic, partial, not counted, no GA",
   "packages": [
     {
       "name": "dsh-einvoice",
-      "version": "0.2.0-alpha.6",
+      "version": "0.2.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-einvoice",
       "npm": "https://www.npmjs.com/package/dsh-einvoice",
-      "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.4",
+      "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.7",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-fin-invoice-core",
       "description": "文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-einvoice.html",
       "gitee": "https://gitee.com/perrylink/dsh-einvoice",
       "gitcode": "https://gitcode.com/PerryLink/dsh-einvoice",
-      "frozen": false
+      "frozen": false,
+      "displayName": "China e-invoice (file-level)",
+      "displayNameZh": "中国电子发票（文件级）",
+      "category": "business-ops",
+      "archetype": "ingest",
+      "domains": [
+        "finance",
+        "china-einvoice"
+      ],
+      "status": "active"
     },
     {
       "name": "dsh-bankrec",
-      "version": "0.1.0-alpha.9",
+      "version": "0.1.0-alpha.10",
       "repo": "https://github.com/PerryLink/dsh-bankrec",
       "npm": "https://www.npmjs.com/package/dsh-bankrec",
-      "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.7",
+      "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.10",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-bankrec",
       "description": "银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-bankrec.html",
       "gitee": "https://gitee.com/perrylink/dsh-bankrec",
       "gitcode": "https://gitcode.com/PerryLink/dsh-bankrec",
-      "frozen": false
+      "frozen": false,
+      "displayName": "Bank statement reconciliation",
+      "displayNameZh": "银行流水对账",
+      "category": "business-ops",
+      "archetype": "reconciler",
+      "domains": [
+        "finance",
+        "banking"
+      ],
+      "status": "active"
     },
     {
       "name": "dsh-ap-three-way",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-ap-three-way",
       "npm": "https://www.npmjs.com/package/dsh-ap-three-way",
-      "release": "https://github.com/PerryLink/dsh-ap-three-way/releases/tag/v0.1.0-alpha.4",
+      "release": "https://github.com/PerryLink/dsh-ap-three-way/releases/tag/v0.1.0-alpha.7",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-ap-three-way",
       "description": "发票/PO/GRN 三单匹配、容差与例外底稿。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ap-three-way.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": false
+      "frozen": false,
+      "displayName": "AP three-way match",
+      "displayNameZh": "AP 三单匹配",
+      "category": "business-ops",
+      "archetype": "reconciler",
+      "domains": [
+        "finance",
+        "accounts-payable"
+      ],
+      "status": "active"
     },
     {
       "name": "dsh-travel-recon",
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.9",
       "repo": "https://github.com/PerryLink/dsh-travel-recon",
       "npm": "https://www.npmjs.com/package/dsh-travel-recon",
-      "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0-alpha.5",
+      "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0-alpha.9",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-travel-recon",
       "description": "差旅订单/发票/卡流水对账、去重与只读政策检查。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-travel-recon.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": false
+      "frozen": false,
+      "displayName": "Travel reconciliation & policy check",
+      "displayNameZh": "差旅对账与政策检查",
+      "category": "business-ops",
+      "archetype": "reconciler",
+      "domains": [
+        "finance",
+        "travel-expense"
+      ],
+      "status": "active"
     },
     {
       "name": "dsh-legal-intake",
-      "version": "0.1.0-alpha.5",
+      "version": "0.1.0-alpha.6",
       "repo": "https://github.com/PerryLink/dsh-legal-intake",
       "npm": "https://www.npmjs.com/package/dsh-legal-intake",
-      "release": "https://github.com/PerryLink/dsh-legal-intake/releases/tag/v0.1.0-alpha.3",
+      "release": "https://github.com/PerryLink/dsh-legal-intake/releases/tag/v0.1.0-alpha.6",
       "family": "法务运营 Legal Ops",
       "dir": "dsh-legal-intake",
       "description": "法务需求 EML 收件、线程去重与台账导出。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-legal-intake.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": false
+      "frozen": false,
+      "displayName": "Legal request intake",
+      "displayNameZh": "法务需求收件",
+      "category": "business-ops",
+      "archetype": "ingest",
+      "domains": [
+        "legal",
+        "intake"
+      ],
+      "status": "active"
     },
     {
       "name": "dsh-legal-clause",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "repo": "https://github.com/PerryLink/dsh-legal-clause",
       "npm": "https://www.npmjs.com/package/dsh-legal-clause",
-      "release": "https://github.com/PerryLink/dsh-legal-clause/releases/tag/v0.1.0-alpha.5",
+      "release": "https://github.com/PerryLink/dsh-legal-clause/releases/tag/v0.1.0-alpha.8",
       "family": "法务运营 Legal Ops",
       "dir": "dsh-legal-clause",
       "description": "合同条款树、playbook 映射与未解决报告。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-legal-clause.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": false
+      "frozen": false,
+      "displayName": "Contract clause & playbook review",
+      "displayNameZh": "合同条款与 playbook 审查",
+      "category": "business-ops",
+      "archetype": "checker",
+      "domains": [
+        "legal",
+        "contracts"
+      ],
+      "status": "active"
     },
     {
       "name": "dsh-ghg",
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "repo": "https://github.com/PerryLink/dsh-ghg",
       "npm": "https://www.npmjs.com/package/dsh-ghg",
-      "release": "https://github.com/PerryLink/dsh-ghg/releases/tag/v0.1.0-alpha.9",
+      "release": "https://github.com/PerryLink/dsh-ghg/releases/tag/v0.1.0-alpha.12",
       "family": "可持续与质量 ESG & Quality",
       "dir": "dsh-ghg",
       "description": "用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ghg.html",
       "gitee": "https://gitee.com/perrylink/dsh-ghg",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": true
+      "frozen": true,
+      "displayName": "Electricity GHG (Scope 2)",
+      "displayNameZh": "用电碳排放（范围二）",
+      "category": "business-ops",
+      "archetype": "calculator",
+      "domains": [
+        "esg",
+        "emissions",
+        "energy"
+      ],
+      "status": "frozen"
     },
     {
       "name": "dsh-qms-capa",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "repo": "https://github.com/PerryLink/dsh-qms-capa",
       "npm": "https://www.npmjs.com/package/dsh-qms-capa",
-      "release": "https://github.com/PerryLink/dsh-qms-capa/releases/tag/v0.1.0-alpha.5",
+      "release": "https://github.com/PerryLink/dsh-qms-capa/releases/tag/v0.1.0-alpha.8",
       "family": "可持续与质量 ESG & Quality",
       "dir": "dsh-qms-capa",
       "description": "QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-qms-capa.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": true
+      "frozen": true,
+      "displayName": "QMS NCR, CAPA & 8D",
+      "displayNameZh": "QMS NCR、CAPA 与 8D",
+      "category": "business-ops",
+      "archetype": "ledger",
+      "domains": [
+        "quality",
+        "manufacturing"
+      ],
+      "status": "frozen"
     },
     {
       "name": "dsh-hs-candidate",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "repo": "https://github.com/PerryLink/dsh-hs-candidate",
       "npm": "https://www.npmjs.com/package/dsh-hs-candidate",
-      "release": "https://github.com/PerryLink/dsh-hs-candidate/releases/tag/v0.1.0-alpha.5",
+      "release": "https://github.com/PerryLink/dsh-hs-candidate/releases/tag/v0.1.0-alpha.8",
       "family": "关务与物流 Trade & Logistics",
       "dir": "dsh-hs-candidate",
       "description": "HS Top3 候选、12 要素完整性、RVC 与税则版本门。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-hs-candidate.html",
       "gitee": "https://gitee.com/perrylink/dsh-hs-candidate",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": true
+      "frozen": true,
+      "displayName": "HS candidate precheck",
+      "displayNameZh": "HS 候选预检",
+      "category": "business-ops",
+      "archetype": "checker",
+      "domains": [
+        "trade",
+        "customs"
+      ],
+      "status": "frozen"
     },
     {
       "name": "dsh-freight-audit",
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.9",
       "repo": "https://github.com/PerryLink/dsh-freight-audit",
       "npm": "https://www.npmjs.com/package/dsh-freight-audit",
-      "release": "https://github.com/PerryLink/dsh-freight-audit/releases/tag/v0.1.0-alpha.6",
+      "release": "https://github.com/PerryLink/dsh-freight-audit/releases/tag/v0.1.0-alpha.9",
       "family": "关务与物流 Trade & Logistics",
       "dir": "dsh-freight-audit",
       "description": "运费 ratecard 版本、账单审计、recovery 汇总与差异导出。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-freight-audit.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": true
+      "frozen": true,
+      "displayName": "Freight bill audit",
+      "displayNameZh": "运费账单审计",
+      "category": "business-ops",
+      "archetype": "checker",
+      "domains": [
+        "logistics",
+        "freight"
+      ],
+      "status": "frozen"
     },
     {
       "name": "dsh-docx-redline",
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.9",
       "repo": "https://github.com/PerryLink/dsh-docx-redline",
       "npm": "https://www.npmjs.com/package/dsh-docx-redline",
-      "release": "https://github.com/PerryLink/dsh-docx-redline/releases/tag/v0.1.0-alpha.6",
+      "release": "https://github.com/PerryLink/dsh-docx-redline/releases/tag/v0.1.0-alpha.9",
       "family": "文档与模型 Docs & Models",
       "dir": "dsh-docx-redline",
       "description": "DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-docx-redline.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-docx-redline",
-      "frozen": true
+      "frozen": true,
+      "displayName": "DOCX inspect & text diff",
+      "displayNameZh": "DOCX 检查与文本差异",
+      "category": "content",
+      "archetype": "inspector",
+      "domains": [
+        "documents"
+      ],
+      "status": "frozen"
     },
     {
       "name": "dsh-ifc-qto",
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.9",
       "repo": "https://github.com/PerryLink/dsh-ifc-qto",
       "npm": "https://www.npmjs.com/package/dsh-ifc-qto",
-      "release": "https://github.com/PerryLink/dsh-ifc-qto/releases/tag/v0.1.0-alpha.6",
+      "release": "https://github.com/PerryLink/dsh-ifc-qto/releases/tag/v0.1.0-alpha.9",
       "family": "文档与模型 Docs & Models",
       "dir": "dsh-ifc-qto",
       "description": "IFC 构件/工程量清单与 CSV 导出。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ifc-qto.html",
       "gitee": "https://gitee.com/perrylink/dsh-ifc-qto",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": true
+      "frozen": true,
+      "displayName": "IFC quantity takeoff",
+      "displayNameZh": "IFC 工程量清单",
+      "category": "data",
+      "archetype": "extractor",
+      "domains": [
+        "construction",
+        "bim"
+      ],
+      "status": "frozen"
     },
     {
       "name": "dsh-policy-ledger",
-      "version": "0.2.0-alpha.8",
+      "version": "0.2.0-alpha.9",
       "repo": "https://github.com/PerryLink/dsh-policy-ledger",
       "npm": "https://www.npmjs.com/package/dsh-policy-ledger",
-      "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0-alpha.4",
+      "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0-alpha.9",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-policy-ledger",
       "description": "只读安装诊断：能力快照、tarball 断言与安装日志分类。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-policy-ledger.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": false
+      "frozen": false,
+      "displayName": "Install doctor",
+      "displayNameZh": "安装诊断",
+      "category": "developer-tools",
+      "archetype": "doctor",
+      "domains": [
+        "plugin-install",
+        "supply-chain"
+      ],
+      "status": "active"
     },
     {
       "name": "dsh-pim-lint",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-pim-lint",
       "npm": "https://www.npmjs.com/package/dsh-pim-lint",
-      "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0-alpha.3",
+      "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0-alpha.7",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-pim-lint",
       "description": "PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-pim-lint.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": true
+      "frozen": true,
+      "displayName": "PIM catalog lint",
+      "displayNameZh": "PIM 目录 lint",
+      "category": "data",
+      "archetype": "validator",
+      "domains": [
+        "retail",
+        "pim"
+      ],
+      "status": "frozen"
     },
     {
       "name": "dsh-eval-pack",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.7",
       "repo": "https://github.com/PerryLink/dsh-eval-pack",
       "npm": "https://www.npmjs.com/package/dsh-eval-pack",
-      "release": "https://github.com/PerryLink/dsh-eval-pack/releases/tag/v0.1.0-alpha.3",
+      "release": "https://github.com/PerryLink/dsh-eval-pack/releases/tag/v0.1.0-alpha.7",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-eval-pack",
       "description": "公开/合成 eval-pack lint 与确定性 JSON 评分。",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-eval-pack.html",
       "gitee": "https://gitee.com/perrylink/dsh-plugins",
       "gitcode": "https://gitcode.com/PerryLink/dsh-plugins",
-      "frozen": false
+      "frozen": false,
+      "displayName": "Eval pack lint & grader",
+      "displayNameZh": "Eval pack 校验与评分",
+      "category": "developer-tools",
+      "archetype": "validator",
+      "domains": [
+        "evaluation"
+      ],
+      "status": "active"
     }
   ],
   "suites": [
     {
       "name": "dsh-finops-suite",
-      "version": "0.1.0-alpha.5",
+      "version": "0.1.0-alpha.6",
       "description": "One-command install for dsh-einvoice, dsh-bankrec, dsh-ap-three-way and dsh-travel-recon.",
       "repo": "https://github.com/PerryLink/dsh-finops-suite",
       "npm": "https://www.npmjs.com/package/dsh-finops-suite",
-      "release": "https://github.com/PerryLink/dsh-finops-suite/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-finops-suite/releases/tag/v0.1.0-alpha.6",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-finops-suite.html",
       "members": [
         "dsh-einvoice",
@@ -231,15 +365,23 @@
       "gitee": "https://gitee.com/perrylink/dsh-finops-suite",
       "gitcode": "https://gitcode.com/PerryLink/dsh-finops-suite",
       "dir": "dsh-finops-suite",
-      "frozen": false
+      "frozen": false,
+      "displayName": "Finance ops suite",
+      "displayNameZh": "财务运营套件",
+      "category": "business-ops",
+      "archetype": "suite",
+      "domains": [
+        "finance"
+      ],
+      "status": "active"
     },
     {
       "name": "dsh-contract-suite",
-      "version": "0.1.0-alpha.4",
+      "version": "0.1.0-alpha.5",
       "description": "One-command install for dsh-legal-intake and dsh-legal-clause.",
       "repo": "https://github.com/PerryLink/dsh-contract-suite",
       "npm": "https://www.npmjs.com/package/dsh-contract-suite",
-      "release": "https://github.com/PerryLink/dsh-contract-suite/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-contract-suite/releases/tag/v0.1.0-alpha.5",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-contract-suite.html",
       "members": [
         "dsh-legal-intake",
@@ -248,7 +390,15 @@
       "gitee": "https://gitee.com/perrylink/dsh-contract-suite",
       "gitcode": "https://gitcode.com/PerryLink/dsh-contract-suite",
       "dir": "dsh-contract-suite",
-      "frozen": false
+      "frozen": false,
+      "displayName": "Contract ops suite",
+      "displayNameZh": "合同法务套件",
+      "category": "business-ops",
+      "archetype": "suite",
+      "domains": [
+        "legal"
+      ],
+      "status": "active"
     }
   ]
 }
