@@ -97,6 +97,9 @@ the next version from `origin/main` rather than the stale local clone.
 | `dsh-legal-intake` | `legal.conflict_check` — opposing-side and both-sides party detection | conflicts-check practice | 11/11 | `0.1.0-alpha.8` |
 | `dsh-eval-pack` | `eval.pass_at_k` — unbiased pass@k with exact binomials | pass@k estimator definition | 12/12 | `0.1.0-alpha.9` |
 
+| `dsh-ap-three-way` | `ap.duplicate_check` — duplicate invoice lines before matching | AP controls | 11/11 | `0.1.0-alpha.9` |
+| `dsh-travel-recon` | `travel.daily_limit_check` — per-employee daily cap with overage | travel policy practice | 9/9 | `0.1.0-alpha.11` |
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
