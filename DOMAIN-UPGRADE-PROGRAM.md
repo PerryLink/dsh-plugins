@@ -60,7 +60,12 @@ better stability, without copying third-party code.
 
 ## 5. Progress
 
-Remaining: P1 capability work is complete for all 15 packages. Next: P3 evidence — ACCEPTANCE rows, real captures and releases. ACCEPTANCE rows and captures are produced at the release step (P3).
+P1 capability work is complete for all 15 packages.
+
+**P3 progress (2026-11-01 late):** all 15 packages now regenerate `ACCEPTANCE.csv` from their own
+`scripts/acceptance.mjs`, and every script carries at least one row for the new capability (95 rows in
+total, all `public/synthetic` / `counted=false`). Remaining P3 work: real terminal captures for the new
+capabilities, version bumps, npm/GitHub pre-releases, mirror assets and the docs/manifest refresh. ACCEPTANCE rows and captures are produced at the release step (P3).
 
 | Date | Package | Change | Evidence |
 |---|---|---|---|
