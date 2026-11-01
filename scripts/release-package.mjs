@@ -27,17 +27,23 @@ const sh = (cmd, cwd = pkgDir, quiet = true) =>
   execSync(cmd, { cwd, stdio: quiet ? 'pipe' : 'inherit', encoding: 'utf8' }).toString().trim()
 
 const pkg = JSON.parse(fs.readFileSync(path.join(pkgDir, 'package.json'), 'utf8'))
-const m = /^(\d+\.\d+\.\d+-alpha\.)(\d+)$/.exec(pkg.version)
-if (!m) throw new Error(`unexpected version ${pkg.version}`)
-const nextVersion = `${m[1]}${Number(m[2]) + 1}`
-console.log(`[${pkg.name}] ${pkg.version} -> ${nextVersion}`)
+const bump = (v) => {
+  const m = /^(\d+\.\d+\.\d+-alpha\.)(\d+)$/.exec(v)
+  if (!m) throw new Error(`unexpected version ${v}`)
+  return `${m[1]}${Number(m[2]) + 1}`
+}
+console.log(`[${pkg.name}] local ${pkg.version}`)
 if (dryRun) process.exit(0)
 
 // 1. clean worktree from origin/main
 sh('git fetch origin --quiet')
 try { execSync(`git worktree remove --force ${workRoot}`, { cwd: pkgDir, stdio: 'pipe' }) } catch { /* not present */ }
 fs.rmSync(workRoot, { recursive: true, force: true })
-sh(`git worktree add -q ${workRoot} origin/main -b release/next`)
+sh('git worktree prune')
+sh(`git worktree add -q ${workRoot} origin/main -b release/${Date.now()}`)
+const workVersion = JSON.parse(fs.readFileSync(path.join(workRoot, 'package.json'), 'utf8')).version
+const nextVersion = bump(workVersion)
+console.log(`  main ${workVersion} -> ${nextVersion}`)
 sh(`ln -sfn ${path.join(pkgDir, 'node_modules')} ${path.join(workRoot, 'node_modules')}`)
 
 // 2. copy the changed source/test/docs files (READMEs stay as they are on main)
@@ -58,7 +64,7 @@ for (const dir of ['src', 'test', 'scripts', 'docs']) {
   for (const file of walk(base)) {
     const rel = path.relative(pkgDir, file)
     if (rel.endsWith('scripts/lint.mjs')) continue
-    if (rel.startsWith('docs/assets/') && !rel.endsWith('-capability.png')) continue
+    if (rel.startsWith('docs/assets/') && !/\.(png|svg|gif)$/i.test(rel)) continue
     const dest = path.join(workRoot, rel)
     fs.mkdirSync(path.dirname(dest), { recursive: true })
     fs.copyFileSync(file, dest)
@@ -77,9 +83,15 @@ fs.writeFileSync(workPkgPath, JSON.stringify(workPkg, null, 2) + '\n')
 const lintPath = path.join(workRoot, 'scripts', 'lint.mjs')
 if (fs.existsSync(lintPath)) {
   const before = fs.readFileSync(lintPath, 'utf8')
-  const after = before.split(pkg.version).join(nextVersion)
-  if (after === before) console.log(`  warn: ${pkg.name} lint script did not contain ${pkg.version}`)
+  const after = before.split(workVersion).join(nextVersion)
+  if (after === before) console.log(`  warn: ${pkg.name} lint script did not contain ${workVersion}`)
   fs.writeFileSync(lintPath, after)
+}
+// git can consider a same-size, same-second rewrite unchanged (racy stat cache on 9p mounts);
+// bumping the mtime forces a content re-hash before the commit
+const future = new Date(Date.now() + 5000)
+for (const f of [workPkgPath, lintPath, path.join(workRoot, 'CHANGELOG.md')]) {
+  if (fs.existsSync(f)) fs.utimesSync(f, future, future)
 }
 const logPath = path.join(workRoot, 'CHANGELOG.md')
 if (fs.existsSync(logPath)) {

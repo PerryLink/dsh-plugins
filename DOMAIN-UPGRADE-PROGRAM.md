@@ -71,6 +71,18 @@ total, all `public/synthetic` / `counted=false`).
 (15 images, 465 KB). Each `screenshots.json` names the exact command, test count and caveat; the seven
 packages that had no `screenshots.json` at all (the previously frozen set) now have one.
 
+## 5b. Second capability wave (2026-11-01 late)
+
+| Package | New capability | Standard | Tests | Release |
+|---|---|---|---|---|
+| `dsh-bankrec` | `bankrec.ingest_camt054` — CAMT.054 notifications as bank rows | ISO 20022 camt.054 | 15/15 | `0.1.0-alpha.13` |
+| `dsh-ghg` | `ghg.scope3_summary` — the 15 Scope 3 categories with diagnostics | GHG Protocol Corporate Value Chain Standard | 13/13 | `0.1.0-alpha.15` |
+
+**Pipeline defect found:** on this 9p-mounted workspace git can treat a same-size, same-second rewrite as
+unchanged (racy stat cache) — `package.json` and `scripts/lint.mjs` silently stayed at the old version in
+two releases. `release-package.mjs` now bumps the mtime of every edited file before staging, and derives
+the next version from `origin/main` rather than the stale local clone.
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
