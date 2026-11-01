@@ -83,6 +83,8 @@ unchanged (racy stat cache) — `package.json` and `scripts/lint.mjs` silently s
 two releases. `release-package.mjs` now bumps the mtime of every edited file before staging, and derives
 the next version from `origin/main` rather than the stale local clone.
 
+| `dsh-einvoice` | `invoice.code_check` — ISO 4217 currency, ISO 3166-1 country, EN 16931 BR-CL-17 VAT category | EN 16931 | 31/31 | `0.2.0-alpha.9` |
+
 ## 6. Release recipe (verified on 2026-11-01)
 
 Publishing locally would lose npm provenance, so releases go through each package's `publish.yml`
