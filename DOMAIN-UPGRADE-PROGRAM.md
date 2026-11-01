@@ -108,7 +108,13 @@ Two release-pipeline defects were found and fixed on the way: `git add -A` was c
 einvoice release needed its version gate in `scripts/lint.mjs` aligned before the tag would publish.
 `scripts/release-package.mjs` now does the whole flow and strips the symlink after staging.
 
-Remaining: mirror assets (Gitee/GitCode) and the catalog refresh. ACCEPTANCE rows and captures are produced at the release step (P3).
+**Catalog (2026-11-01 late):** the `dsh-catalog` refresh workflow had a real defect — its
+`add-paths` list omitted `deploy/artifacts/v1/taxonomy.json`, so the taxonomy sidecar kept an older
+`generatedAt` and the `ci` gate failed with "taxonomy generatedAt must equal page generatedAt". The
+workflow now commits the sidecar; a fresh refresh PR passed CI, merged (`61ddf3a`) and deployed, and the
+live snapshot carries all 15 new versions.
+
+Remaining: mirror assets (Gitee/GitCode). ACCEPTANCE rows and captures are produced at the release step (P3).
 
 | Date | Package | Change | Evidence |
 |---|---|---|---|
