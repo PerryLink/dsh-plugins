@@ -27,10 +27,10 @@
     },
     {
       "name": "dsh-bankrec",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "repo": "https://github.com/PerryLink/dsh-bankrec",
       "npm": "https://www.npmjs.com/package/dsh-bankrec",
-      "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.14",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-bankrec",
       "description": "银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。",

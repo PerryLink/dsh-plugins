@@ -112,8 +112,14 @@ site. Totals: **202 tests**, **111 acceptance rows**, **30 captures**, 17 releas
 suites). Freeze labels: 0 on every live surface.
 
 Known gaps for a deeper pass (deliberately out of scope here): full EN 16931 rule engine for e-invoice,
-camt.056/ISO 20022 pain.001 for bankrec, ESRS datapoints beyond partial E1 for ghg, GS1 prefix-length
-tables, and IFC property-set traversal for quantity take-off.
+ISO 20022 pain.001 for bankrec, ESRS datapoints beyond partial E1 for ghg, GS1 prefix-length tables, and
+IFC property-set traversal for quantity take-off.
+
+**2026-11-01 22:40 — post-completion pass:** `bankrec` gained a third capability, `bankrec.camt056_list`
+(CAMT.056 cancellation requests: original tx id, end-to-end id, reason code, account; read-only, 17/17
+tests, released as `0.1.0-alpha.14`). The Gitee mirror asset sets were rebuilt so no release carries a
+duplicate source archive: each now uploads only the npm tarball, `ACCEPTANCE.csv` and a matching
+`SHA256SUMS`; Gitee serves the source archives itself.
 
 ## 6. Release recipe (verified on 2026-11-01)
 
