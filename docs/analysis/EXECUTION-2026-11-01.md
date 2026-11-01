@@ -99,3 +99,7 @@ This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-202
 - The project Pages site hit a stale `b412d6b` deployment lock and was removed. The same URL is now served from the user Pages repository (`PerryLink/perrylink.github.io/dsh-plugins/`), so no URL change is needed.
 - `https://perrylink.github.io/dsh-plugins/`, `taxonomy.html`, `packages/dsh-bankrec.html` and `family/dsh-einvoice.html` all return 200.
 - The 125 family pages, 17 domain package pages and the taxonomy filter are live.
+
+### Touched legacy package
+
+- `dsh-lsp-actions` was touched for the Dependabot cleanup; it now also has `PRIVACY.md`, `icon.svg`, five README links and `package.json files[]`, verified with `npm pack --dry-run` and `readme-sync`. The other 53 legacy directories remain tracked in `LEGACY-DEBT.md`, not bulk-rewritten.
