@@ -60,7 +60,7 @@ better stability, without copying third-party code.
 
 ## 5. Progress
 
-Remaining: 8 packages still need P1 capability work (legal-intake, qms-capa, hs-candidate, freight-audit, docx-redline, ifc-qto, policy-ledger, eval-pack). ACCEPTANCE rows and captures are produced at the release step (P3).
+Remaining: 2 packages still need P1 capability work (freight-audit, policy-ledger). ACCEPTANCE rows and captures are produced at the release step (P3).
 
 | Date | Package | Change | Evidence |
 |---|---|---|---|
@@ -71,4 +71,10 @@ Remaining: 8 packages still need P1 capability work (legal-intake, qms-capa, hs-
 | 2026-11-01 | `dsh-ap-three-way` | new `ap.tolerance_match`: price/quantity/amount tolerances in basis points, explicit exception reasons, header-only GRN handled | `node --test test/*.test.mjs` → 8/8 pass |
 | 2026-11-01 | `dsh-travel-recon` | new `travel.reuse_check`: cross-trip invoice/card reuse (double claim) before ingest | `node --test test/*.test.mjs` → 7/7 pass |
 | 2026-11-01 | `dsh-legal-clause` | new `legal.clause_integrity`: duplicate / missing / out-of-order clause numbers | `node --test test/*.test.mjs` → 8/8 pass |
+| 2026-11-01 | `dsh-legal-intake` | new `legal.intake_doctor`: EML header/duplicate/thread/attachment QA before intake | `node --test test/*.test.mjs` → 7/7 pass |
+| 2026-11-01 | `dsh-qms-capa` | new `qms.8d_check`: D1-D8 completeness, thin-content and ready-to-close verdict | `node --test test/*.test.mjs` → 9/9 pass |
+| 2026-11-01 | `dsh-hs-candidate` | new `hs.code_check`: HS 2022 code structure, chapter range, reserved chapters | `node --test test/*.test.mjs` → 7/7 pass |
+| 2026-11-01 | `dsh-ifc-qto` | new `ifc.qto_summary`: totals/count/min/max per measurement kind, type distribution, non-positive detection | `node --test test/*.test.mjs` → 9/9 pass |
+| 2026-11-01 | `dsh-docx-redline` | new `doc.change_summary`: tracked insertions/deletions and per-author totals (OOXML WML) | `node --test test/*.test.mjs` → 18/18 pass |
+| 2026-11-01 | `dsh-eval-pack` | new `eval.summary` + canonical-JSON grading (key order insensitive) | `node --test test/*.test.mjs` → 7/7 pass |
 | 2026-11-01 | all 15 + 2 suites | frozen status removed; all active | `check-docs` / `check-taxonomy` green |
