@@ -4,10 +4,10 @@
   "packages": [
     {
       "name": "dsh-einvoice",
-      "version": "0.2.0-alpha.8",
+      "version": "0.2.0-alpha.9",
       "repo": "https://github.com/PerryLink/dsh-einvoice",
       "npm": "https://www.npmjs.com/package/dsh-einvoice",
-      "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.8",
+      "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.9",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-fin-invoice-core",
       "description": "文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。",
