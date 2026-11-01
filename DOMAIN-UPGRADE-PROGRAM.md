@@ -64,8 +64,14 @@ P1 capability work is complete for all 15 packages.
 
 **P3 progress (2026-11-01 late):** all 15 packages now regenerate `ACCEPTANCE.csv` from their own
 `scripts/acceptance.mjs`, and every script carries at least one row for the new capability (95 rows in
-total, all `public/synthetic` / `counted=false`). Remaining P3 work: real terminal captures for the new
-capabilities, version bumps, npm/GitHub pre-releases, mirror assets and the docs/manifest refresh. ACCEPTANCE rows and captures are produced at the release step (P3).
+total, all `public/synthetic` / `counted=false`).
+
+**Captures (2026-11-01 late):** all 15 packages carry `docs/assets/<pkg>-capability.png`, rendered by
+`scripts/render-capture.py` from the actual `node --test` transcript of the new capability test
+(15 images, 465 KB). Each `screenshots.json` names the exact command, test count and caveat; the seven
+packages that had no `screenshots.json` at all (the previously frozen set) now have one.
+
+Remaining P3 work: version bumps, npm/GitHub pre-releases, mirror assets and the docs/manifest refresh. ACCEPTANCE rows and captures are produced at the release step (P3).
 
 | Date | Package | Change | Evidence |
 |---|---|---|---|
