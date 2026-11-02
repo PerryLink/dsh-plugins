@@ -54,10 +54,37 @@ const card = (item) => {
 </a>`
 }
 
-const section = ([fam, list]) => `<section id="${esc(fam)}">
-  <h2>${esc(fam)} <small>${esc(FAMILY_SUB[fam] || '')} · ${list.length}</small></h2>
-  <div class="grid">${list.map(card).join('\n')}</div>
+// 场景包不是单个插件，但按任务族出现在同一张市场页；卡片置顶并标“场景包”。
+const PACKS = {
+  财务报销: [
+    {
+      href: 'packs/finance.html',
+      zh: '财务包：发票到归档',
+      en: 'Finance pack — invoice to archive',
+      desc: '收票 → 查重 → 三单匹配 → 银行对账 → 归档',
+      roles: '会计 · 应付 · 出纳',
+      tags: ['端到端场景', '4 个插件', '合成样例可跑'],
+    },
+  ],
+}
+
+const PACK_COUNT = Object.values(PACKS).reduce((total, packs) => total + packs.length, 0)
+
+const packCard = (pack) => `<a class="card pack" href="${esc(pack.href)}" data-search="${esc([pack.zh, pack.en, pack.desc, ...(pack.tags || []), pack.roles || ''].join(' ').toLowerCase())}">
+  <h3>${esc(pack.zh)}<span class="pill pack">场景包</span></h3>
+  <p class="en">${esc(pack.en)}</p>
+  <p class="meta">${esc(pack.desc)} <span class="roles">${esc(pack.roles)}</span></p>
+  <p class="tags">${(pack.tags || []).map((tag) => `<span>${esc(tag)}</span>`).join('')}</p>
+</a>`
+
+const section = ([fam, list]) => {
+  const packs = PACKS[fam] ?? []
+  const packNote = packs.length ? ` + ${packs.length} 个场景包` : ''
+  return `<section id="${esc(fam)}">
+  <h2>${esc(fam)} <small>${esc(FAMILY_SUB[fam] || '')} · ${list.length}${packNote}</small></h2>
+  <div class="grid">${packs.map(packCard).join('\n')}${packs.length ? '\n' : ''}${list.map(card).join('\n')}</div>
 </section>`
+}
 
 const html = `<!doctype html>
 <html lang="zh-CN">
@@ -89,13 +116,17 @@ h2 small{color:var(--muted);font-weight:400;font-size:13px}
 .tags span{display:inline-block;background:#1f2937;color:#c9d1d9;border-radius:6px;padding:1px 8px;font-size:12px;margin:2px 4px 0 0}
 .pill{font-size:11px;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle}
 .pill.frozen{background:#3d2b1f;color:#f0b72f}
+.pill.pack{background:#1a7f37;color:#fff;margin-left:8px}
+.card.pack{border-color:#2ea043;background:linear-gradient(135deg,#12261a,#161b22 60%)}
+.card.pack:hover{border-color:#3fb950}
+.card.pack .meta{color:#9fd6a8}
 footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
 <header>
   <h1>DSH 插件市场</h1>
-  <p class="sub">${items.length} 个插件，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
+  <p class="sub">${items.length} 个插件${PACK_COUNT ? ` + ${PACK_COUNT} 个场景包` : ''}，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
   <input id="q" type="search" placeholder="试试：发票、对账、报关、合同、考勤…">
 </header>
 <nav>${FAMILIES.map((f) => `<a href="#${esc(f)}">${esc(f)} ${(groups.get(f) || []).length}</a>`).join('')}</nav>

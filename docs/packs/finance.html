@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>财务包（C1）：发票到归档 — DSH 插件市场</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2430;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--amber:#d29922}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+a{color:var(--accent)}
+header{max-width:1040px;margin:0 auto;padding:36px 24px 10px}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 18px}
+h1{margin:0 0 8px;font-size:32px;line-height:1.25}
+.lede{color:var(--muted);margin:0 0 14px;max-width:760px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px}
+.badge{border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:12px;color:var(--muted)}
+.badge.green{border-color:#238636;color:#7ee787;background:#0f2417}
+main{max-width:1040px;margin:0 auto;padding:0 24px 64px}
+section{margin:30px 0}
+h2{font-size:21px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:22px 0 8px}
+p{margin:8px 0}
+code{background:#1f2937;border-radius:5px;padding:1px 5px;font-size:.9em}
+pre{background:#0b0f14;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;color:#c9d1d9}
+pre .c{color:var(--muted)}
+.shot{display:block;max-width:100%;border:1px solid var(--line);border-radius:12px;margin:10px 0 6px}
+.caption{color:var(--muted);font-size:13px;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.plugin{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit}
+.plugin:hover{border-color:var(--accent)}
+.plugin b{display:block;font-size:16px;margin-bottom:2px}
+.plugin span{display:block;color:var(--muted);font-size:13px}
+.plugin code{font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-size:13px;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.note{background:#0f2417;border:1px solid #238636;border-radius:10px;padding:12px 14px;color:#b7f0c0;font-size:14px}
+.warn{background:#2a2112;border:1px solid #6b4e16;border-radius:10px;padding:12px 14px;color:#f0d58a;font-size:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.step h3{margin:0 0 4px}
+.step .who{color:var(--muted);font-size:13px;margin:0 0 8px}
+footer{max-width:1040px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
+@media (max-width:640px){h1{font-size:26px}th,td{padding:8px}pre{font-size:11.5px}}
+</style>
+</head>
+<body>
+<header>
+  <p class="crumb"><a href="../market.html">← 返回插件市场</a> / 财务报销 / 场景包</p>
+  <h1>财务包（C1）：发票到归档，一条命令跑完</h1>
+  <p class="lede">把 4 个 DSH 财务插件串成一条真实可跑的场景：<b>收到发票 → 查重 → 三单匹配 → 银行对账 → 归档</b>。写给财务共享中心、应付会计和出纳，不需要写代码。</p>
+  <div class="badges">
+    <span class="badge green">合成数据 · 本地运行 · 不联网</span>
+    <span class="badge">4 个插件</span>
+    <span class="badge">1 条命令</span>
+    <span class="badge">5 段输出 / 4 步操作</span>
+    <span class="badge">2026-08 · CNY</span>
+  </div>
+</header>
+<main>
+
+<section>
+  <h2>真实运行截图</h2>
+  <img class="shot" src="../assets/finance-flow.png" alt="财务包真实运行截图：收到发票、查重、三单匹配、银行对账、归档">
+  <p class="caption">上图是 <code>node scenario/run-scenario.mjs</code> 的真实输出，不是示意图（<a href="../assets/finance-flow.txt">原始终端文本</a>）。数据全部为 <code>DEMO-*</code> / <code>91330106TEST*</code> 合成值。</p>
+</section>
+
+<section>
+  <h2>这个包解决什么</h2>
+  <p>一张发票从“收到”到“归档”的五个动作，由四个插件接力；脚本把同一份 2026-08 数据在四个插件之间传递，而不是四个样例各跑一遍。</p>
+  <div class="grid">
+    <a class="plugin" href="../packages/dsh-einvoice.html">
+      <b>收票 + 查重 + 归档</b>
+      <span>dsh-einvoice · 发票查重</span>
+      <span>XML/OFD 解析、哈希存原件、按发票号查重、带 manifest 归档</span>
+    </a>
+    <a class="plugin" href="../packages/dsh-ap-three-way.html">
+      <b>采购三单匹配</b>
+      <span>dsh-ap-three-way · 发票三单匹配</span>
+      <span>发票 vs 采购单 vs 收货单，默认 1% 单价容差，例外清单</span>
+    </a>
+    <a class="plugin" href="../packages/dsh-travel-recon.html">
+      <b>差旅三单匹配</b>
+      <span>dsh-travel-recon · 差旅票据稽核</span>
+      <span>行程 vs 发票 vs 卡流水，费用政策、日限额、跨行程重复报销</span>
+    </a>
+    <a class="plugin" href="../packages/dsh-bankrec.html">
+      <b>银行对账</b>
+      <span>dsh-bankrec · 银行流水对账</span>
+      <span>银行 vs 总账 1:1 勾对，CAMT.053 余额连续性检查，三张底稿</span>
+    </a>
+  </div>
+  <p class="warn">它不替你做会计判断，也不做税务签章。匹配例外、政策违规和未达账项仍需人工复核。</p>
+</section>
+
+<section>
+  <h2>你需要准备什么</h2>
+  <p>把文件放进仓库 <code>04-build/dsh-finance-pack/scenario/data/</code> 对应目录，保持表头不变。</p>
+  <table>
+    <thead><tr><th>文件</th><th>放在哪里</th><th>最少需要的列 / 字段</th></tr></thead>
+    <tbody>
+      <tr><td>电子发票 XML 或 OFD</td><td><code>invoice/</code></td><td>XML：<code>InvoiceNo</code>、<code>InvoiceIssueDate</code>、<code>Buyer</code>、<code>Seller</code>、<code>Items</code>、<code>Amount</code>、<code>TaxAmount</code>、<code>TotalAmount</code></td></tr>
+      <tr><td>采购发票 / 采购单 / 收货单</td><td><code>ap/</code></td><td><code>supplier,invoice_no,po_no,line_no,qty,unit_price,amount</code>；PO/GRN 见样例表头</td></tr>
+      <tr><td>差旅行程 / 发票 / 卡流水</td><td><code>travel/</code></td><td>行程 <code>trip_id,employee,origin,destination,date,amount</code>；发票 <code>invoice_id,trip_id,amount</code>；卡 <code>txn_id,trip_id,amount</code></td></tr>
+      <tr><td>银行流水 / 总账 / CAMT.053</td><td><code>bank/</code></td><td>CSV <code>date,amount,reference</code>；CAMT 标准 <code>BkToCstmrStmt/Stmt</code></td></tr>
+    </tbody>
+  </table>
+  <p>金额写 <code>1234.56</code>，日期 <code>YYYY-MM-DD</code>，期间 <code>YYYY-MM</code>；银行流水和总账金额符号要一致，付款记为负数。</p>
+</section>
+
+<section>
+  <h2>四步操作</h2>
+  <p>先运行同一条命令（脚本一次跑完）：</p>
+  <pre>$ cd 04-build/dsh-finance-pack
+$ node scenario/run-scenario.mjs</pre>
+  <p>屏幕上是 <code>[1/5]</code>～<code>[5/5]</code> 五段；下面四步里，收票和查重各占一段。</p>
+
+  <div class="step">
+    <h3>第 1 步：收票 + 查重（dsh-einvoice）</h3>
+    <p class="who">对应 [1/5]、[2/5] 两段</p>
+    <pre>[1/5] 收到发票 ............ 2 份文件入库
+      DOC-1 DEMO-ENTITY-A invoice-DEMO-2026-0001.xml
+      DOC-2 DEMO-ENTITY-B invoice-DEMO-2026-0001-copy.ofd
+[2/5] 查重 ................ 1 组重复（invoice_no:DEMO-INV-2026-0001）
+      两份文件同一发票号、同一卖方，价税合计 1060.00 CNY → 转人工复核</pre>
+    <p>2 份文件都入库（XML + OFD），同一张发票分别落在两个主体；查重命中 1 组，脚本不会自动删除任何一份。同一主体重复解析会报 <code>E_INV_DUP_CONFLICT</code>，说明查重生效。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 2 步：三单匹配（dsh-ap-three-way + dsh-travel-recon）</h3>
+    <p class="who">对应 [3/5] 段；采购与差旅两条线</p>
+    <pre>[3/5] 三单匹配 ............ 采购 2 通过 / 2 例外；差旅 2 通过 / 1 例外
+      采购例外：PO-DEMO-9003 数量超入库；PO-DEMO-9004 单价超容差
+      差旅例外：TRIP-DEMO-03 缺卡流水
+      政策/限额 2 项提示；跨行程重复报销 1 项</pre>
+    <p>采购线：9001（XML 发票）和 9002 通过；9003 数量超过收货单，9004 单价超出 1% 默认容差。差旅线：TRIP-DEMO-01/02 通过；TRIP-DEMO-03 缺卡流水，另有 1 项超政策、1 天超日限额、1 张发票跨两个行程重复报销。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 3 步：银行对账（dsh-bankrec）</h3>
+    <p class="who">对应 [4/5] 段</p>
+    <pre>[4/5] 银行对账 ............ 匹配 5 笔；未达 1 银行 / 1 总账；CAMT 余额平衡
+      未达银行：TRANSFER-DEMO-01；未达总账：TRANSFER-DEMO-02</pre>
+    <p>银行 6 行、总账 6 行，按金额相同且日期相差 ≤3 天勾对，成功 5 笔。两笔转账金额相同但日期相差较远，分别留在银行侧和总账侧。CAMT.053 期初 10000.00 + 净发生额 −4254.90 = 期末 5745.10，余额连续。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 4 步：归档（dsh-einvoice）</h3>
+    <p class="who">对应 [5/5] 段</p>
+    <pre>[5/5] 归档 ................ 1 张发票、2 个文件，校验 ok，恢复 1 个文件
+      归档包含 manifest + 原始文件；重复件保留在原实体待复核
+底稿：output/workpapers/（采购 / 差旅 / 银行 3 份 xlsx）
+归档：output/archive/finance-pack-2026-08.zip</pre>
+    <p>只归档 DEMO-ENTITY-A 下 2026-08 的 1 张发票；归档包 = 1 个原始 XML + 1 个 manifest。归档后用 <code>invoice.check</code> 校验哈希，再用 <code>invoice.restore</code> 做恢复演练。DEMO-ENTITY-B 的重复件不进入归档包。</p>
+  </div>
+</section>
+
+<section>
+  <h2>结果文件</h2>
+  <table>
+    <thead><tr><th>路径</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td><code>output/flow.json</code></td><td>本次运行的完整链路：每步输入、输出摘要、耗时、状态、产物清单</td></tr>
+      <tr><td><code>expected/flow.json</code></td><td>金标；测试剔除时间字段后逐字段比对</td></tr>
+      <tr><td><code>output/workpapers/ap-three-way.xlsx</code></td><td>采购三单底稿：Matches / Exceptions</td></tr>
+      <tr><td><code>output/workpapers/travel-ledger.xlsx</code></td><td>差旅底稿：Trips / Matches</td></tr>
+      <tr><td><code>output/workpapers/bank-rec.xlsx</code></td><td>银行对账底稿：Bank / GL / Matches</td></tr>
+      <tr><td><code>output/archive/finance-pack-2026-08.zip</code></td><td>归档包（原始文件 + manifest）</td></tr>
+      <tr><td><code>output/restored/</code></td><td>恢复演练还原出的原始文件</td></tr>
+    </tbody>
+  </table>
+  <p class="note"><code>output/</code> 每次运行重建，已在 .gitignore 中忽略；金标在 <code>expected/flow.json</code>，不要被覆盖。</p>
+</section>
+
+<section>
+  <h2>出错怎么办</h2>
+  <table>
+    <thead><tr><th>报错</th><th>通常原因</th><th>下一步</th></tr></thead>
+    <tbody>
+      <tr><td><code>E_INV_FILE_UNREADABLE</code> / <code>E_INV_OFD_UNSUPPORTED</code></td><td>文件为空、损坏，或 OFD 中没有可识别的发票 XML</td><td>重新从开票平台导出；确认 OFD 能正常打开</td></tr>
+      <tr><td><code>E_INV_XML_SCHEMA_DRIFT</code> / <code>E_INV_FIELD_MISSING</code></td><td>XML 字段名与样例不同，或缺必填字段</td><td>对照样例补齐发票号、日期、买卖方、Items 和金额</td></tr>
+      <tr><td><code>E_INV_DUP_CONFLICT</code></td><td>同一主体、同一发票号已解析过</td><td>查重生效；先查已有记录，或换 entity_id 做主体隔离，不要删数据</td></tr>
+      <tr><td><code>E_AP_CSV_INVALID</code></td><td>CSV 缺表头、金额读不懂、空行/坏行</td><td>对照 ap 样例表头；金额改成 1234.56</td></tr>
+      <tr><td><code>E_BR_CSV_INVALID</code></td><td>日期/金额/期间格式不对，或 CAMT 缺余额</td><td>CSV 用 YYYY-MM-DD；期间用 YYYY-MM；CAMT 至少要有 OPBD 和 CLBD</td></tr>
+      <tr><td><code>E_TRAVEL_CSV_INVALID</code></td><td>缺 trip_id / invoice_id / txn_id，或金额格式不对</td><td>对照 travel 样例，每个 ID 必填</td></tr>
+      <tr><td>其他错误</td><td>可能是文件权限、临时目录或数据版本变化</td><td>保留完整报错和 output/flow.json，先读错误里的“下一步”，不要删原始文件</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>四个插件</h2>
+  <div class="grid">
+    <a class="plugin" href="../packages/dsh-einvoice.html"><b>发票查重</b><span>dsh-einvoice</span><span>收票 · 查重 · 归档</span></a>
+    <a class="plugin" href="../packages/dsh-ap-three-way.html"><b>发票三单匹配</b><span>dsh-ap-three-way</span><span>采购三单与容差</span></a>
+    <a class="plugin" href="../packages/dsh-travel-recon.html"><b>差旅票据稽核</b><span>dsh-travel-recon</span><span>差旅三单、政策、重复报销</span></a>
+    <a class="plugin" href="../packages/dsh-bankrec.html"><b>银行流水对账</b><span>dsh-bankrec</span><span>银行/总账勾对、CAMT</span></a>
+  </div>
+  <p>仓库内完整中文说明：<code>04-build/dsh-finance-pack/README-zh.md</code>；英文简版：<code>README.md</code>。运行与测试命令：</p>
+  <pre>$ node scenario/run-scenario.mjs
+$ node --test test/*.test.mjs
+$ node scenario/run-scenario.mjs --write-expected   # 有意改动输出后重建金标</pre>
+</section>
+
+</main>
+<footer>
+  <p>财务包（C1）是场景包，不是 npm 包。所有样例数据均为合成数据；不联网、不上传、不调用税局或银行。 · <a href="../market.html">返回插件市场</a></p>
+</footer>
+</body>
+</html>

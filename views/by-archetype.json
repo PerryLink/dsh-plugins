@@ -93,6 +93,7 @@
     "dsh-lawcite-adapter",
     "dsh-library",
     "dsh-paper-doc-adapter",
+    "dsh-pdf-table",
     "dsh-table-ingest",
     "dsh-tender-extract",
     "dsh-tender-requirements"

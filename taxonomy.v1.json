@@ -336,7 +336,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-contract-suite",
-      "version": "0.1.0-alpha.10",
+      "version": "0.1.0-alpha.11",
       "relatedCheckers": [
         "dsh-contract-stance",
         "dsh-evidence-check"
@@ -388,7 +388,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.17",
+      "version": "0.1.0-alpha.18",
       "relatedCheckers": [
         "dsh-eia-guide-check",
         "dsh-soilwater-check"
@@ -466,7 +466,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "relatedCheckers": [
         "dsh-demurrage-ledger",
         "dsh-lc-doc-check",
@@ -543,7 +543,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.2.0-alpha.13",
+      "version": "0.2.0-alpha.14",
       "relatedCheckers": [],
       "relatedTools": [
         "dsh-clinic",
@@ -569,7 +569,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-excel-reconcile"
       ],
@@ -595,7 +595,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-score",
         "dsh-doublecheck",
@@ -1932,7 +1932,7 @@
       "members": [
         {
           "id": "dsh-legal-intake",
-          "version": "0.1.0-alpha.10"
+          "version": "0.1.0-alpha.11"
         },
         {
           "id": "dsh-legal-clause",
@@ -1957,6 +1957,28 @@
       "displayName": "Provider parameter mapping and JSON repair",
       "displayNameZh": "厂商参数转换与 JSON 修复",
       "positioning": "Maps temperature/top_p/max_tokens/stop/system across 11 LLM vendors and repairs broken JSON tool output deterministically; no data is fabricated.",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": []
+    },
+    {
+      "id": "dsh-pdf-table",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "data",
+      "subcategory": "document",
+      "archetype": "extractor",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "pdf",
+        "tables",
+        "data-ingest"
+      ],
+      "displayName": "PDF table extraction (text layer)",
+      "displayNameZh": "PDF 表格提取",
+      "positioning": "Extract tables from text-layer PDFs to CSV with row/column clustering; scanned PDFs are rejected with an OCR hint.",
       "status": "active",
       "release": "alpha",
       "version": "0.1.0-alpha.1",

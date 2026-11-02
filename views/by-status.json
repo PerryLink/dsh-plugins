@@ -75,6 +75,7 @@
     "dsh-output-styles",
     "dsh-paper-doc-adapter",
     "dsh-payroll-audit",
+    "dsh-pdf-table",
     "dsh-permission-rules",
     "dsh-permit-report-check",
     "dsh-pim-lint",

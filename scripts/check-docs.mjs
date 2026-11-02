@@ -33,7 +33,7 @@ try {
   errors.push(`sync-versions: ${error.message}`);
 }
 
-if (packages.packages.length !== 16) errors.push(`packages.json: expected 15 packages, got ${packages.packages.length}`);
+if (packages.packages.length !== 17) errors.push(`packages.json: expected 17 packages, got ${packages.packages.length}`);
 if (packages.suites.length !== 2) errors.push(`packages.json: expected 2 suites, got ${packages.suites.length}`);
 const missingZh = (family.items || []).filter((i) => !i.displayNameZh)
 if (missingZh.length) errors.push(`family.json: ${missingZh.length} item(s) without a Chinese name (${missingZh.slice(0, 3).map((i) => i.id).join(', ')})`);
@@ -140,13 +140,13 @@ for (const file of ['README.md', 'docs/index.html']) {
 }
 
 
-if (family.counts.total !== 126) errors.push(`family.json: expected 126 rows, got ${family.counts.total}`);
-if (family.counts.active !== 115) errors.push(`family.json: expected 115 active, got ${family.counts.active}`);
+if (family.counts.total !== 127) errors.push(`family.json: expected 127 rows, got ${family.counts.total}`);
+if (family.counts.active !== 116) errors.push(`family.json: expected 116 active, got ${family.counts.active}`);
 if (family.counts.frozen !== 8) errors.push(`family.json: expected 8 frozen, got ${family.counts.frozen}`);
 if (family.counts.retired !== 3) errors.push(`family.json: expected 3 retired, got ${family.counts.retired}`);
 const scopeCounts = {};
 for (const item of family.items) scopeCounts[item.installScope] = (scopeCounts[item.installScope] || 0) + 1;
-const expectedScopes = { 'mainline-default':39, 'mainline-opt-in':53, 'catalog-only':10, domain:18, 'excluded-retired':3, infrastructure:3 };
+const expectedScopes = { 'mainline-default':39, 'mainline-opt-in':53, 'catalog-only':10, domain:19, 'excluded-retired':3, infrastructure:3 };
 for (const [k, v] of Object.entries(expectedScopes)) if (scopeCounts[k] !== v) errors.push(`family.json: installScope ${k} ${scopeCounts[k]} != ${v}`);
 
 
@@ -163,7 +163,7 @@ for (const item of family.items) {
   if (!item.npm) errors.push(`${item.id}: missing npm`);
   if (!item.repo) errors.push(`${item.id}: missing repo`);
 }
-if (taxonomy.items.length !== 80) errors.push(`taxonomy.v1.json: expected 80 items, got ${taxonomy.items.length}`);
+if (taxonomy.items.length !== 81) errors.push(`taxonomy.v1.json: expected 81 items, got ${taxonomy.items.length}`);
 
 if (errors.length) {
   console.error(`check-docs: ${errors.length} problem(s)`);

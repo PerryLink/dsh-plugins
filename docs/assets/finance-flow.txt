@@ -1,0 +1,23 @@
+$ node scenario/run-scenario.mjs
+dsh-finance-pack · 财务包端到端场景（合成数据，本地运行）
+流程：收到发票 → 查重 → 三单匹配 → 银行对账 → 归档
+期间：2026-08 ｜ 币种：CNY ｜ 银行账户：ACC-DEMO-001
+
+[1/5] 收到发票 ............ 2 份文件入库
+      DOC-1 DEMO-ENTITY-A invoice-DEMO-2026-0001.xml
+      DOC-2 DEMO-ENTITY-B invoice-DEMO-2026-0001-copy.ofd
+[2/5] 查重 ................ 1 组重复（invoice_no:DEMO-INV-2026-0001）
+      两份文件同一发票号、同一卖方，价税合计 1060.00 CNY → 转人工复核
+[3/5] 三单匹配 ............ 采购 2 通过 / 2 例外；差旅 2 通过 / 1 例外
+      采购例外：PO-DEMO-9003 数量超入库；PO-DEMO-9004 单价超容差
+      差旅例外：TRIP-DEMO-03 缺卡流水
+      政策/限额 2 项提示；跨行程重复报销 1 项
+[4/5] 银行对账 ............ 匹配 5 笔；未达 1 银行 / 1 总账；CAMT 余额平衡
+      未达银行：TRANSFER-DEMO-01；未达总账：TRANSFER-DEMO-02
+[5/5] 归档 ................ 1 张发票、2 个文件，校验 ok，恢复 1 个文件
+      归档包含 manifest + 原始文件；重复件保留在原实体待复核
+底稿：output/workpapers/（采购 / 差旅 / 银行 3 份 xlsx）
+归档：output/archive/finance-pack-2026-08.zip
+
+结果：5/5 步通过，五步耗时 171.986 ms
+flow.json：output/flow.json

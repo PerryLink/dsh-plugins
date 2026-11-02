@@ -2196,5 +2196,24 @@
     "industries": [
       "通用"
     ]
+  },
+  "dsh-pdf-table": {
+    "nameZh": "PDF 表格提取",
+    "tags": [
+      "PDF",
+      "表格",
+      "提取",
+      "CSV",
+      "扫描件提示"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "财务",
+      "行政",
+      "数据录入"
+    ],
+    "industries": [
+      "通用"
+    ]
   }
 }

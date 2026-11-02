@@ -4,8 +4,8 @@
   "status": "proposal",
   "scope": "126-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-provider-params + dsh-community-bench + 3 retired + 3 infrastructure rows.",
   "counts": {
-    "total": 126,
-    "active": 115,
+    "total": 127,
+    "active": 116,
     "frozen": 8,
     "retired": 3
   },
@@ -206,7 +206,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-contract-suite",
-      "version": "0.1.0-alpha.10",
+      "version": "0.1.0-alpha.11",
       "relatedCheckers": [
         "dsh-contract-stance",
         "dsh-evidence-check"
@@ -295,7 +295,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.17",
+      "version": "0.1.0-alpha.18",
       "relatedCheckers": [
         "dsh-eia-guide-check",
         "dsh-soilwater-check"
@@ -432,7 +432,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "relatedCheckers": [
         "dsh-demurrage-ledger",
         "dsh-lc-doc-check",
@@ -565,7 +565,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.2.0-alpha.13",
+      "version": "0.2.0-alpha.14",
       "relatedCheckers": [],
       "relatedTools": [
         "dsh-clinic",
@@ -609,7 +609,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-excel-reconcile"
       ],
@@ -654,7 +654,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-score",
         "dsh-doublecheck",
@@ -3189,7 +3189,7 @@
       "members": [
         {
           "id": "dsh-legal-intake",
-          "version": "0.1.0-alpha.10"
+          "version": "0.1.0-alpha.11"
         },
         {
           "id": "dsh-legal-clause",
@@ -3252,6 +3252,48 @@
       "rolesZh": [
         "开发者",
         "模型接入工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
+    },
+    {
+      "id": "dsh-pdf-table",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "data",
+      "subcategory": "document",
+      "archetype": "extractor",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "pdf",
+        "tables",
+        "data-ingest"
+      ],
+      "displayName": "PDF table extraction (text layer)",
+      "displayNameZh": "PDF 表格提取",
+      "positioning": "Extract tables from text-layer PDFs to CSV with row/column clustering; scanned PDFs are rejected with an OCR hint.",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-pdf-table",
+      "npm": "dsh-pdf-table",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "PDF",
+        "表格",
+        "提取",
+        "CSV",
+        "扫描件提示"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "财务",
+        "行政",
+        "数据录入"
       ],
       "industriesZh": [
         "通用"

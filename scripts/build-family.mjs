@@ -158,7 +158,7 @@ for (const item of items) {
   if (ids.has(item.id)) throw new Error(`duplicate family id ${item.id}`);
   ids.add(item.id);
 }
-const EXPECTED_ROWS = 126
+const EXPECTED_ROWS = 127
 if (items.length !== EXPECTED_ROWS) throw new Error(`expected ${EXPECTED_ROWS} family rows, got ${items.length}`);
 
 const counts = {};

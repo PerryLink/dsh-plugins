@@ -84,6 +84,7 @@
   "data": [
     "dsh-excel-reconcile",
     "dsh-ifc-qto",
+    "dsh-pdf-table",
     "dsh-pim-lint",
     "dsh-table-ingest"
   ],

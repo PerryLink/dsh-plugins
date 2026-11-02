@@ -96,10 +96,10 @@
     },
     {
       "name": "dsh-legal-intake",
-      "version": "0.1.0-alpha.10",
+      "version": "0.1.0-alpha.11",
       "repo": "https://github.com/PerryLink/dsh-legal-intake",
       "npm": "https://www.npmjs.com/package/dsh-legal-intake",
-      "release": "https://github.com/PerryLink/dsh-legal-intake/releases/tag/v0.1.0-alpha.10",
+      "release": "https://github.com/PerryLink/dsh-legal-intake/releases/tag/v0.1.0-alpha.11",
       "family": "法务运营 Legal Ops",
       "dir": "dsh-legal-intake",
       "description": "法务需求 EML 收件、线程去重与台账导出。",
@@ -142,10 +142,10 @@
     },
     {
       "name": "dsh-ghg",
-      "version": "0.1.0-alpha.17",
+      "version": "0.1.0-alpha.18",
       "repo": "https://github.com/PerryLink/dsh-ghg",
       "npm": "https://www.npmjs.com/package/dsh-ghg",
-      "release": "https://github.com/PerryLink/dsh-ghg/releases/tag/v0.1.0-alpha.17",
+      "release": "https://github.com/PerryLink/dsh-ghg/releases/tag/v0.1.0-alpha.18",
       "family": "可持续与质量 ESG & Quality",
       "dir": "dsh-ghg",
       "description": "用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。",
@@ -212,10 +212,10 @@
     },
     {
       "name": "dsh-freight-audit",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "repo": "https://github.com/PerryLink/dsh-freight-audit",
       "npm": "https://www.npmjs.com/package/dsh-freight-audit",
-      "release": "https://github.com/PerryLink/dsh-freight-audit/releases/tag/v0.1.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-freight-audit/releases/tag/v0.1.0-alpha.14",
       "family": "关务与物流 Trade & Logistics",
       "dir": "dsh-freight-audit",
       "description": "运费 ratecard 版本、账单审计、recovery 汇总与差异导出。",
@@ -280,10 +280,10 @@
     },
     {
       "name": "dsh-policy-ledger",
-      "version": "0.2.0-alpha.13",
+      "version": "0.2.0-alpha.14",
       "repo": "https://github.com/PerryLink/dsh-policy-ledger",
       "npm": "https://www.npmjs.com/package/dsh-policy-ledger",
-      "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0-alpha.14",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-policy-ledger",
       "description": "只读安装诊断：能力快照、tarball 断言与安装日志分类。",
@@ -303,10 +303,10 @@
     },
     {
       "name": "dsh-pim-lint",
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "repo": "https://github.com/PerryLink/dsh-pim-lint",
       "npm": "https://www.npmjs.com/package/dsh-pim-lint",
-      "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0-alpha.11",
+      "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0-alpha.12",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-pim-lint",
       "description": "PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。",
@@ -326,10 +326,10 @@
     },
     {
       "name": "dsh-eval-pack",
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "repo": "https://github.com/PerryLink/dsh-eval-pack",
       "npm": "https://www.npmjs.com/package/dsh-eval-pack",
-      "release": "https://github.com/PerryLink/dsh-eval-pack/releases/tag/v0.1.0-alpha.11",
+      "release": "https://github.com/PerryLink/dsh-eval-pack/releases/tag/v0.1.0-alpha.12",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-eval-pack",
       "description": "公开/合成 eval-pack lint 与确定性 JSON 评分。",
@@ -362,6 +362,25 @@
       "archetype": "runtime",
       "domains": [
         "llm"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "dsh-pdf-table",
+      "version": "0.1.0-alpha.1",
+      "description": "Extract tables from text-layer PDFs to CSV",
+      "repo": "https://github.com/PerryLink/dsh-pdf-table",
+      "npm": "https://www.npmjs.com/package/dsh-pdf-table",
+      "release": "https://github.com/PerryLink/dsh-pdf-table/releases/tag/v0.1.0-alpha.1",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-pdf-table.html",
+      "dir": "dsh-pdf-table",
+      "frozen": false,
+      "displayName": "PDF table extraction",
+      "displayNameZh": "PDF 表格提取",
+      "category": "data",
+      "archetype": "extractor",
+      "domains": [
+        "pdf"
       ],
       "status": "active"
     }

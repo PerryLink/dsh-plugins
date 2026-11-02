@@ -182,14 +182,36 @@ for (const name of pageNames) {
   if (!fs.existsSync(pagePath)) throw new Error(`docs/packages/${name}.html is missing`);
   const before = fs.readFileSync(pagePath, 'utf8');
   const mainlineMatches = before.match(new RegExp(mainlineRe.source, 'g')) || [];
-  if (mainlineMatches.length !== 1) {
-    throw new Error(`docs/packages/${name}.html: expected one mainline block, got ${mainlineMatches.length}`);
+  let after
+  if (mainlineMatches.length === 1) {
+    after = before.replace(mainlineRe, () => mainlineBlock);
+  } else if (mainlineMatches.length === 0) {
+    // a hand-written page may not have the generated block yet: append it
+    const anchor = before.includes('</main>') ? '</main>' : '</body>';
+    after = before.replace(anchor, `${mainlineBlock}\n${anchor}`);
+  } else {
+    throw new Error(`docs/packages/${name}.html: expected at most one mainline block, got ${mainlineMatches.length}`);
   }
-  const after = before.replace(mainlineRe, () => mainlineBlock);
   if (after !== before) {
     fs.writeFileSync(pagePath, after);
     refreshed++;
   }
 }
-console.log(`wrote docs/packages (${pageNames.length} pages, ${mainlineEntries.length} mainline specs, ${refreshed} changed)`);
+// Regenerate the domain-family block the same way, so adding a domain package
+// cannot leave the 19 package pages advertising a stale count.
+const domainEntries = [...packagesDoc.packages, ...packagesDoc.suites].map((p) => ({
+  label: p.name,
+  repo: p.repo || `https://github.com/PerryLink/${p.name}`,
+  npm: p.npm || `https://www.npmjs.com/package/${p.name}`,
+}));
+const domainBlock = blockHtml(`DSH domain plugin family (${packagesDoc.packages.length} packages + ${packagesDoc.suites.length} suites)`, domainEntries);
+const domainRe = /<details>\n<summary>DSH domain plugin family \(\d+ packages \+ \d+ suites\)<\/summary><table>[\s\S]*?<\/table>\n<\/details>/;
+let domainRefreshed = 0;
+for (const name of pageNames) {
+  const pagePath = path.join(root, 'docs', 'packages', `${name}.html`);
+  const before = fs.readFileSync(pagePath, 'utf8');
+  const after = before.replace(domainRe, () => domainBlock);
+  if (after !== before) { fs.writeFileSync(pagePath, after); domainRefreshed++; }
+}
+console.log(`wrote docs/packages (${pageNames.length} pages, ${mainlineEntries.length} mainline specs, ${refreshed} changed, ${domainRefreshed} domain blocks refreshed)`);
 

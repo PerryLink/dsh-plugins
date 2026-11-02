@@ -28,20 +28,30 @@ h2 small{color:var(--muted);font-weight:400;font-size:13px}
 .tags span{display:inline-block;background:#1f2937;color:#c9d1d9;border-radius:6px;padding:1px 8px;font-size:12px;margin:2px 4px 0 0}
 .pill{font-size:11px;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle}
 .pill.frozen{background:#3d2b1f;color:#f0b72f}
+.pill.pack{background:#1a7f37;color:#fff;margin-left:8px}
+.card.pack{border-color:#2ea043;background:linear-gradient(135deg,#12261a,#161b22 60%)}
+.card.pack:hover{border-color:#3fb950}
+.card.pack .meta{color:#9fd6a8}
 footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
 <header>
   <h1>DSH 插件市场</h1>
-  <p class="sub">123 个插件，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
+  <p class="sub">124 个插件 + 1 个场景包，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
   <input id="q" type="search" placeholder="试试：发票、对账、报关、合同、考勤…">
 </header>
-<nav><a href="#财务报销">财务报销 7</a><a href="#人力资源">人力资源 2</a><a href="#采购供应链">采购供应链 11</a><a href="#法务合同">法务合同 6</a><a href="#质量生产">质量生产 27</a><a href="#关务物流">关务物流 8</a><a href="#行政办公">行政办公 13</a><a href="#教育培训">教育培训 5</a><a href="#医疗健康">医疗健康 3</a><a href="#零售电商">零售电商 2</a><a href="#开发者工具">开发者工具 39</a></nav>
+<nav><a href="#财务报销">财务报销 7</a><a href="#人力资源">人力资源 2</a><a href="#采购供应链">采购供应链 11</a><a href="#法务合同">法务合同 6</a><a href="#质量生产">质量生产 27</a><a href="#关务物流">关务物流 8</a><a href="#行政办公">行政办公 14</a><a href="#教育培训">教育培训 5</a><a href="#医疗健康">医疗健康 3</a><a href="#零售电商">零售电商 2</a><a href="#开发者工具">开发者工具 39</a></nav>
 <main>
 <section id="财务报销">
-  <h2>财务报销 <small>发票、对账、报销、成本 · 7</small></h2>
-  <div class="grid"><a class="card" href="packages/dsh-einvoice.html" data-search="发票查重 china e-invoice (file-level) 电子发票 发票查重 ofd 发票归档 去重 会计 财务共享专员">
+  <h2>财务报销 <small>发票、对账、报销、成本 · 7 + 1 个场景包</small></h2>
+  <div class="grid"><a class="card pack" href="packs/finance.html" data-search="财务包：发票到归档 finance pack — invoice to archive 收票 → 查重 → 三单匹配 → 银行对账 → 归档 端到端场景 4 个插件 合成样例可跑 会计 · 应付 · 出纳">
+  <h3>财务包：发票到归档<span class="pill pack">场景包</span></h3>
+  <p class="en">Finance pack — invoice to archive</p>
+  <p class="meta">收票 → 查重 → 三单匹配 → 银行对账 → 归档 <span class="roles">会计 · 应付 · 出纳</span></p>
+  <p class="tags"><span>端到端场景</span><span>4 个插件</span><span>合成样例可跑</span></p>
+</a>
+<a class="card" href="packages/dsh-einvoice.html" data-search="发票查重 china e-invoice (file-level) 电子发票 发票查重 ofd 发票归档 去重 会计 财务共享专员">
   <h3>发票查重</h3>
   <p class="en">China e-invoice (file-level)</p>
   <p class="meta"><code>0.2.0-alpha.12</code> <span class="roles">会计 · 财务共享专员</span></p>
@@ -173,7 +183,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <div class="grid"><a class="card" href="packages/dsh-legal-intake.html" data-search="法务需求收件 legal request intake 法务需求 邮件受理 需求登记 线程去重 法务助理 法务专员">
   <h3>法务需求收件</h3>
   <p class="en">Legal request intake</p>
-  <p class="meta"><code>0.1.0-alpha.10</code> <span class="roles">法务助理 · 法务专员</span></p>
+  <p class="meta"><code>0.1.0-alpha.11</code> <span class="roles">法务助理 · 法务专员</span></p>
   <p class="tags"><span>法务需求</span><span>邮件受理</span><span>需求登记</span><span>线程去重</span></p>
 </a>
 <a class="card" href="packages/dsh-legal-clause.html" data-search="合同条款体检 contract clause &amp; playbook review 合同审查 条款比对 缺漏条款 风险条款 审查清单 法务 合同管理员">
@@ -212,7 +222,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <div class="grid"><a class="card" href="packages/dsh-ghg.html" data-search="用电碳排放（范围二） electricity ghg (scope 2) 碳排放 范围二 用电量 排放因子 esg 环保专员 能源管理员">
   <h3>用电碳排放（范围二）</h3>
   <p class="en">Electricity GHG (Scope 2)</p>
-  <p class="meta"><code>0.1.0-alpha.17</code> <span class="roles">环保专员 · 能源管理员</span></p>
+  <p class="meta"><code>0.1.0-alpha.18</code> <span class="roles">环保专员 · 能源管理员</span></p>
   <p class="tags"><span>碳排放</span><span>范围二</span><span>用电量</span><span>排放因子</span></p>
 </a>
 <a class="card" href="packages/dsh-qms-capa.html" data-search="质量问题闭环跟踪 qms ncr, capa &amp; 8d 质量问题 ncr capa 8d 纠正措施 质量工程师 质检员">
@@ -383,7 +393,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
 <a class="card" href="packages/dsh-freight-audit.html" data-search="运费账单审计 freight bill audit 运费 账单审计 费率表 承运商 运费差异 物流专员 应付会计">
   <h3>运费账单审计</h3>
   <p class="en">Freight bill audit</p>
-  <p class="meta"><code>0.1.0-alpha.13</code> <span class="roles">物流专员 · 应付会计</span></p>
+  <p class="meta"><code>0.1.0-alpha.14</code> <span class="roles">物流专员 · 应付会计</span></p>
   <p class="tags"><span>运费</span><span>账单审计</span><span>费率表</span><span>承运商</span></p>
 </a>
 <a class="card" href="packages/dsh-customs-doc-check.html" data-search="报关单证比对 dsh-customs-doc-check 报关单 单证一致 申报要素 海关 报关员 关务">
@@ -424,7 +434,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
 </a></div>
 </section>
 <section id="行政办公">
-  <h2>行政办公 <small>文档、表格、档案、会议 · 13</small></h2>
+  <h2>行政办公 <small>文档、表格、档案、会议 · 14</small></h2>
   <div class="grid"><a class="card" href="packages/dsh-docx-redline.html" data-search="文档正文差异比对 docx inspect &amp; text diff word 文档 文本比对 版本差异 文档校验 行政专员 文员">
   <h3>文档正文差异比对</h3>
   <p class="en">DOCX inspect &amp; text diff</p>
@@ -434,7 +444,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
 <a class="card" href="packages/dsh-policy-ledger.html" data-search="安装诊断 install doctor 安装诊断 插件安装 故障排查 安装日志 运维工程师 开发者">
   <h3>安装诊断</h3>
   <p class="en">Install doctor</p>
-  <p class="meta"><code>0.2.0-alpha.13</code> <span class="roles">运维工程师 · 开发者</span></p>
+  <p class="meta"><code>0.2.0-alpha.14</code> <span class="roles">运维工程师 · 开发者</span></p>
   <p class="tags"><span>安装诊断</span><span>插件安装</span><span>故障排查</span><span>安装日志</span></p>
 </a>
 <a class="card" href="packages/dsh-policy-brief-draft.html" data-search="政策专报要素审定 dsh-policy-brief-draft 政策专报 观点依据 出处 决策参考 政务人员 研究员">
@@ -473,6 +483,12 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <p class="meta"><code>0.2.0</code> <span class="roles">数据分析师 · 办公文员</span></p>
   <p class="tags"><span>表格</span><span>提取</span><span>Excel</span><span>数据转换</span></p>
 </a>
+<a class="card" href="packages/dsh-pdf-table.html" data-search="pdf 表格提取 pdf table extraction (text layer) pdf 表格 提取 csv 扫描件提示 财务 行政 数据录入">
+  <h3>PDF 表格提取</h3>
+  <p class="en">PDF table extraction (text layer)</p>
+  <p class="meta"><code>0.1.0-alpha.1</code> <span class="roles">财务 · 行政</span></p>
+  <p class="tags"><span>PDF</span><span>表格</span><span>提取</span><span>CSV</span></p>
+</a>
 <a class="card" href="packages/dsh-fund-research.html" data-search="基金研究报告 dsh-fund-research 基金 研究报告 净值 数据溯源 研究员 投资经理">
   <h3>基金研究报告</h3>
   <p class="en">dsh-fund-research</p>
@@ -509,7 +525,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <div class="grid"><a class="card" href="packages/dsh-eval-pack.html" data-search="评测包校验评分 eval pack lint &amp; grader 评测集 评分 结构校验 自动打分 评测工程师 教研员">
   <h3>评测包校验评分</h3>
   <p class="en">Eval pack lint &amp; grader</p>
-  <p class="meta"><code>0.1.0-alpha.11</code> <span class="roles">评测工程师 · 教研员</span></p>
+  <p class="meta"><code>0.1.0-alpha.12</code> <span class="roles">评测工程师 · 教研员</span></p>
   <p class="tags"><span>评测集</span><span>评分</span><span>结构校验</span><span>自动打分</span></p>
 </a>
 <a class="card" href="packages/dsh-review-reply-check.html" data-search="审稿回应逐条对照 dsh-review-reply-check 审稿意见 逐条回应 回复覆盖 同行评议 期刊编辑 研究人员">
@@ -563,7 +579,7 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <div class="grid"><a class="card" href="packages/dsh-pim-lint.html" data-search="商品目录查错 pim catalog lint 商品主数据 sku gtin 目录校验 重复商品 电商运营 商品管理员">
   <h3>商品目录查错</h3>
   <p class="en">PIM catalog lint</p>
-  <p class="meta"><code>0.1.0-alpha.11</code> <span class="roles">电商运营 · 商品管理员</span></p>
+  <p class="meta"><code>0.1.0-alpha.12</code> <span class="roles">电商运营 · 商品管理员</span></p>
   <p class="tags"><span>商品主数据</span><span>SKU</span><span>GTIN</span><span>目录校验</span></p>
 </a>
 <a class="card" href="packages/dsh-ota-review-check.html" data-search="点评回复时效检查 dsh-ota-review-check 在线点评 差评回复 回复时限 整改闭环 客服 客服主管 店长">

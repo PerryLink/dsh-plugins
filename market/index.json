@@ -1134,8 +1134,8 @@
       },
       "versions": [
         {
-          "version": "3.0.0",
-          "publishTimestamp": 1793622199,
+          "version": "3.0.1",
+          "publishTimestamp": 1793630594,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1372,7 +1372,7 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.11",
+          "version": "0.1.0-alpha.12",
           "publishTimestamp": 1793629758,
           "source": {
             "type": "npm",
@@ -2012,7 +2012,7 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.10",
+          "version": "0.1.0-alpha.11",
           "publishTimestamp": 1793629529,
           "source": {
             "type": "npm",
@@ -2298,6 +2298,38 @@
       ]
     },
     {
+      "name": "dsh-pdf-table",
+      "title": {
+        "en": "PDF table extraction (text layer)",
+        "zh": "PDF 表格提取"
+      },
+      "description": {
+        "en": "Extract tables from text-layer PDFs to CSV with row/column clustering; scanned PDFs are rejected with an OCR hint."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-pdf-table",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-pdf-table"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793630273,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-policy-brief-draft",
       "title": {
         "en": "dsh-policy-brief-draft",
@@ -2352,7 +2384,7 @@
       },
       "versions": [
         {
-          "version": "0.2.0-alpha.13",
+          "version": "0.2.0-alpha.14",
           "publishTimestamp": 1793629793,
           "source": {
             "type": "npm",
@@ -3053,7 +3085,7 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.17",
+          "version": "0.1.0-alpha.18",
           "publishTimestamp": 1793629370,
           "source": {
             "type": "npm",
@@ -3725,7 +3757,7 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.11",
+          "version": "0.1.0-alpha.12",
           "publishTimestamp": 1793629381,
           "source": {
             "type": "npm",
@@ -3853,7 +3885,7 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.13",
+          "version": "0.1.0-alpha.14",
           "publishTimestamp": 1793629442,
           "source": {
             "type": "npm",
