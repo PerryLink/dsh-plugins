@@ -4,10 +4,10 @@
   "packages": [
     {
       "name": "dsh-einvoice",
-      "version": "0.2.0-alpha.12",
+      "version": "0.2.0",
       "repo": "https://github.com/PerryLink/dsh-einvoice",
       "npm": "https://www.npmjs.com/package/dsh-einvoice",
-      "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.12",
+      "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-fin-invoice-core",
       "description": "文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。",
@@ -23,14 +23,14 @@
         "finance",
         "china-einvoice"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-bankrec",
-      "version": "0.1.0-alpha.17",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-bankrec",
       "npm": "https://www.npmjs.com/package/dsh-bankrec",
-      "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.17",
+      "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-bankrec",
       "description": "银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。",
@@ -46,7 +46,7 @@
         "finance",
         "banking"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-ap-three-way",
@@ -235,10 +235,10 @@
     },
     {
       "name": "dsh-docx-redline",
-      "version": "0.1.0-alpha.14",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-docx-redline",
       "npm": "https://www.npmjs.com/package/dsh-docx-redline",
-      "release": "https://github.com/PerryLink/dsh-docx-redline/releases/tag/v0.1.0-alpha.14",
+      "release": "https://github.com/PerryLink/dsh-docx-redline/releases/tag/v0.1.0",
       "family": "文档与模型 Docs & Models",
       "dir": "dsh-docx-redline",
       "description": "DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。",
@@ -253,7 +253,7 @@
       "domains": [
         "documents"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-ifc-qto",
@@ -483,6 +483,40 @@
       "displayNameZh": "进口单证核对",
       "category": "compliance",
       "archetype": "checker",
+      "domains": [],
+      "status": "active"
+    },
+    {
+      "name": "dsh-ar-collection",
+      "version": "0.1.0-alpha.1",
+      "description": "应收催收",
+      "repo": "https://github.com/PerryLink/dsh-ar-collection",
+      "npm": "https://www.npmjs.com/package/dsh-ar-collection",
+      "release": "https://github.com/PerryLink/dsh-ar-collection/releases/tag/v0.1.0-alpha.1",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ar-collection.html",
+      "dir": "dsh-ar-collection",
+      "frozen": false,
+      "displayName": "AR collection",
+      "displayNameZh": "应收催收",
+      "category": "business-ops",
+      "archetype": "drafter",
+      "domains": [],
+      "status": "active"
+    },
+    {
+      "name": "dsh-settlement-docs",
+      "version": "0.1.0-alpha.1",
+      "description": "竣工结算资料齐套",
+      "repo": "https://github.com/PerryLink/dsh-settlement-docs",
+      "npm": "https://www.npmjs.com/package/dsh-settlement-docs",
+      "release": "https://github.com/PerryLink/dsh-settlement-docs/releases/tag/v0.1.0-alpha.1",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-settlement-docs.html",
+      "dir": "dsh-settlement-docs",
+      "frozen": false,
+      "displayName": "Settlement document completeness",
+      "displayNameZh": "竣工结算资料齐套",
+      "category": "business-ops",
+      "archetype": "validator",
       "domains": [],
       "status": "active"
     }

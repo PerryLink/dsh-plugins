@@ -236,7 +236,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.2.0-alpha.12",
+      "version": "0.2.0",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -261,7 +261,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.17",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-excel-reconcile",
         "dsh-invoice-ledger"
@@ -491,7 +491,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.14",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-gongwen-word-check",
         "dsh-archive-check",
@@ -1894,11 +1894,11 @@
       "members": [
         {
           "id": "dsh-einvoice",
-          "version": "0.2.0-alpha.12"
+          "version": "0.2.0"
         },
         {
           "id": "dsh-bankrec",
-          "version": "0.1.0-alpha.17"
+          "version": "0.1.0"
         },
         {
           "id": "dsh-ap-three-way",
@@ -2117,6 +2117,52 @@
       "displayName": "Import document check",
       "displayNameZh": "进口单证核对",
       "positioning": "核对发票、箱单、提单与报关单的九个字段，并检查报关单 12 项要素是否齐全。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": []
+    },
+    {
+      "id": "dsh-ar-collection",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "drafter",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "催收",
+        "账龄",
+        "催款函",
+        "应收"
+      ],
+      "displayName": "AR collection",
+      "displayNameZh": "应收催收",
+      "positioning": "按账龄阶梯生成催收计划与中文催收函草稿，并导出催收清单。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": []
+    },
+    {
+      "id": "dsh-settlement-docs",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "construction",
+      "archetype": "validator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "竣工",
+        "结算",
+        "资料",
+        "齐套"
+      ],
+      "displayName": "Settlement document completeness",
+      "displayNameZh": "竣工结算资料齐套",
+      "positioning": "按工程类型生成结算资料清单，核对缺件、份数、签字盖章与齐套率。",
       "status": "active",
       "release": "alpha",
       "version": "0.1.0-alpha.1",

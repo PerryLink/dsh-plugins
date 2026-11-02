@@ -18,8 +18,8 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-einvoice`](https://github.com/PerryLink/dsh-einvoice) | 文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 | `0.2.0-alpha.12` | `dsh plugin --profile <profile> add dsh-einvoice` |
-| [`dsh-bankrec`](https://github.com/PerryLink/dsh-bankrec) | 银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。 | `0.1.0-alpha.17` | `dsh plugin --profile <profile> add dsh-bankrec` |
+| [`dsh-einvoice`](https://github.com/PerryLink/dsh-einvoice) | 文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 | `0.2.0` | `dsh plugin --profile <profile> add dsh-einvoice` |
+| [`dsh-bankrec`](https://github.com/PerryLink/dsh-bankrec) | 银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-bankrec` |
 | [`dsh-ap-three-way`](https://github.com/PerryLink/dsh-ap-three-way) | 发票/PO/GRN 三单匹配、容差与例外底稿。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-ap-three-way` |
 | [`dsh-travel-recon`](https://github.com/PerryLink/dsh-travel-recon) | 差旅订单/发票/卡流水对账、去重与只读政策检查。 | `0.1.0-alpha.14` | `dsh plugin --profile <profile> add dsh-travel-recon` |
 
@@ -48,7 +48,7 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-docx-redline`](https://github.com/PerryLink/dsh-docx-redline) | DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。 | `0.1.0-alpha.14` | `dsh plugin --profile <profile> add dsh-docx-redline` |
+| [`dsh-docx-redline`](https://github.com/PerryLink/dsh-docx-redline) | DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-docx-redline` |
 | [`dsh-ifc-qto`](https://github.com/PerryLink/dsh-ifc-qto) | IFC 构件/工程量清单与 CSV 导出。 | `0.1.0-alpha.15` | `dsh plugin --profile <profile> add dsh-ifc-qto` |
 
 ### 校验工具 Verify Utilities
@@ -59,6 +59,8 @@ dsh plugin --profile <profile> add dsh-ghg
 | [`dsh-pim-lint`](https://github.com/PerryLink/dsh-pim-lint) | PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-pim-lint` |
 | [`dsh-eval-pack`](https://github.com/PerryLink/dsh-eval-pack) | 公开/合成 eval-pack lint 与确定性 JSON 评分。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-eval-pack` |
 | [`dsh-provider-params`](https://github.com/PerryLink/dsh-provider-params) | 厂商参数转换与确定性 JSON 修复。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-provider-params` |
+| [`dsh-settlement-docs`](https://github.com/PerryLink/dsh-settlement-docs) | 竣工结算资料齐套：按工程类型生成结算资料清单，核对缺件、份数、签字盖章与齐套率。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-settlement-docs` |
+| [`dsh-ar-collection`](https://github.com/PerryLink/dsh-ar-collection) | 应收催收：按账龄阶梯生成催收计划与中文催收函草稿，并导出催收清单。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-ar-collection` |
 | [`dsh-import-customs-check`](https://github.com/PerryLink/dsh-import-customs-check) | 进口单证核对：核对发票、箱单、提单与报关单的九个字段，并检查报关单 12 项要素是否齐全。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-import-customs-check` |
 | [`dsh-ar-aging`](https://github.com/PerryLink/dsh-ar-aging) | 应收账龄：导入应收明细，按账龄分桶汇总逾期与 Top 客户并导出账龄表。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-ar-aging` |
 | [`dsh-progress-payment`](https://github.com/PerryLink/dsh-progress-payment) | 进度款审核：按合同量与单价审核本期进度款申报，标出超量、单价不符与重复清单项。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-progress-payment` |

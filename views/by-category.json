@@ -2,6 +2,7 @@
   "business-ops": [
     "dsh-ap-three-way",
     "dsh-ar-aging",
+    "dsh-ar-collection",
     "dsh-bankrec",
     "dsh-contract-renewal",
     "dsh-contract-suite",
@@ -17,6 +18,7 @@
     "dsh-progress-payment",
     "dsh-qms-capa",
     "dsh-rfq-compare",
+    "dsh-settlement-docs",
     "dsh-tender-requirements",
     "dsh-travel-recon"
   ],

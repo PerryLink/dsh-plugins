@@ -4,8 +4,8 @@
   "status": "proposal",
   "scope": "126-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-provider-params + dsh-community-bench + 3 retired + 3 infrastructure rows.",
   "counts": {
-    "total": 133,
-    "active": 122,
+    "total": 135,
+    "active": 124,
     "frozen": 8,
     "retired": 3
   },
@@ -29,7 +29,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.2.0-alpha.12",
+      "version": "0.2.0",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -73,7 +73,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.17",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-excel-reconcile",
         "dsh-invoice-ledger"
@@ -476,7 +476,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.14",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-gongwen-word-check",
         "dsh-archive-check",
@@ -3132,11 +3132,11 @@
       "members": [
         {
           "id": "dsh-einvoice",
-          "version": "0.2.0-alpha.12"
+          "version": "0.2.0"
         },
         {
           "id": "dsh-bankrec",
-          "version": "0.1.0-alpha.17"
+          "version": "0.1.0"
         },
         {
           "id": "dsh-ap-three-way",
@@ -3543,6 +3543,88 @@
       ],
       "industriesZh": [
         "关务"
+      ]
+    },
+    {
+      "id": "dsh-ar-collection",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "drafter",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "催收",
+        "账龄",
+        "催款函",
+        "应收"
+      ],
+      "displayName": "AR collection",
+      "displayNameZh": "应收催收",
+      "positioning": "按账龄阶梯生成催收计划与中文催收函草稿，并导出催收清单。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-ar-collection",
+      "npm": "dsh-ar-collection",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "催收",
+        "账龄",
+        "催款函",
+        "应收"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "应收会计",
+        "财务经理"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
+    },
+    {
+      "id": "dsh-settlement-docs",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "construction",
+      "archetype": "validator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "竣工",
+        "结算",
+        "资料",
+        "齐套"
+      ],
+      "displayName": "Settlement document completeness",
+      "displayNameZh": "竣工结算资料齐套",
+      "positioning": "按工程类型生成结算资料清单，核对缺件、份数、签字盖章与齐套率。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-settlement-docs",
+      "npm": "dsh-settlement-docs",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "竣工",
+        "结算",
+        "资料",
+        "齐套"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "造价员",
+        "资料员"
+      ],
+      "industriesZh": [
+        "建筑"
       ]
     },
     {

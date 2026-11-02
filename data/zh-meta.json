@@ -2317,5 +2317,39 @@
     "industries": [
       "关务"
     ]
+  },
+  "dsh-ar-collection": {
+    "nameZh": "应收催收",
+    "tags": [
+      "催收",
+      "账龄",
+      "催款函",
+      "应收"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "应收会计",
+      "财务经理"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-settlement-docs": {
+    "nameZh": "竣工结算资料齐套",
+    "tags": [
+      "竣工",
+      "结算",
+      "资料",
+      "齐套"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "造价员",
+      "资料员"
+    ],
+    "industries": [
+      "建筑"
+    ]
   }
 }

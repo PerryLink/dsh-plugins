@@ -86,6 +86,7 @@
     "dsh-policy-ledger"
   ],
   "drafter": [
+    "dsh-ar-collection",
     "dsh-pleading-draft",
     "dsh-policy-brief-draft"
   ],
@@ -162,6 +163,7 @@
     "dsh-eval-pack",
     "dsh-import-customs-check",
     "dsh-labor-contract",
-    "dsh-pim-lint"
+    "dsh-pim-lint",
+    "dsh-settlement-docs"
   ]
 }

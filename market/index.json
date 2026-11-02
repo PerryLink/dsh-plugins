@@ -1542,6 +1542,38 @@
       ]
     },
     {
+      "name": "dsh-ar-collection",
+      "title": {
+        "en": "AR collection",
+        "zh": "应收催收"
+      },
+      "description": {
+        "en": "按账龄阶梯生成催收计划与中文催收函草稿，并导出催收清单。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ar-collection",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ar-collection"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793635584,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-bankrec",
       "title": {
         "en": "Bank statement reconciliation",
@@ -1564,8 +1596,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.17",
-          "publishTimestamp": 1793623023,
+          "version": "0.1.0",
+          "publishTimestamp": 1793635010,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1596,8 +1628,8 @@
       },
       "versions": [
         {
-          "version": "0.2.0-alpha.12",
-          "publishTimestamp": 1793624199,
+          "version": "0.2.0",
+          "publishTimestamp": 1793634883,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -2233,8 +2265,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.14",
-          "publishTimestamp": 1793624147,
+          "version": "0.1.0",
+          "publishTimestamp": 1793634922,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -3695,6 +3727,38 @@
         {
           "version": "0.1.1",
           "publishTimestamp": 1793377058,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-settlement-docs",
+      "title": {
+        "en": "Settlement document completeness",
+        "zh": "竣工结算资料齐套"
+      },
+      "description": {
+        "en": "按工程类型生成结算资料清单，核对缺件、份数、签字盖章与齐套率。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-settlement-docs",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-settlement-docs"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793635598,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"

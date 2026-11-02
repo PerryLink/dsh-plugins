@@ -4,7 +4,7 @@
 <body><header class="top"><a href="index.html">PerryLink DSH 领域插件</a><span class="badge">taxonomy v1 · draft</span></header>
 <main class="wrap">
 <h1>DSH family taxonomy</h1>
-<p class="lead">133 rows · 122 active · 8 frozen · 3 retired. One primary category, one archetype, optional domain tags.</p>
+<p class="lead">135 rows · 124 active · 8 frozen · 3 retired. One primary category, one archetype, optional domain tags.</p>
 <p class="note">This is a proposal view. It does not replace <a href="https://github.com/PerryLink/dsh-kit">dsh-kit</a> install semantics or any package's own README. Source: <a href="../family.json">family.json</a> · <a href="../TAXONOMY.md">TAXONOMY.md</a>.</p>
 <div class="filters">
 <label>Collection <select id="f-collection"><option value="">all</option><option value="mainline">mainline</option><option value="compliance">compliance</option><option value="domain-ops">domain-ops</option><option value="infrastructure">infrastructure</option></select></label>
@@ -873,6 +873,14 @@
 <td><code>domain</code></td>
 <td>应收, 账龄, 逾期, 催收</td>
 <td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="drafter" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-ar-collection.html">dsh-ar-collection</a><br><small>AR collection</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>drafter</code></td>
+<td><code>domain</code></td>
+<td>催收, 账龄, 催款函, 应收</td>
+<td><span class="status active">active</span></td></tr>
 <tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops" data-scope="domain">
 <td><a href="family/dsh-bankrec.html">dsh-bankrec</a><br><small>Bank statement reconciliation</small></td>
 <td>domain-ops</td>
@@ -992,6 +1000,14 @@
 <td><code>reconciler</code></td>
 <td><code>domain</code></td>
 <td>询价, 比价, 报价, 采购</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="validator" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-settlement-docs.html">dsh-settlement-docs</a><br><small>Settlement document completeness</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>validator</code></td>
+<td><code>domain</code></td>
+<td>竣工, 结算, 资料, 齐套</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops" data-scope="domain">
 <td><a href="family/dsh-travel-recon.html">dsh-travel-recon</a><br><small>Travel reconciliation &amp; policy check</small></td>
