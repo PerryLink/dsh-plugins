@@ -2103,9 +2103,9 @@
       "id": "dsh-import-customs-check",
       "kind": "plugin",
       "collection": "domain-ops",
-      "category": "compliance",
+      "category": "business-ops",
       "subcategory": "trade",
-      "archetype": "checker",
+      "archetype": "validator",
       "checker": false,
       "checkerRole": "none",
       "domains": [

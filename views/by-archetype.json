@@ -56,7 +56,6 @@
     "dsh-hs-candidate",
     "dsh-hs-classify",
     "dsh-icd-rule-check",
-    "dsh-import-customs-check",
     "dsh-invoice-ledger",
     "dsh-lc-doc-check",
     "dsh-learning-gap-check",
@@ -161,6 +160,7 @@
     "dsh-community-bench",
     "dsh-data-quality",
     "dsh-eval-pack",
+    "dsh-import-customs-check",
     "dsh-labor-contract",
     "dsh-pim-lint"
   ]
