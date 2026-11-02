@@ -47,7 +47,7 @@ console.log(`  main ${workVersion} -> ${nextVersion}`)
 sh(`ln -sfn ${path.join(pkgDir, 'node_modules')} ${path.join(workRoot, 'node_modules')}`)
 
 // 2. copy the changed source/test/docs files (READMEs stay as they are on main)
-const copy = ['ACKNOWLEDGEMENTS.md', 'CHANGELOG.md', 'ACCEPTANCE.csv', 'screenshots.json', 'NOTICE', 'THIRD-PARTY-NOTICES', 'pnpm-lock.yaml']
+const copy = ['ACKNOWLEDGEMENTS.md', 'CHANGELOG.md', 'ACCEPTANCE.csv', 'screenshots.json', 'NOTICE', 'THIRD-PARTY-NOTICES', 'pnpm-lock.yaml', 'README.md', 'README-zh.md', 'TROUBLESHOOTING.md']
 const walk = (dir) => {
   const out = []
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -58,7 +58,7 @@ const walk = (dir) => {
   }
   return out
 }
-for (const dir of ['src', 'test', 'scripts', 'docs']) {
+for (const dir of ['src', 'test', 'scripts', 'docs', 'samples']) {
   const base = path.join(pkgDir, dir)
   if (!fs.existsSync(base)) continue
   for (const file of walk(base)) {

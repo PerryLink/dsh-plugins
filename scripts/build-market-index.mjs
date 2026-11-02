@@ -135,8 +135,8 @@ const index = {
   format: 1,
   title: localized('PerryLink DSH 插件市场', 'PerryLink DSH plugins'),
   description: localized(
-    '按任务浏览 125 个本地优先的 DSH 插件：财务、法务、采购、质量、关务、行政与开发者工具。',
-    'Task-first index of 125 local-first DSH plugins for finance, legal, procurement, quality, customs and developer work.',
+    '按任务浏览 126 个本地优先的 DSH 插件：财务、法务、采购、质量、关务、行政与开发者工具。',
+    'Task-first index of 126 local-first DSH plugins for finance, legal, procurement, quality, customs and developer work.',
   ),
   metadata: {
     categories: Object.fromEntries(TASK_FAMILIES.map(([id, zh, en]) => [id, { title: localized(zh, en) }])),

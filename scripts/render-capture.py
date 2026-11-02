@@ -7,7 +7,10 @@ The input file must contain the actual stdout/stderr of a command, optionally wi
 leading "$ <command>" line. Nothing in this script invents output text: it only draws
 what the capture file already contains.
 """
+import os
 import sys
+import unicodedata
+
 from PIL import Image, ImageDraw, ImageFont
 
 BG = (13, 17, 23)
@@ -16,7 +19,17 @@ FG = (201, 209, 217)
 GREEN = (63, 185, 80)
 DIM = (139, 148, 158)
 ACCENT = (88, 166, 255)
-FONT_PATH = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+# The bundled DejaVu mono font has no CJK glyphs. Set RENDER_CAPTURE_FONT (and
+# optionally RENDER_CAPTURE_FONT_BOLD) to a monospace/CJK font to render Chinese,
+# Japanese or Korean lines instead of empty boxes. Defaults are unchanged.
+DEFAULT_FONT = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
+DEFAULT_FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf"
+FONT_PATH = os.environ.get("RENDER_CAPTURE_FONT", DEFAULT_FONT)
+if not os.path.exists(FONT_PATH):
+    FONT_PATH = DEFAULT_FONT
+BOLD_PATH = os.environ.get("RENDER_CAPTURE_FONT_BOLD", FONT_PATH if os.environ.get("RENDER_CAPTURE_FONT") else DEFAULT_FONT_BOLD)
+if not os.path.exists(BOLD_PATH):
+    BOLD_PATH = FONT_PATH
 FONT_SIZE = 15
 PAD = 22
 LINE_H = 21
@@ -42,10 +55,15 @@ def main() -> int:
         lines = lines[:38] + ["… (truncated)"]
 
     font = ImageFont.truetype(FONT_PATH, FONT_SIZE)
-    bold = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf", FONT_SIZE)
+    bold = ImageFont.truetype(BOLD_PATH, FONT_SIZE)
     small = ImageFont.truetype(FONT_PATH, 13)
 
-    width_chars = max([len(title) + 6] + [len(l) for l in lines])
+    # East-Asian wide glyphs take two monospace cells; counting them as two keeps a
+    # CJK transcript from being clipped on the right edge. Pure-ASCII input is unchanged.
+    def cells(text):
+        return sum(2 if unicodedata.east_asian_width(ch) in ("W", "F") else 1 for ch in text)
+
+    width_chars = max([cells(title) + 6] + [cells(l) for l in lines])
     width_chars = min(max(width_chars, 56), 118)
     width = int(width_chars * (FONT_SIZE * 0.62)) + PAD * 2
     height = PAD * 2 + 34 + len(lines) * LINE_H + 10

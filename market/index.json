@@ -389,13 +389,13 @@
     {
       "name": "dsh-clinic",
       "title": {
-        "en": "dsh-plugin-doctor",
+        "en": "dsh-clinic",
         "zh": "包结构冒烟检查"
       },
       "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-plugin-doctor",
+      "homepage": "https://github.com/PerryLink/dsh-clinic",
       "repository": {
-        "url": "https://github.com/PerryLink/dsh-plugin-doctor"
+        "url": "https://github.com/PerryLink/dsh-clinic"
       },
       "metadata": {
         "category": "developer",
@@ -408,6 +408,35 @@
         {
           "version": "0.8.0",
           "publishTimestamp": 1793524781,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-codemod",
+      "title": {
+        "en": "dsh-codemod",
+        "zh": "版本升级迁移"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-codemod",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-codemod"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "3.0.2",
+          "publishTimestamp": 1793525658,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -621,13 +650,13 @@
     {
       "name": "dsh-github-bot",
       "title": {
-        "en": "dsh-github",
+        "en": "dsh-github-bot",
         "zh": "代码评审对接"
       },
       "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-github",
+      "homepage": "https://github.com/PerryLink/dsh-github-bot",
       "repository": {
-        "url": "https://github.com/PerryLink/dsh-github"
+        "url": "https://github.com/PerryLink/dsh-github-bot"
       },
       "metadata": {
         "category": "developer",
@@ -938,15 +967,15 @@
       ]
     },
     {
-      "name": "dsh-plugin-guide",
+      "name": "dsh-primer",
       "title": {
-        "en": "dsh-plugin-guide",
+        "en": "dsh-primer",
         "zh": "扩展开发指南"
       },
       "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-plugin-guide",
+      "homepage": "https://github.com/PerryLink/dsh-primer",
       "repository": {
-        "url": "https://github.com/PerryLink/dsh-plugin-guide"
+        "url": "https://github.com/PerryLink/dsh-primer"
       },
       "metadata": {
         "category": "developer",
@@ -957,37 +986,8 @@
       },
       "versions": [
         {
-          "version": "0.3.40",
-          "publishTimestamp": 1793521320,
-          "source": {
-            "type": "npm",
-            "registry": "https://registry.npmjs.org"
-          }
-        }
-      ]
-    },
-    {
-      "name": "dsh-plugin-upgrade",
-      "title": {
-        "en": "dsh-plugin-upgrade",
-        "zh": "版本升级迁移"
-      },
-      "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-plugin-upgrade",
-      "repository": {
-        "url": "https://github.com/PerryLink/dsh-plugin-upgrade"
-      },
-      "metadata": {
-        "category": "developer",
-        "labels": [
-          "default",
-          "active"
-        ]
-      },
-      "versions": [
-        {
-          "version": "2.2.0",
-          "publishTimestamp": 1793521343,
+          "version": "0.4.1",
+          "publishTimestamp": 1793525331,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1059,13 +1059,13 @@
     {
       "name": "dsh-scaffold",
       "title": {
-        "en": "dsh-plugin-kit",
+        "en": "dsh-scaffold",
         "zh": "公共组件工具箱"
       },
       "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-plugin-kit",
+      "homepage": "https://github.com/PerryLink/dsh-scaffold",
       "repository": {
-        "url": "https://github.com/PerryLink/dsh-plugin-kit"
+        "url": "https://github.com/PerryLink/dsh-scaffold"
       },
       "metadata": {
         "category": "developer",
@@ -1117,13 +1117,13 @@
     {
       "name": "dsh-security-pack",
       "title": {
-        "en": "dsh-skill-pack-security-provider",
+        "en": "dsh-security-pack",
         "zh": "安全技能包供给"
       },
       "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-skill-pack-security-provider",
+      "homepage": "https://github.com/PerryLink/dsh-security-pack",
       "repository": {
-        "url": "https://github.com/PerryLink/dsh-skill-pack-security-provider"
+        "url": "https://github.com/PerryLink/dsh-security-pack"
       },
       "metadata": {
         "category": "developer",
@@ -2088,13 +2088,13 @@
     {
       "name": "dsh-dida",
       "title": {
-        "en": "dsh-ticktick",
+        "en": "dsh-dida",
         "zh": "滴答清单对接"
       },
       "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-ticktick",
+      "homepage": "https://github.com/PerryLink/dsh-dida",
       "repository": {
-        "url": "https://github.com/PerryLink/dsh-ticktick"
+        "url": "https://github.com/PerryLink/dsh-dida"
       },
       "metadata": {
         "category": "office",
