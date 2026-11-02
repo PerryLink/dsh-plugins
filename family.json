@@ -4732,7 +4732,7 @@
       ]
     },
     {
-      "id": "dsh-plugin-certification",
+      "id": "dsh-certification",
       "kind": "infrastructure",
       "collection": "infrastructure",
       "category": "platform",
@@ -4742,8 +4742,8 @@
       ],
       "status": "active",
       "release": "stable",
-      "npm": "dsh-plugin-certification",
-      "repo": "PerryLink/dsh-plugin-certification",
+      "npm": null,
+      "repo": "PerryLink/dsh-certification",
       "source": "documented edge set",
       "installScope": "infrastructure",
       "displayNameZh": "认证评级登记",

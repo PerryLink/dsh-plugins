@@ -126,13 +126,13 @@ const edge = [
   ['dsh-team-rooms', 'mainline', 'workflow', 'runtime', ['agents'], 'retired', 'PerryLink/dsh-team-rooms'],
   ['dsh-kit', 'infrastructure', 'platform', 'catalog', ['install'], 'active', 'PerryLink/dsh-kit'],
   ['dsh-catalog', 'infrastructure', 'platform', 'catalog', ['market'], 'active', 'PerryLink/dsh-catalog'],
-  ['dsh-plugin-certification', 'infrastructure', 'platform', 'catalog', ['certification'], 'active', 'PerryLink/dsh-plugin-certification'],
+  ['dsh-certification', 'infrastructure', 'platform', 'catalog', ['certification'], 'active', 'PerryLink/dsh-certification'],
 ];
 for (const [id, collection, category, archetype, domains, status, repo] of edge) {
   items.push({
-    id, kind: id.startsWith('dsh-kit') || id === 'dsh-catalog' || id === 'dsh-plugin-certification' ? 'infrastructure' : 'plugin',
+    id, kind: id.startsWith('dsh-kit') || id === 'dsh-catalog' || id === 'dsh-certification' ? 'infrastructure' : 'plugin',
     collection, category, archetype, domains, status, release: status === 'retired' ? 'retired' : 'stable',
-    npm: id, repo, source: 'documented edge set',
+    npm: id === 'dsh-certification' ? null : id, repo, source: 'documented edge set',
     installScope: status === 'retired' ? 'excluded-retired' : (collection === 'infrastructure' ? 'infrastructure' : 'catalog-only'),
   });
 }
@@ -158,7 +158,7 @@ for (const item of items) {
   if (ids.has(item.id)) throw new Error(`duplicate family id ${item.id}`);
   ids.add(item.id);
 }
-const EXPECTED_ROWS = 127
+const EXPECTED_ROWS = taxonomy.items.length + mainline.length + edge.length
 if (items.length !== EXPECTED_ROWS) throw new Error(`expected ${EXPECTED_ROWS} family rows, got ${items.length}`);
 
 const counts = {};

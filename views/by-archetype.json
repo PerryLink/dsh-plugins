@@ -24,8 +24,8 @@
   "catalog": [
     "dsh-catalog",
     "dsh-cert-mcp",
+    "dsh-certification",
     "dsh-kit",
-    "dsh-plugin-certification",
     "dsh-scaffold"
   ],
   "checker": [

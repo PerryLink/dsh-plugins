@@ -124,8 +124,8 @@
   "platform": [
     "dsh-catalog",
     "dsh-cert-mcp",
-    "dsh-kit",
-    "dsh-plugin-certification"
+    "dsh-certification",
+    "dsh-kit"
   ],
   "research": [
     "dsh-fund-research",
