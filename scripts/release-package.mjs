@@ -42,12 +42,12 @@ fs.rmSync(workRoot, { recursive: true, force: true })
 sh('git worktree prune')
 sh(`git worktree add -q ${workRoot} origin/main -b release/${Date.now()}`)
 const workVersion = JSON.parse(fs.readFileSync(path.join(workRoot, 'package.json'), 'utf8')).version
-const nextVersion = bump(workVersion)
+const nextVersion = process.env.DSH_RELEASE_VERSION || bump(workVersion)
 console.log(`  main ${workVersion} -> ${nextVersion}`)
 sh(`ln -sfn ${path.join(pkgDir, 'node_modules')} ${path.join(workRoot, 'node_modules')}`)
 
 // 2. copy the changed source/test/docs files (READMEs stay as they are on main)
-const copy = ['ACKNOWLEDGEMENTS.md', 'CHANGELOG.md', 'ACCEPTANCE.csv', 'screenshots.json', 'NOTICE', 'THIRD-PARTY-NOTICES']
+const copy = ['ACKNOWLEDGEMENTS.md', 'CHANGELOG.md', 'ACCEPTANCE.csv', 'screenshots.json', 'NOTICE', 'THIRD-PARTY-NOTICES', 'pnpm-lock.yaml']
 const walk = (dir) => {
   const out = []
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
