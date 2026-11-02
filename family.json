@@ -24,7 +24,7 @@
         "china-einvoice"
       ],
       "displayName": "China e-invoice (file-level)",
-      "displayNameZh": "中国电子发票（文件级）",
+      "displayNameZh": "发票查重",
       "positioning": "File-level OFD/XML invoice ingest, parse, dedupe and local archive; not tax-authority verification.",
       "status": "active",
       "release": "alpha",
@@ -37,7 +37,22 @@
       "repo": "PerryLink/dsh-einvoice",
       "npm": "dsh-einvoice",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "电子发票",
+        "发票查重",
+        "OFD",
+        "发票归档",
+        "去重"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "会计",
+        "财务共享专员"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
     },
     {
       "id": "dsh-bankrec",
@@ -66,7 +81,22 @@
       "repo": "PerryLink/dsh-bankrec",
       "npm": "dsh-bankrec",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "银行流水",
+        "对账",
+        "核账",
+        "勾稽",
+        "CAMT.053"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "出纳",
+        "会计"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
     },
     {
       "id": "dsh-ap-three-way",
@@ -82,7 +112,7 @@
         "accounts-payable"
       ],
       "displayName": "AP three-way match",
-      "displayNameZh": "AP 三单匹配",
+      "displayNameZh": "发票三单匹配",
       "positioning": "Invoice/PO/GRN three-way match with a 1% default price tolerance and exception workpaper.",
       "status": "active",
       "release": "alpha",
@@ -95,7 +125,23 @@
       "repo": "PerryLink/dsh-ap-three-way",
       "npm": "dsh-ap-three-way",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "三单匹配",
+        "发票",
+        "采购单",
+        "入库单",
+        "容差"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "应付会计",
+        "财务共享专员"
+      ],
+      "industriesZh": [
+        "财务",
+        "制造"
+      ]
     },
     {
       "id": "dsh-travel-recon",
@@ -111,7 +157,7 @@
         "travel-expense"
       ],
       "displayName": "Travel reconciliation & policy check",
-      "displayNameZh": "差旅对账与政策检查",
+      "displayNameZh": "差旅票据稽核",
       "positioning": "Order/invoice/card three-way match, duplicate check and a read-only amount/invoice policy check.",
       "status": "active",
       "release": "alpha",
@@ -124,7 +170,22 @@
       "repo": "PerryLink/dsh-travel-recon",
       "npm": "dsh-travel-recon",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "差旅报销",
+        "票据核对",
+        "重复报销",
+        "费用政策",
+        "行程单"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "报销专员",
+        "会计"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
     },
     {
       "id": "dsh-legal-intake",
@@ -153,7 +214,21 @@
       "repo": "PerryLink/dsh-legal-intake",
       "npm": "dsh-legal-intake",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "法务需求",
+        "邮件受理",
+        "需求登记",
+        "线程去重"
+      ],
+      "taskFamilyZh": "法务合同",
+      "rolesZh": [
+        "法务助理",
+        "法务专员"
+      ],
+      "industriesZh": [
+        "法务"
+      ]
     },
     {
       "id": "dsh-legal-clause",
@@ -169,7 +244,7 @@
         "contracts"
       ],
       "displayName": "Contract clause & playbook review",
-      "displayNameZh": "合同条款与 playbook 审查",
+      "displayNameZh": "合同条款体检",
       "positioning": "Clause tree plus a versioned 12-key playbook comparison and unresolved report; no legal conclusion.",
       "status": "active",
       "release": "alpha",
@@ -183,7 +258,22 @@
       "repo": "PerryLink/dsh-legal-clause",
       "npm": "dsh-legal-clause",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "合同审查",
+        "条款比对",
+        "缺漏条款",
+        "风险条款",
+        "审查清单"
+      ],
+      "taskFamilyZh": "法务合同",
+      "rolesZh": [
+        "法务",
+        "合同管理员"
+      ],
+      "industriesZh": [
+        "法务"
+      ]
     },
     {
       "id": "dsh-ghg",
@@ -213,7 +303,23 @@
       "repo": "PerryLink/dsh-ghg",
       "npm": "dsh-ghg",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "碳排放",
+        "范围二",
+        "用电量",
+        "排放因子",
+        "ESG"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "环保专员",
+        "能源管理员"
+      ],
+      "industriesZh": [
+        "能源",
+        "制造"
+      ]
     },
     {
       "id": "dsh-qms-capa",
@@ -229,7 +335,7 @@
         "manufacturing"
       ],
       "displayName": "QMS NCR, CAPA & 8D",
-      "displayNameZh": "QMS NCR、CAPA 与 8D",
+      "displayNameZh": "质量问题闭环跟踪",
       "positioning": "NCR ingest/dedupe, batch alias resolution, impact evaluation and CAPA/8D state tracking.",
       "status": "active",
       "release": "alpha",
@@ -244,7 +350,22 @@
       "repo": "PerryLink/dsh-qms-capa",
       "npm": "dsh-qms-capa",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "质量问题",
+        "NCR",
+        "CAPA",
+        "8D",
+        "纠正措施"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "质量工程师",
+        "质检员"
+      ],
+      "industriesZh": [
+        "制造"
+      ]
     },
     {
       "id": "dsh-hs-candidate",
@@ -274,7 +395,23 @@
       "repo": "PerryLink/dsh-hs-candidate",
       "npm": "dsh-hs-candidate",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "HS 编码",
+        "商品归类",
+        "预归类",
+        "申报要素",
+        "关税"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "关务",
+        "报关员"
+      ],
+      "industriesZh": [
+        "物流",
+        "制造"
+      ]
     },
     {
       "id": "dsh-freight-audit",
@@ -304,7 +441,22 @@
       "repo": "PerryLink/dsh-freight-audit",
       "npm": "dsh-freight-audit",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "运费",
+        "账单审计",
+        "费率表",
+        "承运商",
+        "运费差异"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "物流专员",
+        "应付会计"
+      ],
+      "industriesZh": [
+        "物流"
+      ]
     },
     {
       "id": "dsh-docx-redline",
@@ -319,7 +471,7 @@
         "documents"
       ],
       "displayName": "DOCX inspect & text diff",
-      "displayNameZh": "DOCX 检查与文本差异",
+      "displayNameZh": "文档正文差异比对",
       "positioning": "DOCX structure/hash inspection, byte-exact roundtrip, one exact-run replacement and text-level diff; not a tracked-changes writer.",
       "status": "active",
       "release": "alpha",
@@ -333,7 +485,21 @@
       "repo": "PerryLink/dsh-docx-redline",
       "npm": "dsh-docx-redline",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "Word 文档",
+        "文本比对",
+        "版本差异",
+        "文档校验"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "行政专员",
+        "文员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-ifc-qto",
@@ -349,7 +515,7 @@
         "bim"
       ],
       "displayName": "IFC quantity takeoff",
-      "displayNameZh": "IFC 工程量清单",
+      "displayNameZh": "模型工程量提取",
       "positioning": "IFC element/quantity inventory and CSV takeoff.",
       "status": "active",
       "release": "alpha",
@@ -363,7 +529,22 @@
       "repo": "PerryLink/dsh-ifc-qto",
       "npm": "dsh-ifc-qto",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "IFC",
+        "BIM",
+        "工程量",
+        "算量",
+        "清单"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "造价工程师",
+        "施工员"
+      ],
+      "industriesZh": [
+        "建筑"
+      ]
     },
     {
       "id": "dsh-policy-ledger",
@@ -393,7 +574,21 @@
       "repo": "PerryLink/dsh-policy-ledger",
       "npm": "dsh-policy-ledger",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "安装诊断",
+        "插件安装",
+        "故障排查",
+        "安装日志"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "运维工程师",
+        "开发者"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-pim-lint",
@@ -409,7 +604,7 @@
         "pim"
       ],
       "displayName": "PIM catalog lint",
-      "displayNameZh": "PIM 目录 lint",
+      "displayNameZh": "商品目录查错",
       "positioning": "CSV catalog lint for required fields, duplicate SKU, GTIN check digit and price.",
       "status": "active",
       "release": "alpha",
@@ -424,7 +619,22 @@
       "repo": "PerryLink/dsh-pim-lint",
       "npm": "dsh-pim-lint",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "商品主数据",
+        "SKU",
+        "GTIN",
+        "目录校验",
+        "重复商品"
+      ],
+      "taskFamilyZh": "零售电商",
+      "rolesZh": [
+        "电商运营",
+        "商品管理员"
+      ],
+      "industriesZh": [
+        "零售"
+      ]
     },
     {
       "id": "dsh-eval-pack",
@@ -439,7 +649,7 @@
         "evaluation"
       ],
       "displayName": "Eval pack lint & grader",
-      "displayNameZh": "Eval pack 校验与评分",
+      "displayNameZh": "评测包校验评分",
       "positioning": "Public/synthetic eval-pack structure lint and deterministic JSON grading; not a validated benchmark.",
       "status": "active",
       "release": "alpha",
@@ -453,7 +663,21 @@
       "repo": "PerryLink/dsh-eval-pack",
       "npm": "dsh-eval-pack",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "评测集",
+        "评分",
+        "结构校验",
+        "自动打分"
+      ],
+      "taskFamilyZh": "教育培训",
+      "rolesZh": [
+        "评测工程师",
+        "教研员"
+      ],
+      "industriesZh": [
+        "教育"
+      ]
     },
     {
       "id": "dsh-customs-doc-check",
@@ -469,7 +693,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "报关单证比对",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -477,7 +701,22 @@
       "repo": "PerryLink/dsh-customs-doc-check",
       "npm": "dsh-customs-doc-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "报关单",
+        "单证一致",
+        "申报要素",
+        "海关"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "报关员",
+        "关务"
+      ],
+      "industriesZh": [
+        "物流",
+        "制造"
+      ]
     },
     {
       "id": "dsh-demurrage-ledger",
@@ -493,7 +732,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "滞箱费台账核验",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -501,7 +740,22 @@
       "repo": "PerryLink/dsh-demurrage-ledger",
       "npm": "dsh-demurrage-ledger",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "滞箱费",
+        "滞期费",
+        "免箱期",
+        "海运",
+        "台账"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "关务",
+        "物流专员"
+      ],
+      "industriesZh": [
+        "物流"
+      ]
     },
     {
       "id": "dsh-export-ctl-check",
@@ -517,7 +771,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "出口管制物项筛查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -525,7 +779,23 @@
       "repo": "PerryLink/dsh-export-ctl-check",
       "npm": "dsh-export-ctl-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "出口管制",
+        "管制清单",
+        "两用物项",
+        "最终用途",
+        "许可证"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "关务",
+        "合规专员"
+      ],
+      "industriesZh": [
+        "物流",
+        "制造"
+      ]
     },
     {
       "id": "dsh-forecast-penalty",
@@ -541,7 +811,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "预测考核费用测算",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -549,7 +819,22 @@
       "repo": "PerryLink/dsh-forecast-penalty",
       "npm": "dsh-forecast-penalty",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "预测准确率",
+        "考核费用",
+        "供应链",
+        "结算"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "供应链计划员",
+        "采购员"
+      ],
+      "industriesZh": [
+        "制造",
+        "零售"
+      ]
     },
     {
       "id": "dsh-hs-classify",
@@ -565,7 +850,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "商品归类层级校验",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -573,7 +858,23 @@
       "repo": "PerryLink/dsh-hs-classify",
       "npm": "dsh-hs-classify",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "HS 编码",
+        "商品归类",
+        "税则",
+        "章品目子目",
+        "层级"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "归类师",
+        "关务"
+      ],
+      "industriesZh": [
+        "物流",
+        "制造"
+      ]
     },
     {
       "id": "dsh-lc-doc-check",
@@ -589,7 +890,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "信用证不符点筛查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -597,7 +898,23 @@
       "repo": "PerryLink/dsh-lc-doc-check",
       "npm": "dsh-lc-doc-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "信用证",
+        "不符点",
+        "交单",
+        "UCP600",
+        "审单"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "单证员",
+        "外贸业务员"
+      ],
+      "industriesZh": [
+        "物流",
+        "财务"
+      ]
     },
     {
       "id": "dsh-origin-rvc-check",
@@ -613,7 +930,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "原产地成分核算",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -621,7 +938,23 @@
       "repo": "PerryLink/dsh-origin-rvc-check",
       "npm": "dsh-origin-rvc-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "原产地证",
+        "区域价值成分",
+        "RVC",
+        "自贸协定",
+        "优惠税率"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "关务",
+        "单证员"
+      ],
+      "industriesZh": [
+        "物流",
+        "制造"
+      ]
     },
     {
       "id": "dsh-railway-window",
@@ -637,7 +970,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "铁路天窗台账复核",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -645,7 +978,22 @@
       "repo": "PerryLink/dsh-railway-window",
       "npm": "dsh-railway-window",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "铁路施工",
+        "天窗",
+        "施工计划",
+        "营业线",
+        "台账"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "施工员",
+        "铁路工程师"
+      ],
+      "industriesZh": [
+        "建筑"
+      ]
     },
     {
       "id": "dsh-fmea-table-check",
@@ -661,7 +1009,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "失效分析表核对",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -669,7 +1017,21 @@
       "repo": "PerryLink/dsh-fmea-table-check",
       "npm": "dsh-fmea-table-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "FMEA",
+        "失效分析",
+        "风险顺序数",
+        "质量工具"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "质量工程师",
+        "工艺工程师"
+      ],
+      "industriesZh": [
+        "制造"
+      ]
     },
     {
       "id": "dsh-ota-review-check",
@@ -685,7 +1047,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "点评回复时效检查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -693,7 +1055,22 @@
       "repo": "PerryLink/dsh-ota-review-check",
       "npm": "dsh-ota-review-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "在线点评",
+        "差评回复",
+        "回复时限",
+        "整改闭环",
+        "客服"
+      ],
+      "taskFamilyZh": "零售电商",
+      "rolesZh": [
+        "客服主管",
+        "店长"
+      ],
+      "industriesZh": [
+        "零售"
+      ]
     },
     {
       "id": "dsh-pipeline-check",
@@ -709,7 +1086,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "项目文件链条联查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -717,7 +1094,22 @@
       "repo": "PerryLink/dsh-pipeline-check",
       "npm": "dsh-pipeline-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "项目文件",
+        "文件链条",
+        "环节先后",
+        "金额口径"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "项目经理",
+        "内控专员"
+      ],
+      "industriesZh": [
+        "建筑",
+        "制造"
+      ]
     },
     {
       "id": "dsh-ppap-check",
@@ -733,7 +1125,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "生产件批准放行",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -741,7 +1133,22 @@
       "repo": "PerryLink/dsh-ppap-check",
       "npm": "dsh-ppap-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "PPAP",
+        "样件批准",
+        "提交等级",
+        "供应商",
+        "量产"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "质量工程师",
+        "供应商质量工程师"
+      ],
+      "industriesZh": [
+        "制造"
+      ]
     },
     {
       "id": "dsh-repair-order-qc",
@@ -757,7 +1164,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "维修结算单核算",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -765,7 +1172,21 @@
       "repo": "PerryLink/dsh-repair-order-qc",
       "npm": "dsh-repair-order-qc",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "维修工单",
+        "结算",
+        "配件工时",
+        "售后"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "售后主管",
+        "结算员"
+      ],
+      "industriesZh": [
+        "制造"
+      ]
     },
     {
       "id": "dsh-review-reply-check",
@@ -781,7 +1202,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "审稿回应逐条对照",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -789,7 +1210,21 @@
       "repo": "PerryLink/dsh-review-reply-check",
       "npm": "dsh-review-reply-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "审稿意见",
+        "逐条回应",
+        "回复覆盖",
+        "同行评议"
+      ],
+      "taskFamilyZh": "教育培训",
+      "rolesZh": [
+        "期刊编辑",
+        "研究人员"
+      ],
+      "industriesZh": [
+        "教育"
+      ]
     },
     {
       "id": "dsh-spc-gbt-adapter",
@@ -805,7 +1240,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "过程能力指数计算",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -813,7 +1248,22 @@
       "repo": "PerryLink/dsh-spc-gbt-adapter",
       "npm": "dsh-spc-gbt-adapter",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "SPC",
+        "控制图",
+        "过程能力",
+        "CPK",
+        "国标"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "质量工程师",
+        "工艺工程师"
+      ],
+      "industriesZh": [
+        "制造"
+      ]
     },
     {
       "id": "dsh-warranty-calc",
@@ -829,7 +1279,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "质保索赔金额核算",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -837,7 +1287,22 @@
       "repo": "PerryLink/dsh-warranty-calc",
       "npm": "dsh-warranty-calc",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "质保期",
+        "索赔",
+        "保修",
+        "里程",
+        "金额核算"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "售后专员",
+        "质量工程师"
+      ],
+      "industriesZh": [
+        "制造"
+      ]
     },
     {
       "id": "dsh-aqua-input-check",
@@ -853,7 +1318,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "水产投入品核查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -861,7 +1326,22 @@
       "repo": "PerryLink/dsh-aqua-input-check",
       "npm": "dsh-aqua-input-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "水产养殖",
+        "投入品",
+        "渔药",
+        "休药期",
+        "饲料添加剂"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "养殖技术员",
+        "质检员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-drill-script-check",
@@ -877,7 +1357,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "演练脚本要素清点",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -885,7 +1365,22 @@
       "repo": "PerryLink/dsh-drill-script-check",
       "npm": "dsh-drill-script-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "应急演练",
+        "演练脚本",
+        "响应分级",
+        "要素齐备"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "安全员",
+        "应急管理员"
+      ],
+      "industriesZh": [
+        "制造",
+        "建筑"
+      ]
     },
     {
       "id": "dsh-emergency-plan",
@@ -901,7 +1396,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "应急预案要素审查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -909,7 +1404,22 @@
       "repo": "PerryLink/dsh-emergency-plan",
       "npm": "dsh-emergency-plan",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "应急预案",
+        "要素齐备",
+        "条款定位",
+        "备案"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "安全员",
+        "环保专员"
+      ],
+      "industriesZh": [
+        "制造",
+        "建筑"
+      ]
     },
     {
       "id": "dsh-hazchem-check",
@@ -925,7 +1435,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "危化品临界量辨识",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -933,7 +1443,22 @@
       "repo": "PerryLink/dsh-hazchem-check",
       "npm": "dsh-hazchem-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "危化品",
+        "重大危险源",
+        "临界量",
+        "储存"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "安全员",
+        "仓管员"
+      ],
+      "industriesZh": [
+        "制造",
+        "能源"
+      ]
     },
     {
       "id": "dsh-hidden-risk-map",
@@ -949,7 +1474,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "重大隐患判定映射",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -957,7 +1482,22 @@
       "repo": "PerryLink/dsh-hidden-risk-map",
       "npm": "dsh-hidden-risk-map",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "重大隐患",
+        "判定标准",
+        "隐患台账",
+        "条款映射"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "安全员",
+        "环保专员"
+      ],
+      "industriesZh": [
+        "制造",
+        "建筑"
+      ]
     },
     {
       "id": "dsh-power-loss-split",
@@ -973,7 +1513,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "线损电量拆分",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -981,7 +1521,21 @@
       "repo": "PerryLink/dsh-power-loss-split",
       "npm": "dsh-power-loss-split",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "线损",
+        "电量拆分",
+        "考核表",
+        "供电"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "电气工程师",
+        "安全员"
+      ],
+      "industriesZh": [
+        "能源"
+      ]
     },
     {
       "id": "dsh-power-ticket-check",
@@ -997,7 +1551,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "电力工作票核查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1005,7 +1559,21 @@
       "repo": "PerryLink/dsh-power-ticket-check",
       "npm": "dsh-power-ticket-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "工作票",
+        "两票",
+        "签发许可",
+        "电力安全"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "电气工程师",
+        "安全员"
+      ],
+      "industriesZh": [
+        "能源"
+      ]
     },
     {
       "id": "dsh-bid-ca-precheck",
@@ -1021,7 +1589,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "投标符合性预检",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1029,7 +1597,22 @@
       "repo": "PerryLink/dsh-bid-ca-precheck",
       "npm": "dsh-bid-ca-precheck",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "投标文件",
+        "符合性",
+        "逐条响应",
+        "招标文件"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "投标专员",
+        "商务专员"
+      ],
+      "industriesZh": [
+        "建筑",
+        "制造"
+      ]
     },
     {
       "id": "dsh-bid-qual-check",
@@ -1045,7 +1628,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "投标资格条件审查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1053,7 +1636,22 @@
       "repo": "PerryLink/dsh-bid-qual-check",
       "npm": "dsh-bid-qual-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "投标资格",
+        "资格条件",
+        "证明材料",
+        "否决项"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "投标专员",
+        "采购员"
+      ],
+      "industriesZh": [
+        "建筑",
+        "制造"
+      ]
     },
     {
       "id": "dsh-contract-stance",
@@ -1069,7 +1667,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "合同立场台账梳理",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1077,7 +1675,22 @@
       "repo": "PerryLink/dsh-contract-stance",
       "npm": "dsh-contract-stance",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "合同条款",
+        "立场",
+        "风险等级",
+        "退让底线"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "商务专员",
+        "法务"
+      ],
+      "industriesZh": [
+        "建筑",
+        "制造"
+      ]
     },
     {
       "id": "dsh-protest-deadline",
@@ -1093,7 +1706,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "质疑投诉期限测算",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1101,7 +1714,22 @@
       "repo": "PerryLink/dsh-protest-deadline",
       "npm": "dsh-protest-deadline",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "质疑",
+        "投诉",
+        "法定期限",
+        "政府采购"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "投标专员",
+        "法务"
+      ],
+      "industriesZh": [
+        "政务",
+        "建筑"
+      ]
     },
     {
       "id": "dsh-rulefile-check",
@@ -1117,7 +1745,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "规则库自检",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1125,7 +1753,21 @@
       "repo": "PerryLink/dsh-rulefile-check",
       "npm": "dsh-rulefile-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "规则库",
+        "条款引用",
+        "效力",
+        "自检"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "招标代理",
+        "评标专家"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-tender-extract",
@@ -1141,7 +1783,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "招标条款逐字摘录",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1149,7 +1791,21 @@
       "repo": "PerryLink/dsh-tender-extract",
       "npm": "dsh-tender-extract",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "招标文件",
+        "条款摘录",
+        "出处",
+        "原文"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "投标专员",
+        "招标代理"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-tender-matrix",
@@ -1165,7 +1821,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "评标评分矩阵校验",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1173,7 +1829,21 @@
       "repo": "PerryLink/dsh-tender-matrix",
       "npm": "dsh-tender-matrix",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "评标",
+        "评分矩阵",
+        "分值合计",
+        "评标办法"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "评标专家",
+        "招标代理"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-eia-guide-check",
@@ -1189,7 +1859,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "环评导则适用判定",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1197,7 +1867,22 @@
       "repo": "PerryLink/dsh-eia-guide-check",
       "npm": "dsh-eia-guide-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "环评",
+        "导则",
+        "适用性",
+        "执行标准"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "环评工程师",
+        "施工员"
+      ],
+      "industriesZh": [
+        "建筑",
+        "能源"
+      ]
     },
     {
       "id": "dsh-guard-plan-qc",
@@ -1213,7 +1898,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "劳保用品配置核对",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1221,7 +1906,21 @@
       "repo": "PerryLink/dsh-guard-plan-qc",
       "npm": "dsh-guard-plan-qc",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "劳保用品",
+        "安全防护",
+        "配备标准",
+        "配置数量"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "安全员",
+        "施工员"
+      ],
+      "industriesZh": [
+        "建筑"
+      ]
     },
     {
       "id": "dsh-hazplan-check",
@@ -1237,7 +1936,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "偏差分析表复核",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1245,7 +1944,22 @@
       "repo": "PerryLink/dsh-hazplan-check",
       "npm": "dsh-hazplan-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "HAZOP",
+        "偏差分析",
+        "危险可操作性",
+        "分析表"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "工艺工程师",
+        "安全员"
+      ],
+      "industriesZh": [
+        "制造",
+        "能源"
+      ]
     },
     {
       "id": "dsh-permit-report-check",
@@ -1261,7 +1975,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "行政许可材料核查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1269,7 +1983,22 @@
       "repo": "PerryLink/dsh-permit-report-check",
       "npm": "dsh-permit-report-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "行政许可",
+        "申请材料",
+        "法定时限",
+        "办理台账"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "行政专员",
+        "政务人员"
+      ],
+      "industriesZh": [
+        "政务",
+        "建筑"
+      ]
     },
     {
       "id": "dsh-safety-brief-check",
@@ -1285,7 +2014,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "安全交底签字闭环",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1293,7 +2022,21 @@
       "repo": "PerryLink/dsh-safety-brief-check",
       "npm": "dsh-safety-brief-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "安全交底",
+        "技术交底",
+        "签字",
+        "施工安全"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "施工员",
+        "安全员"
+      ],
+      "industriesZh": [
+        "建筑"
+      ]
     },
     {
       "id": "dsh-site-log-check",
@@ -1309,7 +2052,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "监理日志连续检查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1317,7 +2060,21 @@
       "repo": "PerryLink/dsh-site-log-check",
       "npm": "dsh-site-log-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "监理日志",
+        "旁站",
+        "跨日连续",
+        "监理"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "监理员",
+        "施工员"
+      ],
+      "industriesZh": [
+        "建筑"
+      ]
     },
     {
       "id": "dsh-soilwater-check",
@@ -1333,7 +2090,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "土壤地下水核验",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1341,7 +2098,22 @@
       "repo": "PerryLink/dsh-soilwater-check",
       "npm": "dsh-soilwater-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "土壤",
+        "地下水",
+        "监测点位",
+        "超标判定"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "环保专员",
+        "环评工程师"
+      ],
+      "industriesZh": [
+        "建筑",
+        "能源"
+      ]
     },
     {
       "id": "dsh-essay-rubric-check",
@@ -1357,7 +2129,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "作文量表评分复核",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1365,7 +2137,21 @@
       "repo": "PerryLink/dsh-essay-rubric-check",
       "npm": "dsh-essay-rubric-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "作文",
+        "评分量表",
+        "评分项",
+        "原文定位"
+      ],
+      "taskFamilyZh": "教育培训",
+      "rolesZh": [
+        "教师",
+        "教研员"
+      ],
+      "industriesZh": [
+        "教育"
+      ]
     },
     {
       "id": "dsh-learning-gap-check",
@@ -1381,7 +2167,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "能力差距培养评估",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1389,7 +2175,21 @@
       "repo": "PerryLink/dsh-learning-gap-check",
       "npm": "dsh-learning-gap-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "能力差距",
+        "培养计划",
+        "人才梯队",
+        "培训"
+      ],
+      "taskFamilyZh": "人力资源",
+      "rolesZh": [
+        "培训专员",
+        "HRBP"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-nsfc-form-check",
@@ -1405,7 +2205,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "国自然形式审查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1413,7 +2213,21 @@
       "repo": "PerryLink/dsh-nsfc-form-check",
       "npm": "dsh-nsfc-form-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "国自然",
+        "基金申请",
+        "形式审查",
+        "匿名化"
+      ],
+      "taskFamilyZh": "教育培训",
+      "rolesZh": [
+        "科研人员",
+        "科研秘书"
+      ],
+      "industriesZh": [
+        "教育"
+      ]
     },
     {
       "id": "dsh-paper-doc-adapter",
@@ -1429,7 +2243,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "试卷结构解析校核",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1437,7 +2251,21 @@
       "repo": "PerryLink/dsh-paper-doc-adapter",
       "npm": "dsh-paper-doc-adapter",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "试卷",
+        "题型",
+        "分值",
+        "解析结构"
+      ],
+      "taskFamilyZh": "教育培训",
+      "rolesZh": [
+        "教研员",
+        "教师"
+      ],
+      "industriesZh": [
+        "教育"
+      ]
     },
     {
       "id": "dsh-policy-brief-draft",
@@ -1453,7 +2281,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "政策专报要素审定",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1461,7 +2289,21 @@
       "repo": "PerryLink/dsh-policy-brief-draft",
       "npm": "dsh-policy-brief-draft",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "政策专报",
+        "观点依据",
+        "出处",
+        "决策参考"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "政务人员",
+        "研究员"
+      ],
+      "industriesZh": [
+        "政务"
+      ]
     },
     {
       "id": "dsh-archive-check",
@@ -1477,7 +2319,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "档案归档查验",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1485,7 +2327,22 @@
       "repo": "PerryLink/dsh-archive-check",
       "npm": "dsh-archive-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "归档",
+        "档案",
+        "保管期限",
+        "完整性"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "档案管理员",
+        "政务人员"
+      ],
+      "industriesZh": [
+        "政务",
+        "通用"
+      ]
     },
     {
       "id": "dsh-gongwen-flow-check",
@@ -1501,7 +2358,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "公文流转时限检查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1509,7 +2366,21 @@
       "repo": "PerryLink/dsh-gongwen-flow-check",
       "npm": "dsh-gongwen-flow-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "公文",
+        "流转",
+        "办理时限",
+        "环节"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "政务人员",
+        "办公室文员"
+      ],
+      "industriesZh": [
+        "政务"
+      ]
     },
     {
       "id": "dsh-gongwen-word-check",
@@ -1525,7 +2396,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "公文格式要素校对",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1533,7 +2404,21 @@
       "repo": "PerryLink/dsh-gongwen-word-check",
       "npm": "dsh-gongwen-word-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "公文格式",
+        "版头",
+        "主体要素",
+        "党政机关公文"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "办公室文员",
+        "政务人员"
+      ],
+      "industriesZh": [
+        "政务"
+      ]
     },
     {
       "id": "dsh-evidence-check",
@@ -1549,7 +2434,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "证据清单齐备核验",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1557,7 +2442,21 @@
       "repo": "PerryLink/dsh-evidence-check",
       "npm": "dsh-evidence-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "证据清单",
+        "举证",
+        "待证事实",
+        "齐备性"
+      ],
+      "taskFamilyZh": "法务合同",
+      "rolesZh": [
+        "律师",
+        "法务专员"
+      ],
+      "industriesZh": [
+        "法务"
+      ]
     },
     {
       "id": "dsh-lawcite-adapter",
@@ -1573,7 +2472,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "法条引用校对",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1581,7 +2480,21 @@
       "repo": "PerryLink/dsh-lawcite-adapter",
       "npm": "dsh-lawcite-adapter",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "法条",
+        "条号",
+        "效力状态",
+        "引用"
+      ],
+      "taskFamilyZh": "法务合同",
+      "rolesZh": [
+        "律师",
+        "法务专员"
+      ],
+      "industriesZh": [
+        "法务"
+      ]
     },
     {
       "id": "dsh-pleading-draft",
@@ -1597,7 +2510,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "起诉状要素核对",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1605,7 +2518,22 @@
       "repo": "PerryLink/dsh-pleading-draft",
       "npm": "dsh-pleading-draft",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "起诉状",
+        "诉请",
+        "事实理由",
+        "证据",
+        "法条"
+      ],
+      "taskFamilyZh": "法务合同",
+      "rolesZh": [
+        "律师",
+        "法务专员"
+      ],
+      "industriesZh": [
+        "法务"
+      ]
     },
     {
       "id": "dsh-icd-rule-check",
@@ -1621,7 +2549,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "疾病编码规则核对",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1629,7 +2557,22 @@
       "repo": "PerryLink/dsh-icd-rule-check",
       "npm": "dsh-icd-rule-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "疾病编码",
+        "ICD",
+        "病案首页",
+        "编码合规",
+        "诊断编码"
+      ],
+      "taskFamilyZh": "医疗健康",
+      "rolesZh": [
+        "病案编码员",
+        "医保专员"
+      ],
+      "industriesZh": [
+        "医疗"
+      ]
     },
     {
       "id": "dsh-medrec-qc",
@@ -1645,7 +2588,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "病案首页质控",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1653,7 +2596,22 @@
       "repo": "PerryLink/dsh-medrec-qc",
       "npm": "dsh-medrec-qc",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "病历",
+        "质控",
+        "病案",
+        "首页质控",
+        "逻辑校验"
+      ],
+      "taskFamilyZh": "医疗健康",
+      "rolesZh": [
+        "病案质控员",
+        "临床医师"
+      ],
+      "industriesZh": [
+        "医疗"
+      ]
     },
     {
       "id": "dsh-nurse-record-check",
@@ -1669,7 +2627,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "护理记录核对",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1677,7 +2635,22 @@
       "repo": "PerryLink/dsh-nurse-record-check",
       "npm": "dsh-nurse-record-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "护理记录",
+        "护理文书",
+        "查对",
+        "病区",
+        "护理质量"
+      ],
+      "taskFamilyZh": "医疗健康",
+      "rolesZh": [
+        "护士",
+        "护理管理者"
+      ],
+      "industriesZh": [
+        "医疗"
+      ]
     },
     {
       "id": "dsh-soe-decision-check",
@@ -1693,7 +2666,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "国企决策合规检查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1701,7 +2674,22 @@
       "repo": "PerryLink/dsh-soe-decision-check",
       "npm": "dsh-soe-decision-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "国企",
+        "三重一大",
+        "决策",
+        "合规"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "合规专员",
+        "纪检专员",
+        "行政专员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-sop-sync-check",
@@ -1717,7 +2705,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "作业规程同步检查",
       "positioning": "China compliance checker with a versioned rule pack and citation gate.",
       "status": "active",
       "release": "stable",
@@ -1725,7 +2713,21 @@
       "repo": "PerryLink/dsh-sop-sync-check",
       "npm": "dsh-sop-sync-check",
       "source": "taxonomy.v1.json",
-      "installScope": "mainline-opt-in"
+      "installScope": "mainline-opt-in",
+      "tagsZh": [
+        "作业规程",
+        "SOP",
+        "版本一致",
+        "制度落地"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "质量工程师",
+        "内审员"
+      ],
+      "industriesZh": [
+        "制造"
+      ]
     },
     {
       "id": "dsh-bid-health-check",
@@ -1741,7 +2743,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "投标响应覆盖检查",
       "positioning": "Bid requirement coverage/locator check.",
       "status": "active",
       "release": "alpha",
@@ -1752,7 +2754,22 @@
       "repo": "PerryLink/dsh-bid-health-check",
       "npm": "dsh-bid-health-check",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "投标",
+        "招标",
+        "响应",
+        "应答",
+        "偏离"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "投标专员",
+        "商务经理"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-canteen-retention-check",
@@ -1769,7 +2786,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "食堂留样台账核对",
       "positioning": "Canteen retention ledger check.",
       "status": "active",
       "release": "alpha",
@@ -1780,7 +2797,22 @@
       "repo": "PerryLink/dsh-canteen-retention-check",
       "npm": "dsh-canteen-retention-check",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "食堂",
+        "留样",
+        "台账",
+        "食品安全",
+        "食品留样"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "食品安全员",
+        "食堂管理员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-construction-doc-check",
@@ -1796,7 +2828,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "施工资料齐套检查",
       "positioning": "Construction document directory/version/empty-file check.",
       "status": "active",
       "release": "alpha",
@@ -1807,7 +2839,22 @@
       "repo": "PerryLink/dsh-construction-doc-check",
       "npm": "dsh-construction-doc-check",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "施工资料",
+        "竣工",
+        "齐套",
+        "资料齐全",
+        "资料版本"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "资料员",
+        "施工员"
+      ],
+      "industriesZh": [
+        "建筑"
+      ]
     },
     {
       "id": "dsh-excel-reconcile",
@@ -1823,7 +2870,7 @@
         "finance"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "双表对账查差异",
       "positioning": "Two-table reconciliation by key and tolerance.",
       "status": "active",
       "release": "alpha",
@@ -1834,7 +2881,22 @@
       "repo": "PerryLink/dsh-excel-reconcile",
       "npm": "dsh-excel-reconcile",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "对账",
+        "核账",
+        "勾对",
+        "差异",
+        "两表比对"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "会计",
+        "出纳"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
     },
     {
       "id": "dsh-invoice-ledger",
@@ -1850,7 +2912,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "发票台账核验",
       "positioning": "Invoice ledger duplicate/arithmetic/party/date check.",
       "status": "active",
       "release": "alpha",
@@ -1861,7 +2923,22 @@
       "repo": "PerryLink/dsh-invoice-ledger",
       "npm": "dsh-invoice-ledger",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "发票",
+        "票据",
+        "台账",
+        "查重",
+        "勾稽"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "会计",
+        "税务专员"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
     },
     {
       "id": "dsh-payroll-audit",
@@ -1878,7 +2955,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "工资核算复核",
       "positioning": "Payroll parameter and arithmetic audit.",
       "status": "active",
       "release": "alpha",
@@ -1889,7 +2966,23 @@
       "repo": "PerryLink/dsh-payroll-audit",
       "npm": "dsh-payroll-audit",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "工资",
+        "薪酬",
+        "薪资",
+        "算薪",
+        "个税"
+      ],
+      "taskFamilyZh": "人力资源",
+      "rolesZh": [
+        "薪酬专员",
+        "人力资源专员"
+      ],
+      "industriesZh": [
+        "通用",
+        "财务"
+      ]
     },
     {
       "id": "dsh-safety-ledger-check",
@@ -1906,7 +2999,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "安全资质台账核对",
       "positioning": "Construction safety qualification ledger check.",
       "status": "active",
       "release": "alpha",
@@ -1917,7 +3010,21 @@
       "repo": "PerryLink/dsh-safety-ledger-check",
       "npm": "dsh-safety-ledger-check",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "安全资质",
+        "台账",
+        "施工",
+        "证件有效期"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "安全员",
+        "资料员"
+      ],
+      "industriesZh": [
+        "建筑"
+      ]
     },
     {
       "id": "dsh-table-ingest",
@@ -1933,7 +3040,7 @@
         "documents"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "表格数据提取",
       "positioning": "DOCX/XLSX/CSV to table JSON for checkers.",
       "status": "active",
       "release": "alpha",
@@ -1944,7 +3051,22 @@
       "repo": "PerryLink/dsh-table-ingest",
       "npm": "dsh-table-ingest",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "表格",
+        "提取",
+        "Excel",
+        "数据转换",
+        "结构化"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "数据分析师",
+        "办公文员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-tender-requirements",
@@ -1960,7 +3082,7 @@
         "china"
       ],
       "displayName": null,
-      "displayNameZh": null,
+      "displayNameZh": "招标文件要点提取",
       "positioning": "Tender document key-information extraction with retrieval status.",
       "status": "active",
       "release": "alpha",
@@ -1971,7 +3093,22 @@
       "repo": "PerryLink/dsh-tender-requirements",
       "npm": "dsh-tender-requirements",
       "source": "taxonomy.v1.json",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "tagsZh": [
+        "招标文件",
+        "要点",
+        "资格条件",
+        "检索",
+        "摘录"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "投标专员",
+        "采购员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-finops-suite",
@@ -2013,7 +3150,22 @@
       "repo": "PerryLink/dsh-finops-suite",
       "npm": "dsh-finops-suite",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "财务",
+        "报销",
+        "银行对账",
+        "三单匹配",
+        "差旅"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "财务经理",
+        "会计"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
     },
     {
       "id": "dsh-contract-suite",
@@ -2047,7 +3199,22 @@
       "repo": "PerryLink/dsh-contract-suite",
       "npm": "dsh-contract-suite",
       "source": "taxonomy.v1.json",
-      "installScope": "domain"
+      "installScope": "domain",
+      "tagsZh": [
+        "合同",
+        "法务",
+        "条款",
+        "审查",
+        "合同审查"
+      ],
+      "taskFamilyZh": "法务合同",
+      "rolesZh": [
+        "法务",
+        "合同管理员"
+      ],
+      "industriesZh": [
+        "法务"
+      ]
     },
     {
       "id": "dsh-auto-review",
@@ -2065,7 +3232,22 @@
       "repo": "PerryLink/dsh-auto-review",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "敏感操作复核",
+      "tagsZh": [
+        "审批",
+        "复核",
+        "放行",
+        "风险"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "运维工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-autotier",
@@ -2083,7 +3265,22 @@
       "repo": "PerryLink/dsh-autotier",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "模型档位分配",
+      "tagsZh": [
+        "模型路由",
+        "档位",
+        "成本",
+        "调度"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "平台运营"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-budget",
@@ -2100,7 +3297,22 @@
       "repo": "PerryLink/dsh-budget",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "会话成本看板",
+      "tagsZh": [
+        "成本",
+        "预算",
+        "用量",
+        "时延"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "财务"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-cert-mcp",
@@ -2118,7 +3330,22 @@
       "repo": "PerryLink/dsh-cert-mcp",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "认证数据查询",
+      "tagsZh": [
+        "认证",
+        "评级",
+        "查询",
+        "证据"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "平台运营",
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-checkpoint-rewind",
@@ -2135,7 +3362,22 @@
       "repo": "PerryLink/dsh-checkpoint-rewind",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "快照一键回滚",
+      "tagsZh": [
+        "快照",
+        "回滚",
+        "备份",
+        "恢复",
+        "还原"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-claude-move",
@@ -2152,7 +3394,22 @@
       "repo": "PerryLink/dsh-claude-move",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "配置与会话迁移",
+      "tagsZh": [
+        "迁移",
+        "配置导入",
+        "命令迁移",
+        "会话",
+        "历史记录"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-click",
@@ -2170,7 +3427,22 @@
       "repo": "PerryLink/dsh-click",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "桌面点击操作",
+      "tagsZh": [
+        "桌面",
+        "点击",
+        "截图",
+        "鼠标"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "运维工程师",
+        "办公文员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-composer-history",
@@ -2187,7 +3459,21 @@
       "repo": "PerryLink/dsh-composer-history",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "输入历史回溯",
+      "tagsZh": [
+        "输入历史",
+        "命令",
+        "补全",
+        "快捷"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-data-quality",
@@ -2204,7 +3490,22 @@
       "repo": "PerryLink/dsh-data-quality",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "数据质量核验",
+      "tagsZh": [
+        "数据质量",
+        "清洗",
+        "剖析",
+        "校验"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "数据分析师",
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-defend",
@@ -2221,7 +3522,22 @@
       "repo": "PerryLink/dsh-defend",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "提示词攻击防护",
+      "tagsZh": [
+        "注入防护",
+        "越狱",
+        "密钥泄露",
+        "拦截"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "安全工程师",
+        "运维工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-doublecheck",
@@ -2238,7 +3554,22 @@
       "repo": "PerryLink/dsh-doublecheck",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "交付质量把关",
+      "tagsZh": [
+        "交付",
+        "验收",
+        "测试",
+        "把关"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "项目经理",
+        "测试工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-draw",
@@ -2255,7 +3586,22 @@
       "repo": "PerryLink/dsh-draw",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "图片生成调度",
+      "tagsZh": [
+        "文生图",
+        "配图",
+        "绘图",
+        "路由"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "设计师",
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-fast",
@@ -2272,7 +3618,22 @@
       "repo": "PerryLink/dsh-fast",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "性能瓶颈诊断",
+      "tagsZh": [
+        "性能",
+        "时延",
+        "诊断",
+        "上下文"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "运维工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-fund-research",
@@ -2289,7 +3650,22 @@
       "repo": "PerryLink/dsh-fund-research",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "基金研究报告",
+      "tagsZh": [
+        "基金",
+        "研究报告",
+        "净值",
+        "数据溯源"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "研究员",
+        "投资经理"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
     },
     {
       "id": "dsh-industry-research",
@@ -2306,7 +3682,22 @@
       "repo": "PerryLink/dsh-industry-research",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "行业公司研究",
+      "tagsZh": [
+        "行业研究",
+        "公司",
+        "产业链",
+        "调研"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "研究员",
+        "咨询顾问"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-laya",
@@ -2323,7 +3714,21 @@
       "repo": "laya-family/dsh-laya",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "结构化决策支持",
+      "tagsZh": [
+        "决策",
+        "选项",
+        "评分",
+        "服务接口"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-library",
@@ -2340,7 +3745,22 @@
       "repo": "PerryLink/dsh-library",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "本地资料库检索",
+      "tagsZh": [
+        "资料库",
+        "检索",
+        "引用",
+        "文档"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "办公文员",
+        "研究员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-local-ai",
@@ -2357,7 +3777,21 @@
       "repo": "PerryLink/dsh-local-ai",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "本地模型接入",
+      "tagsZh": [
+        "本地模型",
+        "Ollama",
+        "离线",
+        "推理"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-lsp-actions",
@@ -2374,7 +3808,21 @@
       "repo": "PerryLink/dsh-lsp-actions",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "代码诊断与补全",
+      "tagsZh": [
+        "代码诊断",
+        "补全",
+        "格式化",
+        "编辑器"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-mask",
@@ -2391,7 +3839,23 @@
       "repo": "PerryLink/dsh-mask",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "个人信息脱敏",
+      "tagsZh": [
+        "脱敏",
+        "隐私",
+        "手机号",
+        "身份证",
+        "匿名化"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "安全工程师",
+        "法务"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-mcp-panel",
@@ -2408,7 +3872,24 @@
       "repo": "PerryLink/dsh-mcp-panel",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "外部工具管理",
+      "tagsZh": [
+        "MCP",
+        "工具接入",
+        "配置",
+        "诊断",
+        "服务器管理",
+        "调用测试"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "平台运营"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-memento",
@@ -2425,7 +3906,21 @@
       "repo": "PerryLink/dsh-memento",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "跨会话记忆",
+      "tagsZh": [
+        "记忆",
+        "跨会话",
+        "长期",
+        "审计"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-observe",
@@ -2442,7 +3937,22 @@
       "repo": "PerryLink/dsh-observe",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "链路追踪导出",
+      "tagsZh": [
+        "链路追踪",
+        "监控",
+        "OpenTelemetry",
+        "导出"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "运维工程师",
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-output-styles",
@@ -2459,7 +3969,22 @@
       "repo": "PerryLink/dsh-output-styles",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "回复风格切换",
+      "tagsZh": [
+        "风格",
+        "简洁",
+        "预设",
+        "回复"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "办公文员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-permission-rules",
@@ -2476,7 +4001,23 @@
       "repo": "PerryLink/dsh-permission-rules",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "权限规则配置",
+      "tagsZh": [
+        "权限",
+        "规则",
+        "审批",
+        "白名单",
+        "放行策略"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "运维工程师",
+        "安全工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-plugin-guide",
@@ -2493,7 +4034,21 @@
       "repo": "PerryLink/dsh-plugin-guide",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "扩展开发指南",
+      "tagsZh": [
+        "开发文档",
+        "API",
+        "版本兼容",
+        "示例"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-plugin-upgrade",
@@ -2510,7 +4065,21 @@
       "repo": "PerryLink/dsh-plugin-upgrade",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "版本升级迁移",
+      "tagsZh": [
+        "升级",
+        "版本",
+        "迁移",
+        "兼容"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-reach",
@@ -2527,7 +4096,24 @@
       "repo": "PerryLink/dsh-reach",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "聊天渠道审批",
+      "tagsZh": [
+        "微信",
+        "飞书",
+        "Telegram",
+        "消息推送",
+        "审批答复",
+        "远程确认"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "运维工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-research-report",
@@ -2544,7 +4130,22 @@
       "repo": "PerryLink/dsh-research-report",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "可溯源研究报告",
+      "tagsZh": [
+        "研究报告",
+        "证据",
+        "引用",
+        "成稿"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "研究员",
+        "分析师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-score",
@@ -2561,7 +4162,22 @@
       "repo": "PerryLink/dsh-score",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "五维质量评分",
+      "tagsZh": [
+        "评分",
+        "质量",
+        "证据",
+        "排行"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "平台运营",
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-session-sync",
@@ -2578,7 +4194,21 @@
       "repo": "PerryLink/dsh-session-sync",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "会话跨设备同步",
+      "tagsZh": [
+        "同步",
+        "会话",
+        "多设备",
+        "备份"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-talk",
@@ -2595,7 +4225,22 @@
       "repo": "PerryLink/dsh-talk",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "语音对话交互",
+      "tagsZh": [
+        "语音",
+        "对话",
+        "朗读",
+        "打断"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "办公文员"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-test-drive",
@@ -2612,7 +4257,22 @@
       "repo": "PerryLink/dsh-test-drive",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "隔离试装核验",
+      "tagsZh": [
+        "试装",
+        "沙箱",
+        "冒烟测试",
+        "清理"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "测试工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-translate",
@@ -2629,7 +4289,22 @@
       "repo": "PerryLink/dsh-translate",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "文本翻译校对",
+      "tagsZh": [
+        "翻译",
+        "文件翻译",
+        "质量检查",
+        "多语言",
+        "JSON修复"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-github",
@@ -2646,7 +4321,22 @@
       "repo": "PerryLink/dsh-github",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "代码评审对接",
+      "tagsZh": [
+        "代码评审",
+        "PR",
+        "CI",
+        "问题单"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "项目经理"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-plugin-doctor",
@@ -2663,7 +4353,22 @@
       "repo": "PerryLink/dsh-plugin-doctor",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "包结构冒烟检查",
+      "tagsZh": [
+        "结构检查",
+        "冒烟",
+        "体检",
+        "核验"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "测试工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-plugin-kit",
@@ -2680,7 +4385,21 @@
       "repo": "PerryLink/dsh-plugin-kit",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "公共组件工具箱",
+      "tagsZh": [
+        "工具库",
+        "组件",
+        "复用",
+        "骨架"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-skill-pack-security-provider",
@@ -2697,7 +4416,22 @@
       "repo": "PerryLink/dsh-skill-pack-security-provider",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "安全技能包供给",
+      "tagsZh": [
+        "安全",
+        "技能包",
+        "规则",
+        "供给"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "安全工程师",
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-ticktick",
@@ -2714,7 +4448,22 @@
       "repo": "PerryLink/dsh-ticktick",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
-      "mappingConfidence": "reviewed"
+      "mappingConfidence": "reviewed",
+      "displayNameZh": "滴答清单对接",
+      "tagsZh": [
+        "待办",
+        "清单",
+        "日程",
+        "任务"
+      ],
+      "taskFamilyZh": "行政办公",
+      "rolesZh": [
+        "办公文员",
+        "项目经理"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-community-bench",
@@ -2730,7 +4479,23 @@
       "npm": "dsh-community-bench",
       "repo": "PerryLink/dsh-community-bench",
       "source": "documented edge set",
-      "installScope": "catalog-only"
+      "installScope": "catalog-only",
+      "displayNameZh": "社区基准看板",
+      "tagsZh": [
+        "榜单",
+        "基准",
+        "评分",
+        "社区",
+        "公开分数"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "平台运营",
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-background-agents",
@@ -2746,7 +4511,21 @@
       "npm": "dsh-background-agents",
       "repo": "PerryLink/dsh-background-agents",
       "source": "documented edge set",
-      "installScope": "excluded-retired"
+      "installScope": "excluded-retired",
+      "displayNameZh": "后台长期任务",
+      "tagsZh": [
+        "后台",
+        "长任务",
+        "子任务",
+        "多会话"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-session-pin",
@@ -2762,7 +4541,21 @@
       "npm": "dsh-session-pin",
       "repo": "PerryLink/dsh-session-pin",
       "source": "documented edge set",
-      "installScope": "excluded-retired"
+      "installScope": "excluded-retired",
+      "displayNameZh": "会话置顶管理",
+      "tagsZh": [
+        "置顶",
+        "会话",
+        "侧边栏",
+        "排序"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-team-rooms",
@@ -2778,7 +4571,22 @@
       "npm": "dsh-team-rooms",
       "repo": "PerryLink/dsh-team-rooms",
       "source": "documented edge set",
-      "installScope": "excluded-retired"
+      "installScope": "excluded-retired",
+      "displayNameZh": "多会话协作室",
+      "tagsZh": [
+        "协作",
+        "团队",
+        "消息",
+        "任务板"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师",
+        "项目经理"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-kit",
@@ -2794,7 +4602,21 @@
       "npm": "dsh-kit",
       "repo": "PerryLink/dsh-kit",
       "source": "documented edge set",
-      "installScope": "infrastructure"
+      "installScope": "infrastructure",
+      "displayNameZh": "一键安装合集",
+      "tagsZh": [
+        "安装",
+        "合集",
+        "入门",
+        "打包"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-catalog",
@@ -2810,7 +4632,21 @@
       "npm": "dsh-catalog",
       "repo": "PerryLink/dsh-catalog",
       "source": "documented edge set",
-      "installScope": "infrastructure"
+      "installScope": "infrastructure",
+      "displayNameZh": "应用目录清单",
+      "tagsZh": [
+        "目录",
+        "清单",
+        "市场",
+        "元数据"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "平台运营"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     },
     {
       "id": "dsh-plugin-certification",
@@ -2826,7 +4662,22 @@
       "npm": "dsh-plugin-certification",
       "repo": "PerryLink/dsh-plugin-certification",
       "source": "documented edge set",
-      "installScope": "infrastructure"
+      "installScope": "infrastructure",
+      "displayNameZh": "认证评级登记",
+      "tagsZh": [
+        "认证",
+        "评级",
+        "登记",
+        "社区"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "平台运营",
+        "研发工程师"
+      ],
+      "industriesZh": [
+        "通用"
+      ]
     }
   ]
 }

@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSH 插件市场 — 按任务浏览</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+header{padding:40px 24px 16px;max-width:1120px;margin:0 auto}
+h1{margin:0 0 8px;font-size:30px}
+.sub{color:var(--muted);margin:0 0 20px}
+#q{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:16px}
+nav{display:flex;flex-wrap:wrap;gap:8px;padding:16px 24px;max-width:1120px;margin:0 auto}
+nav a{color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px}
+main{max-width:1120px;margin:0 auto;padding:0 24px 64px}
+section{margin:28px 0}
+h2{font-size:20px;border-bottom:1px solid var(--line);padding-bottom:8px}
+h2 small{color:var(--muted);font-weight:400;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h3{margin:0 0 4px;font-size:17px}
+.card .en{margin:0;color:var(--muted);font-size:12px}
+.card .meta{margin:6px 0;font-size:12px;color:var(--muted)}
+.card .roles{color:var(--accent)}
+.tags span{display:inline-block;background:#1f2937;color:#c9d1d9;border-radius:6px;padding:1px 8px;font-size:12px;margin:2px 4px 0 0}
+.pill{font-size:11px;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+.pill.frozen{background:#3d2b1f;color:#f0b72f}
+footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <h1>DSH 插件市场</h1>
+  <p class="sub">122 个插件，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
+  <input id="q" type="search" placeholder="试试：发票、对账、报关、合同、考勤…">
+</header>
+<nav><a href="#财务报销">财务报销 7</a><a href="#人力资源">人力资源 2</a><a href="#采购供应链">采购供应链 11</a><a href="#法务合同">法务合同 6</a><a href="#质量生产">质量生产 27</a><a href="#关务物流">关务物流 8</a><a href="#行政办公">行政办公 13</a><a href="#教育培训">教育培训 5</a><a href="#医疗健康">医疗健康 3</a><a href="#零售电商">零售电商 2</a><a href="#开发者工具">开发者工具 38</a></nav>
+<main>
+<section id="财务报销">
+  <h2>财务报销 <small>发票、对账、报销、成本 · 7</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-einvoice.html" data-search="发票查重 china e-invoice (file-level) 电子发票 发票查重 ofd 发票归档 去重 会计 财务共享专员">
+  <h3>发票查重</h3>
+  <p class="en">China e-invoice (file-level)</p>
+  <p class="meta"><code>0.2.0-alpha.11</code> <span class="roles">会计 · 财务共享专员</span></p>
+  <p class="tags"><span>电子发票</span><span>发票查重</span><span>OFD</span><span>发票归档</span></p>
+</a>
+<a class="card" href="packages/dsh-bankrec.html" data-search="银行流水对账 bank statement reconciliation 银行流水 对账 核账 勾稽 camt.053 出纳 会计">
+  <h3>银行流水对账</h3>
+  <p class="en">Bank statement reconciliation</p>
+  <p class="meta"><code>0.1.0-alpha.16</code> <span class="roles">出纳 · 会计</span></p>
+  <p class="tags"><span>银行流水</span><span>对账</span><span>核账</span><span>勾稽</span></p>
+</a>
+<a class="card" href="packages/dsh-ap-three-way.html" data-search="发票三单匹配 ap three-way match 三单匹配 发票 采购单 入库单 容差 应付会计 财务共享专员">
+  <h3>发票三单匹配</h3>
+  <p class="en">AP three-way match</p>
+  <p class="meta"><code>0.1.0-alpha.11</code> <span class="roles">应付会计 · 财务共享专员</span></p>
+  <p class="tags"><span>三单匹配</span><span>发票</span><span>采购单</span><span>入库单</span></p>
+</a>
+<a class="card" href="packages/dsh-travel-recon.html" data-search="差旅票据稽核 travel reconciliation &amp; policy check 差旅报销 票据核对 重复报销 费用政策 行程单 报销专员 会计">
+  <h3>差旅票据稽核</h3>
+  <p class="en">Travel reconciliation &amp; policy check</p>
+  <p class="meta"><code>0.1.0-alpha.13</code> <span class="roles">报销专员 · 会计</span></p>
+  <p class="tags"><span>差旅报销</span><span>票据核对</span><span>重复报销</span><span>费用政策</span></p>
+</a>
+<a class="card" href="packages/dsh-excel-reconcile.html" data-search="双表对账查差异 dsh-excel-reconcile 对账 核账 勾对 差异 两表比对 会计 出纳">
+  <h3>双表对账查差异</h3>
+  <p class="en">dsh-excel-reconcile</p>
+  <p class="meta"><code>0.1.1</code> <span class="roles">会计 · 出纳</span></p>
+  <p class="tags"><span>对账</span><span>核账</span><span>勾对</span><span>差异</span></p>
+</a>
+<a class="card" href="packages/dsh-invoice-ledger.html" data-search="发票台账核验 dsh-invoice-ledger 发票 票据 台账 查重 勾稽 会计 税务专员">
+  <h3>发票台账核验</h3>
+  <p class="en">dsh-invoice-ledger</p>
+  <p class="meta"><code>0.1.0</code> <span class="roles">会计 · 税务专员</span></p>
+  <p class="tags"><span>发票</span><span>票据</span><span>台账</span><span>查重</span></p>
+</a>
+<a class="card" href="packages/dsh-finops-suite.html" data-search="财务运营套件 finance ops suite 财务 报销 银行对账 三单匹配 差旅 财务经理 会计">
+  <h3>财务运营套件</h3>
+  <p class="en">Finance ops suite</p>
+  <p class="meta"><code>0.1.0-alpha.9</code> <span class="roles">财务经理 · 会计</span></p>
+  <p class="tags"><span>财务</span><span>报销</span><span>银行对账</span><span>三单匹配</span></p>
+</a></div>
+</section>
+<section id="人力资源">
+  <h2>人力资源 <small>入离职、合同、考勤 · 2</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-learning-gap-check.html" data-search="能力差距培养评估 dsh-learning-gap-check 能力差距 培养计划 人才梯队 培训 培训专员 hrbp">
+  <h3>能力差距培养评估</h3>
+  <p class="en">dsh-learning-gap-check</p>
+  <p class="meta"> <span class="roles">培训专员 · HRBP</span></p>
+  <p class="tags"><span>能力差距</span><span>培养计划</span><span>人才梯队</span><span>培训</span></p>
+</a>
+<a class="card" href="packages/dsh-payroll-audit.html" data-search="工资核算复核 dsh-payroll-audit 工资 薪酬 薪资 算薪 个税 薪酬专员 人力资源专员">
+  <h3>工资核算复核</h3>
+  <p class="en">dsh-payroll-audit</p>
+  <p class="meta"><code>0.1.0</code> <span class="roles">薪酬专员 · 人力资源专员</span></p>
+  <p class="tags"><span>工资</span><span>薪酬</span><span>薪资</span><span>算薪</span></p>
+</a></div>
+</section>
+<section id="采购供应链">
+  <h2>采购供应链 <small>询价、比价、准入、履约 · 11</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-ifc-qto.html" data-search="模型工程量提取 ifc quantity takeoff ifc bim 工程量 算量 清单 造价工程师 施工员">
+  <h3>模型工程量提取</h3>
+  <p class="en">IFC quantity takeoff</p>
+  <p class="meta"><code>0.1.0-alpha.13</code> <span class="roles">造价工程师 · 施工员</span></p>
+  <p class="tags"><span>IFC</span><span>BIM</span><span>工程量</span><span>算量</span></p>
+</a>
+<a class="card" href="packages/dsh-forecast-penalty.html" data-search="预测考核费用测算 dsh-forecast-penalty 预测准确率 考核费用 供应链 结算 供应链计划员 采购员">
+  <h3>预测考核费用测算</h3>
+  <p class="en">dsh-forecast-penalty</p>
+  <p class="meta"> <span class="roles">供应链计划员 · 采购员</span></p>
+  <p class="tags"><span>预测准确率</span><span>考核费用</span><span>供应链</span><span>结算</span></p>
+</a>
+<a class="card" href="packages/dsh-bid-ca-precheck.html" data-search="投标符合性预检 dsh-bid-ca-precheck 投标文件 符合性 逐条响应 招标文件 投标专员 商务专员">
+  <h3>投标符合性预检</h3>
+  <p class="en">dsh-bid-ca-precheck</p>
+  <p class="meta"> <span class="roles">投标专员 · 商务专员</span></p>
+  <p class="tags"><span>投标文件</span><span>符合性</span><span>逐条响应</span><span>招标文件</span></p>
+</a>
+<a class="card" href="packages/dsh-bid-qual-check.html" data-search="投标资格条件审查 dsh-bid-qual-check 投标资格 资格条件 证明材料 否决项 投标专员 采购员">
+  <h3>投标资格条件审查</h3>
+  <p class="en">dsh-bid-qual-check</p>
+  <p class="meta"> <span class="roles">投标专员 · 采购员</span></p>
+  <p class="tags"><span>投标资格</span><span>资格条件</span><span>证明材料</span><span>否决项</span></p>
+</a>
+<a class="card" href="packages/dsh-contract-stance.html" data-search="合同立场台账梳理 dsh-contract-stance 合同条款 立场 风险等级 退让底线 商务专员 法务">
+  <h3>合同立场台账梳理</h3>
+  <p class="en">dsh-contract-stance</p>
+  <p class="meta"> <span class="roles">商务专员 · 法务</span></p>
+  <p class="tags"><span>合同条款</span><span>立场</span><span>风险等级</span><span>退让底线</span></p>
+</a>
+<a class="card" href="packages/dsh-protest-deadline.html" data-search="质疑投诉期限测算 dsh-protest-deadline 质疑 投诉 法定期限 政府采购 投标专员 法务">
+  <h3>质疑投诉期限测算</h3>
+  <p class="en">dsh-protest-deadline</p>
+  <p class="meta"> <span class="roles">投标专员 · 法务</span></p>
+  <p class="tags"><span>质疑</span><span>投诉</span><span>法定期限</span><span>政府采购</span></p>
+</a>
+<a class="card" href="packages/dsh-rulefile-check.html" data-search="规则库自检 dsh-rulefile-check 规则库 条款引用 效力 自检 招标代理 评标专家">
+  <h3>规则库自检</h3>
+  <p class="en">dsh-rulefile-check</p>
+  <p class="meta"> <span class="roles">招标代理 · 评标专家</span></p>
+  <p class="tags"><span>规则库</span><span>条款引用</span><span>效力</span><span>自检</span></p>
+</a>
+<a class="card" href="packages/dsh-tender-extract.html" data-search="招标条款逐字摘录 dsh-tender-extract 招标文件 条款摘录 出处 原文 投标专员 招标代理">
+  <h3>招标条款逐字摘录</h3>
+  <p class="en">dsh-tender-extract</p>
+  <p class="meta"> <span class="roles">投标专员 · 招标代理</span></p>
+  <p class="tags"><span>招标文件</span><span>条款摘录</span><span>出处</span><span>原文</span></p>
+</a>
+<a class="card" href="packages/dsh-tender-matrix.html" data-search="评标评分矩阵校验 dsh-tender-matrix 评标 评分矩阵 分值合计 评标办法 评标专家 招标代理">
+  <h3>评标评分矩阵校验</h3>
+  <p class="en">dsh-tender-matrix</p>
+  <p class="meta"> <span class="roles">评标专家 · 招标代理</span></p>
+  <p class="tags"><span>评标</span><span>评分矩阵</span><span>分值合计</span><span>评标办法</span></p>
+</a>
+<a class="card" href="packages/dsh-bid-health-check.html" data-search="投标响应覆盖检查 dsh-bid-health-check 投标 招标 响应 应答 偏离 投标专员 商务经理">
+  <h3>投标响应覆盖检查</h3>
+  <p class="en">dsh-bid-health-check</p>
+  <p class="meta"><code>0.1.0</code> <span class="roles">投标专员 · 商务经理</span></p>
+  <p class="tags"><span>投标</span><span>招标</span><span>响应</span><span>应答</span></p>
+</a>
+<a class="card" href="packages/dsh-tender-requirements.html" data-search="招标文件要点提取 dsh-tender-requirements 招标文件 要点 资格条件 检索 摘录 投标专员 采购员">
+  <h3>招标文件要点提取</h3>
+  <p class="en">dsh-tender-requirements</p>
+  <p class="meta"><code>0.2.0</code> <span class="roles">投标专员 · 采购员</span></p>
+  <p class="tags"><span>招标文件</span><span>要点</span><span>资格条件</span><span>检索</span></p>
+</a></div>
+</section>
+<section id="法务合同">
+  <h2>法务合同 <small>条款、风险、到期 · 6</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-legal-intake.html" data-search="法务需求收件 legal request intake 法务需求 邮件受理 需求登记 线程去重 法务助理 法务专员">
+  <h3>法务需求收件</h3>
+  <p class="en">Legal request intake</p>
+  <p class="meta"><code>0.1.0-alpha.10</code> <span class="roles">法务助理 · 法务专员</span></p>
+  <p class="tags"><span>法务需求</span><span>邮件受理</span><span>需求登记</span><span>线程去重</span></p>
+</a>
+<a class="card" href="packages/dsh-legal-clause.html" data-search="合同条款体检 contract clause &amp; playbook review 合同审查 条款比对 缺漏条款 风险条款 审查清单 法务 合同管理员">
+  <h3>合同条款体检</h3>
+  <p class="en">Contract clause &amp; playbook review</p>
+  <p class="meta"><code>0.1.0-alpha.12</code> <span class="roles">法务 · 合同管理员</span></p>
+  <p class="tags"><span>合同审查</span><span>条款比对</span><span>缺漏条款</span><span>风险条款</span></p>
+</a>
+<a class="card" href="packages/dsh-evidence-check.html" data-search="证据清单齐备核验 dsh-evidence-check 证据清单 举证 待证事实 齐备性 律师 法务专员">
+  <h3>证据清单齐备核验</h3>
+  <p class="en">dsh-evidence-check</p>
+  <p class="meta"> <span class="roles">律师 · 法务专员</span></p>
+  <p class="tags"><span>证据清单</span><span>举证</span><span>待证事实</span><span>齐备性</span></p>
+</a>
+<a class="card" href="packages/dsh-lawcite-adapter.html" data-search="法条引用校对 dsh-lawcite-adapter 法条 条号 效力状态 引用 律师 法务专员">
+  <h3>法条引用校对</h3>
+  <p class="en">dsh-lawcite-adapter</p>
+  <p class="meta"> <span class="roles">律师 · 法务专员</span></p>
+  <p class="tags"><span>法条</span><span>条号</span><span>效力状态</span><span>引用</span></p>
+</a>
+<a class="card" href="packages/dsh-pleading-draft.html" data-search="起诉状要素核对 dsh-pleading-draft 起诉状 诉请 事实理由 证据 法条 律师 法务专员">
+  <h3>起诉状要素核对</h3>
+  <p class="en">dsh-pleading-draft</p>
+  <p class="meta"> <span class="roles">律师 · 法务专员</span></p>
+  <p class="tags"><span>起诉状</span><span>诉请</span><span>事实理由</span><span>证据</span></p>
+</a>
+<a class="card" href="packages/dsh-contract-suite.html" data-search="合同法务套件 contract ops suite 合同 法务 条款 审查 合同审查 法务 合同管理员">
+  <h3>合同法务套件</h3>
+  <p class="en">Contract ops suite</p>
+  <p class="meta"><code>0.1.0-alpha.8</code> <span class="roles">法务 · 合同管理员</span></p>
+  <p class="tags"><span>合同</span><span>法务</span><span>条款</span><span>审查</span></p>
+</a></div>
+</section>
+<section id="质量生产">
+  <h2>质量生产 <small>不合格、8D、审核、检验 · 27</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-ghg.html" data-search="用电碳排放（范围二） electricity ghg (scope 2) 碳排放 范围二 用电量 排放因子 esg 环保专员 能源管理员">
+  <h3>用电碳排放（范围二）</h3>
+  <p class="en">Electricity GHG (Scope 2)</p>
+  <p class="meta"><code>0.1.0-alpha.17</code> <span class="roles">环保专员 · 能源管理员</span></p>
+  <p class="tags"><span>碳排放</span><span>范围二</span><span>用电量</span><span>排放因子</span></p>
+</a>
+<a class="card" href="packages/dsh-qms-capa.html" data-search="质量问题闭环跟踪 qms ncr, capa &amp; 8d 质量问题 ncr capa 8d 纠正措施 质量工程师 质检员">
+  <h3>质量问题闭环跟踪</h3>
+  <p class="en">QMS NCR, CAPA &amp; 8D</p>
+  <p class="meta"><code>0.1.0-alpha.12</code> <span class="roles">质量工程师 · 质检员</span></p>
+  <p class="tags"><span>质量问题</span><span>NCR</span><span>CAPA</span><span>8D</span></p>
+</a>
+<a class="card" href="packages/dsh-railway-window.html" data-search="铁路天窗台账复核 dsh-railway-window 铁路施工 天窗 施工计划 营业线 台账 施工员 铁路工程师">
+  <h3>铁路天窗台账复核</h3>
+  <p class="en">dsh-railway-window</p>
+  <p class="meta"> <span class="roles">施工员 · 铁路工程师</span></p>
+  <p class="tags"><span>铁路施工</span><span>天窗</span><span>施工计划</span><span>营业线</span></p>
+</a>
+<a class="card" href="packages/dsh-fmea-table-check.html" data-search="失效分析表核对 dsh-fmea-table-check fmea 失效分析 风险顺序数 质量工具 质量工程师 工艺工程师">
+  <h3>失效分析表核对</h3>
+  <p class="en">dsh-fmea-table-check</p>
+  <p class="meta"> <span class="roles">质量工程师 · 工艺工程师</span></p>
+  <p class="tags"><span>FMEA</span><span>失效分析</span><span>风险顺序数</span><span>质量工具</span></p>
+</a>
+<a class="card" href="packages/dsh-pipeline-check.html" data-search="项目文件链条联查 dsh-pipeline-check 项目文件 文件链条 环节先后 金额口径 项目经理 内控专员">
+  <h3>项目文件链条联查</h3>
+  <p class="en">dsh-pipeline-check</p>
+  <p class="meta"> <span class="roles">项目经理 · 内控专员</span></p>
+  <p class="tags"><span>项目文件</span><span>文件链条</span><span>环节先后</span><span>金额口径</span></p>
+</a>
+<a class="card" href="packages/dsh-ppap-check.html" data-search="生产件批准放行 dsh-ppap-check ppap 样件批准 提交等级 供应商 量产 质量工程师 供应商质量工程师">
+  <h3>生产件批准放行</h3>
+  <p class="en">dsh-ppap-check</p>
+  <p class="meta"> <span class="roles">质量工程师 · 供应商质量工程师</span></p>
+  <p class="tags"><span>PPAP</span><span>样件批准</span><span>提交等级</span><span>供应商</span></p>
+</a>
+<a class="card" href="packages/dsh-repair-order-qc.html" data-search="维修结算单核算 dsh-repair-order-qc 维修工单 结算 配件工时 售后 售后主管 结算员">
+  <h3>维修结算单核算</h3>
+  <p class="en">dsh-repair-order-qc</p>
+  <p class="meta"> <span class="roles">售后主管 · 结算员</span></p>
+  <p class="tags"><span>维修工单</span><span>结算</span><span>配件工时</span><span>售后</span></p>
+</a>
+<a class="card" href="packages/dsh-spc-gbt-adapter.html" data-search="过程能力指数计算 dsh-spc-gbt-adapter spc 控制图 过程能力 cpk 国标 质量工程师 工艺工程师">
+  <h3>过程能力指数计算</h3>
+  <p class="en">dsh-spc-gbt-adapter</p>
+  <p class="meta"> <span class="roles">质量工程师 · 工艺工程师</span></p>
+  <p class="tags"><span>SPC</span><span>控制图</span><span>过程能力</span><span>CPK</span></p>
+</a>
+<a class="card" href="packages/dsh-warranty-calc.html" data-search="质保索赔金额核算 dsh-warranty-calc 质保期 索赔 保修 里程 金额核算 售后专员 质量工程师">
+  <h3>质保索赔金额核算</h3>
+  <p class="en">dsh-warranty-calc</p>
+  <p class="meta"> <span class="roles">售后专员 · 质量工程师</span></p>
+  <p class="tags"><span>质保期</span><span>索赔</span><span>保修</span><span>里程</span></p>
+</a>
+<a class="card" href="packages/dsh-aqua-input-check.html" data-search="水产投入品核查 dsh-aqua-input-check 水产养殖 投入品 渔药 休药期 饲料添加剂 养殖技术员 质检员">
+  <h3>水产投入品核查</h3>
+  <p class="en">dsh-aqua-input-check</p>
+  <p class="meta"> <span class="roles">养殖技术员 · 质检员</span></p>
+  <p class="tags"><span>水产养殖</span><span>投入品</span><span>渔药</span><span>休药期</span></p>
+</a>
+<a class="card" href="packages/dsh-drill-script-check.html" data-search="演练脚本要素清点 dsh-drill-script-check 应急演练 演练脚本 响应分级 要素齐备 安全员 应急管理员">
+  <h3>演练脚本要素清点</h3>
+  <p class="en">dsh-drill-script-check</p>
+  <p class="meta"> <span class="roles">安全员 · 应急管理员</span></p>
+  <p class="tags"><span>应急演练</span><span>演练脚本</span><span>响应分级</span><span>要素齐备</span></p>
+</a>
+<a class="card" href="packages/dsh-emergency-plan.html" data-search="应急预案要素审查 dsh-emergency-plan 应急预案 要素齐备 条款定位 备案 安全员 环保专员">
+  <h3>应急预案要素审查</h3>
+  <p class="en">dsh-emergency-plan</p>
+  <p class="meta"> <span class="roles">安全员 · 环保专员</span></p>
+  <p class="tags"><span>应急预案</span><span>要素齐备</span><span>条款定位</span><span>备案</span></p>
+</a>
+<a class="card" href="packages/dsh-hazchem-check.html" data-search="危化品临界量辨识 dsh-hazchem-check 危化品 重大危险源 临界量 储存 安全员 仓管员">
+  <h3>危化品临界量辨识</h3>
+  <p class="en">dsh-hazchem-check</p>
+  <p class="meta"> <span class="roles">安全员 · 仓管员</span></p>
+  <p class="tags"><span>危化品</span><span>重大危险源</span><span>临界量</span><span>储存</span></p>
+</a>
+<a class="card" href="packages/dsh-hidden-risk-map.html" data-search="重大隐患判定映射 dsh-hidden-risk-map 重大隐患 判定标准 隐患台账 条款映射 安全员 环保专员">
+  <h3>重大隐患判定映射</h3>
+  <p class="en">dsh-hidden-risk-map</p>
+  <p class="meta"> <span class="roles">安全员 · 环保专员</span></p>
+  <p class="tags"><span>重大隐患</span><span>判定标准</span><span>隐患台账</span><span>条款映射</span></p>
+</a>
+<a class="card" href="packages/dsh-power-loss-split.html" data-search="线损电量拆分 dsh-power-loss-split 线损 电量拆分 考核表 供电 电气工程师 安全员">
+  <h3>线损电量拆分</h3>
+  <p class="en">dsh-power-loss-split</p>
+  <p class="meta"> <span class="roles">电气工程师 · 安全员</span></p>
+  <p class="tags"><span>线损</span><span>电量拆分</span><span>考核表</span><span>供电</span></p>
+</a>
+<a class="card" href="packages/dsh-power-ticket-check.html" data-search="电力工作票核查 dsh-power-ticket-check 工作票 两票 签发许可 电力安全 电气工程师 安全员">
+  <h3>电力工作票核查</h3>
+  <p class="en">dsh-power-ticket-check</p>
+  <p class="meta"> <span class="roles">电气工程师 · 安全员</span></p>
+  <p class="tags"><span>工作票</span><span>两票</span><span>签发许可</span><span>电力安全</span></p>
+</a>
+<a class="card" href="packages/dsh-eia-guide-check.html" data-search="环评导则适用判定 dsh-eia-guide-check 环评 导则 适用性 执行标准 环评工程师 施工员">
+  <h3>环评导则适用判定</h3>
+  <p class="en">dsh-eia-guide-check</p>
+  <p class="meta"> <span class="roles">环评工程师 · 施工员</span></p>
+  <p class="tags"><span>环评</span><span>导则</span><span>适用性</span><span>执行标准</span></p>
+</a>
+<a class="card" href="packages/dsh-guard-plan-qc.html" data-search="劳保用品配置核对 dsh-guard-plan-qc 劳保用品 安全防护 配备标准 配置数量 安全员 施工员">
+  <h3>劳保用品配置核对</h3>
+  <p class="en">dsh-guard-plan-qc</p>
+  <p class="meta"> <span class="roles">安全员 · 施工员</span></p>
+  <p class="tags"><span>劳保用品</span><span>安全防护</span><span>配备标准</span><span>配置数量</span></p>
+</a>
+<a class="card" href="packages/dsh-hazplan-check.html" data-search="偏差分析表复核 dsh-hazplan-check hazop 偏差分析 危险可操作性 分析表 工艺工程师 安全员">
+  <h3>偏差分析表复核</h3>
+  <p class="en">dsh-hazplan-check</p>
+  <p class="meta"> <span class="roles">工艺工程师 · 安全员</span></p>
+  <p class="tags"><span>HAZOP</span><span>偏差分析</span><span>危险可操作性</span><span>分析表</span></p>
+</a>
+<a class="card" href="packages/dsh-permit-report-check.html" data-search="行政许可材料核查 dsh-permit-report-check 行政许可 申请材料 法定时限 办理台账 行政专员 政务人员">
+  <h3>行政许可材料核查</h3>
+  <p class="en">dsh-permit-report-check</p>
+  <p class="meta"> <span class="roles">行政专员 · 政务人员</span></p>
+  <p class="tags"><span>行政许可</span><span>申请材料</span><span>法定时限</span><span>办理台账</span></p>
+</a>
+<a class="card" href="packages/dsh-safety-brief-check.html" data-search="安全交底签字闭环 dsh-safety-brief-check 安全交底 技术交底 签字 施工安全 施工员 安全员">
+  <h3>安全交底签字闭环</h3>
+  <p class="en">dsh-safety-brief-check</p>
+  <p class="meta"> <span class="roles">施工员 · 安全员</span></p>
+  <p class="tags"><span>安全交底</span><span>技术交底</span><span>签字</span><span>施工安全</span></p>
+</a>
+<a class="card" href="packages/dsh-site-log-check.html" data-search="监理日志连续检查 dsh-site-log-check 监理日志 旁站 跨日连续 监理 监理员 施工员">
+  <h3>监理日志连续检查</h3>
+  <p class="en">dsh-site-log-check</p>
+  <p class="meta"> <span class="roles">监理员 · 施工员</span></p>
+  <p class="tags"><span>监理日志</span><span>旁站</span><span>跨日连续</span><span>监理</span></p>
+</a>
+<a class="card" href="packages/dsh-soilwater-check.html" data-search="土壤地下水核验 dsh-soilwater-check 土壤 地下水 监测点位 超标判定 环保专员 环评工程师">
+  <h3>土壤地下水核验</h3>
+  <p class="en">dsh-soilwater-check</p>
+  <p class="meta"> <span class="roles">环保专员 · 环评工程师</span></p>
+  <p class="tags"><span>土壤</span><span>地下水</span><span>监测点位</span><span>超标判定</span></p>
+</a>
+<a class="card" href="packages/dsh-sop-sync-check.html" data-search="作业规程同步检查 dsh-sop-sync-check 作业规程 sop 版本一致 制度落地 质量工程师 内审员">
+  <h3>作业规程同步检查</h3>
+  <p class="en">dsh-sop-sync-check</p>
+  <p class="meta"> <span class="roles">质量工程师 · 内审员</span></p>
+  <p class="tags"><span>作业规程</span><span>SOP</span><span>版本一致</span><span>制度落地</span></p>
+</a>
+<a class="card" href="packages/dsh-canteen-retention-check.html" data-search="食堂留样台账核对 dsh-canteen-retention-check 食堂 留样 台账 食品安全 食品留样 食品安全员 食堂管理员">
+  <h3>食堂留样台账核对</h3>
+  <p class="en">dsh-canteen-retention-check</p>
+  <p class="meta"><code>0.2.0</code> <span class="roles">食品安全员 · 食堂管理员</span></p>
+  <p class="tags"><span>食堂</span><span>留样</span><span>台账</span><span>食品安全</span></p>
+</a>
+<a class="card" href="packages/dsh-construction-doc-check.html" data-search="施工资料齐套检查 dsh-construction-doc-check 施工资料 竣工 齐套 资料齐全 资料版本 资料员 施工员">
+  <h3>施工资料齐套检查</h3>
+  <p class="en">dsh-construction-doc-check</p>
+  <p class="meta"><code>0.1.1</code> <span class="roles">资料员 · 施工员</span></p>
+  <p class="tags"><span>施工资料</span><span>竣工</span><span>齐套</span><span>资料齐全</span></p>
+</a>
+<a class="card" href="packages/dsh-safety-ledger-check.html" data-search="安全资质台账核对 dsh-safety-ledger-check 安全资质 台账 施工 证件有效期 安全员 资料员">
+  <h3>安全资质台账核对</h3>
+  <p class="en">dsh-safety-ledger-check</p>
+  <p class="meta"><code>0.1.0</code> <span class="roles">安全员 · 资料员</span></p>
+  <p class="tags"><span>安全资质</span><span>台账</span><span>施工</span><span>证件有效期</span></p>
+</a></div>
+</section>
+<section id="关务物流">
+  <h2>关务物流 <small>归类、单证、运费 · 8</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-hs-candidate.html" data-search="hs 候选预检 hs candidate precheck hs 编码 商品归类 预归类 申报要素 关税 关务 报关员">
+  <h3>HS 候选预检</h3>
+  <p class="en">HS candidate precheck</p>
+  <p class="meta"><code>0.1.0-alpha.12</code> <span class="roles">关务 · 报关员</span></p>
+  <p class="tags"><span>HS 编码</span><span>商品归类</span><span>预归类</span><span>申报要素</span></p>
+</a>
+<a class="card" href="packages/dsh-freight-audit.html" data-search="运费账单审计 freight bill audit 运费 账单审计 费率表 承运商 运费差异 物流专员 应付会计">
+  <h3>运费账单审计</h3>
+  <p class="en">Freight bill audit</p>
+  <p class="meta"><code>0.1.0-alpha.13</code> <span class="roles">物流专员 · 应付会计</span></p>
+  <p class="tags"><span>运费</span><span>账单审计</span><span>费率表</span><span>承运商</span></p>
+</a>
+<a class="card" href="packages/dsh-customs-doc-check.html" data-search="报关单证比对 dsh-customs-doc-check 报关单 单证一致 申报要素 海关 报关员 关务">
+  <h3>报关单证比对</h3>
+  <p class="en">dsh-customs-doc-check</p>
+  <p class="meta"> <span class="roles">报关员 · 关务</span></p>
+  <p class="tags"><span>报关单</span><span>单证一致</span><span>申报要素</span><span>海关</span></p>
+</a>
+<a class="card" href="packages/dsh-demurrage-ledger.html" data-search="滞箱费台账核验 dsh-demurrage-ledger 滞箱费 滞期费 免箱期 海运 台账 关务 物流专员">
+  <h3>滞箱费台账核验</h3>
+  <p class="en">dsh-demurrage-ledger</p>
+  <p class="meta"> <span class="roles">关务 · 物流专员</span></p>
+  <p class="tags"><span>滞箱费</span><span>滞期费</span><span>免箱期</span><span>海运</span></p>
+</a>
+<a class="card" href="packages/dsh-export-ctl-check.html" data-search="出口管制物项筛查 dsh-export-ctl-check 出口管制 管制清单 两用物项 最终用途 许可证 关务 合规专员">
+  <h3>出口管制物项筛查</h3>
+  <p class="en">dsh-export-ctl-check</p>
+  <p class="meta"> <span class="roles">关务 · 合规专员</span></p>
+  <p class="tags"><span>出口管制</span><span>管制清单</span><span>两用物项</span><span>最终用途</span></p>
+</a>
+<a class="card" href="packages/dsh-hs-classify.html" data-search="商品归类层级校验 dsh-hs-classify hs 编码 商品归类 税则 章品目子目 层级 归类师 关务">
+  <h3>商品归类层级校验</h3>
+  <p class="en">dsh-hs-classify</p>
+  <p class="meta"> <span class="roles">归类师 · 关务</span></p>
+  <p class="tags"><span>HS 编码</span><span>商品归类</span><span>税则</span><span>章品目子目</span></p>
+</a>
+<a class="card" href="packages/dsh-lc-doc-check.html" data-search="信用证不符点筛查 dsh-lc-doc-check 信用证 不符点 交单 ucp600 审单 单证员 外贸业务员">
+  <h3>信用证不符点筛查</h3>
+  <p class="en">dsh-lc-doc-check</p>
+  <p class="meta"> <span class="roles">单证员 · 外贸业务员</span></p>
+  <p class="tags"><span>信用证</span><span>不符点</span><span>交单</span><span>UCP600</span></p>
+</a>
+<a class="card" href="packages/dsh-origin-rvc-check.html" data-search="原产地成分核算 dsh-origin-rvc-check 原产地证 区域价值成分 rvc 自贸协定 优惠税率 关务 单证员">
+  <h3>原产地成分核算</h3>
+  <p class="en">dsh-origin-rvc-check</p>
+  <p class="meta"> <span class="roles">关务 · 单证员</span></p>
+  <p class="tags"><span>原产地证</span><span>区域价值成分</span><span>RVC</span><span>自贸协定</span></p>
+</a></div>
+</section>
+<section id="行政办公">
+  <h2>行政办公 <small>文档、表格、档案、会议 · 13</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-docx-redline.html" data-search="文档正文差异比对 docx inspect &amp; text diff word 文档 文本比对 版本差异 文档校验 行政专员 文员">
+  <h3>文档正文差异比对</h3>
+  <p class="en">DOCX inspect &amp; text diff</p>
+  <p class="meta"><code>0.1.0-alpha.13</code> <span class="roles">行政专员 · 文员</span></p>
+  <p class="tags"><span>Word 文档</span><span>文本比对</span><span>版本差异</span><span>文档校验</span></p>
+</a>
+<a class="card" href="packages/dsh-policy-ledger.html" data-search="安装诊断 install doctor 安装诊断 插件安装 故障排查 安装日志 运维工程师 开发者">
+  <h3>安装诊断</h3>
+  <p class="en">Install doctor</p>
+  <p class="meta"><code>0.2.0-alpha.13</code> <span class="roles">运维工程师 · 开发者</span></p>
+  <p class="tags"><span>安装诊断</span><span>插件安装</span><span>故障排查</span><span>安装日志</span></p>
+</a>
+<a class="card" href="packages/dsh-policy-brief-draft.html" data-search="政策专报要素审定 dsh-policy-brief-draft 政策专报 观点依据 出处 决策参考 政务人员 研究员">
+  <h3>政策专报要素审定</h3>
+  <p class="en">dsh-policy-brief-draft</p>
+  <p class="meta"> <span class="roles">政务人员 · 研究员</span></p>
+  <p class="tags"><span>政策专报</span><span>观点依据</span><span>出处</span><span>决策参考</span></p>
+</a>
+<a class="card" href="packages/dsh-archive-check.html" data-search="档案归档查验 dsh-archive-check 归档 档案 保管期限 完整性 档案管理员 政务人员">
+  <h3>档案归档查验</h3>
+  <p class="en">dsh-archive-check</p>
+  <p class="meta"> <span class="roles">档案管理员 · 政务人员</span></p>
+  <p class="tags"><span>归档</span><span>档案</span><span>保管期限</span><span>完整性</span></p>
+</a>
+<a class="card" href="packages/dsh-gongwen-flow-check.html" data-search="公文流转时限检查 dsh-gongwen-flow-check 公文 流转 办理时限 环节 政务人员 办公室文员">
+  <h3>公文流转时限检查</h3>
+  <p class="en">dsh-gongwen-flow-check</p>
+  <p class="meta"> <span class="roles">政务人员 · 办公室文员</span></p>
+  <p class="tags"><span>公文</span><span>流转</span><span>办理时限</span><span>环节</span></p>
+</a>
+<a class="card" href="packages/dsh-gongwen-word-check.html" data-search="公文格式要素校对 dsh-gongwen-word-check 公文格式 版头 主体要素 党政机关公文 办公室文员 政务人员">
+  <h3>公文格式要素校对</h3>
+  <p class="en">dsh-gongwen-word-check</p>
+  <p class="meta"> <span class="roles">办公室文员 · 政务人员</span></p>
+  <p class="tags"><span>公文格式</span><span>版头</span><span>主体要素</span><span>党政机关公文</span></p>
+</a>
+<a class="card" href="packages/dsh-soe-decision-check.html" data-search="国企决策合规检查 dsh-soe-decision-check 国企 三重一大 决策 合规 合规专员 纪检专员 行政专员">
+  <h3>国企决策合规检查</h3>
+  <p class="en">dsh-soe-decision-check</p>
+  <p class="meta"> <span class="roles">合规专员 · 纪检专员</span></p>
+  <p class="tags"><span>国企</span><span>三重一大</span><span>决策</span><span>合规</span></p>
+</a>
+<a class="card" href="packages/dsh-table-ingest.html" data-search="表格数据提取 dsh-table-ingest 表格 提取 excel 数据转换 结构化 数据分析师 办公文员">
+  <h3>表格数据提取</h3>
+  <p class="en">dsh-table-ingest</p>
+  <p class="meta"><code>0.2.0</code> <span class="roles">数据分析师 · 办公文员</span></p>
+  <p class="tags"><span>表格</span><span>提取</span><span>Excel</span><span>数据转换</span></p>
+</a>
+<a class="card" href="packages/dsh-fund-research.html" data-search="基金研究报告 dsh-fund-research 基金 研究报告 净值 数据溯源 研究员 投资经理">
+  <h3>基金研究报告</h3>
+  <p class="en">dsh-fund-research</p>
+  <p class="meta"> <span class="roles">研究员 · 投资经理</span></p>
+  <p class="tags"><span>基金</span><span>研究报告</span><span>净值</span><span>数据溯源</span></p>
+</a>
+<a class="card" href="packages/dsh-industry-research.html" data-search="行业公司研究 dsh-industry-research 行业研究 公司 产业链 调研 研究员 咨询顾问">
+  <h3>行业公司研究</h3>
+  <p class="en">dsh-industry-research</p>
+  <p class="meta"> <span class="roles">研究员 · 咨询顾问</span></p>
+  <p class="tags"><span>行业研究</span><span>公司</span><span>产业链</span><span>调研</span></p>
+</a>
+<a class="card" href="packages/dsh-library.html" data-search="本地资料库检索 dsh-library 资料库 检索 引用 文档 办公文员 研究员">
+  <h3>本地资料库检索</h3>
+  <p class="en">dsh-library</p>
+  <p class="meta"> <span class="roles">办公文员 · 研究员</span></p>
+  <p class="tags"><span>资料库</span><span>检索</span><span>引用</span><span>文档</span></p>
+</a>
+<a class="card" href="packages/dsh-research-report.html" data-search="可溯源研究报告 dsh-research-report 研究报告 证据 引用 成稿 研究员 分析师">
+  <h3>可溯源研究报告</h3>
+  <p class="en">dsh-research-report</p>
+  <p class="meta"> <span class="roles">研究员 · 分析师</span></p>
+  <p class="tags"><span>研究报告</span><span>证据</span><span>引用</span><span>成稿</span></p>
+</a>
+<a class="card" href="packages/dsh-ticktick.html" data-search="滴答清单对接 dsh-ticktick 待办 清单 日程 任务 办公文员 项目经理">
+  <h3>滴答清单对接</h3>
+  <p class="en">dsh-ticktick</p>
+  <p class="meta"> <span class="roles">办公文员 · 项目经理</span></p>
+  <p class="tags"><span>待办</span><span>清单</span><span>日程</span><span>任务</span></p>
+</a></div>
+</section>
+<section id="教育培训">
+  <h2>教育培训 <small>教案、作业、学情 · 5</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-eval-pack.html" data-search="评测包校验评分 eval pack lint &amp; grader 评测集 评分 结构校验 自动打分 评测工程师 教研员">
+  <h3>评测包校验评分</h3>
+  <p class="en">Eval pack lint &amp; grader</p>
+  <p class="meta"><code>0.1.0-alpha.11</code> <span class="roles">评测工程师 · 教研员</span></p>
+  <p class="tags"><span>评测集</span><span>评分</span><span>结构校验</span><span>自动打分</span></p>
+</a>
+<a class="card" href="packages/dsh-review-reply-check.html" data-search="审稿回应逐条对照 dsh-review-reply-check 审稿意见 逐条回应 回复覆盖 同行评议 期刊编辑 研究人员">
+  <h3>审稿回应逐条对照</h3>
+  <p class="en">dsh-review-reply-check</p>
+  <p class="meta"> <span class="roles">期刊编辑 · 研究人员</span></p>
+  <p class="tags"><span>审稿意见</span><span>逐条回应</span><span>回复覆盖</span><span>同行评议</span></p>
+</a>
+<a class="card" href="packages/dsh-essay-rubric-check.html" data-search="作文量表评分复核 dsh-essay-rubric-check 作文 评分量表 评分项 原文定位 教师 教研员">
+  <h3>作文量表评分复核</h3>
+  <p class="en">dsh-essay-rubric-check</p>
+  <p class="meta"> <span class="roles">教师 · 教研员</span></p>
+  <p class="tags"><span>作文</span><span>评分量表</span><span>评分项</span><span>原文定位</span></p>
+</a>
+<a class="card" href="packages/dsh-nsfc-form-check.html" data-search="国自然形式审查 dsh-nsfc-form-check 国自然 基金申请 形式审查 匿名化 科研人员 科研秘书">
+  <h3>国自然形式审查</h3>
+  <p class="en">dsh-nsfc-form-check</p>
+  <p class="meta"> <span class="roles">科研人员 · 科研秘书</span></p>
+  <p class="tags"><span>国自然</span><span>基金申请</span><span>形式审查</span><span>匿名化</span></p>
+</a>
+<a class="card" href="packages/dsh-paper-doc-adapter.html" data-search="试卷结构解析校核 dsh-paper-doc-adapter 试卷 题型 分值 解析结构 教研员 教师">
+  <h3>试卷结构解析校核</h3>
+  <p class="en">dsh-paper-doc-adapter</p>
+  <p class="meta"> <span class="roles">教研员 · 教师</span></p>
+  <p class="tags"><span>试卷</span><span>题型</span><span>分值</span><span>解析结构</span></p>
+</a></div>
+</section>
+<section id="医疗健康">
+  <h2>医疗健康 <small>病历、检验、随访 · 3</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-icd-rule-check.html" data-search="疾病编码规则核对 dsh-icd-rule-check 疾病编码 icd 病案首页 编码合规 诊断编码 病案编码员 医保专员">
+  <h3>疾病编码规则核对</h3>
+  <p class="en">dsh-icd-rule-check</p>
+  <p class="meta"> <span class="roles">病案编码员 · 医保专员</span></p>
+  <p class="tags"><span>疾病编码</span><span>ICD</span><span>病案首页</span><span>编码合规</span></p>
+</a>
+<a class="card" href="packages/dsh-medrec-qc.html" data-search="病案首页质控 dsh-medrec-qc 病历 质控 病案 首页质控 逻辑校验 病案质控员 临床医师">
+  <h3>病案首页质控</h3>
+  <p class="en">dsh-medrec-qc</p>
+  <p class="meta"> <span class="roles">病案质控员 · 临床医师</span></p>
+  <p class="tags"><span>病历</span><span>质控</span><span>病案</span><span>首页质控</span></p>
+</a>
+<a class="card" href="packages/dsh-nurse-record-check.html" data-search="护理记录核对 dsh-nurse-record-check 护理记录 护理文书 查对 病区 护理质量 护士 护理管理者">
+  <h3>护理记录核对</h3>
+  <p class="en">dsh-nurse-record-check</p>
+  <p class="meta"> <span class="roles">护士 · 护理管理者</span></p>
+  <p class="tags"><span>护理记录</span><span>护理文书</span><span>查对</span><span>病区</span></p>
+</a></div>
+</section>
+<section id="零售电商">
+  <h2>零售电商 <small>商品、补货、点评 · 2</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-pim-lint.html" data-search="商品目录查错 pim catalog lint 商品主数据 sku gtin 目录校验 重复商品 电商运营 商品管理员">
+  <h3>商品目录查错</h3>
+  <p class="en">PIM catalog lint</p>
+  <p class="meta"><code>0.1.0-alpha.11</code> <span class="roles">电商运营 · 商品管理员</span></p>
+  <p class="tags"><span>商品主数据</span><span>SKU</span><span>GTIN</span><span>目录校验</span></p>
+</a>
+<a class="card" href="packages/dsh-ota-review-check.html" data-search="点评回复时效检查 dsh-ota-review-check 在线点评 差评回复 回复时限 整改闭环 客服 客服主管 店长">
+  <h3>点评回复时效检查</h3>
+  <p class="en">dsh-ota-review-check</p>
+  <p class="meta"> <span class="roles">客服主管 · 店长</span></p>
+  <p class="tags"><span>在线点评</span><span>差评回复</span><span>回复时限</span><span>整改闭环</span></p>
+</a></div>
+</section>
+<section id="开发者工具">
+  <h2>开发者工具 <small>运行时、安装、诊断 · 38</small></h2>
+  <div class="grid"><a class="card" href="packages/dsh-auto-review.html" data-search="敏感操作复核 dsh-auto-review 审批 复核 放行 风险 研发工程师 运维工程师">
+  <h3>敏感操作复核</h3>
+  <p class="en">dsh-auto-review</p>
+  <p class="meta"> <span class="roles">研发工程师 · 运维工程师</span></p>
+  <p class="tags"><span>审批</span><span>复核</span><span>放行</span><span>风险</span></p>
+</a>
+<a class="card" href="packages/dsh-autotier.html" data-search="模型档位分配 dsh-autotier 模型路由 档位 成本 调度 研发工程师 平台运营">
+  <h3>模型档位分配<span class="pill frozen">冻结</span></h3>
+  <p class="en">dsh-autotier</p>
+  <p class="meta"> <span class="roles">研发工程师 · 平台运营</span></p>
+  <p class="tags"><span>模型路由</span><span>档位</span><span>成本</span><span>调度</span></p>
+</a>
+<a class="card" href="packages/dsh-budget.html" data-search="会话成本看板 dsh-budget 成本 预算 用量 时延 研发工程师 财务">
+  <h3>会话成本看板<span class="pill frozen">冻结</span></h3>
+  <p class="en">dsh-budget</p>
+  <p class="meta"> <span class="roles">研发工程师 · 财务</span></p>
+  <p class="tags"><span>成本</span><span>预算</span><span>用量</span><span>时延</span></p>
+</a>
+<a class="card" href="packages/dsh-cert-mcp.html" data-search="认证数据查询 dsh-cert-mcp 认证 评级 查询 证据 平台运营 研发工程师">
+  <h3>认证数据查询<span class="pill frozen">冻结</span></h3>
+  <p class="en">dsh-cert-mcp</p>
+  <p class="meta"> <span class="roles">平台运营 · 研发工程师</span></p>
+  <p class="tags"><span>认证</span><span>评级</span><span>查询</span><span>证据</span></p>
+</a>
+<a class="card" href="packages/dsh-checkpoint-rewind.html" data-search="快照一键回滚 dsh-checkpoint-rewind 快照 回滚 备份 恢复 还原 研发工程师">
+  <h3>快照一键回滚</h3>
+  <p class="en">dsh-checkpoint-rewind</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>快照</span><span>回滚</span><span>备份</span><span>恢复</span></p>
+</a>
+<a class="card" href="packages/dsh-claude-move.html" data-search="配置与会话迁移 dsh-claude-move 迁移 配置导入 命令迁移 会话 历史记录 研发工程师">
+  <h3>配置与会话迁移<span class="pill frozen">冻结</span></h3>
+  <p class="en">dsh-claude-move</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>迁移</span><span>配置导入</span><span>命令迁移</span><span>会话</span></p>
+</a>
+<a class="card" href="packages/dsh-click.html" data-search="桌面点击操作 dsh-click 桌面 点击 截图 鼠标 运维工程师 办公文员">
+  <h3>桌面点击操作</h3>
+  <p class="en">dsh-click</p>
+  <p class="meta"> <span class="roles">运维工程师 · 办公文员</span></p>
+  <p class="tags"><span>桌面</span><span>点击</span><span>截图</span><span>鼠标</span></p>
+</a>
+<a class="card" href="packages/dsh-composer-history.html" data-search="输入历史回溯 dsh-composer-history 输入历史 命令 补全 快捷 研发工程师">
+  <h3>输入历史回溯</h3>
+  <p class="en">dsh-composer-history</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>输入历史</span><span>命令</span><span>补全</span><span>快捷</span></p>
+</a>
+<a class="card" href="packages/dsh-data-quality.html" data-search="数据质量核验 dsh-data-quality 数据质量 清洗 剖析 校验 数据分析师 研发工程师">
+  <h3>数据质量核验</h3>
+  <p class="en">dsh-data-quality</p>
+  <p class="meta"> <span class="roles">数据分析师 · 研发工程师</span></p>
+  <p class="tags"><span>数据质量</span><span>清洗</span><span>剖析</span><span>校验</span></p>
+</a>
+<a class="card" href="packages/dsh-defend.html" data-search="提示词攻击防护 dsh-defend 注入防护 越狱 密钥泄露 拦截 安全工程师 运维工程师">
+  <h3>提示词攻击防护<span class="pill frozen">冻结</span></h3>
+  <p class="en">dsh-defend</p>
+  <p class="meta"> <span class="roles">安全工程师 · 运维工程师</span></p>
+  <p class="tags"><span>注入防护</span><span>越狱</span><span>密钥泄露</span><span>拦截</span></p>
+</a>
+<a class="card" href="packages/dsh-doublecheck.html" data-search="交付质量把关 dsh-doublecheck 交付 验收 测试 把关 项目经理 测试工程师">
+  <h3>交付质量把关</h3>
+  <p class="en">dsh-doublecheck</p>
+  <p class="meta"> <span class="roles">项目经理 · 测试工程师</span></p>
+  <p class="tags"><span>交付</span><span>验收</span><span>测试</span><span>把关</span></p>
+</a>
+<a class="card" href="packages/dsh-draw.html" data-search="图片生成调度 dsh-draw 文生图 配图 绘图 路由 设计师 研发工程师">
+  <h3>图片生成调度<span class="pill frozen">冻结</span></h3>
+  <p class="en">dsh-draw</p>
+  <p class="meta"> <span class="roles">设计师 · 研发工程师</span></p>
+  <p class="tags"><span>文生图</span><span>配图</span><span>绘图</span><span>路由</span></p>
+</a>
+<a class="card" href="packages/dsh-fast.html" data-search="性能瓶颈诊断 dsh-fast 性能 时延 诊断 上下文 研发工程师 运维工程师">
+  <h3>性能瓶颈诊断</h3>
+  <p class="en">dsh-fast</p>
+  <p class="meta"> <span class="roles">研发工程师 · 运维工程师</span></p>
+  <p class="tags"><span>性能</span><span>时延</span><span>诊断</span><span>上下文</span></p>
+</a>
+<a class="card" href="packages/dsh-laya.html" data-search="结构化决策支持 dsh-laya 决策 选项 评分 服务接口 研发工程师">
+  <h3>结构化决策支持</h3>
+  <p class="en">dsh-laya</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>决策</span><span>选项</span><span>评分</span><span>服务接口</span></p>
+</a>
+<a class="card" href="packages/dsh-local-ai.html" data-search="本地模型接入 dsh-local-ai 本地模型 ollama 离线 推理 研发工程师">
+  <h3>本地模型接入</h3>
+  <p class="en">dsh-local-ai</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>本地模型</span><span>Ollama</span><span>离线</span><span>推理</span></p>
+</a>
+<a class="card" href="packages/dsh-lsp-actions.html" data-search="代码诊断与补全 dsh-lsp-actions 代码诊断 补全 格式化 编辑器 研发工程师">
+  <h3>代码诊断与补全</h3>
+  <p class="en">dsh-lsp-actions</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>代码诊断</span><span>补全</span><span>格式化</span><span>编辑器</span></p>
+</a>
+<a class="card" href="packages/dsh-mask.html" data-search="个人信息脱敏 dsh-mask 脱敏 隐私 手机号 身份证 匿名化 安全工程师 法务">
+  <h3>个人信息脱敏</h3>
+  <p class="en">dsh-mask</p>
+  <p class="meta"> <span class="roles">安全工程师 · 法务</span></p>
+  <p class="tags"><span>脱敏</span><span>隐私</span><span>手机号</span><span>身份证</span></p>
+</a>
+<a class="card" href="packages/dsh-mcp-panel.html" data-search="外部工具管理 dsh-mcp-panel mcp 工具接入 配置 诊断 服务器管理 调用测试 研发工程师 平台运营">
+  <h3>外部工具管理</h3>
+  <p class="en">dsh-mcp-panel</p>
+  <p class="meta"> <span class="roles">研发工程师 · 平台运营</span></p>
+  <p class="tags"><span>MCP</span><span>工具接入</span><span>配置</span><span>诊断</span></p>
+</a>
+<a class="card" href="packages/dsh-memento.html" data-search="跨会话记忆 dsh-memento 记忆 跨会话 长期 审计 研发工程师">
+  <h3>跨会话记忆</h3>
+  <p class="en">dsh-memento</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>记忆</span><span>跨会话</span><span>长期</span><span>审计</span></p>
+</a>
+<a class="card" href="packages/dsh-observe.html" data-search="链路追踪导出 dsh-observe 链路追踪 监控 opentelemetry 导出 运维工程师 研发工程师">
+  <h3>链路追踪导出</h3>
+  <p class="en">dsh-observe</p>
+  <p class="meta"> <span class="roles">运维工程师 · 研发工程师</span></p>
+  <p class="tags"><span>链路追踪</span><span>监控</span><span>OpenTelemetry</span><span>导出</span></p>
+</a>
+<a class="card" href="packages/dsh-output-styles.html" data-search="回复风格切换 dsh-output-styles 风格 简洁 预设 回复 研发工程师 办公文员">
+  <h3>回复风格切换</h3>
+  <p class="en">dsh-output-styles</p>
+  <p class="meta"> <span class="roles">研发工程师 · 办公文员</span></p>
+  <p class="tags"><span>风格</span><span>简洁</span><span>预设</span><span>回复</span></p>
+</a>
+<a class="card" href="packages/dsh-permission-rules.html" data-search="权限规则配置 dsh-permission-rules 权限 规则 审批 白名单 放行策略 运维工程师 安全工程师">
+  <h3>权限规则配置</h3>
+  <p class="en">dsh-permission-rules</p>
+  <p class="meta"> <span class="roles">运维工程师 · 安全工程师</span></p>
+  <p class="tags"><span>权限</span><span>规则</span><span>审批</span><span>白名单</span></p>
+</a>
+<a class="card" href="packages/dsh-plugin-guide.html" data-search="扩展开发指南 dsh-plugin-guide 开发文档 api 版本兼容 示例 研发工程师">
+  <h3>扩展开发指南</h3>
+  <p class="en">dsh-plugin-guide</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>开发文档</span><span>API</span><span>版本兼容</span><span>示例</span></p>
+</a>
+<a class="card" href="packages/dsh-plugin-upgrade.html" data-search="版本升级迁移 dsh-plugin-upgrade 升级 版本 迁移 兼容 研发工程师">
+  <h3>版本升级迁移</h3>
+  <p class="en">dsh-plugin-upgrade</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>升级</span><span>版本</span><span>迁移</span><span>兼容</span></p>
+</a>
+<a class="card" href="packages/dsh-reach.html" data-search="聊天渠道审批 dsh-reach 微信 飞书 telegram 消息推送 审批答复 远程确认 研发工程师 运维工程师">
+  <h3>聊天渠道审批<span class="pill frozen">冻结</span></h3>
+  <p class="en">dsh-reach</p>
+  <p class="meta"> <span class="roles">研发工程师 · 运维工程师</span></p>
+  <p class="tags"><span>微信</span><span>飞书</span><span>Telegram</span><span>消息推送</span></p>
+</a>
+<a class="card" href="packages/dsh-score.html" data-search="五维质量评分 dsh-score 评分 质量 证据 排行 平台运营 研发工程师">
+  <h3>五维质量评分</h3>
+  <p class="en">dsh-score</p>
+  <p class="meta"> <span class="roles">平台运营 · 研发工程师</span></p>
+  <p class="tags"><span>评分</span><span>质量</span><span>证据</span><span>排行</span></p>
+</a>
+<a class="card" href="packages/dsh-session-sync.html" data-search="会话跨设备同步 dsh-session-sync 同步 会话 多设备 备份 研发工程师">
+  <h3>会话跨设备同步</h3>
+  <p class="en">dsh-session-sync</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>同步</span><span>会话</span><span>多设备</span><span>备份</span></p>
+</a>
+<a class="card" href="packages/dsh-talk.html" data-search="语音对话交互 dsh-talk 语音 对话 朗读 打断 研发工程师 办公文员">
+  <h3>语音对话交互</h3>
+  <p class="en">dsh-talk</p>
+  <p class="meta"> <span class="roles">研发工程师 · 办公文员</span></p>
+  <p class="tags"><span>语音</span><span>对话</span><span>朗读</span><span>打断</span></p>
+</a>
+<a class="card" href="packages/dsh-test-drive.html" data-search="隔离试装核验 dsh-test-drive 试装 沙箱 冒烟测试 清理 研发工程师 测试工程师">
+  <h3>隔离试装核验</h3>
+  <p class="en">dsh-test-drive</p>
+  <p class="meta"> <span class="roles">研发工程师 · 测试工程师</span></p>
+  <p class="tags"><span>试装</span><span>沙箱</span><span>冒烟测试</span><span>清理</span></p>
+</a>
+<a class="card" href="packages/dsh-translate.html" data-search="文本翻译校对 dsh-translate 翻译 文件翻译 质量检查 多语言 json修复 研发工程师">
+  <h3>文本翻译校对</h3>
+  <p class="en">dsh-translate</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>翻译</span><span>文件翻译</span><span>质量检查</span><span>多语言</span></p>
+</a>
+<a class="card" href="packages/dsh-github.html" data-search="代码评审对接 dsh-github 代码评审 pr ci 问题单 研发工程师 项目经理">
+  <h3>代码评审对接</h3>
+  <p class="en">dsh-github</p>
+  <p class="meta"> <span class="roles">研发工程师 · 项目经理</span></p>
+  <p class="tags"><span>代码评审</span><span>PR</span><span>CI</span><span>问题单</span></p>
+</a>
+<a class="card" href="packages/dsh-plugin-doctor.html" data-search="包结构冒烟检查 dsh-plugin-doctor 结构检查 冒烟 体检 核验 研发工程师 测试工程师">
+  <h3>包结构冒烟检查</h3>
+  <p class="en">dsh-plugin-doctor</p>
+  <p class="meta"> <span class="roles">研发工程师 · 测试工程师</span></p>
+  <p class="tags"><span>结构检查</span><span>冒烟</span><span>体检</span><span>核验</span></p>
+</a>
+<a class="card" href="packages/dsh-plugin-kit.html" data-search="公共组件工具箱 dsh-plugin-kit 工具库 组件 复用 骨架 研发工程师">
+  <h3>公共组件工具箱</h3>
+  <p class="en">dsh-plugin-kit</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>工具库</span><span>组件</span><span>复用</span><span>骨架</span></p>
+</a>
+<a class="card" href="packages/dsh-skill-pack-security-provider.html" data-search="安全技能包供给 dsh-skill-pack-security-provider 安全 技能包 规则 供给 安全工程师 研发工程师">
+  <h3>安全技能包供给</h3>
+  <p class="en">dsh-skill-pack-security-provider</p>
+  <p class="meta"> <span class="roles">安全工程师 · 研发工程师</span></p>
+  <p class="tags"><span>安全</span><span>技能包</span><span>规则</span><span>供给</span></p>
+</a>
+<a class="card" href="packages/dsh-community-bench.html" data-search="社区基准看板 dsh-community-bench 榜单 基准 评分 社区 公开分数 平台运营 研发工程师">
+  <h3>社区基准看板<span class="pill frozen">冻结</span></h3>
+  <p class="en">dsh-community-bench</p>
+  <p class="meta"> <span class="roles">平台运营 · 研发工程师</span></p>
+  <p class="tags"><span>榜单</span><span>基准</span><span>评分</span><span>社区</span></p>
+</a>
+<a class="card" href="packages/dsh-kit.html" data-search="一键安装合集 dsh-kit 安装 合集 入门 打包 研发工程师">
+  <h3>一键安装合集</h3>
+  <p class="en">dsh-kit</p>
+  <p class="meta"> <span class="roles">研发工程师</span></p>
+  <p class="tags"><span>安装</span><span>合集</span><span>入门</span><span>打包</span></p>
+</a>
+<a class="card" href="packages/dsh-catalog.html" data-search="应用目录清单 dsh-catalog 目录 清单 市场 元数据 平台运营">
+  <h3>应用目录清单</h3>
+  <p class="en">dsh-catalog</p>
+  <p class="meta"> <span class="roles">平台运营</span></p>
+  <p class="tags"><span>目录</span><span>清单</span><span>市场</span><span>元数据</span></p>
+</a>
+<a class="card" href="packages/dsh-plugin-certification.html" data-search="认证评级登记 dsh-plugin-certification 认证 评级 登记 社区 平台运营 研发工程师">
+  <h3>认证评级登记</h3>
+  <p class="en">dsh-plugin-certification</p>
+  <p class="meta"> <span class="roles">平台运营 · 研发工程师</span></p>
+  <p class="tags"><span>认证</span><span>评级</span><span>登记</span><span>社区</span></p>
+</a></div>
+</section>
+<p id="empty" hidden>没有匹配的插件。</p>
+</main>
+<footer>
+  <p>所有插件在本地运行，不上传你的文件。版本与安装方式见各插件详情页；索引文件在 <a href="market/index.json">market/index.json</a>（format 1，可直接添加到 DSH 的插件索引源）。</p>
+</footer>
+<script>
+const q = document.getElementById('q')
+const cards = [...document.querySelectorAll('.card')]
+const sections = [...document.querySelectorAll('section')]
+q.addEventListener('input', () => {
+  const term = q.value.trim().toLowerCase()
+  let visible = 0
+  for (const card of cards) {
+    const hit = !term || card.dataset.search.includes(term)
+    card.hidden = !hit
+    if (hit) visible++
+  }
+  for (const s of sections) {
+    s.hidden = ![...s.querySelectorAll('.card')].some((c) => !c.hidden)
+  }
+  document.getElementById('empty').hidden = visible > 0
+})
+</script>
+</body>
+</html>

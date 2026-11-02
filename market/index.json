@@ -1,0 +1,3962 @@
+{
+  "format": 1,
+  "title": {
+    "en": "PerryLink DSH plugins",
+    "zh": "PerryLink DSH 插件市场"
+  },
+  "description": {
+    "en": "Task-first index of 125 local-first DSH plugins for finance, legal, procurement, quality, customs and developer work.",
+    "zh": "按任务浏览 125 个本地优先的 DSH 插件：财务、法务、采购、质量、关务、行政与开发者工具。"
+  },
+  "metadata": {
+    "categories": {
+      "finance": {
+        "title": {
+          "en": "Finance & expense",
+          "zh": "财务报销"
+        }
+      },
+      "hr": {
+        "title": {
+          "en": "People & HR",
+          "zh": "人力资源"
+        }
+      },
+      "procurement": {
+        "title": {
+          "en": "Procurement & supply chain",
+          "zh": "采购供应链"
+        }
+      },
+      "legal": {
+        "title": {
+          "en": "Legal & contracts",
+          "zh": "法务合同"
+        }
+      },
+      "quality": {
+        "title": {
+          "en": "Quality & production",
+          "zh": "质量生产"
+        }
+      },
+      "trade": {
+        "title": {
+          "en": "Customs & logistics",
+          "zh": "关务物流"
+        }
+      },
+      "office": {
+        "title": {
+          "en": "Office & admin",
+          "zh": "行政办公"
+        }
+      },
+      "education": {
+        "title": {
+          "en": "Education & training",
+          "zh": "教育培训"
+        }
+      },
+      "health": {
+        "title": {
+          "en": "Health",
+          "zh": "医疗健康"
+        }
+      },
+      "retail": {
+        "title": {
+          "en": "Retail & e-commerce",
+          "zh": "零售电商"
+        }
+      },
+      "developer": {
+        "title": {
+          "en": "Developer tools",
+          "zh": "开发者工具"
+        }
+      }
+    },
+    "labels": {
+      "domain": {
+        "title": {
+          "en": "Domain package",
+          "zh": "领域包"
+        }
+      },
+      "default": {
+        "title": {
+          "en": "Installed by default",
+          "zh": "默认安装"
+        }
+      },
+      "opt-in": {
+        "title": {
+          "en": "Opt-in",
+          "zh": "按需安装"
+        }
+      },
+      "active": {
+        "title": {
+          "en": "Active",
+          "zh": "维护中"
+        }
+      },
+      "frozen": {
+        "title": {
+          "en": "Frozen",
+          "zh": "已冻结"
+        }
+      },
+      "retired": {
+        "title": {
+          "en": "Retired",
+          "zh": "已退役"
+        }
+      }
+    },
+    "sortKeys": {
+      "installScope": {
+        "title": {
+          "en": "Install scope",
+          "zh": "安装范围"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "@perrylink/dsh-github",
+      "title": {
+        "en": "dsh-github",
+        "zh": "代码评审对接"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-github",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-github"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.7.28",
+          "publishTimestamp": 1793101737,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@perrylink/dsh-plugin-doctor",
+      "title": {
+        "en": "dsh-plugin-doctor",
+        "zh": "包结构冒烟检查"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-plugin-doctor",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-plugin-doctor"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.7.7",
+          "publishTimestamp": 1793521476,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@perrylink/dsh-plugin-kit",
+      "title": {
+        "en": "dsh-plugin-kit",
+        "zh": "公共组件工具箱"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-plugin-kit",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-plugin-kit"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.22",
+          "publishTimestamp": 1793521772,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@perrylink/dsh-skill-pack-security-provider",
+      "title": {
+        "en": "dsh-skill-pack-security-provider",
+        "zh": "安全技能包供给"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-skill-pack-security-provider",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-skill-pack-security-provider"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "2.2.25",
+          "publishTimestamp": 1793466588,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-auto-review",
+      "title": {
+        "en": "dsh-auto-review",
+        "zh": "敏感操作复核"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-auto-review",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-auto-review"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.15.0",
+          "publishTimestamp": 1793189336,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-autotier",
+      "title": {
+        "en": "dsh-autotier",
+        "zh": "模型档位分配"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-autotier",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-autotier"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "frozen"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.20",
+          "publishTimestamp": 1793465756,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-background-agents",
+      "title": {
+        "en": "dsh-background-agents",
+        "zh": "后台长期任务"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-background-agents",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-background-agents"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "opt-in",
+          "retired"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.10.2",
+          "publishTimestamp": 1791198386,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-budget",
+      "title": {
+        "en": "dsh-budget",
+        "zh": "会话成本看板"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-budget",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-budget"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "frozen"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.4.21",
+          "publishTimestamp": 1793457922,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-catalog",
+      "title": {
+        "en": "dsh-catalog",
+        "zh": "应用目录清单"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-catalog",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-catalog"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1786899023,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-cert-mcp",
+      "title": {
+        "en": "dsh-cert-mcp",
+        "zh": "认证数据查询"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-cert-mcp",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-cert-mcp"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "frozen"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793521326,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-checkpoint-rewind",
+      "title": {
+        "en": "dsh-checkpoint-rewind",
+        "zh": "快照一键回滚"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-checkpoint-rewind",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-checkpoint-rewind"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.6.34",
+          "publishTimestamp": 1792845283,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-claude-move",
+      "title": {
+        "en": "dsh-claude-move",
+        "zh": "配置与会话迁移"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-claude-move",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-claude-move"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "frozen"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.4.18",
+          "publishTimestamp": 1792317978,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-click",
+      "title": {
+        "en": "dsh-click",
+        "zh": "桌面点击操作"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-click",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-click"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.26",
+          "publishTimestamp": 1793102371,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-community-bench",
+      "title": {
+        "en": "dsh-community-bench",
+        "zh": "社区基准看板"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-community-bench",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-community-bench"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "opt-in",
+          "frozen"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.6",
+          "publishTimestamp": 1793465733,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-composer-history",
+      "title": {
+        "en": "dsh-composer-history",
+        "zh": "输入历史回溯"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-composer-history",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-composer-history"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.8.15",
+          "publishTimestamp": 1792326693,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-data-quality",
+      "title": {
+        "en": "dsh-data-quality",
+        "zh": "数据质量核验"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-data-quality",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-data-quality"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.24",
+          "publishTimestamp": 1792854632,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-defend",
+      "title": {
+        "en": "dsh-defend",
+        "zh": "提示词攻击防护"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-defend",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-defend"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "frozen"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.26",
+          "publishTimestamp": 1793458449,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-doublecheck",
+      "title": {
+        "en": "dsh-doublecheck",
+        "zh": "交付质量把关"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-doublecheck",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-doublecheck"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.9.29",
+          "publishTimestamp": 1792404971,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-draw",
+      "title": {
+        "en": "dsh-draw",
+        "zh": "图片生成调度"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-draw",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-draw"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "frozen"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.25",
+          "publishTimestamp": 1793458607,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-fast",
+      "title": {
+        "en": "dsh-fast",
+        "zh": "性能瓶颈诊断"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-fast",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-fast"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.27",
+          "publishTimestamp": 1792854415,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-kit",
+      "title": {
+        "en": "dsh-kit",
+        "zh": "一键安装合集"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-kit",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-kit"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.1",
+          "publishTimestamp": 1786854527,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-laya",
+      "title": {
+        "en": "dsh-laya",
+        "zh": "结构化决策支持"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/laya-family/dsh-laya",
+      "repository": {
+        "url": "https://github.com/laya-family/dsh-laya"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1790073270,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-local-ai",
+      "title": {
+        "en": "dsh-local-ai",
+        "zh": "本地模型接入"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-local-ai",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-local-ai"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.23",
+          "publishTimestamp": 1792333452,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-lsp-actions",
+      "title": {
+        "en": "dsh-lsp-actions",
+        "zh": "代码诊断与补全"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-lsp-actions",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-lsp-actions"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.5.17",
+          "publishTimestamp": 1792766133,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-mask",
+      "title": {
+        "en": "dsh-mask",
+        "zh": "个人信息脱敏"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-mask",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-mask"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.23",
+          "publishTimestamp": 1792854128,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-mcp-panel",
+      "title": {
+        "en": "dsh-mcp-panel",
+        "zh": "外部工具管理"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-mcp-panel",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-mcp-panel"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.6.29",
+          "publishTimestamp": 1792343431,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-memento",
+      "title": {
+        "en": "dsh-memento",
+        "zh": "跨会话记忆"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-memento",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-memento"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.5.29",
+          "publishTimestamp": 1793466226,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-observe",
+      "title": {
+        "en": "dsh-observe",
+        "zh": "链路追踪导出"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-observe",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-observe"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.26",
+          "publishTimestamp": 1792850513,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-output-styles",
+      "title": {
+        "en": "dsh-output-styles",
+        "zh": "回复风格切换"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-output-styles",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-output-styles"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.8.2",
+          "publishTimestamp": 1792841260,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-permission-rules",
+      "title": {
+        "en": "dsh-permission-rules",
+        "zh": "权限规则配置"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-permission-rules",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-permission-rules"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.7.20",
+          "publishTimestamp": 1792333761,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-plugin-guide",
+      "title": {
+        "en": "dsh-plugin-guide",
+        "zh": "扩展开发指南"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-plugin-guide",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-plugin-guide"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.40",
+          "publishTimestamp": 1793521320,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-plugin-upgrade",
+      "title": {
+        "en": "dsh-plugin-upgrade",
+        "zh": "版本升级迁移"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-plugin-upgrade",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-plugin-upgrade"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "2.2.0",
+          "publishTimestamp": 1793521343,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-reach",
+      "title": {
+        "en": "dsh-reach",
+        "zh": "聊天渠道审批"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-reach",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-reach"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "frozen"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.24",
+          "publishTimestamp": 1793458444,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-score",
+      "title": {
+        "en": "dsh-score",
+        "zh": "五维质量评分"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-score",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-score"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.27",
+          "publishTimestamp": 1793466280,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-session-pin",
+      "title": {
+        "en": "dsh-session-pin",
+        "zh": "会话置顶管理"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-session-pin",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-session-pin"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "opt-in",
+          "retired"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.7.19",
+          "publishTimestamp": 1791198637,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-session-sync",
+      "title": {
+        "en": "dsh-session-sync",
+        "zh": "会话跨设备同步"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-session-sync",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-session-sync"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.31",
+          "publishTimestamp": 1792845529,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-talk",
+      "title": {
+        "en": "dsh-talk",
+        "zh": "语音对话交互"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-talk",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-talk"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.26",
+          "publishTimestamp": 1792853578,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-team-rooms",
+      "title": {
+        "en": "dsh-team-rooms",
+        "zh": "多会话协作室"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-team-rooms",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-team-rooms"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "opt-in",
+          "retired"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.8",
+          "publishTimestamp": 1791198550,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-test-drive",
+      "title": {
+        "en": "dsh-test-drive",
+        "zh": "隔离试装核验"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-test-drive",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-test-drive"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.24",
+          "publishTimestamp": 1792853661,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-translate",
+      "title": {
+        "en": "dsh-translate",
+        "zh": "文本翻译校对"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-translate",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-translate"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.24",
+          "publishTimestamp": 1792316794,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-essay-rubric-check",
+      "title": {
+        "en": "dsh-essay-rubric-check",
+        "zh": "作文量表评分复核"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-essay-rubric-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-essay-rubric-check"
+      },
+      "metadata": {
+        "category": "education",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376558,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-eval-pack",
+      "title": {
+        "en": "Eval pack lint & grader",
+        "zh": "评测包校验评分"
+      },
+      "description": {
+        "en": "Public/synthetic eval-pack structure lint and deterministic JSON grading; not a validated benchmark."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-eval-pack",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-eval-pack"
+      },
+      "metadata": {
+        "category": "education",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.11",
+          "publishTimestamp": 1793598350,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-nsfc-form-check",
+      "title": {
+        "en": "dsh-nsfc-form-check",
+        "zh": "国自然形式审查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-nsfc-form-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-nsfc-form-check"
+      },
+      "metadata": {
+        "category": "education",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793376819,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-paper-doc-adapter",
+      "title": {
+        "en": "dsh-paper-doc-adapter",
+        "zh": "试卷结构解析校核"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-paper-doc-adapter",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-paper-doc-adapter"
+      },
+      "metadata": {
+        "category": "education",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376841,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-review-reply-check",
+      "title": {
+        "en": "dsh-review-reply-check",
+        "zh": "审稿回应逐条对照"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-review-reply-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-review-reply-check"
+      },
+      "metadata": {
+        "category": "education",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793377078,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-ap-three-way",
+      "title": {
+        "en": "AP three-way match",
+        "zh": "发票三单匹配"
+      },
+      "description": {
+        "en": "Invoice/PO/GRN three-way match with a 1% default price tolerance and exception workpaper."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ap-three-way",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ap-three-way"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.11",
+          "publishTimestamp": 1793599143,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-bankrec",
+      "title": {
+        "en": "Bank statement reconciliation",
+        "zh": "银行流水对账"
+      },
+      "description": {
+        "en": "CAMT.053/MT940/GL ingest, 1:1 bank-to-GL match and a three-sheet workpaper."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-bankrec",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-bankrec"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.16",
+          "publishTimestamp": 1793599006,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-einvoice",
+      "title": {
+        "en": "China e-invoice (file-level)",
+        "zh": "发票查重"
+      },
+      "description": {
+        "en": "File-level OFD/XML invoice ingest, parse, dedupe and local archive; not tax-authority verification."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-einvoice",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-einvoice"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.0-alpha.11",
+          "publishTimestamp": 1793598270,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-excel-reconcile",
+      "title": {
+        "en": "dsh-excel-reconcile",
+        "zh": "双表对账查差异"
+      },
+      "description": {
+        "en": "Two-table reconciliation by key and tolerance."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-excel-reconcile",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-excel-reconcile"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.3",
+          "publishTimestamp": 1793376695,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-finops-suite",
+      "title": {
+        "en": "Finance ops suite",
+        "zh": "财务运营套件"
+      },
+      "description": {
+        "en": "Installer only: dsh-einvoice + dsh-bankrec + dsh-ap-three-way + dsh-travel-recon."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-finops-suite",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-finops-suite"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.9",
+          "publishTimestamp": 1793598620,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-invoice-ledger",
+      "title": {
+        "en": "dsh-invoice-ledger",
+        "zh": "发票台账核验"
+      },
+      "description": {
+        "en": "Invoice ledger duplicate/arithmetic/party/date check."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-invoice-ledger",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-invoice-ledger"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.4",
+          "publishTimestamp": 1793419696,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-travel-recon",
+      "title": {
+        "en": "Travel reconciliation & policy check",
+        "zh": "差旅票据稽核"
+      },
+      "description": {
+        "en": "Order/invoice/card three-way match, duplicate check and a read-only amount/invoice policy check."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-travel-recon",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-travel-recon"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.13",
+          "publishTimestamp": 1793598281,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-icd-rule-check",
+      "title": {
+        "en": "dsh-icd-rule-check",
+        "zh": "疾病编码规则核对"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-icd-rule-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-icd-rule-check"
+      },
+      "metadata": {
+        "category": "health",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793376717,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-medrec-qc",
+      "title": {
+        "en": "dsh-medrec-qc",
+        "zh": "病案首页质控"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-medrec-qc",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-medrec-qc"
+      },
+      "metadata": {
+        "category": "health",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793376775,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-nurse-record-check",
+      "title": {
+        "en": "dsh-nurse-record-check",
+        "zh": "护理记录核对"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-nurse-record-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-nurse-record-check"
+      },
+      "metadata": {
+        "category": "health",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793376901,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-learning-gap-check",
+      "title": {
+        "en": "dsh-learning-gap-check",
+        "zh": "能力差距培养评估"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-learning-gap-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-learning-gap-check"
+      },
+      "metadata": {
+        "category": "hr",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376758,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-payroll-audit",
+      "title": {
+        "en": "dsh-payroll-audit",
+        "zh": "工资核算复核"
+      },
+      "description": {
+        "en": "Payroll parameter and arithmetic audit."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-payroll-audit",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-payroll-audit"
+      },
+      "metadata": {
+        "category": "hr",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.2",
+          "publishTimestamp": 1793376914,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-contract-suite",
+      "title": {
+        "en": "Contract ops suite",
+        "zh": "合同法务套件"
+      },
+      "description": {
+        "en": "Installer only: dsh-legal-intake + dsh-legal-clause."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-contract-suite",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-contract-suite"
+      },
+      "metadata": {
+        "category": "legal",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.8",
+          "publishTimestamp": 1793598567,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-evidence-check",
+      "title": {
+        "en": "dsh-evidence-check",
+        "zh": "证据清单齐备核验"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-evidence-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-evidence-check"
+      },
+      "metadata": {
+        "category": "legal",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793376498,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-lawcite-adapter",
+      "title": {
+        "en": "dsh-lawcite-adapter",
+        "zh": "法条引用校对"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-lawcite-adapter",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-lawcite-adapter"
+      },
+      "metadata": {
+        "category": "legal",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793376787,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-legal-clause",
+      "title": {
+        "en": "Contract clause & playbook review",
+        "zh": "合同条款体检"
+      },
+      "description": {
+        "en": "Clause tree plus a versioned 12-key playbook comparison and unresolved report; no legal conclusion."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-legal-clause",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-legal-clause"
+      },
+      "metadata": {
+        "category": "legal",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.12",
+          "publishTimestamp": 1793598287,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-legal-intake",
+      "title": {
+        "en": "Legal request intake",
+        "zh": "法务需求收件"
+      },
+      "description": {
+        "en": "EML legal-request parse, classification, thread dedupe and ledger export."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-legal-intake",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-legal-intake"
+      },
+      "metadata": {
+        "category": "legal",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.10",
+          "publishTimestamp": 1793598319,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-pleading-draft",
+      "title": {
+        "en": "dsh-pleading-draft",
+        "zh": "起诉状要素核对"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-pleading-draft",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-pleading-draft"
+      },
+      "metadata": {
+        "category": "legal",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793377020,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "@perrylink/dsh-ticktick",
+      "title": {
+        "en": "dsh-ticktick",
+        "zh": "滴答清单对接"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ticktick",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ticktick"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.23",
+          "publishTimestamp": 1793017744,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-archive-check",
+      "title": {
+        "en": "dsh-archive-check",
+        "zh": "档案归档查验"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-archive-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-archive-check"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376021,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-docx-redline",
+      "title": {
+        "en": "DOCX inspect & text diff",
+        "zh": "文档正文差异比对"
+      },
+      "description": {
+        "en": "DOCX structure/hash inspection, byte-exact roundtrip, one exact-run replacement and text-level diff; not a tracked-changes writer."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-docx-redline",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-docx-redline"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.13",
+          "publishTimestamp": 1793598219,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-fund-research",
+      "title": {
+        "en": "dsh-fund-research",
+        "zh": "基金研究报告"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-fund-research",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-fund-research"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.5.1",
+          "publishTimestamp": 1792850908,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-gongwen-flow-check",
+      "title": {
+        "en": "dsh-gongwen-flow-check",
+        "zh": "公文流转时限检查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-gongwen-flow-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-gongwen-flow-check"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376564,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-gongwen-word-check",
+      "title": {
+        "en": "dsh-gongwen-word-check",
+        "zh": "公文格式要素校对"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-gongwen-word-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-gongwen-word-check"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793377730,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-industry-research",
+      "title": {
+        "en": "dsh-industry-research",
+        "zh": "行业公司研究"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-industry-research",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-industry-research"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.23",
+          "publishTimestamp": 1792347767,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-library",
+      "title": {
+        "en": "dsh-library",
+        "zh": "本地资料库检索"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-library",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-library"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.25",
+          "publishTimestamp": 1792853397,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-policy-brief-draft",
+      "title": {
+        "en": "dsh-policy-brief-draft",
+        "zh": "政策专报要素审定"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-policy-brief-draft",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-policy-brief-draft"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793376952,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-policy-ledger",
+      "title": {
+        "en": "Install doctor",
+        "zh": "安装诊断"
+      },
+      "description": {
+        "en": "Read-only install doctor: capability snapshot, tarball assertion and install-log diagnosis; not a policy gate or ledger."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-policy-ledger",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-policy-ledger"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.0-alpha.13",
+          "publishTimestamp": 1793598368,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-research-report",
+      "title": {
+        "en": "dsh-research-report",
+        "zh": "可溯源研究报告"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-research-report",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-research-report"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.30",
+          "publishTimestamp": 1792677345,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-soe-decision-check",
+      "title": {
+        "en": "dsh-soe-decision-check",
+        "zh": "国企决策合规检查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-soe-decision-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-soe-decision-check"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.15",
+          "publishTimestamp": 1793377086,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-table-ingest",
+      "title": {
+        "en": "dsh-table-ingest",
+        "zh": "表格数据提取"
+      },
+      "description": {
+        "en": "DOCX/XLSX/CSV to table JSON for checkers."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-table-ingest",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-table-ingest"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.2",
+          "publishTimestamp": 1793377434,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-bid-ca-precheck",
+      "title": {
+        "en": "dsh-bid-ca-precheck",
+        "zh": "投标符合性预检"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-bid-ca-precheck",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-bid-ca-precheck"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793376031,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-bid-health-check",
+      "title": {
+        "en": "dsh-bid-health-check",
+        "zh": "投标响应覆盖检查"
+      },
+      "description": {
+        "en": "Bid requirement coverage/locator check."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-bid-health-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-bid-health-check"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.2",
+          "publishTimestamp": 1793376498,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-bid-qual-check",
+      "title": {
+        "en": "dsh-bid-qual-check",
+        "zh": "投标资格条件审查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-bid-qual-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-bid-qual-check"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793375992,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-contract-stance",
+      "title": {
+        "en": "dsh-contract-stance",
+        "zh": "合同立场台账梳理"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-contract-stance",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-contract-stance"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376026,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-forecast-penalty",
+      "title": {
+        "en": "dsh-forecast-penalty",
+        "zh": "预测考核费用测算"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-forecast-penalty",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-forecast-penalty"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376658,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-ifc-qto",
+      "title": {
+        "en": "IFC quantity takeoff",
+        "zh": "模型工程量提取"
+      },
+      "description": {
+        "en": "IFC element/quantity inventory and CSV takeoff."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ifc-qto",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ifc-qto"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.13",
+          "publishTimestamp": 1793598310,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-protest-deadline",
+      "title": {
+        "en": "dsh-protest-deadline",
+        "zh": "质疑投诉期限测算"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-protest-deadline",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-protest-deadline"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793376979,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-rulefile-check",
+      "title": {
+        "en": "dsh-rulefile-check",
+        "zh": "规则库自检"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-rulefile-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-rulefile-check"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793377021,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-tender-extract",
+      "title": {
+        "en": "dsh-tender-extract",
+        "zh": "招标条款逐字摘录"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-tender-extract",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-tender-extract"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793377186,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-tender-matrix",
+      "title": {
+        "en": "dsh-tender-matrix",
+        "zh": "评标评分矩阵校验"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-tender-matrix",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-tender-matrix"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.15",
+          "publishTimestamp": 1793377173,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-tender-requirements",
+      "title": {
+        "en": "dsh-tender-requirements",
+        "zh": "招标文件要点提取"
+      },
+      "description": {
+        "en": "Tender document key-information extraction with retrieval status."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-tender-requirements",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-tender-requirements"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.3",
+          "publishTimestamp": 1793377792,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-aqua-input-check",
+      "title": {
+        "en": "dsh-aqua-input-check",
+        "zh": "水产投入品核查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-aqua-input-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-aqua-input-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793375946,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-canteen-retention-check",
+      "title": {
+        "en": "dsh-canteen-retention-check",
+        "zh": "食堂留样台账核对"
+      },
+      "description": {
+        "en": "Canteen retention ledger check."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-canteen-retention-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-canteen-retention-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.1",
+          "publishTimestamp": 1793376007,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-construction-doc-check",
+      "title": {
+        "en": "dsh-construction-doc-check",
+        "zh": "施工资料齐套检查"
+      },
+      "description": {
+        "en": "Construction document directory/version/empty-file check."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-construction-doc-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-construction-doc-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.2",
+          "publishTimestamp": 1793376307,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-drill-script-check",
+      "title": {
+        "en": "dsh-drill-script-check",
+        "zh": "演练脚本要素清点"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-drill-script-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-drill-script-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376075,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-eia-guide-check",
+      "title": {
+        "en": "dsh-eia-guide-check",
+        "zh": "环评导则适用判定"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-eia-guide-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-eia-guide-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376085,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-emergency-plan",
+      "title": {
+        "en": "dsh-emergency-plan",
+        "zh": "应急预案要素审查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-emergency-plan",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-emergency-plan"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376475,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-fmea-table-check",
+      "title": {
+        "en": "dsh-fmea-table-check",
+        "zh": "失效分析表核对"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-fmea-table-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-fmea-table-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376715,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-ghg",
+      "title": {
+        "en": "Electricity GHG (Scope 2)",
+        "zh": "用电碳排放（范围二）"
+      },
+      "description": {
+        "en": "Electricity activity ingest, location-based factor calculation, row verification and a partial ESRS E1 pack."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ghg",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ghg"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.17",
+          "publishTimestamp": 1793599080,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-guard-plan-qc",
+      "title": {
+        "en": "dsh-guard-plan-qc",
+        "zh": "劳保用品配置核对"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-guard-plan-qc",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-guard-plan-qc"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376628,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-hazchem-check",
+      "title": {
+        "en": "dsh-hazchem-check",
+        "zh": "危化品临界量辨识"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-hazchem-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-hazchem-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793376634,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-hazplan-check",
+      "title": {
+        "en": "dsh-hazplan-check",
+        "zh": "偏差分析表复核"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-hazplan-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-hazplan-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793376890,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-hidden-risk-map",
+      "title": {
+        "en": "dsh-hidden-risk-map",
+        "zh": "重大隐患判定映射"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-hidden-risk-map",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-hidden-risk-map"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376701,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-permit-report-check",
+      "title": {
+        "en": "dsh-permit-report-check",
+        "zh": "行政许可材料核查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-permit-report-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-permit-report-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793377061,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-pipeline-check",
+      "title": {
+        "en": "dsh-pipeline-check",
+        "zh": "项目文件链条联查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-pipeline-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-pipeline-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376915,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-power-loss-split",
+      "title": {
+        "en": "dsh-power-loss-split",
+        "zh": "线损电量拆分"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-power-loss-split",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-power-loss-split"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376954,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-power-ticket-check",
+      "title": {
+        "en": "dsh-power-ticket-check",
+        "zh": "电力工作票核查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-power-ticket-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-power-ticket-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376957,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-ppap-check",
+      "title": {
+        "en": "dsh-ppap-check",
+        "zh": "生产件批准放行"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ppap-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ppap-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793377220,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-qms-capa",
+      "title": {
+        "en": "QMS NCR, CAPA & 8D",
+        "zh": "质量问题闭环跟踪"
+      },
+      "description": {
+        "en": "NCR ingest/dedupe, batch alias resolution, impact evaluation and CAPA/8D state tracking."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-qms-capa",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-qms-capa"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.12",
+          "publishTimestamp": 1793598284,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-railway-window",
+      "title": {
+        "en": "dsh-railway-window",
+        "zh": "铁路天窗台账复核"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-railway-window",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-railway-window"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793377006,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-repair-order-qc",
+      "title": {
+        "en": "dsh-repair-order-qc",
+        "zh": "维修结算单核算"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-repair-order-qc",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-repair-order-qc"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793377263,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-safety-brief-check",
+      "title": {
+        "en": "dsh-safety-brief-check",
+        "zh": "安全交底签字闭环"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-safety-brief-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-safety-brief-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793377069,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-safety-ledger-check",
+      "title": {
+        "en": "dsh-safety-ledger-check",
+        "zh": "安全资质台账核对"
+      },
+      "description": {
+        "en": "Construction safety qualification ledger check."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-safety-ledger-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-safety-ledger-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.1",
+          "publishTimestamp": 1793377058,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-site-log-check",
+      "title": {
+        "en": "dsh-site-log-check",
+        "zh": "监理日志连续检查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-site-log-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-site-log-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.3.1",
+          "publishTimestamp": 1793377112,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-soilwater-check",
+      "title": {
+        "en": "dsh-soilwater-check",
+        "zh": "土壤地下水核验"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-soilwater-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-soilwater-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793377192,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-sop-sync-check",
+      "title": {
+        "en": "dsh-sop-sync-check",
+        "zh": "作业规程同步检查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-sop-sync-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-sop-sync-check"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793377137,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-spc-gbt-adapter",
+      "title": {
+        "en": "dsh-spc-gbt-adapter",
+        "zh": "过程能力指数计算"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-spc-gbt-adapter",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-spc-gbt-adapter"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793377187,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-warranty-calc",
+      "title": {
+        "en": "dsh-warranty-calc",
+        "zh": "质保索赔金额核算"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-warranty-calc",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-warranty-calc"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793375655,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-ota-review-check",
+      "title": {
+        "en": "dsh-ota-review-check",
+        "zh": "点评回复时效检查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ota-review-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ota-review-check"
+      },
+      "metadata": {
+        "category": "retail",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793376970,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-pim-lint",
+      "title": {
+        "en": "PIM catalog lint",
+        "zh": "商品目录查错"
+      },
+      "description": {
+        "en": "CSV catalog lint for required fields, duplicate SKU, GTIN check digit and price."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-pim-lint",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-pim-lint"
+      },
+      "metadata": {
+        "category": "retail",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.11",
+          "publishTimestamp": 1793598343,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-customs-doc-check",
+      "title": {
+        "en": "dsh-customs-doc-check",
+        "zh": "报关单证比对"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-customs-doc-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-customs-doc-check"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.9",
+          "publishTimestamp": 1793376030,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-demurrage-ledger",
+      "title": {
+        "en": "dsh-demurrage-ledger",
+        "zh": "滞箱费台账核验"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-demurrage-ledger",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-demurrage-ledger"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376314,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-export-ctl-check",
+      "title": {
+        "en": "dsh-export-ctl-check",
+        "zh": "出口管制物项筛查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-export-ctl-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-export-ctl-check"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.12",
+          "publishTimestamp": 1793377357,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-freight-audit",
+      "title": {
+        "en": "Freight bill audit",
+        "zh": "运费账单审计"
+      },
+      "description": {
+        "en": "Versioned ratecard, carrier-bill audit, recovery summary and variance export."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-freight-audit",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-freight-audit"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.13",
+          "publishTimestamp": 1793598300,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-hs-candidate",
+      "title": {
+        "en": "HS candidate precheck",
+        "zh": "HS 候选预检"
+      },
+      "description": {
+        "en": "HS Top-3 candidates, 12-element completeness, simple RVC and tariff-version gate; not a binding classification."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-hs-candidate",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-hs-candidate"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.12",
+          "publishTimestamp": 1793598337,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-hs-classify",
+      "title": {
+        "en": "dsh-hs-classify",
+        "zh": "商品归类层级校验"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-hs-classify",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-hs-classify"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.11",
+          "publishTimestamp": 1793376720,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-lc-doc-check",
+      "title": {
+        "en": "dsh-lc-doc-check",
+        "zh": "信用证不符点筛查"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-lc-doc-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-lc-doc-check"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376762,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-origin-rvc-check",
+      "title": {
+        "en": "dsh-origin-rvc-check",
+        "zh": "原产地成分核算"
+      },
+      "description": {
+        "en": "China compliance checker with a versioned rule pack and citation gate."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-origin-rvc-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-origin-rvc-check"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "opt-in",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.10",
+          "publishTimestamp": 1793376919,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    }
+  ]
+}

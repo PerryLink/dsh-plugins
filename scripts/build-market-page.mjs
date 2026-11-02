@@ -1,0 +1,132 @@
+#!/usr/bin/env node
+/**
+ * Render docs/market.html — a task-first browser over the family.
+ *
+ * Grouping comes from family.json `taskFamilyZh` (falling back to the English
+ * `taskFamily`), ordering from the family file, so the page never disagrees
+ * with market/index.json about what exists.
+ */
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+const here = path.dirname(fileURLToPath(import.meta.url))
+const root = path.resolve(here, '..')
+const family = JSON.parse(fs.readFileSync(path.join(root, 'family.json'), 'utf8'))
+
+const FAMILIES = ['财务报销', '人力资源', '采购供应链', '法务合同', '质量生产', '关务物流', '行政办公', '教育培训', '医疗健康', '零售电商', '开发者工具']
+const FAMILY_SUB = {
+  财务报销: '发票、对账、报销、成本',
+  人力资源: '入离职、合同、考勤',
+  采购供应链: '询价、比价、准入、履约',
+  法务合同: '条款、风险、到期',
+  质量生产: '不合格、8D、审核、检验',
+  关务物流: '归类、单证、运费',
+  行政办公: '文档、表格、档案、会议',
+  教育培训: '教案、作业、学情',
+  医疗健康: '病历、检验、随访',
+  零售电商: '商品、补货、点评',
+  开发者工具: '运行时、安装、诊断',
+}
+
+const esc = (s = '') => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c])
+
+const items = family.items.filter((i) => i.status !== 'retired')
+const groups = new Map(FAMILIES.map((f) => [f, []]))
+for (const item of items) {
+  const fam = item.taskFamilyZh || '开发者工具'
+  if (!groups.has(fam)) groups.set(fam, [])
+  groups.get(fam).push(item)
+}
+
+const card = (item) => {
+  const zh = item.displayNameZh || item.displayName || item.id
+  const en = item.displayName || item.id
+  const tags = (item.tagsZh || []).slice(0, 4)
+  const roles = (item.rolesZh || []).slice(0, 2).join(' · ')
+  const status = item.status === 'frozen' ? '<span class="pill frozen">冻结</span>' : ''
+  const npm = item.version ? `<code>${esc(item.version)}</code>` : ''
+  return `<a class="card" href="packages/${esc(item.id)}.html" data-search="${esc([zh, en, ...(item.tagsZh || []), ...(item.rolesZh || [])].join(' ').toLowerCase())}">
+  <h3>${esc(zh)}${status}</h3>
+  <p class="en">${esc(en)}</p>
+  <p class="meta">${npm}${roles ? ` <span class="roles">${esc(roles)}</span>` : ''}</p>
+  <p class="tags">${tags.map((t) => `<span>${esc(t)}</span>`).join('')}</p>
+</a>`
+}
+
+const section = ([fam, list]) => `<section id="${esc(fam)}">
+  <h2>${esc(fam)} <small>${esc(FAMILY_SUB[fam] || '')} · ${list.length}</small></h2>
+  <div class="grid">${list.map(card).join('\n')}</div>
+</section>`
+
+const html = `<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DSH 插件市场 — 按任务浏览</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+header{padding:40px 24px 16px;max-width:1120px;margin:0 auto}
+h1{margin:0 0 8px;font-size:30px}
+.sub{color:var(--muted);margin:0 0 20px}
+#q{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--panel);color:var(--text);font-size:16px}
+nav{display:flex;flex-wrap:wrap;gap:8px;padding:16px 24px;max-width:1120px;margin:0 auto}
+nav a{color:var(--accent);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:14px}
+main{max-width:1120px;margin:0 auto;padding:0 24px 64px}
+section{margin:28px 0}
+h2{font-size:20px;border-bottom:1px solid var(--line);padding-bottom:8px}
+h2 small{color:var(--muted);font-weight:400;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit}
+.card:hover{border-color:var(--accent)}
+.card h3{margin:0 0 4px;font-size:17px}
+.card .en{margin:0;color:var(--muted);font-size:12px}
+.card .meta{margin:6px 0;font-size:12px;color:var(--muted)}
+.card .roles{color:var(--accent)}
+.tags span{display:inline-block;background:#1f2937;color:#c9d1d9;border-radius:6px;padding:1px 8px;font-size:12px;margin:2px 4px 0 0}
+.pill{font-size:11px;border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+.pill.frozen{background:#3d2b1f;color:#f0b72f}
+footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <h1>DSH 插件市场</h1>
+  <p class="sub">${items.length} 个插件，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
+  <input id="q" type="search" placeholder="试试：发票、对账、报关、合同、考勤…">
+</header>
+<nav>${FAMILIES.map((f) => `<a href="#${esc(f)}">${esc(f)} ${(groups.get(f) || []).length}</a>`).join('')}</nav>
+<main>
+${FAMILIES.map((f) => section([f, groups.get(f) || []])).join('\n')}
+<p id="empty" hidden>没有匹配的插件。</p>
+</main>
+<footer>
+  <p>所有插件在本地运行，不上传你的文件。版本与安装方式见各插件详情页；索引文件在 <a href="market/index.json">market/index.json</a>（format 1，可直接添加到 DSH 的插件索引源）。</p>
+</footer>
+<script>
+const q = document.getElementById('q')
+const cards = [...document.querySelectorAll('.card')]
+const sections = [...document.querySelectorAll('section')]
+q.addEventListener('input', () => {
+  const term = q.value.trim().toLowerCase()
+  let visible = 0
+  for (const card of cards) {
+    const hit = !term || card.dataset.search.includes(term)
+    card.hidden = !hit
+    if (hit) visible++
+  }
+  for (const s of sections) {
+    s.hidden = ![...s.querySelectorAll('.card')].some((c) => !c.hidden)
+  }
+  document.getElementById('empty').hidden = visible > 0
+})
+</script>
+</body>
+</html>
+`
+
+fs.writeFileSync(path.join(root, 'docs', 'market.html'), html)
+console.log(`wrote docs/market.html (${items.length} plugins, ${FAMILIES.length} families)`)

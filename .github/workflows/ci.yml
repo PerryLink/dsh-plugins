@@ -24,5 +24,11 @@ jobs:
         run: node scripts/build-docs.mjs
       - name: Verify checked-in generated files
         run: git diff --exit-code -- family.json views docs/taxonomy.html docs/family docs/packages README.md docs/index.html
+      - name: Rebuild the market page
+        run: node scripts/build-market-page.mjs
+      - name: Verify the market index
+        run: node scripts/build-market-index.mjs --check
+      - name: Verify checked-in market page
+        run: git diff --exit-code -- docs/market.html
       - name: Verify package/docs metadata
         run: node scripts/check-docs.mjs
