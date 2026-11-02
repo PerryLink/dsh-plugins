@@ -1991,7 +1991,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.9",
       "members": [
         {
           "id": "dsh-einvoice",
@@ -2033,7 +2033,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.8",
       "members": [
         {
           "id": "dsh-legal-intake",
