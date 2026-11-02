@@ -1,0 +1,2182 @@
+{
+  "dsh-einvoice": {
+    "nameZh": "发票查重",
+    "tags": [
+      "电子发票",
+      "发票查重",
+      "OFD",
+      "发票归档",
+      "去重"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "会计",
+      "财务共享专员"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-bankrec": {
+    "nameZh": "银行流水对账",
+    "tags": [
+      "银行流水",
+      "对账",
+      "核账",
+      "勾稽",
+      "CAMT.053"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "出纳",
+      "会计"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-ap-three-way": {
+    "nameZh": "发票三单匹配",
+    "tags": [
+      "三单匹配",
+      "发票",
+      "采购单",
+      "入库单",
+      "容差"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "应付会计",
+      "财务共享专员"
+    ],
+    "industries": [
+      "财务",
+      "制造"
+    ]
+  },
+  "dsh-travel-recon": {
+    "nameZh": "差旅票据稽核",
+    "tags": [
+      "差旅报销",
+      "票据核对",
+      "重复报销",
+      "费用政策",
+      "行程单"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "报销专员",
+      "会计"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-legal-intake": {
+    "nameZh": "法务需求收件",
+    "tags": [
+      "法务需求",
+      "邮件受理",
+      "需求登记",
+      "线程去重"
+    ],
+    "taskFamily": "法务合同",
+    "roles": [
+      "法务助理",
+      "法务专员"
+    ],
+    "industries": [
+      "法务"
+    ]
+  },
+  "dsh-legal-clause": {
+    "nameZh": "合同条款体检",
+    "tags": [
+      "合同审查",
+      "条款比对",
+      "缺漏条款",
+      "风险条款",
+      "审查清单"
+    ],
+    "taskFamily": "法务合同",
+    "roles": [
+      "法务",
+      "合同管理员"
+    ],
+    "industries": [
+      "法务"
+    ]
+  },
+  "dsh-ghg": {
+    "nameZh": "用电碳排放（范围二）",
+    "tags": [
+      "碳排放",
+      "范围二",
+      "用电量",
+      "排放因子",
+      "ESG"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "环保专员",
+      "能源管理员"
+    ],
+    "industries": [
+      "能源",
+      "制造"
+    ]
+  },
+  "dsh-qms-capa": {
+    "nameZh": "质量问题闭环跟踪",
+    "tags": [
+      "质量问题",
+      "NCR",
+      "CAPA",
+      "8D",
+      "纠正措施"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "质量工程师",
+      "质检员"
+    ],
+    "industries": [
+      "制造"
+    ]
+  },
+  "dsh-hs-candidate": {
+    "nameZh": "HS 候选预检",
+    "tags": [
+      "HS 编码",
+      "商品归类",
+      "预归类",
+      "申报要素",
+      "关税"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "关务",
+      "报关员"
+    ],
+    "industries": [
+      "物流",
+      "制造"
+    ]
+  },
+  "dsh-freight-audit": {
+    "nameZh": "运费账单审计",
+    "tags": [
+      "运费",
+      "账单审计",
+      "费率表",
+      "承运商",
+      "运费差异"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "物流专员",
+      "应付会计"
+    ],
+    "industries": [
+      "物流"
+    ]
+  },
+  "dsh-docx-redline": {
+    "nameZh": "文档正文差异比对",
+    "tags": [
+      "Word 文档",
+      "文本比对",
+      "版本差异",
+      "文档校验"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "行政专员",
+      "文员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-ifc-qto": {
+    "nameZh": "模型工程量提取",
+    "tags": [
+      "IFC",
+      "BIM",
+      "工程量",
+      "算量",
+      "清单"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "造价工程师",
+      "施工员"
+    ],
+    "industries": [
+      "建筑"
+    ]
+  },
+  "dsh-policy-ledger": {
+    "nameZh": "安装诊断",
+    "tags": [
+      "安装诊断",
+      "插件安装",
+      "故障排查",
+      "安装日志"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "运维工程师",
+      "开发者"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-pim-lint": {
+    "nameZh": "商品目录查错",
+    "tags": [
+      "商品主数据",
+      "SKU",
+      "GTIN",
+      "目录校验",
+      "重复商品"
+    ],
+    "taskFamily": "零售电商",
+    "roles": [
+      "电商运营",
+      "商品管理员"
+    ],
+    "industries": [
+      "零售"
+    ]
+  },
+  "dsh-eval-pack": {
+    "nameZh": "评测包校验评分",
+    "tags": [
+      "评测集",
+      "评分",
+      "结构校验",
+      "自动打分"
+    ],
+    "taskFamily": "教育培训",
+    "roles": [
+      "评测工程师",
+      "教研员"
+    ],
+    "industries": [
+      "教育"
+    ]
+  },
+  "dsh-customs-doc-check": {
+    "nameZh": "报关单证比对",
+    "tags": [
+      "报关单",
+      "单证一致",
+      "申报要素",
+      "海关"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "报关员",
+      "关务"
+    ],
+    "industries": [
+      "物流",
+      "制造"
+    ]
+  },
+  "dsh-demurrage-ledger": {
+    "nameZh": "滞箱费台账核验",
+    "tags": [
+      "滞箱费",
+      "滞期费",
+      "免箱期",
+      "海运",
+      "台账"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "关务",
+      "物流专员"
+    ],
+    "industries": [
+      "物流"
+    ]
+  },
+  "dsh-export-ctl-check": {
+    "nameZh": "出口管制物项筛查",
+    "tags": [
+      "出口管制",
+      "管制清单",
+      "两用物项",
+      "最终用途",
+      "许可证"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "关务",
+      "合规专员"
+    ],
+    "industries": [
+      "物流",
+      "制造"
+    ]
+  },
+  "dsh-forecast-penalty": {
+    "nameZh": "预测考核费用测算",
+    "tags": [
+      "预测准确率",
+      "考核费用",
+      "供应链",
+      "结算"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "供应链计划员",
+      "采购员"
+    ],
+    "industries": [
+      "制造",
+      "零售"
+    ]
+  },
+  "dsh-hs-classify": {
+    "nameZh": "商品归类层级校验",
+    "tags": [
+      "HS 编码",
+      "商品归类",
+      "税则",
+      "章品目子目",
+      "层级"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "归类师",
+      "关务"
+    ],
+    "industries": [
+      "物流",
+      "制造"
+    ]
+  },
+  "dsh-lc-doc-check": {
+    "nameZh": "信用证不符点筛查",
+    "tags": [
+      "信用证",
+      "不符点",
+      "交单",
+      "UCP600",
+      "审单"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "单证员",
+      "外贸业务员"
+    ],
+    "industries": [
+      "物流",
+      "财务"
+    ]
+  },
+  "dsh-origin-rvc-check": {
+    "nameZh": "原产地成分核算",
+    "tags": [
+      "原产地证",
+      "区域价值成分",
+      "RVC",
+      "自贸协定",
+      "优惠税率"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "关务",
+      "单证员"
+    ],
+    "industries": [
+      "物流",
+      "制造"
+    ]
+  },
+  "dsh-railway-window": {
+    "nameZh": "铁路天窗台账复核",
+    "tags": [
+      "铁路施工",
+      "天窗",
+      "施工计划",
+      "营业线",
+      "台账"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "施工员",
+      "铁路工程师"
+    ],
+    "industries": [
+      "建筑"
+    ]
+  },
+  "dsh-fmea-table-check": {
+    "nameZh": "失效分析表核对",
+    "tags": [
+      "FMEA",
+      "失效分析",
+      "风险顺序数",
+      "质量工具"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "质量工程师",
+      "工艺工程师"
+    ],
+    "industries": [
+      "制造"
+    ]
+  },
+  "dsh-ota-review-check": {
+    "nameZh": "点评回复时效检查",
+    "tags": [
+      "在线点评",
+      "差评回复",
+      "回复时限",
+      "整改闭环",
+      "客服"
+    ],
+    "taskFamily": "零售电商",
+    "roles": [
+      "客服主管",
+      "店长"
+    ],
+    "industries": [
+      "零售"
+    ]
+  },
+  "dsh-pipeline-check": {
+    "nameZh": "项目文件链条联查",
+    "tags": [
+      "项目文件",
+      "文件链条",
+      "环节先后",
+      "金额口径"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "项目经理",
+      "内控专员"
+    ],
+    "industries": [
+      "建筑",
+      "制造"
+    ]
+  },
+  "dsh-ppap-check": {
+    "nameZh": "生产件批准放行",
+    "tags": [
+      "PPAP",
+      "样件批准",
+      "提交等级",
+      "供应商",
+      "量产"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "质量工程师",
+      "供应商质量工程师"
+    ],
+    "industries": [
+      "制造"
+    ]
+  },
+  "dsh-repair-order-qc": {
+    "nameZh": "维修结算单核算",
+    "tags": [
+      "维修工单",
+      "结算",
+      "配件工时",
+      "售后"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "售后主管",
+      "结算员"
+    ],
+    "industries": [
+      "制造"
+    ]
+  },
+  "dsh-review-reply-check": {
+    "nameZh": "审稿回应逐条对照",
+    "tags": [
+      "审稿意见",
+      "逐条回应",
+      "回复覆盖",
+      "同行评议"
+    ],
+    "taskFamily": "教育培训",
+    "roles": [
+      "期刊编辑",
+      "研究人员"
+    ],
+    "industries": [
+      "教育"
+    ]
+  },
+  "dsh-spc-gbt-adapter": {
+    "nameZh": "过程能力指数计算",
+    "tags": [
+      "SPC",
+      "控制图",
+      "过程能力",
+      "CPK",
+      "国标"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "质量工程师",
+      "工艺工程师"
+    ],
+    "industries": [
+      "制造"
+    ]
+  },
+  "dsh-warranty-calc": {
+    "nameZh": "质保索赔金额核算",
+    "tags": [
+      "质保期",
+      "索赔",
+      "保修",
+      "里程",
+      "金额核算"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "售后专员",
+      "质量工程师"
+    ],
+    "industries": [
+      "制造"
+    ]
+  },
+  "dsh-aqua-input-check": {
+    "nameZh": "水产投入品核查",
+    "tags": [
+      "水产养殖",
+      "投入品",
+      "渔药",
+      "休药期",
+      "饲料添加剂"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "养殖技术员",
+      "质检员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-drill-script-check": {
+    "nameZh": "演练脚本要素清点",
+    "tags": [
+      "应急演练",
+      "演练脚本",
+      "响应分级",
+      "要素齐备"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "安全员",
+      "应急管理员"
+    ],
+    "industries": [
+      "制造",
+      "建筑"
+    ]
+  },
+  "dsh-emergency-plan": {
+    "nameZh": "应急预案要素审查",
+    "tags": [
+      "应急预案",
+      "要素齐备",
+      "条款定位",
+      "备案"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "安全员",
+      "环保专员"
+    ],
+    "industries": [
+      "制造",
+      "建筑"
+    ]
+  },
+  "dsh-hazchem-check": {
+    "nameZh": "危化品临界量辨识",
+    "tags": [
+      "危化品",
+      "重大危险源",
+      "临界量",
+      "储存"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "安全员",
+      "仓管员"
+    ],
+    "industries": [
+      "制造",
+      "能源"
+    ]
+  },
+  "dsh-hidden-risk-map": {
+    "nameZh": "重大隐患判定映射",
+    "tags": [
+      "重大隐患",
+      "判定标准",
+      "隐患台账",
+      "条款映射"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "安全员",
+      "环保专员"
+    ],
+    "industries": [
+      "制造",
+      "建筑"
+    ]
+  },
+  "dsh-power-loss-split": {
+    "nameZh": "线损电量拆分",
+    "tags": [
+      "线损",
+      "电量拆分",
+      "考核表",
+      "供电"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "电气工程师",
+      "安全员"
+    ],
+    "industries": [
+      "能源"
+    ]
+  },
+  "dsh-power-ticket-check": {
+    "nameZh": "电力工作票核查",
+    "tags": [
+      "工作票",
+      "两票",
+      "签发许可",
+      "电力安全"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "电气工程师",
+      "安全员"
+    ],
+    "industries": [
+      "能源"
+    ]
+  },
+  "dsh-bid-ca-precheck": {
+    "nameZh": "投标符合性预检",
+    "tags": [
+      "投标文件",
+      "符合性",
+      "逐条响应",
+      "招标文件"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "投标专员",
+      "商务专员"
+    ],
+    "industries": [
+      "建筑",
+      "制造"
+    ]
+  },
+  "dsh-bid-qual-check": {
+    "nameZh": "投标资格条件审查",
+    "tags": [
+      "投标资格",
+      "资格条件",
+      "证明材料",
+      "否决项"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "投标专员",
+      "采购员"
+    ],
+    "industries": [
+      "建筑",
+      "制造"
+    ]
+  },
+  "dsh-contract-stance": {
+    "nameZh": "合同立场台账梳理",
+    "tags": [
+      "合同条款",
+      "立场",
+      "风险等级",
+      "退让底线"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "商务专员",
+      "法务"
+    ],
+    "industries": [
+      "建筑",
+      "制造"
+    ]
+  },
+  "dsh-protest-deadline": {
+    "nameZh": "质疑投诉期限测算",
+    "tags": [
+      "质疑",
+      "投诉",
+      "法定期限",
+      "政府采购"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "投标专员",
+      "法务"
+    ],
+    "industries": [
+      "政务",
+      "建筑"
+    ]
+  },
+  "dsh-rulefile-check": {
+    "nameZh": "规则库自检",
+    "tags": [
+      "规则库",
+      "条款引用",
+      "效力",
+      "自检"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "招标代理",
+      "评标专家"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-tender-extract": {
+    "nameZh": "招标条款逐字摘录",
+    "tags": [
+      "招标文件",
+      "条款摘录",
+      "出处",
+      "原文"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "投标专员",
+      "招标代理"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-tender-matrix": {
+    "nameZh": "评标评分矩阵校验",
+    "tags": [
+      "评标",
+      "评分矩阵",
+      "分值合计",
+      "评标办法"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "评标专家",
+      "招标代理"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-eia-guide-check": {
+    "nameZh": "环评导则适用判定",
+    "tags": [
+      "环评",
+      "导则",
+      "适用性",
+      "执行标准"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "环评工程师",
+      "施工员"
+    ],
+    "industries": [
+      "建筑",
+      "能源"
+    ]
+  },
+  "dsh-guard-plan-qc": {
+    "nameZh": "劳保用品配置核对",
+    "tags": [
+      "劳保用品",
+      "安全防护",
+      "配备标准",
+      "配置数量"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "安全员",
+      "施工员"
+    ],
+    "industries": [
+      "建筑"
+    ]
+  },
+  "dsh-hazplan-check": {
+    "nameZh": "偏差分析表复核",
+    "tags": [
+      "HAZOP",
+      "偏差分析",
+      "危险可操作性",
+      "分析表"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "工艺工程师",
+      "安全员"
+    ],
+    "industries": [
+      "制造",
+      "能源"
+    ]
+  },
+  "dsh-permit-report-check": {
+    "nameZh": "行政许可材料核查",
+    "tags": [
+      "行政许可",
+      "申请材料",
+      "法定时限",
+      "办理台账"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "行政专员",
+      "政务人员"
+    ],
+    "industries": [
+      "政务",
+      "建筑"
+    ]
+  },
+  "dsh-safety-brief-check": {
+    "nameZh": "安全交底签字闭环",
+    "tags": [
+      "安全交底",
+      "技术交底",
+      "签字",
+      "施工安全"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "施工员",
+      "安全员"
+    ],
+    "industries": [
+      "建筑"
+    ]
+  },
+  "dsh-site-log-check": {
+    "nameZh": "监理日志连续检查",
+    "tags": [
+      "监理日志",
+      "旁站",
+      "跨日连续",
+      "监理"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "监理员",
+      "施工员"
+    ],
+    "industries": [
+      "建筑"
+    ]
+  },
+  "dsh-soilwater-check": {
+    "nameZh": "土壤地下水核验",
+    "tags": [
+      "土壤",
+      "地下水",
+      "监测点位",
+      "超标判定"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "环保专员",
+      "环评工程师"
+    ],
+    "industries": [
+      "建筑",
+      "能源"
+    ]
+  },
+  "dsh-essay-rubric-check": {
+    "nameZh": "作文量表评分复核",
+    "tags": [
+      "作文",
+      "评分量表",
+      "评分项",
+      "原文定位"
+    ],
+    "taskFamily": "教育培训",
+    "roles": [
+      "教师",
+      "教研员"
+    ],
+    "industries": [
+      "教育"
+    ]
+  },
+  "dsh-learning-gap-check": {
+    "nameZh": "能力差距培养评估",
+    "tags": [
+      "能力差距",
+      "培养计划",
+      "人才梯队",
+      "培训"
+    ],
+    "taskFamily": "人力资源",
+    "roles": [
+      "培训专员",
+      "HRBP"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-nsfc-form-check": {
+    "nameZh": "国自然形式审查",
+    "tags": [
+      "国自然",
+      "基金申请",
+      "形式审查",
+      "匿名化"
+    ],
+    "taskFamily": "教育培训",
+    "roles": [
+      "科研人员",
+      "科研秘书"
+    ],
+    "industries": [
+      "教育"
+    ]
+  },
+  "dsh-paper-doc-adapter": {
+    "nameZh": "试卷结构解析校核",
+    "tags": [
+      "试卷",
+      "题型",
+      "分值",
+      "解析结构"
+    ],
+    "taskFamily": "教育培训",
+    "roles": [
+      "教研员",
+      "教师"
+    ],
+    "industries": [
+      "教育"
+    ]
+  },
+  "dsh-policy-brief-draft": {
+    "nameZh": "政策专报要素审定",
+    "tags": [
+      "政策专报",
+      "观点依据",
+      "出处",
+      "决策参考"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "政务人员",
+      "研究员"
+    ],
+    "industries": [
+      "政务"
+    ]
+  },
+  "dsh-archive-check": {
+    "nameZh": "档案归档查验",
+    "tags": [
+      "归档",
+      "档案",
+      "保管期限",
+      "完整性"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "档案管理员",
+      "政务人员"
+    ],
+    "industries": [
+      "政务",
+      "通用"
+    ]
+  },
+  "dsh-gongwen-flow-check": {
+    "nameZh": "公文流转时限检查",
+    "tags": [
+      "公文",
+      "流转",
+      "办理时限",
+      "环节"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "政务人员",
+      "办公室文员"
+    ],
+    "industries": [
+      "政务"
+    ]
+  },
+  "dsh-gongwen-word-check": {
+    "nameZh": "公文格式要素校对",
+    "tags": [
+      "公文格式",
+      "版头",
+      "主体要素",
+      "党政机关公文"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "办公室文员",
+      "政务人员"
+    ],
+    "industries": [
+      "政务"
+    ]
+  },
+  "dsh-evidence-check": {
+    "nameZh": "证据清单齐备核验",
+    "tags": [
+      "证据清单",
+      "举证",
+      "待证事实",
+      "齐备性"
+    ],
+    "taskFamily": "法务合同",
+    "roles": [
+      "律师",
+      "法务专员"
+    ],
+    "industries": [
+      "法务"
+    ]
+  },
+  "dsh-lawcite-adapter": {
+    "nameZh": "法条引用校对",
+    "tags": [
+      "法条",
+      "条号",
+      "效力状态",
+      "引用"
+    ],
+    "taskFamily": "法务合同",
+    "roles": [
+      "律师",
+      "法务专员"
+    ],
+    "industries": [
+      "法务"
+    ]
+  },
+  "dsh-pleading-draft": {
+    "nameZh": "起诉状要素核对",
+    "tags": [
+      "起诉状",
+      "诉请",
+      "事实理由",
+      "证据",
+      "法条"
+    ],
+    "taskFamily": "法务合同",
+    "roles": [
+      "律师",
+      "法务专员"
+    ],
+    "industries": [
+      "法务"
+    ]
+  },
+  "dsh-icd-rule-check": {
+    "nameZh": "疾病编码规则核对",
+    "tags": [
+      "疾病编码",
+      "ICD",
+      "病案首页",
+      "编码合规",
+      "诊断编码"
+    ],
+    "taskFamily": "医疗健康",
+    "roles": [
+      "病案编码员",
+      "医保专员"
+    ],
+    "industries": [
+      "医疗"
+    ]
+  },
+  "dsh-medrec-qc": {
+    "nameZh": "病案首页质控",
+    "tags": [
+      "病历",
+      "质控",
+      "病案",
+      "首页质控",
+      "逻辑校验"
+    ],
+    "taskFamily": "医疗健康",
+    "roles": [
+      "病案质控员",
+      "临床医师"
+    ],
+    "industries": [
+      "医疗"
+    ]
+  },
+  "dsh-nurse-record-check": {
+    "nameZh": "护理记录核对",
+    "tags": [
+      "护理记录",
+      "护理文书",
+      "查对",
+      "病区",
+      "护理质量"
+    ],
+    "taskFamily": "医疗健康",
+    "roles": [
+      "护士",
+      "护理管理者"
+    ],
+    "industries": [
+      "医疗"
+    ]
+  },
+  "dsh-soe-decision-check": {
+    "nameZh": "国企决策合规检查",
+    "tags": [
+      "国企",
+      "三重一大",
+      "决策",
+      "合规"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "合规专员",
+      "纪检专员",
+      "行政专员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-sop-sync-check": {
+    "nameZh": "作业规程同步检查",
+    "tags": [
+      "作业规程",
+      "SOP",
+      "版本一致",
+      "制度落地"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "质量工程师",
+      "内审员"
+    ],
+    "industries": [
+      "制造"
+    ]
+  },
+  "dsh-bid-health-check": {
+    "nameZh": "投标响应覆盖检查",
+    "tags": [
+      "投标",
+      "招标",
+      "响应",
+      "应答",
+      "偏离"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "投标专员",
+      "商务经理"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-canteen-retention-check": {
+    "nameZh": "食堂留样台账核对",
+    "tags": [
+      "食堂",
+      "留样",
+      "台账",
+      "食品安全",
+      "食品留样"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "食品安全员",
+      "食堂管理员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-construction-doc-check": {
+    "nameZh": "施工资料齐套检查",
+    "tags": [
+      "施工资料",
+      "竣工",
+      "齐套",
+      "资料齐全",
+      "资料版本"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "资料员",
+      "施工员"
+    ],
+    "industries": [
+      "建筑"
+    ]
+  },
+  "dsh-excel-reconcile": {
+    "nameZh": "双表对账查差异",
+    "tags": [
+      "对账",
+      "核账",
+      "勾对",
+      "差异",
+      "两表比对"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "会计",
+      "出纳"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-invoice-ledger": {
+    "nameZh": "发票台账核验",
+    "tags": [
+      "发票",
+      "票据",
+      "台账",
+      "查重",
+      "勾稽"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "会计",
+      "税务专员"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-payroll-audit": {
+    "nameZh": "工资核算复核",
+    "tags": [
+      "工资",
+      "薪酬",
+      "薪资",
+      "算薪",
+      "个税"
+    ],
+    "taskFamily": "人力资源",
+    "roles": [
+      "薪酬专员",
+      "人力资源专员"
+    ],
+    "industries": [
+      "通用",
+      "财务"
+    ]
+  },
+  "dsh-safety-ledger-check": {
+    "nameZh": "安全资质台账核对",
+    "tags": [
+      "安全资质",
+      "台账",
+      "施工",
+      "证件有效期"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "安全员",
+      "资料员"
+    ],
+    "industries": [
+      "建筑"
+    ]
+  },
+  "dsh-table-ingest": {
+    "nameZh": "表格数据提取",
+    "tags": [
+      "表格",
+      "提取",
+      "Excel",
+      "数据转换",
+      "结构化"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "数据分析师",
+      "办公文员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-tender-requirements": {
+    "nameZh": "招标文件要点提取",
+    "tags": [
+      "招标文件",
+      "要点",
+      "资格条件",
+      "检索",
+      "摘录"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "投标专员",
+      "采购员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-finops-suite": {
+    "nameZh": "财务运营套件",
+    "tags": [
+      "财务",
+      "报销",
+      "银行对账",
+      "三单匹配",
+      "差旅"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "财务经理",
+      "会计"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-contract-suite": {
+    "nameZh": "合同法务套件",
+    "tags": [
+      "合同",
+      "法务",
+      "条款",
+      "审查",
+      "合同审查"
+    ],
+    "taskFamily": "法务合同",
+    "roles": [
+      "法务",
+      "合同管理员"
+    ],
+    "industries": [
+      "法务"
+    ]
+  },
+  "dsh-auto-review": {
+    "nameZh": "敏感操作复核",
+    "tags": [
+      "审批",
+      "复核",
+      "放行",
+      "风险"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "运维工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-autotier": {
+    "nameZh": "模型档位分配",
+    "tags": [
+      "模型路由",
+      "档位",
+      "成本",
+      "调度"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "平台运营"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-budget": {
+    "nameZh": "会话成本看板",
+    "tags": [
+      "成本",
+      "预算",
+      "用量",
+      "时延"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "财务"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-cert-mcp": {
+    "nameZh": "认证数据查询",
+    "tags": [
+      "认证",
+      "评级",
+      "查询",
+      "证据"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "平台运营",
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-checkpoint-rewind": {
+    "nameZh": "快照一键回滚",
+    "tags": [
+      "快照",
+      "回滚",
+      "备份",
+      "恢复",
+      "还原"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-claude-move": {
+    "nameZh": "配置与会话迁移",
+    "tags": [
+      "迁移",
+      "配置导入",
+      "命令迁移",
+      "会话",
+      "历史记录"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-click": {
+    "nameZh": "桌面点击操作",
+    "tags": [
+      "桌面",
+      "点击",
+      "截图",
+      "鼠标"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "运维工程师",
+      "办公文员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-composer-history": {
+    "nameZh": "输入历史回溯",
+    "tags": [
+      "输入历史",
+      "命令",
+      "补全",
+      "快捷"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-data-quality": {
+    "nameZh": "数据质量核验",
+    "tags": [
+      "数据质量",
+      "清洗",
+      "剖析",
+      "校验"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "数据分析师",
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-defend": {
+    "nameZh": "提示词攻击防护",
+    "tags": [
+      "注入防护",
+      "越狱",
+      "密钥泄露",
+      "拦截"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "安全工程师",
+      "运维工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-doublecheck": {
+    "nameZh": "交付质量把关",
+    "tags": [
+      "交付",
+      "验收",
+      "测试",
+      "把关"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "项目经理",
+      "测试工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-draw": {
+    "nameZh": "图片生成调度",
+    "tags": [
+      "文生图",
+      "配图",
+      "绘图",
+      "路由"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "设计师",
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-fast": {
+    "nameZh": "性能瓶颈诊断",
+    "tags": [
+      "性能",
+      "时延",
+      "诊断",
+      "上下文"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "运维工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-fund-research": {
+    "nameZh": "基金研究报告",
+    "tags": [
+      "基金",
+      "研究报告",
+      "净值",
+      "数据溯源"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "研究员",
+      "投资经理"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-industry-research": {
+    "nameZh": "行业公司研究",
+    "tags": [
+      "行业研究",
+      "公司",
+      "产业链",
+      "调研"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "研究员",
+      "咨询顾问"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-laya": {
+    "nameZh": "结构化决策支持",
+    "tags": [
+      "决策",
+      "选项",
+      "评分",
+      "服务接口"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-library": {
+    "nameZh": "本地资料库检索",
+    "tags": [
+      "资料库",
+      "检索",
+      "引用",
+      "文档"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "办公文员",
+      "研究员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-local-ai": {
+    "nameZh": "本地模型接入",
+    "tags": [
+      "本地模型",
+      "Ollama",
+      "离线",
+      "推理"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-lsp-actions": {
+    "nameZh": "代码诊断与补全",
+    "tags": [
+      "代码诊断",
+      "补全",
+      "格式化",
+      "编辑器"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-mask": {
+    "nameZh": "个人信息脱敏",
+    "tags": [
+      "脱敏",
+      "隐私",
+      "手机号",
+      "身份证",
+      "匿名化"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "安全工程师",
+      "法务"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-mcp-panel": {
+    "nameZh": "外部工具管理",
+    "tags": [
+      "MCP",
+      "工具接入",
+      "配置",
+      "诊断",
+      "服务器管理",
+      "调用测试"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "平台运营"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-memento": {
+    "nameZh": "跨会话记忆",
+    "tags": [
+      "记忆",
+      "跨会话",
+      "长期",
+      "审计"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-observe": {
+    "nameZh": "链路追踪导出",
+    "tags": [
+      "链路追踪",
+      "监控",
+      "OpenTelemetry",
+      "导出"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "运维工程师",
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-output-styles": {
+    "nameZh": "回复风格切换",
+    "tags": [
+      "风格",
+      "简洁",
+      "预设",
+      "回复"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "办公文员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-permission-rules": {
+    "nameZh": "权限规则配置",
+    "tags": [
+      "权限",
+      "规则",
+      "审批",
+      "白名单",
+      "放行策略"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "运维工程师",
+      "安全工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-plugin-guide": {
+    "nameZh": "扩展开发指南",
+    "tags": [
+      "开发文档",
+      "API",
+      "版本兼容",
+      "示例"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-plugin-upgrade": {
+    "nameZh": "版本升级迁移",
+    "tags": [
+      "升级",
+      "版本",
+      "迁移",
+      "兼容"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-reach": {
+    "nameZh": "聊天渠道审批",
+    "tags": [
+      "微信",
+      "飞书",
+      "Telegram",
+      "消息推送",
+      "审批答复",
+      "远程确认"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "运维工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-research-report": {
+    "nameZh": "可溯源研究报告",
+    "tags": [
+      "研究报告",
+      "证据",
+      "引用",
+      "成稿"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "研究员",
+      "分析师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-score": {
+    "nameZh": "五维质量评分",
+    "tags": [
+      "评分",
+      "质量",
+      "证据",
+      "排行"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "平台运营",
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-session-sync": {
+    "nameZh": "会话跨设备同步",
+    "tags": [
+      "同步",
+      "会话",
+      "多设备",
+      "备份"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-talk": {
+    "nameZh": "语音对话交互",
+    "tags": [
+      "语音",
+      "对话",
+      "朗读",
+      "打断"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "办公文员"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-test-drive": {
+    "nameZh": "隔离试装核验",
+    "tags": [
+      "试装",
+      "沙箱",
+      "冒烟测试",
+      "清理"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "测试工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-translate": {
+    "nameZh": "文本翻译校对",
+    "tags": [
+      "翻译",
+      "文件翻译",
+      "质量检查",
+      "多语言",
+      "JSON修复"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-github": {
+    "nameZh": "代码评审对接",
+    "tags": [
+      "代码评审",
+      "PR",
+      "CI",
+      "问题单"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "项目经理"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-plugin-doctor": {
+    "nameZh": "包结构冒烟检查",
+    "tags": [
+      "结构检查",
+      "冒烟",
+      "体检",
+      "核验"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "测试工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-plugin-kit": {
+    "nameZh": "公共组件工具箱",
+    "tags": [
+      "工具库",
+      "组件",
+      "复用",
+      "骨架"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-skill-pack-security-provider": {
+    "nameZh": "安全技能包供给",
+    "tags": [
+      "安全",
+      "技能包",
+      "规则",
+      "供给"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "安全工程师",
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-ticktick": {
+    "nameZh": "滴答清单对接",
+    "tags": [
+      "待办",
+      "清单",
+      "日程",
+      "任务"
+    ],
+    "taskFamily": "行政办公",
+    "roles": [
+      "办公文员",
+      "项目经理"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-community-bench": {
+    "nameZh": "社区基准看板",
+    "tags": [
+      "榜单",
+      "基准",
+      "评分",
+      "社区",
+      "公开分数"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "平台运营",
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-background-agents": {
+    "nameZh": "后台长期任务",
+    "tags": [
+      "后台",
+      "长任务",
+      "子任务",
+      "多会话"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-session-pin": {
+    "nameZh": "会话置顶管理",
+    "tags": [
+      "置顶",
+      "会话",
+      "侧边栏",
+      "排序"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-team-rooms": {
+    "nameZh": "多会话协作室",
+    "tags": [
+      "协作",
+      "团队",
+      "消息",
+      "任务板"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "项目经理"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-kit": {
+    "nameZh": "一键安装合集",
+    "tags": [
+      "安装",
+      "合集",
+      "入门",
+      "打包"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-catalog": {
+    "nameZh": "应用目录清单",
+    "tags": [
+      "目录",
+      "清单",
+      "市场",
+      "元数据"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "平台运营"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-plugin-certification": {
+    "nameZh": "认证评级登记",
+    "tags": [
+      "认证",
+      "评级",
+      "登记",
+      "社区"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "平台运营",
+      "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  }
+}

@@ -143,6 +143,22 @@ for (const [id, collection, category, archetype, domains, status, repo] of edge)
   });
 }
 
+// Chinese display metadata is authored once in data/zh-meta.json and merged here,
+// so family.json stays a projection instead of a second source of truth.
+const zhMetaPath = path.join(root, 'data', 'zh-meta.json');
+if (fs.existsSync(zhMetaPath)) {
+  const zhMeta = JSON.parse(fs.readFileSync(zhMetaPath, 'utf8'));
+  for (const item of items) {
+    const meta = zhMeta[item.id];
+    if (!meta) continue;
+    item.displayNameZh = meta.nameZh;
+    item.tagsZh = meta.tags;
+    item.taskFamilyZh = meta.taskFamily;
+    item.rolesZh = meta.roles;
+    item.industriesZh = meta.industries;
+  }
+}
+
 const ids = new Set();
 for (const item of items) {
   if (ids.has(item.id)) throw new Error(`duplicate family id ${item.id}`);
