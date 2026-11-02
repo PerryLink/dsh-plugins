@@ -1,34 +1,35 @@
 # Roster and install scopes
 
-**Measured 2026-11-01.** The family roster, the `dsh-kit` installer and the npm catalog are three different surfaces. This page is the closure: every number has one meaning and one source.
+**Measured 2026-11-02** against `dsh-kit` origin/main `3c7bd13` (`plugins.txt`, `family.txt`) and `dsh-catalog` origin/main `61ddf3a` (`data/packages.json`). The family roster, the two `dsh-kit` installers and the npm catalog are different surfaces. This page is the closure: every number has one meaning and one source.
 
 ## 1. Family roster — 125 rows
 
-`family.json` is the authoritative 125-row projection. Its `installScope` field explains why a row is or is not in `dsh-kit/plugins.txt`.
+`family.json` is the authoritative 125-row projection. Its `installScope` field says which installer surface sees a row: `plugins.txt` (mainline), `family.txt` (full family), both, or neither.
 
 | installScope | Rows | Meaning |
 |---|---:|---|
-| `mainline-default` | 39 | Family rows installed by `install-family.*`; `install-all.*` adds 4 default rows (see §2) |
-| `mainline-opt-in` | 53 | Core compliance checkers; installed only with `--include-checkers` / `-IncludeCheckers` |
-| `catalog-only` | 10 | The 9 newer compliance tools + `dsh-community-bench`; visible in the catalog, not in the family installer by default |
-| `domain` | 17 | 15 domain packages + 2 domain suites; installed from the domain index or a suite |
+| `mainline-default` | 39 | All 39 are among the 43 defaults in `plugins.txt`, and all are in `family.txt` |
+| `mainline-opt-in` | 53 | In `plugins.txt` behind `--include-checkers` / `-IncludeCheckers`; also in `family.txt` |
+| `catalog-only` | 10 | The 9 newer compliance tools + `dsh-community-bench`; **all 10 are in `family.txt`**; only `dsh-community-bench` is also in `plugins.txt` (as a default) |
+| `domain` | 17 | 15 domain packages + 2 domain suites; **the 15 packages are in `family.txt`**, the 2 suites are not (a suite installs its own members) |
 | `excluded-retired` | 3 | `dsh-background-agents`, `dsh-session-pin`, `dsh-team-rooms`; never installed by a fresh setup |
-| `infrastructure` | 3 | `dsh-kit`, `dsh-catalog`, `dsh-plugin-certification`; support surfaces, not runtime plugins |
+| `infrastructure` | 3 | `dsh-kit`, `dsh-catalog`, `dsh-plugin-certification`; support surfaces, not runtime plugins, in neither installer |
 | **Total** | **125** | **114 active / 8 frozen / 3 retired** |
 
-## 2. `dsh-kit` — 96 install specs
+## 2. `dsh-kit/plugins.txt` — 96 install specs
 
-`dsh-kit/plugins.txt` is deliberately the **mainline installer**, not the whole family:
+`plugins.txt` is deliberately the **mainline installer**, not the whole family:
 
 ```text
 96 = 43 default + 53 opt-in
-43 = 39 family mainline-default + 4 default rows
-   (dsh-community-bench, dsh-checkers, dsh-phocinae, dsh-phone-inbox)
+43 = 39 family mainline-default + 4 extra defaults
+   (dsh-community-bench, @perrylink/dsh-checkers, dsh-phocinae, dsh-phone-inbox)
 ```
 
 - `install-all.sh` / `install-all.ps1` install the 43 by default.
 - `--include-checkers` / `-IncludeCheckers` adds the 53 core checkers.
-- It does **not** include the 10 catalog-only rows or the 17 domain rows. That is a scope decision, not a missing count.
+- 93 of the 125 family rows are in `plugins.txt`: the 39 default + 53 opt-in + `dsh-community-bench`.
+- It does **not** contain the other 9 catalog-only rows, the 15 domain packages, the 2 domain suites, the 3 retired rows or the 3 infrastructure rows. The 3 extra npm specs beyond the family are `@perrylink/dsh-checkers`, `dsh-phocinae` and `dsh-phone-inbox`.
 
 ## 3. npm catalog — 126 records
 
@@ -36,12 +37,14 @@
 
 ```text
 122 shared with family.json
-+ 3 family-only infrastructure rows (dsh-kit, dsh-catalog, dsh-plugin-certification)
-+ 4 catalog-only rows (dsh-checkers-suite, dsh-personal-directive, dsh-phocinae, dsh-phone-inbox)
+   = 125 family rows − 3 family-only infrastructure rows
+   = 39 mainline-default + 53 mainline-opt-in + 10 catalog-only + 17 domain + 3 retired
++ 4 catalog-only rows outside the family
+   (dsh-checkers-suite, dsh-personal-directive, dsh-phocinae, dsh-phone-inbox)
 = 126 npm records
 ```
 
-The 4 catalog-only rows are intentionally visible because they are installable or useful discovery entries, but they are not counted in the 125-row family roster.
+The 4 catalog-only rows are intentionally visible because they are installable or useful discovery entries, but they are not counted in the 125-row family roster. Conversely, the 3 infrastructure rows are family-only: they are not npm catalog records. The 3 retired rows remain catalog records for history, but no installer includes them.
 
 ## 4. Install surfaces
 
@@ -49,19 +52,29 @@ The 4 catalog-only rows are intentionally visible because they are installable o
 |---|---:|---|
 | Mainline default | 43 | `./install-all.sh <profile>` |
 | Mainline + core checkers | 96 | `./install-all.sh <profile> --include-checkers` |
+| Family install (no suites) | 117 | `./install-family.sh <profile>` |
 | Finance suite | 4 members + suite | `dsh plugin --profile <profile> add dsh-finops-suite` |
 | Contract suite | 2 members + suite | `dsh plugin --profile <profile> add dsh-contract-suite` |
-| Family install (no suites) | 117 | `./install-family.sh <profile>` |
 | Domain packages without a suite | 9 | install individually from the [domain index](https://perrylink.github.io/dsh-plugins/) |
-| Catalog-only compliance tools | 10 | install the exact npm package; they are not in `plugins.txt` |
+| Catalog-only rows not in `plugins.txt` | 9 | install the exact npm package; `dsh-community-bench` is the exception (also a `plugins.txt` default) |
 | Retired | 0 | never installed by a fresh setup |
+
+`family.txt` is the full-family installer, and its 117 specs are exactly the family rows minus the three exclusions:
+
+```text
+117 = 39 mainline-default + 53 mainline-opt-in + 10 catalog-only + 15 domain packages
+excluded: 2 domain suites (their members are listed) + 3 retired + 3 infrastructure
+```
+
+So **catalog-only and domain rows are in the family installer** even though they are not in the mainline `plugins.txt`; the only domain rows missing from `family.txt` are the 2 suites, which install their members instead.
 
 > **Status note (2026-11-01):** all 15 domain packages and both suites are `active`. The 8 remaining `frozen` rows are legacy mainline utilities (`dsh-autotier`, `dsh-budget`, `dsh-cert-mcp`, `dsh-claude-move`, `dsh-defend`, `dsh-draw`, `dsh-reach`) plus `dsh-community-bench`.
 
 ## 5. Rules
 
-- Counts are generated from `family.json` / `data/packages.json`; do not hand-write a fourth number.
-- A new package is added to `family.json` first; `installScope` decides whether it enters `plugins.txt`.
-- `dsh-kit/plugins.txt` changes require running `node scripts/check-parity.mjs` in `dsh-kit`.
+- Counts are generated from `family.json` / `packages.json`; do not hand-write a fourth number.
+- `plugins.txt` and `family.txt` snapshots live in `data/kit-plugins.txt` (96) and `data/kit-family.txt` (117); refresh them from `dsh-kit` origin/main when that repo changes.
+- A new package is added to `family.json` first; `installScope` decides whether it enters `plugins.txt` and/or `family.txt`.
+- `dsh-kit` manifest changes require running `node scripts/check-parity.mjs` in `dsh-kit`.
 - `dsh-catalog` changes require `check-data`, `check-counts`, `check-levels`, `check-taxonomy` and `validate`.
 - The profile and docs read these numbers; they never introduce a new scope.

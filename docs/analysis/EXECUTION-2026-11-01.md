@@ -1,3 +1,5 @@
+> **Superseded 2026-11-02.** Historical record: its 107/15/3, catalog 99, kit 92 and “0 screenshots” figures are stale; see [ROSTER.md](../../ROSTER.md) for the verified current numbers.
+
 # P0–P2 execution record — 2026-11-01
 
 This is the completion record for the plan in [DSH-PLUGIN-PORTFOLIO-ANALYSIS-2026-11-01.md](DSH-PLUGIN-PORTFOLIO-ANALYSIS-2026-11-01.md). It records what shipped, not a new proposal.

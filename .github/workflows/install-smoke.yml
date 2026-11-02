@@ -9,8 +9,35 @@ permissions:
   contents: read
 
 jobs:
-  smoke:
+  pins:
     runs-on: ubuntu-latest
+    outputs:
+      specs: ${{ steps.gen.outputs.specs }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Generate pins from packages.json
+        id: gen
+        shell: bash
+        run: |
+          {
+            echo 'specs<<EOF'
+            node scripts/gen-smoke-pins.mjs --json
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+      - name: Show pins
+        run: node scripts/gen-smoke-pins.mjs
+
+  smoke:
+    needs: pins
+    runs-on: ubuntu-latest
+    name: smoke ${{ matrix.spec }}
+    strategy:
+      fail-fast: false
+      matrix:
+        spec: ${{ fromJSON(needs.pins.outputs.specs) }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -18,40 +45,19 @@ jobs:
           node-version: 24
       - name: Install DSH and pnpm
         run: npm install -g @deepseek-ai/dsh@0.2.1-rc.5 pnpm@11.28.5
-      - name: Install every published package into a fresh profile
+      - name: Install ${{ matrix.spec }} into a fresh profile
         shell: bash
+        env:
+          SPEC: ${{ matrix.spec }}
         run: |
-          fail=0
-          specs=(
-            "dsh-ap-three-way@0.1.0-alpha.7"
-            "dsh-bankrec@0.1.0-alpha.10"
-            "dsh-contract-suite@0.1.0-alpha.5"
-            "dsh-docx-redline@0.1.0-alpha.9"
-            "dsh-eval-pack@0.1.0-alpha.7"
-            "dsh-einvoice@0.2.0-alpha.7"
-            "dsh-finops-suite@0.1.0-alpha.6"
-            "dsh-freight-audit@0.1.0-alpha.9"
-            "dsh-ghg@0.1.0-alpha.12"
-            "dsh-hs-candidate@0.1.0-alpha.8"
-            "dsh-ifc-qto@0.1.0-alpha.9"
-            "dsh-legal-clause@0.1.0-alpha.8"
-            "dsh-legal-intake@0.1.0-alpha.6"
-            "dsh-pim-lint@0.1.0-alpha.7"
-            "dsh-policy-ledger@0.2.0-alpha.9"
-            "dsh-qms-capa@0.1.0-alpha.8"
-            "dsh-travel-recon@0.1.0-alpha.9"
-          )
-          for spec in "${specs[@]}"; do
-            export DSH_HOME="$(mktemp -d)"
-            echo "== $spec"
-            if dsh plugin --profile web add "$spec" >/tmp/dsh-add.log 2>&1 && \
-               dsh --profile web --dump-config 2>/dev/null | grep -q "${spec%@*}"; then
-              echo "OK $spec"
-            else
-              echo "FAIL $spec"
-              tail -30 /tmp/dsh-add.log || true
-              fail=1
-            fi
-            rm -rf "$DSH_HOME"
-          done
-          exit "$fail"
+          export DSH_HOME="$(mktemp -d)"
+          trap 'rm -rf "$DSH_HOME"' EXIT
+          echo "== $SPEC"
+          if dsh plugin --profile web add "$SPEC" >/tmp/dsh-add.log 2>&1 && \
+             dsh --profile web --dump-config 2>/dev/null | grep -q "${SPEC%@*}"; then
+            echo "OK $SPEC"
+          else
+            echo "FAIL $SPEC"
+            tail -30 /tmp/dsh-add.log || true
+            exit 1
+          fi

@@ -236,7 +236,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.2.0-alpha.7",
+      "version": "0.2.0-alpha.10",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -261,7 +261,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.10",
+      "version": "0.1.0-alpha.15",
       "relatedCheckers": [
         "dsh-excel-reconcile",
         "dsh-invoice-ledger"
@@ -286,7 +286,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.10",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -311,7 +311,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.9",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -336,7 +336,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-contract-suite",
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.9",
       "relatedCheckers": [
         "dsh-contract-stance",
         "dsh-evidence-check"
@@ -361,7 +361,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-contract-suite",
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.11",
       "relatedCheckers": [
         "dsh-contract-stance",
         "dsh-lawcite-adapter",
@@ -388,7 +388,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.16",
       "relatedCheckers": [
         "dsh-eia-guide-check",
         "dsh-soilwater-check"
@@ -413,7 +413,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.11",
       "relatedCheckers": [
         "dsh-fmea-table-check",
         "dsh-ppap-check",
@@ -440,7 +440,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.11",
       "relatedCheckers": [
         "dsh-hs-classify",
         "dsh-origin-rvc-check",
@@ -466,7 +466,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.9",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-demurrage-ledger",
         "dsh-lc-doc-check",
@@ -491,7 +491,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.9",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-gongwen-word-check",
         "dsh-archive-check",
@@ -517,7 +517,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.9",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-construction-doc-check",
         "dsh-pipeline-check",
@@ -543,7 +543,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.2.0-alpha.9",
+      "version": "0.2.0-alpha.12",
       "relatedCheckers": [],
       "relatedTools": [
         "dsh-plugin-doctor",
@@ -569,7 +569,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.10",
       "relatedCheckers": [
         "dsh-excel-reconcile"
       ],
@@ -595,7 +595,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.7",
+      "version": "0.1.0-alpha.10",
       "relatedCheckers": [
         "dsh-score",
         "dsh-doublecheck",
@@ -1890,23 +1890,23 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.6",
+      "version": "0.1.0-alpha.8",
       "members": [
         {
           "id": "dsh-einvoice",
-          "version": "0.2.0-alpha.7"
+          "version": "0.2.0-alpha.10"
         },
         {
           "id": "dsh-bankrec",
-          "version": "0.1.0-alpha.10"
+          "version": "0.1.0-alpha.15"
         },
         {
           "id": "dsh-ap-three-way",
-          "version": "0.1.0-alpha.7"
+          "version": "0.1.0-alpha.10"
         },
         {
           "id": "dsh-travel-recon",
-          "version": "0.1.0-alpha.9"
+          "version": "0.1.0-alpha.12"
         }
       ]
     },
@@ -1928,15 +1928,15 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.5",
+      "version": "0.1.0-alpha.7",
       "members": [
         {
           "id": "dsh-legal-intake",
-          "version": "0.1.0-alpha.6"
+          "version": "0.1.0-alpha.9"
         },
         {
           "id": "dsh-legal-clause",
-          "version": "0.1.0-alpha.8"
+          "version": "0.1.0-alpha.11"
         }
       ]
     }

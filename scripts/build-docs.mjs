@@ -1,14 +1,24 @@
 #!/usr/bin/env node
 /**
- * Generate docs/taxonomy.html from family.json.
+ * Generate docs/taxonomy.html and docs/family/*.html from family.json, and
+ * refresh the two family blocks embedded in every docs/packages/*.html.
+ *
+ * Version numbers are not read from family.json: syncVersions() overwrites
+ * them (and README.md / docs/index.html) from packages.json before rendering.
+ * The "Mainline family" block is generated from data/kit-plugins.txt, the
+ * vendored dsh-kit plugins.txt snapshot, so its count is never typed by hand.
+ *
  * Usage: node scripts/build-docs.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { syncVersions } from './sync-versions.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..');
+syncVersions({ root, quiet: true });
+const packagesDoc = JSON.parse(fs.readFileSync(path.join(root, 'packages.json'), 'utf8'));
 const family = JSON.parse(fs.readFileSync(path.join(root, 'family.json'), 'utf8'));
 const tax = JSON.parse(fs.readFileSync(path.join(root, 'taxonomy.v1.json'), 'utf8'));
 
@@ -128,4 +138,58 @@ ${relatedTools}
   fs.writeFileSync(path.join(familyDir, `${x.id}.html`), html);
 }
 console.log(`wrote docs/family (${rows.length} pages)`);
+
+// Refresh the "Mainline family" block embedded in every published package
+// page. The rest of each page (including the domain-family block above it) is
+// hand-curated; check-docs.mjs verifies that block's counts. This block is
+// generated from the vendored dsh-kit plugins.txt roster, so its
+// "N current install specs" number is the actual spec-line count.
+const readSpecs = (file) => fs.readFileSync(path.join(root, file), 'utf8')
+  .split(/\r?\n/)
+  .map((line) => line.replace(/\s+#.*$/, '').trim())
+  .filter((line) => line && !line.startsWith('#'));
+const kitSpecs = readSpecs('data/kit-plugins.txt');
+if (!kitSpecs.length) throw new Error('data/kit-plugins.txt contains no install specs');
+
+const rowHtml = (label, repo, npm) => `<tr>
+<td><strong><a href="${esc(repo)}">${esc(label)}</a></strong></td>
+<td><a href="${esc(npm)}">npm</a></td>
+</tr>
+`;
+const blockHtml = (summary, entries) => `<details>
+<summary>${summary}</summary><table>
+<thead>
+<tr>
+<th>Package</th>
+<th>npm</th>
+</tr>
+</thead>
+<tbody>${entries.map((e) => rowHtml(e.label, e.repo, e.npm)).join('')}</tbody></table>
+</details>`;
+
+const pageNames = [...packagesDoc.packages, ...packagesDoc.suites].map((p) => p.name);
+const mainlineEntries = kitSpecs.map((spec) => ({
+  label: spec,
+  repo: `https://github.com/PerryLink/${spec.replace(/^@perrylink\//, '')}`,
+  npm: `https://www.npmjs.com/package/${spec}`,
+}));
+const mainlineBlock = blockHtml(`Mainline family — ${mainlineEntries.length} current install specs`, mainlineEntries);
+
+const mainlineRe = /<details>\n<summary>Mainline family — \d+ current install specs<\/summary><table>[\s\S]*?<\/table>\n<\/details>/;
+let refreshed = 0;
+for (const name of pageNames) {
+  const pagePath = path.join(root, 'docs', 'packages', `${name}.html`);
+  if (!fs.existsSync(pagePath)) throw new Error(`docs/packages/${name}.html is missing`);
+  const before = fs.readFileSync(pagePath, 'utf8');
+  const mainlineMatches = before.match(new RegExp(mainlineRe.source, 'g')) || [];
+  if (mainlineMatches.length !== 1) {
+    throw new Error(`docs/packages/${name}.html: expected one mainline block, got ${mainlineMatches.length}`);
+  }
+  const after = before.replace(mainlineRe, () => mainlineBlock);
+  if (after !== before) {
+    fs.writeFileSync(pagePath, after);
+    refreshed++;
+  }
+}
+console.log(`wrote docs/packages (${pageNames.length} pages, ${mainlineEntries.length} mainline specs, ${refreshed} changed)`);
 

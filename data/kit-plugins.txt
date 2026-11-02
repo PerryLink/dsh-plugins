@@ -1,0 +1,141 @@
+# Vendored snapshot of dsh-kit `plugins.txt` (origin/main).
+# Source: https://github.com/PerryLink/dsh-kit/blob/main/plugins.txt
+# Commit: 3c7bd139489655659f3b7976b2e8b39c6431e41d (2026-11-01T17:29:39+08:00)
+# Upstream sha256: addeead00bcf2b611adb23b97bc1a57fcde40a94a03d3d656b090ff45a1ceb55
+# 96 install specs: 43 default + 53 opt-in. Comment/blank lines are ignored by
+# scripts/build-docs.mjs and scripts/check-docs.mjs; only spec lines are counted.
+# Refresh: git -C <dsh-kit> show origin/main:plugins.txt > data/kit-plugins.txt
+# PerryLink DSH plugin roster — the single source of truth for install-all.sh,
+# install-all.ps1 and scripts/check-parity.mjs (which also holds README.md's
+# numbers and its family table to this file).
+#
+# One npm spec per line. Blank lines and lines starting with # are ignored. A
+# trailing "# ..." comment after a spec is allowed and ignored by all three
+# readers; it is how a package's maintenance status is recorded here.
+#
+# A package belongs here when it is installable from npm (`dsh.bundle.patch`
+# declared and the patch file committed), published, and NOT retired.
+#
+# ── 🆕 Compliance checkers (53): added 2026-10-08 ──────────────────
+# Published to npm with SLSA provenance, Apache-2.0, five-language READMEs, and
+# a per-repo check:citations gate that holds every rule quotation to its
+# rules/evidence/ record. All active. See D:/Projects/dsh-plugins/AGENTS.md.
+dsh-aqua-input-check  # opt-in
+dsh-archive-check  # opt-in
+dsh-bid-ca-precheck  # opt-in
+dsh-bid-qual-check  # opt-in
+dsh-contract-stance  # opt-in
+dsh-customs-doc-check  # opt-in
+dsh-demurrage-ledger  # opt-in
+dsh-drill-script-check  # opt-in
+dsh-eia-guide-check  # opt-in
+dsh-emergency-plan  # opt-in
+dsh-essay-rubric-check  # opt-in
+dsh-evidence-check  # opt-in
+dsh-export-ctl-check  # opt-in
+dsh-fmea-table-check  # opt-in
+dsh-forecast-penalty  # opt-in
+dsh-gongwen-flow-check  # opt-in
+dsh-gongwen-word-check  # opt-in
+dsh-guard-plan-qc  # opt-in
+dsh-hazchem-check  # opt-in
+dsh-hazplan-check  # opt-in
+dsh-hidden-risk-map  # opt-in
+dsh-hs-classify  # opt-in
+dsh-icd-rule-check  # opt-in
+dsh-lawcite-adapter  # opt-in
+dsh-lc-doc-check  # opt-in
+dsh-learning-gap-check  # opt-in
+dsh-medrec-qc  # opt-in
+dsh-nsfc-form-check  # opt-in
+dsh-nurse-record-check  # opt-in
+dsh-origin-rvc-check  # opt-in
+dsh-ota-review-check  # opt-in
+dsh-paper-doc-adapter  # opt-in
+dsh-permit-report-check  # opt-in
+dsh-pipeline-check  # opt-in
+dsh-pleading-draft  # opt-in
+dsh-policy-brief-draft  # opt-in
+dsh-power-loss-split  # opt-in
+dsh-power-ticket-check  # opt-in
+dsh-ppap-check  # opt-in
+dsh-protest-deadline  # opt-in
+dsh-railway-window  # opt-in
+dsh-repair-order-qc  # opt-in
+dsh-review-reply-check  # opt-in
+dsh-rulefile-check  # opt-in
+dsh-safety-brief-check  # opt-in
+dsh-site-log-check  # opt-in
+dsh-soe-decision-check  # opt-in
+dsh-soilwater-check  # opt-in
+dsh-sop-sync-check  # opt-in
+dsh-spc-gbt-adapter  # opt-in
+dsh-tender-extract  # opt-in
+dsh-tender-matrix  # opt-in
+dsh-warranty-calc  # opt-in
+
+# ── 🧊 Frozen (5): no new features, minimal breakage fixes only ────────────
+# They stay installable and stay on this list. Marked so nobody reads them as
+# actively developed work.
+#
+# ── 🚫 Retired (6): must NEVER be listed below ─────────────────────────────
+# npm-deprecated, no further fixes or releases. The gate in
+# scripts/check-parity.mjs holds the same set in its RETIRED object and fails on
+# any of these appearing below, so a retired package cannot come back through
+# this file. The names stay on the registry for anyone already on them:
+#   dsh-background-agents    the host ships native continuable subagents
+#   dsh-session-pin          the host ships session pinning natively
+#   dsh-team-rooms           the host ships the Agent Teams subsystem
+#   dsh-plugin-upgrade-015   superseded by dsh-plugin-upgrade, which carries
+#                            every corridor in one package
+#   dsh-plugin-upgrade-016   never published; folded into dsh-plugin-upgrade
+#   dsh-plugin-upgrade-rc1   superseded by dsh-plugin-upgrade 2.0.0, which
+#                            carries its 0.1.3-alpha.1 -> 0.1.5-rc.1 corridor
+#                            (retired 2026-10-05; missing from this list and
+#                            from RETIRED.corridor until 2026-10-08)
+#
+# Third-party packages do not belong here at all, however friendly the
+# collaboration (dsh-wechat was listed until 2026-09-20; it is pan17's package).
+dsh-auto-review
+dsh-autotier                      # 🧊 FROZEN — see the repo README
+dsh-budget                        # 🧊 FROZEN — see the repo README
+dsh-cert-mcp                      # 🧊 FROZEN — see the repo README
+dsh-checkpoint-rewind
+dsh-claude-move                   # 🧊 FROZEN — see the repo README
+dsh-click
+dsh-community-bench               # 🧊 FROZEN — see the repo README
+dsh-composer-history
+dsh-data-quality
+dsh-defend                        # 🧊 FROZEN — see the repo README
+dsh-doublecheck
+dsh-draw                          # 🧊 FROZEN — see the repo README
+dsh-fast
+dsh-fund-research
+dsh-industry-research
+dsh-laya
+dsh-library
+dsh-local-ai
+dsh-lsp-actions
+dsh-mask
+dsh-mcp-panel
+dsh-memento
+dsh-observe
+dsh-output-styles
+dsh-permission-rules
+dsh-phocinae
+dsh-phone-inbox
+dsh-plugin-guide
+dsh-plugin-upgrade                # corridors end at 0.1.6-alpha.2
+dsh-reach                         # 🧊 FROZEN — see the repo README
+dsh-research-report
+dsh-score
+dsh-session-sync
+dsh-talk
+dsh-test-drive
+dsh-translate
+@perrylink/dsh-checkers            # current shim; @perrylink/dsh-checkers-suite is the deprecated alias
+@perrylink/dsh-github
+@perrylink/dsh-plugin-doctor
+@perrylink/dsh-plugin-kit
+@perrylink/dsh-skill-pack-security-provider
+@perrylink/dsh-ticktick

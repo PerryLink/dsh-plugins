@@ -10,13 +10,17 @@
  *   - domain/compliance items come from taxonomy.v1.json;
  *   - the 39 mainline install specs come from dsh-kit/plugins.txt;
  *   - the frozen/retired/support rows are the documented edge set below.
+ *   - versions are never authored here: syncVersions() overlays packages.json
+ *     onto taxonomy.v1.json (and family.json) before the projection runs.
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { syncVersions } from './sync-versions.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(here, '..');
+syncVersions({ root, quiet: true });
 const taxonomy = JSON.parse(fs.readFileSync(path.join(root, 'taxonomy.v1.json'), 'utf8'));
 const kit = path.join(root, 'data', 'mainline-specs.txt');
 const roster = fs.readFileSync(kit, 'utf8')
@@ -166,7 +170,7 @@ const family = {
   schemaVersion: '1.0.0-draft',
   updated: '2026-11-01',
   status: 'proposal',
-  scope: '125-row working roster: 92 install specs + 9 newer compliance tools + 17 domain packages/suites + dsh-community-bench + 3 retired + 3 infrastructure rows.',
+  scope: '125-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-community-bench + 3 retired + 3 infrastructure rows.',
   counts: {
     total: items.length,
     active: items.filter((x) => x.status === 'active').length,

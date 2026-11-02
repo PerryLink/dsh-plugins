@@ -1,3 +1,5 @@
+> **Superseded 2026-11-02.** Historical analysis: its 107/15/3, catalog 99, kit 92 and “0 screenshots” figures are stale; see [ROSTER.md](../../ROSTER.md) for the verified current numbers.
+
 # DSH 插件组合深度分析
 
 **日期**：2026-11-01 · **范围**：PerryLink 名下 DSH 插件家族（profile 口径 125 个仓 / 107 active / 15 frozen / 3 retired）＋ 本地可核对的 62 个合规插件、17 个领域包/套件、54 个主线插件目录。  

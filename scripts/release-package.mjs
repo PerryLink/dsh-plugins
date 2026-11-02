@@ -47,7 +47,7 @@ console.log(`  main ${workVersion} -> ${nextVersion}`)
 sh(`ln -sfn ${path.join(pkgDir, 'node_modules')} ${path.join(workRoot, 'node_modules')}`)
 
 // 2. copy the changed source/test/docs files (READMEs stay as they are on main)
-const copy = ['ACKNOWLEDGEMENTS.md', 'CHANGELOG.md', 'ACCEPTANCE.csv', 'screenshots.json']
+const copy = ['ACKNOWLEDGEMENTS.md', 'CHANGELOG.md', 'ACCEPTANCE.csv', 'screenshots.json', 'NOTICE', 'THIRD-PARTY-NOTICES']
 const walk = (dir) => {
   const out = []
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -78,6 +78,11 @@ for (const file of copy) {
 // 3. bump both version carriers
 const workPkgPath = path.join(workRoot, 'package.json')
 const workPkg = JSON.parse(fs.readFileSync(workPkgPath, 'utf8'))
+// carry release-config edits made locally (peer ranges, engines, prepublish, files list)
+const localPkg = JSON.parse(fs.readFileSync(path.join(pkgDir, 'package.json'), 'utf8'))
+for (const key of ['peerDependencies', 'engines', 'prepublishOnly', 'files', 'NOTICE', 'dsh', 'dependencies']) {
+  if (localPkg[key] !== undefined) workPkg[key] = localPkg[key]
+}
 workPkg.version = nextVersion
 fs.writeFileSync(workPkgPath, JSON.stringify(workPkg, null, 2) + '\n')
 const lintPath = path.join(workRoot, 'scripts', 'lint.mjs')
