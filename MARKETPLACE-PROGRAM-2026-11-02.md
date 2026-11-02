@@ -265,6 +265,22 @@
 
 ---
 
+## 4bis. 执行进度（2026-11-02 晚）
+
+| 任务 | 状态 | 证据 |
+|---|---|---|
+| A1 format 1 index | ✅ 完成 | `market/index.json`：124 个插件、124 个中文标题、npm source + engines；`scripts/build-market-index.mjs`（含 `--check`） |
+| A2 托管 index | ✅ 完成 | 线上 `https://perrylink.github.io/dsh-plugins/market/index.json`（HTTP 200, format 1, 124 条） |
+| A3 108 个中文名 | ✅ 完成 | `data/zh-meta.json` 125 条；`check-docs` 断言 125/125 有中文名 |
+| A4 任务族映射 | ✅ 完成 | 11 个任务族；`docs/market.html` 按族分组（122 个非退役插件） |
+| A5 按任务浏览页 | ✅ 完成 | `docs/market.html`（中文搜索、同义词、族内计数） |
+| B1 Package Standard v1 | ✅ 完成 | `docs/PACKAGE-STANDARD.md`（8 块 + 首跑三件套 + 权限四行 + 打分表） |
+| B2 打分脚本 | ✅ 完成 | `scripts/score-packages.mjs`（离线，125 条，输出 CSV / `--gate`） |
+| B3–B6 T1 首跑三件套 | ⏳ 进行中 | 21 个 T1 包均 0 分起步（缺样例/话术/权限块） |
+| C/D/E/F | ⏳ 未开始 | 依赖 B 阶段 |
+
+**F1 实测（bigram 检索模拟，接近宿主 CJK 分词）**：10 条大白话查询 **命中 8/10**；未命中的「考勤加班」「补货」正是 P3 计划里的新包（HR 考勤、零售补货），说明索引本身可用，缺口在供给。
+
 ## 5. 排期
 
 | 周 | 主线 | 交付 |
