@@ -34,11 +34,11 @@ const mainline = roster
   .filter((id) => !checkerIds.has(id));
 
 const scoped = new Map([
-  ['dsh-github', '@perrylink/dsh-github'],
-  ['dsh-plugin-doctor', '@perrylink/dsh-plugin-doctor'],
-  ['dsh-plugin-kit', '@perrylink/dsh-plugin-kit'],
-  ['dsh-skill-pack-security-provider', '@perrylink/dsh-skill-pack-security-provider'],
-  ['dsh-ticktick', '@perrylink/dsh-ticktick'],
+  ['dsh-github', 'dsh-github-bot'],
+  ['dsh-plugin-doctor', 'dsh-clinic'],
+  ['dsh-plugin-kit', 'dsh-scaffold'],
+  ['dsh-skill-pack-security-provider', 'dsh-security-pack'],
+  ['dsh-ticktick', 'dsh-dida'],
 ]);
 
 const frozenMainline = new Set([
