@@ -80,7 +80,7 @@ const workPkgPath = path.join(workRoot, 'package.json')
 const workPkg = JSON.parse(fs.readFileSync(workPkgPath, 'utf8'))
 // carry release-config edits made locally (peer ranges, engines, prepublish, files list)
 const localPkg = JSON.parse(fs.readFileSync(path.join(pkgDir, 'package.json'), 'utf8'))
-for (const key of ['peerDependencies', 'engines', 'prepublishOnly', 'files', 'NOTICE', 'dsh', 'dependencies']) {
+for (const key of ['peerDependencies', 'peerDependenciesMeta', 'engines', 'prepublishOnly', 'files', 'NOTICE', 'dsh', 'dependencies']) {
   if (localPkg[key] !== undefined) workPkg[key] = localPkg[key]
 }
 workPkg.version = nextVersion
