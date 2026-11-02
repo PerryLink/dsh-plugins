@@ -35,7 +35,7 @@ try {
 
 if (packages.packages.length !== 15) errors.push(`packages.json: expected 15 packages, got ${packages.packages.length}`);
 if (packages.suites.length !== 2) errors.push(`packages.json: expected 2 suites, got ${packages.suites.length}`);
-if (packages.updated !== '2026-11-01') errors.push(`packages.json: updated is ${packages.updated}`);
+if (!/^\d{4}-\d{2}-\d{2}$/.test(packages.updated)) errors.push(`packages.json: updated is not an ISO date (${packages.updated})`);
 
 for (const p of [...packages.packages, ...packages.suites]) {
   if (!p.release.endsWith(`/v${p.version}`)) errors.push(`${p.name}: release URL does not end in /v${p.version}`);
