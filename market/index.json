@@ -5,8 +5,8 @@
     "zh": "PerryLink DSH 插件市场"
   },
   "description": {
-    "en": "Task-first index of 125 local-first DSH plugins for finance, legal, procurement, quality, customs and developer work.",
-    "zh": "按任务浏览 125 个本地优先的 DSH 插件：财务、法务、采购、质量、关务、行政与开发者工具。"
+    "en": "Task-first index of 126 local-first DSH plugins for finance, legal, procurement, quality, customs and developer work.",
+    "zh": "按任务浏览 126 个本地优先的 DSH 插件：财务、法务、采购、质量、关务、行政与开发者工具。"
   },
   "metadata": {
     "categories": {
@@ -125,122 +125,6 @@
     }
   },
   "plugins": [
-    {
-      "name": "@perrylink/dsh-github",
-      "title": {
-        "en": "dsh-github",
-        "zh": "代码评审对接"
-      },
-      "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-github",
-      "repository": {
-        "url": "https://github.com/PerryLink/dsh-github"
-      },
-      "metadata": {
-        "category": "developer",
-        "labels": [
-          "default",
-          "active"
-        ]
-      },
-      "versions": [
-        {
-          "version": "0.7.28",
-          "publishTimestamp": 1793101737,
-          "source": {
-            "type": "npm",
-            "registry": "https://registry.npmjs.org"
-          }
-        }
-      ]
-    },
-    {
-      "name": "@perrylink/dsh-plugin-doctor",
-      "title": {
-        "en": "dsh-plugin-doctor",
-        "zh": "包结构冒烟检查"
-      },
-      "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-plugin-doctor",
-      "repository": {
-        "url": "https://github.com/PerryLink/dsh-plugin-doctor"
-      },
-      "metadata": {
-        "category": "developer",
-        "labels": [
-          "default",
-          "active"
-        ]
-      },
-      "versions": [
-        {
-          "version": "0.7.7",
-          "publishTimestamp": 1793521476,
-          "source": {
-            "type": "npm",
-            "registry": "https://registry.npmjs.org"
-          }
-        }
-      ]
-    },
-    {
-      "name": "@perrylink/dsh-plugin-kit",
-      "title": {
-        "en": "dsh-plugin-kit",
-        "zh": "公共组件工具箱"
-      },
-      "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-plugin-kit",
-      "repository": {
-        "url": "https://github.com/PerryLink/dsh-plugin-kit"
-      },
-      "metadata": {
-        "category": "developer",
-        "labels": [
-          "default",
-          "active"
-        ]
-      },
-      "versions": [
-        {
-          "version": "0.1.22",
-          "publishTimestamp": 1793521772,
-          "source": {
-            "type": "npm",
-            "registry": "https://registry.npmjs.org"
-          }
-        }
-      ]
-    },
-    {
-      "name": "@perrylink/dsh-skill-pack-security-provider",
-      "title": {
-        "en": "dsh-skill-pack-security-provider",
-        "zh": "安全技能包供给"
-      },
-      "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-skill-pack-security-provider",
-      "repository": {
-        "url": "https://github.com/PerryLink/dsh-skill-pack-security-provider"
-      },
-      "metadata": {
-        "category": "developer",
-        "labels": [
-          "default",
-          "active"
-        ]
-      },
-      "versions": [
-        {
-          "version": "2.2.25",
-          "publishTimestamp": 1793466588,
-          "source": {
-            "type": "npm",
-            "registry": "https://registry.npmjs.org"
-          }
-        }
-      ]
-    },
     {
       "name": "dsh-auto-review",
       "title": {
@@ -503,6 +387,35 @@
       ]
     },
     {
+      "name": "dsh-clinic",
+      "title": {
+        "en": "dsh-plugin-doctor",
+        "zh": "包结构冒烟检查"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-plugin-doctor",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-plugin-doctor"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.8.0",
+          "publishTimestamp": 1793524781,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-community-bench",
       "title": {
         "en": "dsh-community-bench",
@@ -698,6 +611,35 @@
         {
           "version": "0.2.27",
           "publishTimestamp": 1792854415,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-github-bot",
+      "title": {
+        "en": "dsh-github",
+        "zh": "代码评审对接"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-github",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-github"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.8.0",
+          "publishTimestamp": 1793623117,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1054,6 +996,38 @@
       ]
     },
     {
+      "name": "dsh-provider-params",
+      "title": {
+        "en": "Provider parameter mapping and JSON repair",
+        "zh": "厂商参数转换与 JSON 修复"
+      },
+      "description": {
+        "en": "Maps temperature/top_p/max_tokens/stop/system across 11 LLM vendors and repairs broken JSON tool output deterministically; no data is fabricated."
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-provider-params",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-provider-params"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793623958,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-reach",
       "title": {
         "en": "dsh-reach",
@@ -1083,6 +1057,35 @@
       ]
     },
     {
+      "name": "dsh-scaffold",
+      "title": {
+        "en": "dsh-plugin-kit",
+        "zh": "公共组件工具箱"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-plugin-kit",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-plugin-kit"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1793524696,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-score",
       "title": {
         "en": "dsh-score",
@@ -1104,6 +1107,35 @@
         {
           "version": "0.2.27",
           "publishTimestamp": 1793466280,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-security-pack",
+      "title": {
+        "en": "dsh-skill-pack-security-provider",
+        "zh": "安全技能包供给"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-skill-pack-security-provider",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-skill-pack-security-provider"
+      },
+      "metadata": {
+        "category": "developer",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "3.0.0",
+          "publishTimestamp": 1793622199,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1468,8 +1500,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.11",
-          "publishTimestamp": 1793599143,
+          "version": "0.1.0-alpha.12",
+          "publishTimestamp": 1793623071,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1500,8 +1532,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.16",
-          "publishTimestamp": 1793599006,
+          "version": "0.1.0-alpha.17",
+          "publishTimestamp": 1793623023,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1532,8 +1564,8 @@
       },
       "versions": [
         {
-          "version": "0.2.0-alpha.11",
-          "publishTimestamp": 1793598270,
+          "version": "0.2.0-alpha.12",
+          "publishTimestamp": 1793624199,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1660,8 +1692,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.13",
-          "publishTimestamp": 1793598281,
+          "version": "0.1.0-alpha.14",
+          "publishTimestamp": 1793623124,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1948,8 +1980,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.12",
-          "publishTimestamp": 1793598287,
+          "version": "0.1.0-alpha.13",
+          "publishTimestamp": 1793623151,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -2022,35 +2054,6 @@
       ]
     },
     {
-      "name": "@perrylink/dsh-ticktick",
-      "title": {
-        "en": "dsh-ticktick",
-        "zh": "滴答清单对接"
-      },
-      "author": "PerryLink",
-      "homepage": "https://github.com/PerryLink/dsh-ticktick",
-      "repository": {
-        "url": "https://github.com/PerryLink/dsh-ticktick"
-      },
-      "metadata": {
-        "category": "office",
-        "labels": [
-          "default",
-          "active"
-        ]
-      },
-      "versions": [
-        {
-          "version": "0.1.23",
-          "publishTimestamp": 1793017744,
-          "source": {
-            "type": "npm",
-            "registry": "https://registry.npmjs.org"
-          }
-        }
-      ]
-    },
-    {
       "name": "dsh-archive-check",
       "title": {
         "en": "dsh-archive-check",
@@ -2083,6 +2086,35 @@
       ]
     },
     {
+      "name": "dsh-dida",
+      "title": {
+        "en": "dsh-ticktick",
+        "zh": "滴答清单对接"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ticktick",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ticktick"
+      },
+      "metadata": {
+        "category": "office",
+        "labels": [
+          "default",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1793622760,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-docx-redline",
       "title": {
         "en": "DOCX inspect & text diff",
@@ -2105,8 +2137,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.13",
-          "publishTimestamp": 1793598219,
+          "version": "0.1.0-alpha.14",
+          "publishTimestamp": 1793624147,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -2605,8 +2637,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.13",
-          "publishTimestamp": 1793598310,
+          "version": "0.1.0-alpha.15",
+          "publishTimestamp": 1793624147,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -3341,8 +3373,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.12",
-          "publishTimestamp": 1793598284,
+          "version": "0.1.0-alpha.13",
+          "publishTimestamp": 1793623101,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -3853,8 +3885,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.12",
-          "publishTimestamp": 1793598337,
+          "version": "0.1.0-alpha.13",
+          "publishTimestamp": 1793623145,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"

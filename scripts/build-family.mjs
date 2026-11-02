@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Build family.json (125-row roster view) and the taxonomy views from
+ * Build family.json (roster view) and the taxonomy views from
  * taxonomy.v1.json + the mainline roster + the three support/retired rows.
  *
  * Usage: node scripts/build-family.mjs
@@ -33,13 +33,7 @@ const mainline = roster
   .map((spec) => spec.replace(/^@perrylink\//, ''))
   .filter((id) => !checkerIds.has(id));
 
-const scoped = new Map([
-  ['dsh-github', 'dsh-github-bot'],
-  ['dsh-plugin-doctor', 'dsh-clinic'],
-  ['dsh-plugin-kit', 'dsh-scaffold'],
-  ['dsh-skill-pack-security-provider', 'dsh-security-pack'],
-  ['dsh-ticktick', 'dsh-dida'],
-]);
+const scoped = new Map();
 
 const frozenMainline = new Set([
   'dsh-budget', 'dsh-draw', 'dsh-claude-move', 'dsh-reach', 'dsh-defend',
@@ -72,8 +66,8 @@ const mainlineMeta = {
   'dsh-observe': ['observability', 'runtime', ['telemetry']],
   'dsh-output-styles': ['interface', 'ui', ['output']],
   'dsh-permission-rules': ['security', 'runtime', ['permissions']],
-  'dsh-plugin-guide': ['developer-tools', 'assistant', ['plugin-dev']],
-  'dsh-plugin-upgrade': ['workflow', 'integration', ['upgrade']],
+  'dsh-primer': ['developer-tools', 'assistant', ['plugin-dev']],
+  'dsh-codemod': ['workflow', 'integration', ['upgrade']],
   'dsh-reach': ['integrations', 'integration', ['messaging']],
   'dsh-research-report': ['research', 'assistant', ['research']],
   'dsh-score': ['developer-tools', 'assistant', ['evaluation']],
@@ -81,11 +75,11 @@ const mainlineMeta = {
   'dsh-talk': ['content', 'ui', ['chat']],
   'dsh-test-drive': ['workflow', 'assistant', ['testing']],
   'dsh-translate': ['content', 'assistant', ['translation']],
-  'dsh-github': ['workflow', 'integration', ['github']],
-  'dsh-plugin-doctor': ['developer-tools', 'doctor', ['plugin-install']],
-  'dsh-plugin-kit': ['developer-tools', 'catalog', ['plugin-dev']],
-  'dsh-skill-pack-security-provider': ['security', 'assistant', ['security-audit']],
-  'dsh-ticktick': ['integrations', 'integration', ['tasks']],
+  'dsh-github-bot': ['workflow', 'integration', ['github']],
+  'dsh-clinic': ['developer-tools', 'doctor', ['plugin-install']],
+  'dsh-scaffold': ['developer-tools', 'catalog', ['plugin-dev']],
+  'dsh-security-pack': ['security', 'assistant', ['security-audit']],
+  'dsh-dida': ['integrations', 'integration', ['tasks']],
 };
 
 const items = [];
@@ -164,7 +158,8 @@ for (const item of items) {
   if (ids.has(item.id)) throw new Error(`duplicate family id ${item.id}`);
   ids.add(item.id);
 }
-if (items.length !== 125) throw new Error(`expected 125 family rows, got ${items.length}`);
+const EXPECTED_ROWS = 126
+if (items.length !== EXPECTED_ROWS) throw new Error(`expected ${EXPECTED_ROWS} family rows, got ${items.length}`);
 
 const counts = {};
 for (const item of items) {
@@ -186,7 +181,7 @@ const family = {
   schemaVersion: '1.0.0-draft',
   updated: '2026-11-01',
   status: 'proposal',
-  scope: '125-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-community-bench + 3 retired + 3 infrastructure rows.',
+  scope: '126-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-provider-params + dsh-community-bench + 3 retired + 3 infrastructure rows.',
   counts: {
     total: items.length,
     active: items.filter((x) => x.status === 'active').length,

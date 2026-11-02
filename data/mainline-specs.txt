@@ -25,8 +25,8 @@ dsh-memento
 dsh-observe
 dsh-output-styles
 dsh-permission-rules
-dsh-plugin-guide
-dsh-plugin-upgrade
+dsh-primer
+dsh-codemod
 dsh-reach
 dsh-research-report
 dsh-score
@@ -34,8 +34,8 @@ dsh-session-sync
 dsh-talk
 dsh-test-drive
 dsh-translate
-dsh-github
-dsh-plugin-doctor
-dsh-plugin-kit
-dsh-skill-pack-security-provider
-dsh-ticktick
+dsh-github-bot
+dsh-clinic
+dsh-scaffold
+dsh-security-pack
+dsh-dida

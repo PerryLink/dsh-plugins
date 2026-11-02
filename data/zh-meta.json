@@ -1827,7 +1827,7 @@
       "通用"
     ]
   },
-  "dsh-plugin-guide": {
+  "dsh-primer": {
     "nameZh": "扩展开发指南",
     "tags": [
       "开发文档",
@@ -1843,7 +1843,7 @@
       "通用"
     ]
   },
-  "dsh-plugin-upgrade": {
+  "dsh-codemod": {
     "nameZh": "版本升级迁移",
     "tags": [
       "升级",
@@ -1979,7 +1979,7 @@
       "通用"
     ]
   },
-  "dsh-github": {
+  "dsh-github-bot": {
     "nameZh": "代码评审对接",
     "tags": [
       "代码评审",
@@ -1996,7 +1996,7 @@
       "通用"
     ]
   },
-  "dsh-plugin-doctor": {
+  "dsh-clinic": {
     "nameZh": "包结构冒烟检查",
     "tags": [
       "结构检查",
@@ -2013,7 +2013,7 @@
       "通用"
     ]
   },
-  "dsh-plugin-kit": {
+  "dsh-scaffold": {
     "nameZh": "公共组件工具箱",
     "tags": [
       "工具库",
@@ -2029,7 +2029,7 @@
       "通用"
     ]
   },
-  "dsh-skill-pack-security-provider": {
+  "dsh-security-pack": {
     "nameZh": "安全技能包供给",
     "tags": [
       "安全",
@@ -2046,7 +2046,7 @@
       "通用"
     ]
   },
-  "dsh-ticktick": {
+  "dsh-dida": {
     "nameZh": "滴答清单对接",
     "tags": [
       "待办",
@@ -2174,6 +2174,24 @@
     "roles": [
       "平台运营",
       "研发工程师"
+    ],
+    "industries": [
+      "通用"
+    ]
+  },
+  "dsh-provider-params": {
+    "nameZh": "厂商参数转换与 JSON 修复",
+    "tags": [
+      "参数映射",
+      "厂商差异",
+      "temperature",
+      "JSON 修复",
+      "截断闭合"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "开发者",
+      "模型接入工程师"
     ],
     "industries": [
       "通用"

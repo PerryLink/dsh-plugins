@@ -25,7 +25,7 @@ dsh-doublecheck
 dsh-draw
 dsh-fast
 dsh-fund-research
-@perrylink/dsh-github
+dsh-github-bot
 dsh-industry-research
 dsh-laya
 dsh-library
@@ -37,18 +37,18 @@ dsh-memento
 dsh-observe
 dsh-output-styles
 dsh-permission-rules
-@perrylink/dsh-plugin-doctor
-dsh-plugin-guide
-@perrylink/dsh-plugin-kit
-dsh-plugin-upgrade
+dsh-clinic
+dsh-primer
+dsh-scaffold
+dsh-codemod
 dsh-reach
 dsh-research-report
 dsh-score
 dsh-session-sync
-@perrylink/dsh-skill-pack-security-provider
+dsh-security-pack
 dsh-talk
 dsh-test-drive
-@perrylink/dsh-ticktick
+dsh-dida
 dsh-translate
 
 # ── mainline-opt-in (53) ──

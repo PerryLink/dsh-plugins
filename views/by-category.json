@@ -88,23 +88,24 @@
     "dsh-table-ingest"
   ],
   "developer-tools": [
+    "dsh-clinic",
     "dsh-community-bench",
     "dsh-data-quality",
     "dsh-eval-pack",
     "dsh-lsp-actions",
     "dsh-mcp-panel",
-    "dsh-plugin-doctor",
-    "dsh-plugin-guide",
-    "dsh-plugin-kit",
     "dsh-policy-ledger",
+    "dsh-primer",
+    "dsh-provider-params",
+    "dsh-scaffold",
     "dsh-score"
   ],
   "integrations": [
     "dsh-claude-move",
+    "dsh-dida",
     "dsh-laya",
     "dsh-local-ai",
-    "dsh-reach",
-    "dsh-ticktick"
+    "dsh-reach"
   ],
   "interface": [
     "dsh-click",
@@ -134,16 +135,16 @@
     "dsh-defend",
     "dsh-mask",
     "dsh-permission-rules",
-    "dsh-skill-pack-security-provider"
+    "dsh-security-pack"
   ],
   "workflow": [
     "dsh-auto-review",
     "dsh-background-agents",
     "dsh-checkpoint-rewind",
+    "dsh-codemod",
     "dsh-doublecheck",
-    "dsh-github",
+    "dsh-github-bot",
     "dsh-memento",
-    "dsh-plugin-upgrade",
     "dsh-session-sync",
     "dsh-team-rooms",
     "dsh-test-drive"

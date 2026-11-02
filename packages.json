@@ -4,10 +4,10 @@
   "packages": [
     {
       "name": "dsh-einvoice",
-      "version": "0.2.0-alpha.11",
+      "version": "0.2.0-alpha.12",
       "repo": "https://github.com/PerryLink/dsh-einvoice",
       "npm": "https://www.npmjs.com/package/dsh-einvoice",
-      "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.11",
+      "release": "https://github.com/PerryLink/dsh-einvoice/releases/tag/v0.2.0-alpha.12",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-fin-invoice-core",
       "description": "文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。",
@@ -27,10 +27,10 @@
     },
     {
       "name": "dsh-bankrec",
-      "version": "0.1.0-alpha.16",
+      "version": "0.1.0-alpha.17",
       "repo": "https://github.com/PerryLink/dsh-bankrec",
       "npm": "https://www.npmjs.com/package/dsh-bankrec",
-      "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.16",
+      "release": "https://github.com/PerryLink/dsh-bankrec/releases/tag/v0.1.0-alpha.17",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-bankrec",
       "description": "银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。",
@@ -50,10 +50,10 @@
     },
     {
       "name": "dsh-ap-three-way",
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "repo": "https://github.com/PerryLink/dsh-ap-three-way",
       "npm": "https://www.npmjs.com/package/dsh-ap-three-way",
-      "release": "https://github.com/PerryLink/dsh-ap-three-way/releases/tag/v0.1.0-alpha.11",
+      "release": "https://github.com/PerryLink/dsh-ap-three-way/releases/tag/v0.1.0-alpha.12",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-ap-three-way",
       "description": "发票/PO/GRN 三单匹配、容差与例外底稿。",
@@ -73,10 +73,10 @@
     },
     {
       "name": "dsh-travel-recon",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "repo": "https://github.com/PerryLink/dsh-travel-recon",
       "npm": "https://www.npmjs.com/package/dsh-travel-recon",
-      "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0-alpha.14",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-travel-recon",
       "description": "差旅订单/发票/卡流水对账、去重与只读政策检查。",
@@ -119,10 +119,10 @@
     },
     {
       "name": "dsh-legal-clause",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "repo": "https://github.com/PerryLink/dsh-legal-clause",
       "npm": "https://www.npmjs.com/package/dsh-legal-clause",
-      "release": "https://github.com/PerryLink/dsh-legal-clause/releases/tag/v0.1.0-alpha.12",
+      "release": "https://github.com/PerryLink/dsh-legal-clause/releases/tag/v0.1.0-alpha.13",
       "family": "法务运营 Legal Ops",
       "dir": "dsh-legal-clause",
       "description": "合同条款树、playbook 映射与未解决报告。",
@@ -166,10 +166,10 @@
     },
     {
       "name": "dsh-qms-capa",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "repo": "https://github.com/PerryLink/dsh-qms-capa",
       "npm": "https://www.npmjs.com/package/dsh-qms-capa",
-      "release": "https://github.com/PerryLink/dsh-qms-capa/releases/tag/v0.1.0-alpha.12",
+      "release": "https://github.com/PerryLink/dsh-qms-capa/releases/tag/v0.1.0-alpha.13",
       "family": "可持续与质量 ESG & Quality",
       "dir": "dsh-qms-capa",
       "description": "QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。",
@@ -189,10 +189,10 @@
     },
     {
       "name": "dsh-hs-candidate",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "repo": "https://github.com/PerryLink/dsh-hs-candidate",
       "npm": "https://www.npmjs.com/package/dsh-hs-candidate",
-      "release": "https://github.com/PerryLink/dsh-hs-candidate/releases/tag/v0.1.0-alpha.12",
+      "release": "https://github.com/PerryLink/dsh-hs-candidate/releases/tag/v0.1.0-alpha.13",
       "family": "关务与物流 Trade & Logistics",
       "dir": "dsh-hs-candidate",
       "description": "HS Top3 候选、12 要素完整性、RVC 与税则版本门。",
@@ -235,10 +235,10 @@
     },
     {
       "name": "dsh-docx-redline",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "repo": "https://github.com/PerryLink/dsh-docx-redline",
       "npm": "https://www.npmjs.com/package/dsh-docx-redline",
-      "release": "https://github.com/PerryLink/dsh-docx-redline/releases/tag/v0.1.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-docx-redline/releases/tag/v0.1.0-alpha.14",
       "family": "文档与模型 Docs & Models",
       "dir": "dsh-docx-redline",
       "description": "DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。",
@@ -257,10 +257,10 @@
     },
     {
       "name": "dsh-ifc-qto",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.15",
       "repo": "https://github.com/PerryLink/dsh-ifc-qto",
       "npm": "https://www.npmjs.com/package/dsh-ifc-qto",
-      "release": "https://github.com/PerryLink/dsh-ifc-qto/releases/tag/v0.1.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-ifc-qto/releases/tag/v0.1.0-alpha.15",
       "family": "文档与模型 Docs & Models",
       "dir": "dsh-ifc-qto",
       "description": "IFC 构件/工程量清单与 CSV 导出。",
@@ -343,6 +343,25 @@
       "archetype": "validator",
       "domains": [
         "evaluation"
+      ],
+      "status": "active"
+    },
+    {
+      "name": "dsh-provider-params",
+      "version": "0.1.0-alpha.1",
+      "description": "Vendor parameter mapping and deterministic JSON repair",
+      "repo": "https://github.com/PerryLink/dsh-provider-params",
+      "npm": "https://www.npmjs.com/package/dsh-provider-params",
+      "release": "https://github.com/PerryLink/dsh-provider-params/releases/tag/v0.1.0-alpha.1",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-provider-params.html",
+      "dir": "dsh-provider-params",
+      "frozen": false,
+      "displayName": "Provider parameter mapping",
+      "displayNameZh": "厂商参数转换与 JSON 修复",
+      "category": "developer-tools",
+      "archetype": "runtime",
+      "domains": [
+        "llm"
       ],
       "status": "active"
     }

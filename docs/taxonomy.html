@@ -4,7 +4,7 @@
 <body><header class="top"><a href="index.html">PerryLink DSH 领域插件</a><span class="badge">taxonomy v1 · draft</span></header>
 <main class="wrap">
 <h1>DSH family taxonomy</h1>
-<p class="lead">125 rows · 114 active · 8 frozen · 3 retired. One primary category, one archetype, optional domain tags.</p>
+<p class="lead">126 rows · 115 active · 8 frozen · 3 retired. One primary category, one archetype, optional domain tags.</p>
 <p class="note">This is a proposal view. It does not replace <a href="https://github.com/PerryLink/dsh-kit">dsh-kit</a> install semantics or any package's own README. Source: <a href="../family.json">family.json</a> · <a href="../TAXONOMY.md">TAXONOMY.md</a>.</p>
 <div class="filters">
 <label>Collection <select id="f-collection"><option value="">all</option><option value="mainline">mainline</option><option value="compliance">compliance</option><option value="domain-ops">domain-ops</option><option value="infrastructure">infrastructure</option></select></label>
@@ -41,6 +41,14 @@
 <td><code>mainline-default</code></td>
 <td>translation</td>
 <td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="doctor" data-status="active" data-collection="mainline" data-scope="mainline-default">
+<td><a href="family/dsh-clinic.html">dsh-clinic</a><br><small>dsh-clinic</small></td>
+<td>mainline</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>doctor</code></td>
+<td><code>mainline-default</code></td>
+<td>plugin-install</td>
+<td><span class="status active">active</span></td></tr>
 <tr data-category="developer-tools" data-archetype="validator" data-status="frozen" data-collection="mainline" data-scope="catalog-only">
 <td><a href="family/dsh-community-bench.html">dsh-community-bench</a><br><small>dsh-community-bench</small></td>
 <td>mainline</td>
@@ -73,16 +81,8 @@
 <td><code>mainline-default</code></td>
 <td>mcp</td>
 <td><span class="status active">active</span></td></tr>
-<tr data-category="developer-tools" data-archetype="doctor" data-status="active" data-collection="mainline" data-scope="mainline-default">
-<td><a href="family/dsh-plugin-doctor.html">dsh-plugin-doctor</a><br><small>dsh-plugin-doctor</small></td>
-<td>mainline</td>
-<td>开发者工具 / developer-tools</td>
-<td><code>doctor</code></td>
-<td><code>mainline-default</code></td>
-<td>plugin-install</td>
-<td><span class="status active">active</span></td></tr>
 <tr data-category="developer-tools" data-archetype="assistant" data-status="active" data-collection="mainline" data-scope="mainline-default">
-<td><a href="family/dsh-plugin-guide.html">dsh-plugin-guide</a><br><small>dsh-plugin-guide</small></td>
+<td><a href="family/dsh-primer.html">dsh-primer</a><br><small>dsh-primer</small></td>
 <td>mainline</td>
 <td>开发者工具 / developer-tools</td>
 <td><code>assistant</code></td>
@@ -90,7 +90,7 @@
 <td>plugin-dev</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="developer-tools" data-archetype="catalog" data-status="active" data-collection="mainline" data-scope="mainline-default">
-<td><a href="family/dsh-plugin-kit.html">dsh-plugin-kit</a><br><small>dsh-plugin-kit</small></td>
+<td><a href="family/dsh-scaffold.html">dsh-scaffold</a><br><small>dsh-scaffold</small></td>
 <td>mainline</td>
 <td>开发者工具 / developer-tools</td>
 <td><code>catalog</code></td>
@@ -113,6 +113,14 @@
 <td><code>mainline-default</code></td>
 <td>migration</td>
 <td><span class="status frozen">frozen</span></td></tr>
+<tr data-category="integrations" data-archetype="integration" data-status="active" data-collection="mainline" data-scope="mainline-default">
+<td><a href="family/dsh-dida.html">dsh-dida</a><br><small>dsh-dida</small></td>
+<td>mainline</td>
+<td>集成与消息 / integrations</td>
+<td><code>integration</code></td>
+<td><code>mainline-default</code></td>
+<td>tasks</td>
+<td><span class="status active">active</span></td></tr>
 <tr data-category="integrations" data-archetype="integration" data-status="active" data-collection="mainline" data-scope="mainline-default">
 <td><a href="family/dsh-laya.html">dsh-laya</a><br><small>dsh-laya</small></td>
 <td>mainline</td>
@@ -137,14 +145,6 @@
 <td><code>mainline-default</code></td>
 <td>messaging</td>
 <td><span class="status frozen">frozen</span></td></tr>
-<tr data-category="integrations" data-archetype="integration" data-status="active" data-collection="mainline" data-scope="mainline-default">
-<td><a href="family/dsh-ticktick.html">dsh-ticktick</a><br><small>dsh-ticktick</small></td>
-<td>mainline</td>
-<td>集成与消息 / integrations</td>
-<td><code>integration</code></td>
-<td><code>mainline-default</code></td>
-<td>tasks</td>
-<td><span class="status active">active</span></td></tr>
 <tr data-category="interface" data-archetype="ui" data-status="active" data-collection="mainline" data-scope="mainline-default">
 <td><a href="family/dsh-click.html">dsh-click</a><br><small>dsh-click</small></td>
 <td>mainline</td>
@@ -274,7 +274,7 @@
 <td>permissions</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="security" data-archetype="assistant" data-status="active" data-collection="mainline" data-scope="mainline-default">
-<td><a href="family/dsh-skill-pack-security-provider.html">dsh-skill-pack-security-provider</a><br><small>dsh-skill-pack-security-provider</small></td>
+<td><a href="family/dsh-security-pack.html">dsh-security-pack</a><br><small>dsh-security-pack</small></td>
 <td>mainline</td>
 <td>安全与隐私 / security</td>
 <td><code>assistant</code></td>
@@ -305,6 +305,14 @@
 <td><code>mainline-default</code></td>
 <td>sessions</td>
 <td><span class="status active">active</span></td></tr>
+<tr data-category="workflow" data-archetype="integration" data-status="active" data-collection="mainline" data-scope="mainline-default">
+<td><a href="family/dsh-codemod.html">dsh-codemod</a><br><small>dsh-codemod</small></td>
+<td>mainline</td>
+<td>工作流与自动化 / workflow</td>
+<td><code>integration</code></td>
+<td><code>mainline-default</code></td>
+<td>upgrade</td>
+<td><span class="status active">active</span></td></tr>
 <tr data-category="workflow" data-archetype="assistant" data-status="active" data-collection="mainline" data-scope="mainline-default">
 <td><a href="family/dsh-doublecheck.html">dsh-doublecheck</a><br><small>dsh-doublecheck</small></td>
 <td>mainline</td>
@@ -314,7 +322,7 @@
 <td>quality-gate</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="workflow" data-archetype="integration" data-status="active" data-collection="mainline" data-scope="mainline-default">
-<td><a href="family/dsh-github.html">dsh-github</a><br><small>dsh-github</small></td>
+<td><a href="family/dsh-github-bot.html">dsh-github-bot</a><br><small>dsh-github-bot</small></td>
 <td>mainline</td>
 <td>工作流与自动化 / workflow</td>
 <td><code>integration</code></td>
@@ -328,14 +336,6 @@
 <td><code>runtime</code></td>
 <td><code>mainline-default</code></td>
 <td>memory</td>
-<td><span class="status active">active</span></td></tr>
-<tr data-category="workflow" data-archetype="integration" data-status="active" data-collection="mainline" data-scope="mainline-default">
-<td><a href="family/dsh-plugin-upgrade.html">dsh-plugin-upgrade</a><br><small>dsh-plugin-upgrade</small></td>
-<td>mainline</td>
-<td>工作流与自动化 / workflow</td>
-<td><code>integration</code></td>
-<td><code>mainline-default</code></td>
-<td>upgrade</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="workflow" data-archetype="runtime" data-status="active" data-collection="mainline" data-scope="mainline-default">
 <td><a href="family/dsh-session-sync.html">dsh-session-sync</a><br><small>dsh-session-sync</small></td>
@@ -992,6 +992,14 @@
 <td><code>doctor</code></td>
 <td><code>domain</code></td>
 <td>plugin-install, supply-chain</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="developer-tools" data-archetype="runtime" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-provider-params.html">dsh-provider-params</a><br><small>Provider parameter mapping and JSON repair</small></td>
+<td>domain-ops</td>
+<td>开发者工具 / developer-tools</td>
+<td><code>runtime</code></td>
+<td><code>domain</code></td>
+<td>llm, parameters, json</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="platform" data-archetype="catalog" data-status="active" data-collection="infrastructure" data-scope="infrastructure">
 <td><a href="family/dsh-catalog.html">dsh-catalog</a><br><small>dsh-catalog</small></td>

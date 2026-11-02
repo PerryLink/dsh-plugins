@@ -4,10 +4,10 @@
     "dsh-doublecheck",
     "dsh-fund-research",
     "dsh-industry-research",
-    "dsh-plugin-guide",
+    "dsh-primer",
     "dsh-research-report",
     "dsh-score",
-    "dsh-skill-pack-security-provider",
+    "dsh-security-pack",
     "dsh-test-drive",
     "dsh-translate"
   ],
@@ -26,7 +26,7 @@
     "dsh-cert-mcp",
     "dsh-kit",
     "dsh-plugin-certification",
-    "dsh-plugin-kit"
+    "dsh-scaffold"
   ],
   "checker": [
     "dsh-aqua-input-check",
@@ -81,7 +81,7 @@
     "dsh-tender-matrix"
   ],
   "doctor": [
-    "dsh-plugin-doctor",
+    "dsh-clinic",
     "dsh-policy-ledger"
   ],
   "drafter": [
@@ -106,14 +106,14 @@
     "dsh-docx-redline"
   ],
   "integration": [
-    "dsh-github",
+    "dsh-codemod",
+    "dsh-dida",
+    "dsh-github-bot",
     "dsh-laya",
     "dsh-local-ai",
     "dsh-lsp-actions",
     "dsh-mcp-panel",
-    "dsh-plugin-upgrade",
-    "dsh-reach",
-    "dsh-ticktick"
+    "dsh-reach"
   ],
   "ledger": [
     "dsh-demurrage-ledger",
@@ -135,6 +135,7 @@
     "dsh-memento",
     "dsh-observe",
     "dsh-permission-rules",
+    "dsh-provider-params",
     "dsh-session-sync",
     "dsh-team-rooms"
   ],

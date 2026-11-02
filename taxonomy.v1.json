@@ -236,7 +236,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.2.0-alpha.11",
+      "version": "0.2.0-alpha.12",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -261,7 +261,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.16",
+      "version": "0.1.0-alpha.17",
       "relatedCheckers": [
         "dsh-excel-reconcile",
         "dsh-invoice-ledger"
@@ -286,7 +286,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -311,7 +311,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -361,7 +361,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-contract-suite",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "relatedCheckers": [
         "dsh-contract-stance",
         "dsh-lawcite-adapter",
@@ -413,7 +413,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "relatedCheckers": [
         "dsh-fmea-table-check",
         "dsh-ppap-check",
@@ -440,7 +440,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "relatedCheckers": [
         "dsh-hs-classify",
         "dsh-origin-rvc-check",
@@ -491,7 +491,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "relatedCheckers": [
         "dsh-gongwen-word-check",
         "dsh-archive-check",
@@ -517,7 +517,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.15",
       "relatedCheckers": [
         "dsh-construction-doc-check",
         "dsh-pipeline-check",
@@ -546,8 +546,8 @@
       "version": "0.2.0-alpha.13",
       "relatedCheckers": [],
       "relatedTools": [
-        "dsh-plugin-doctor",
-        "dsh-plugin-kit"
+        "dsh-clinic",
+        "dsh-scaffold"
       ]
     },
     {
@@ -1894,19 +1894,19 @@
       "members": [
         {
           "id": "dsh-einvoice",
-          "version": "0.2.0-alpha.11"
+          "version": "0.2.0-alpha.12"
         },
         {
           "id": "dsh-bankrec",
-          "version": "0.1.0-alpha.16"
+          "version": "0.1.0-alpha.17"
         },
         {
           "id": "dsh-ap-three-way",
-          "version": "0.1.0-alpha.11"
+          "version": "0.1.0-alpha.12"
         },
         {
           "id": "dsh-travel-recon",
-          "version": "0.1.0-alpha.13"
+          "version": "0.1.0-alpha.14"
         }
       ]
     },
@@ -1936,9 +1936,31 @@
         },
         {
           "id": "dsh-legal-clause",
-          "version": "0.1.0-alpha.12"
+          "version": "0.1.0-alpha.13"
         }
       ]
+    },
+    {
+      "id": "dsh-provider-params",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "developer-tools",
+      "subcategory": "runtime",
+      "archetype": "runtime",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "llm",
+        "parameters",
+        "json"
+      ],
+      "displayName": "Provider parameter mapping and JSON repair",
+      "displayNameZh": "厂商参数转换与 JSON 修复",
+      "positioning": "Maps temperature/top_p/max_tokens/stop/system across 11 LLM vendors and repairs broken JSON tool output deterministically; no data is fabricated.",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": []
     }
   ],
   "scope": "Phase 1 seed: 62 compliance tools + 15 domain plugins + 2 suites. The mainline and infrastructure collections are defined but not populated in this file yet."

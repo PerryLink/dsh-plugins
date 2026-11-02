@@ -2,10 +2,10 @@
   "schemaVersion": "1.0.0-draft",
   "updated": "2026-11-01",
   "status": "proposal",
-  "scope": "125-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-community-bench + 3 retired + 3 infrastructure rows.",
+  "scope": "126-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-provider-params + dsh-community-bench + 3 retired + 3 infrastructure rows.",
   "counts": {
-    "total": 125,
-    "active": 114,
+    "total": 126,
+    "active": 115,
     "frozen": 8,
     "retired": 3
   },
@@ -29,7 +29,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.2.0-alpha.11",
+      "version": "0.2.0-alpha.12",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -73,7 +73,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.16",
+      "version": "0.1.0-alpha.17",
       "relatedCheckers": [
         "dsh-excel-reconcile",
         "dsh-invoice-ledger"
@@ -117,7 +117,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0-alpha.12",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -162,7 +162,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -249,7 +249,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-contract-suite",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "relatedCheckers": [
         "dsh-contract-stance",
         "dsh-lawcite-adapter",
@@ -340,7 +340,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "relatedCheckers": [
         "dsh-fmea-table-check",
         "dsh-ppap-check",
@@ -386,7 +386,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0-alpha.13",
       "relatedCheckers": [
         "dsh-hs-classify",
         "dsh-origin-rvc-check",
@@ -476,7 +476,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.14",
       "relatedCheckers": [
         "dsh-gongwen-word-check",
         "dsh-archive-check",
@@ -520,7 +520,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0-alpha.15",
       "relatedCheckers": [
         "dsh-construction-doc-check",
         "dsh-pipeline-check",
@@ -568,8 +568,8 @@
       "version": "0.2.0-alpha.13",
       "relatedCheckers": [],
       "relatedTools": [
-        "dsh-plugin-doctor",
-        "dsh-plugin-kit"
+        "dsh-clinic",
+        "dsh-scaffold"
       ],
       "repo": "PerryLink/dsh-policy-ledger",
       "npm": "dsh-policy-ledger",
@@ -3132,19 +3132,19 @@
       "members": [
         {
           "id": "dsh-einvoice",
-          "version": "0.2.0-alpha.11"
+          "version": "0.2.0-alpha.12"
         },
         {
           "id": "dsh-bankrec",
-          "version": "0.1.0-alpha.16"
+          "version": "0.1.0-alpha.17"
         },
         {
           "id": "dsh-ap-three-way",
-          "version": "0.1.0-alpha.11"
+          "version": "0.1.0-alpha.12"
         },
         {
           "id": "dsh-travel-recon",
-          "version": "0.1.0-alpha.13"
+          "version": "0.1.0-alpha.14"
         }
       ],
       "repo": "PerryLink/dsh-finops-suite",
@@ -3193,7 +3193,7 @@
         },
         {
           "id": "dsh-legal-clause",
-          "version": "0.1.0-alpha.12"
+          "version": "0.1.0-alpha.13"
         }
       ],
       "repo": "PerryLink/dsh-contract-suite",
@@ -3214,6 +3214,47 @@
       ],
       "industriesZh": [
         "法务"
+      ]
+    },
+    {
+      "id": "dsh-provider-params",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "developer-tools",
+      "subcategory": "runtime",
+      "archetype": "runtime",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "llm",
+        "parameters",
+        "json"
+      ],
+      "displayName": "Provider parameter mapping and JSON repair",
+      "displayNameZh": "厂商参数转换与 JSON 修复",
+      "positioning": "Maps temperature/top_p/max_tokens/stop/system across 11 LLM vendors and repairs broken JSON tool output deterministically; no data is fabricated.",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-provider-params",
+      "npm": "dsh-provider-params",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "参数映射",
+        "厂商差异",
+        "temperature",
+        "JSON 修复",
+        "截断闭合"
+      ],
+      "taskFamilyZh": "开发者工具",
+      "rolesZh": [
+        "开发者",
+        "模型接入工程师"
+      ],
+      "industriesZh": [
+        "通用"
       ]
     },
     {
@@ -4020,7 +4061,7 @@
       ]
     },
     {
-      "id": "dsh-plugin-guide",
+      "id": "dsh-primer",
       "kind": "plugin",
       "collection": "mainline",
       "category": "developer-tools",
@@ -4030,8 +4071,8 @@
       ],
       "status": "active",
       "release": "stable",
-      "npm": "dsh-plugin-guide",
-      "repo": "PerryLink/dsh-plugin-guide",
+      "npm": "dsh-primer",
+      "repo": "PerryLink/dsh-primer",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
       "mappingConfidence": "reviewed",
@@ -4051,7 +4092,7 @@
       ]
     },
     {
-      "id": "dsh-plugin-upgrade",
+      "id": "dsh-codemod",
       "kind": "plugin",
       "collection": "mainline",
       "category": "workflow",
@@ -4061,8 +4102,8 @@
       ],
       "status": "active",
       "release": "stable",
-      "npm": "dsh-plugin-upgrade",
-      "repo": "PerryLink/dsh-plugin-upgrade",
+      "npm": "dsh-codemod",
+      "repo": "PerryLink/dsh-codemod",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
       "mappingConfidence": "reviewed",
@@ -4307,7 +4348,7 @@
       ]
     },
     {
-      "id": "dsh-github",
+      "id": "dsh-github-bot",
       "kind": "plugin",
       "collection": "mainline",
       "category": "workflow",
@@ -4318,7 +4359,7 @@
       "status": "active",
       "release": "stable",
       "npm": "dsh-github-bot",
-      "repo": "PerryLink/dsh-github",
+      "repo": "PerryLink/dsh-github-bot",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
       "mappingConfidence": "reviewed",
@@ -4339,7 +4380,7 @@
       ]
     },
     {
-      "id": "dsh-plugin-doctor",
+      "id": "dsh-clinic",
       "kind": "plugin",
       "collection": "mainline",
       "category": "developer-tools",
@@ -4350,7 +4391,7 @@
       "status": "active",
       "release": "stable",
       "npm": "dsh-clinic",
-      "repo": "PerryLink/dsh-plugin-doctor",
+      "repo": "PerryLink/dsh-clinic",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
       "mappingConfidence": "reviewed",
@@ -4371,7 +4412,7 @@
       ]
     },
     {
-      "id": "dsh-plugin-kit",
+      "id": "dsh-scaffold",
       "kind": "plugin",
       "collection": "mainline",
       "category": "developer-tools",
@@ -4382,7 +4423,7 @@
       "status": "active",
       "release": "stable",
       "npm": "dsh-scaffold",
-      "repo": "PerryLink/dsh-plugin-kit",
+      "repo": "PerryLink/dsh-scaffold",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
       "mappingConfidence": "reviewed",
@@ -4402,7 +4443,7 @@
       ]
     },
     {
-      "id": "dsh-skill-pack-security-provider",
+      "id": "dsh-security-pack",
       "kind": "plugin",
       "collection": "mainline",
       "category": "security",
@@ -4413,7 +4454,7 @@
       "status": "active",
       "release": "stable",
       "npm": "dsh-security-pack",
-      "repo": "PerryLink/dsh-skill-pack-security-provider",
+      "repo": "PerryLink/dsh-security-pack",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
       "mappingConfidence": "reviewed",
@@ -4434,7 +4475,7 @@
       ]
     },
     {
-      "id": "dsh-ticktick",
+      "id": "dsh-dida",
       "kind": "plugin",
       "collection": "mainline",
       "category": "integrations",
@@ -4445,7 +4486,7 @@
       "status": "active",
       "release": "stable",
       "npm": "dsh-dida",
-      "repo": "PerryLink/dsh-ticktick",
+      "repo": "PerryLink/dsh-dida",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
       "mappingConfidence": "reviewed",
