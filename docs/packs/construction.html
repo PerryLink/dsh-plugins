@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>建筑包（C5）：模型工程量到进度款 — DSH 插件市场</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2430;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--amber:#d29922}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+a{color:var(--accent)}
+header{max-width:1040px;margin:0 auto;padding:36px 24px 10px}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 18px}
+h1{margin:0 0 8px;font-size:32px;line-height:1.25}
+.lede{color:var(--muted);margin:0 0 14px;max-width:760px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px}
+.badge{border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:12px;color:var(--muted)}
+.badge.green{border-color:#238636;color:#7ee787;background:#0f2417}
+main{max-width:1040px;margin:0 auto;padding:0 24px 64px}
+section{margin:30px 0}
+h2{font-size:21px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:22px 0 8px}
+p{margin:8px 0}
+code{background:#1f2937;border-radius:5px;padding:1px 5px;font-size:.9em}
+pre{background:#0b0f14;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;color:#c9d1d9}
+pre .c{color:var(--muted)}
+.shot{display:block;max-width:100%;border:1px solid var(--line);border-radius:12px;margin:10px 0 6px}
+.caption{color:var(--muted);font-size:13px;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.plugin{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit}
+.plugin:hover{border-color:var(--accent)}
+.plugin b{display:block;font-size:16px;margin-bottom:2px}
+.plugin span{display:block;color:var(--muted);font-size:13px}
+.plugin code{font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-size:13px;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.note{background:#0f2417;border:1px solid #238636;border-radius:10px;padding:12px 14px;color:#b7f0c0;font-size:14px}
+.warn{background:#2a2112;border:1px solid #6b4e16;border-radius:10px;padding:12px 14px;color:#f0d58a;font-size:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.step h3{margin:0 0 4px}
+.step .who{color:var(--muted);font-size:13px;margin:0 0 8px}
+footer{max-width:1040px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
+@media (max-width:640px){h1{font-size:26px}th,td{padding:8px}pre{font-size:11.5px}}
+</style>
+</head>
+<body>
+<header>
+  <p class="crumb"><a href="../market.html">← 返回插件市场</a> / 质量生产 / 场景包</p>
+  <h1>建筑包（C5）：模型工程量到进度款，一条命令跑完</h1>
+  <p class="lede">把 3 个 DSH 建筑插件串成一条真实可跑的场景：<b>模型工程量 → 进度款审核 → 付款单三单匹配</b>。写给造价工程师、监理和项目经理，不需要写代码。</p>
+  <div class="badges">
+    <span class="badge green">合成数据 · 本地运行 · 不联网</span>
+    <span class="badge">3 个插件</span>
+    <span class="badge">1 条命令</span>
+    <span class="badge">3 段输出 / 3 步操作</span>
+    <span class="badge">2026-10 · CNY</span>
+  </div>
+</header>
+<main>
+
+<section>
+  <h2>真实运行截图</h2>
+  <img class="shot" src="../assets/construction-flow.png" alt="建筑包真实运行截图：模型工程量、进度款审核、付款单三单匹配">
+  <p class="caption">上图是 <code>node scenario/run-scenario.mjs</code> 的真实输出，不是示意图（<a href="../assets/construction-flow.txt">原始终端文本</a>）。数据全部为 <code>DEMO-*</code> / 虚构清单编码的合成值。</p>
+</section>
+
+<section>
+  <h2>这个包解决什么</h2>
+  <p>同一期（2026-10）的模型、申报和付款申请，由三个插件接力；脚本把同一份数据在三个插件之间传递，而不是三个样例各跑一遍。</p>
+  <div class="grid">
+    <a class="plugin" href="../packages/dsh-ifc-qto.html">
+      <b>模型工程量</b>
+      <span>dsh-ifc-qto</span>
+      <span>IFC 单位检查、构件清点、体积/面积/长度汇总、模型量 CSV</span>
+    </a>
+    <div class="plugin">
+      <b>进度款审核</b>
+      <span>dsh-progress-payment</span>
+      <span>合同基准、整数分金额、累计比例、超量/单价/重复项、审核底稿</span>
+    </div>
+    <a class="plugin" href="../packages/dsh-ap-three-way.html">
+      <b>付款单三单匹配</b>
+      <span>dsh-ap-three-way · 可选</span>
+      <span>付款申请 vs 采购单 vs 收货单，1% 单价容差，例外清单</span>
+    </a>
+  </div>
+  <p class="warn">它不替你做计价、结算审核或监理签认：变更签证、索赔、质量扣款、税率和支付比例仍需合同条款与人工判断。模型量只作申报量对照，不是计价依据。</p>
+</section>
+
+<section>
+  <h2>你需要准备什么</h2>
+  <p>把文件放进 <code>04-build/dsh-construction-pack/scenario/data/</code> 对应目录，保持表头不变。</p>
+  <table>
+    <thead><tr><th>文件</th><th>放在哪里</th><th>最少需要的列 / 字段</th></tr></thead>
+    <tbody>
+      <tr><td>IFC 模型</td><td><code>model/</code></td><td>IFC4 文本（ISO-10303-21），带 <code>IfcUnitAssignment</code> 和 <code>IfcQuantityLength/Area/Volume</code></td></tr>
+      <tr><td>本期申报</td><td><code>progress/</code></td><td><code>清单编码,名称,单位,合同量,合同单价,本期完成量,累计完成量</code></td></tr>
+      <tr><td>合同基准</td><td><code>progress/</code></td><td><code>清单编码,合同量,合同单价</code>；一条清单一行</td></tr>
+      <tr><td>付款申请 / 采购单 / 收货单</td><td><code>ap/</code></td><td><code>supplier,invoice_no,po_no,line_no,qty,unit_price,amount</code>；PO/GRN 见样例表头</td></tr>
+    </tbody>
+  </table>
+  <p>数量最多 3 位小数，金额最多 2 位小数；金额内部按整数分计算。表头可用中文或英文，列顺序随意。</p>
+  <p class="note">样例数据里的“坑”是故意的：矩形柱累计超合同量、基础模板单价与合同基准不符、挖沟槽土方重复两行、付款申请第 2 行没有采购单。改数据前先读 <code>scenario/data/README.md</code>。</p>
+</section>
+
+<section>
+  <h2>三步操作</h2>
+  <p>先运行同一条命令（脚本一次跑完）：</p>
+  <pre>$ cd 04-build/dsh-construction-pack
+$ node scenario/run-scenario.mjs</pre>
+  <p>屏幕上是 <code>[1/3]</code>～<code>[3/3]</code> 三段；下面每段对应一步。</p>
+
+  <div class="step">
+    <h3>第 1 步：模型工程量（dsh-ifc-qto）</h3>
+    <p class="who">对应 [1/3] 段</p>
+    <pre>[1/3] 模型工程量 .......... 6 个构件 / 6 条工程量；体积 25.92 m³、面积 86.4 m²
+      单位声明：长度 MILLI|METRE / 面积 $|SQUARE_METRE / 体积 $|CUBIC_METRE</pre>
+    <p>IFC 里有 2 面墙、1 块楼板、1 扇门、1 扇窗、1 根柱；工程量实体汇总出体积 25.92 m³、面积 86.4 m²、长度 8100 mm。单位声明完整，所以第 2 步可以放心拿模型量做对照。样例模型里有一条 0 值工程量（<code>NetSideArea</code>），会以 <code>E_IFC_QUANTITY_NON_POSITIVE</code> 提示，不影响合计。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 2 步：进度款审核（dsh-progress-payment）</h3>
+    <p class="who">对应 [2/3] 段</p>
+    <pre>[2/3] 进度款审核 .......... 6 个清单项；本期 50763.60 CNY；累计 614145.00（84.62%）
+      模型对照：混凝土基础 申报 25.92 m3 / 模型 25.92 m3；基础模板 申报 86.4 m2 / 模型 86.4 m2
+      问题 3 项：累计完成量 101.5 超过合同量 95；申报合同单价 65.00 与合同基准 55.00 不符；
+                清单编码 010101003 在本期申报里出现 2 次</pre>
+    <p>申报 7 行 / 6 个清单项，合同基准 6 项。本期金额 50,763.60 CNY，累计 614,145.00 CNY，占合同额 725,750.00 CNY 的 84.62%。三个阻塞问题：矩形柱累计超合同量（<code>E_PROGRESS_OVER_QTY</code>）；基础模板申报单价与合同基准不符（<code>E_PROGRESS_PRICE_MISMATCH</code>，本期金额已按 55.00 重算）；挖沟槽土方重复两行（<code>E_PROGRESS_DUP_ITEM</code>，只计第一行）。底稿里重复行标 <code>是否计入=否</code>。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 3 步：付款单三单匹配（dsh-ap-three-way，可选）</h3>
+    <p class="who">对应 [3/3] 段</p>
+    <pre>[3/3] 付款单三单匹配 ...... 1 通过 / 1 例外（PO-DEMO-7001 第 2 行缺采购单）
+      付款申请 52763.60 CNY；本期核定 50763.60 CNY；差额 2000.00 CNY</pre>
+    <p>付款申请两行：第 1 行 50,763.60 CNY 与采购单、收货单一致，通过；第 2 行 2,000.00 CNY 没有采购依据（<code>po_missing</code>），退回。第 2 步核定多少，第 3 步就只认多少；差额单独列出来，不会自动改申报金额。</p>
+  </div>
+</section>
+
+<section>
+  <h2>结果文件</h2>
+  <table>
+    <thead><tr><th>路径</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td><code>output/flow.json</code></td><td>本次运行的完整链路：每步输入、输出、耗时、状态、产物清单</td></tr>
+      <tr><td><code>expected/flow.json</code></td><td>金标；测试剔除时间字段后逐字段比对</td></tr>
+      <tr><td><code>output/workpapers/model-quantities.csv</code></td><td>模型工程量：构件类型计数 + 长度/面积/体积明细</td></tr>
+      <tr><td><code>output/workpapers/progress-audit-2026-10.csv</code></td><td>进度款审核底稿：7 行申报 + 表头，重复行标 <code>是否计入=否</code></td></tr>
+      <tr><td><code>output/workpapers/construction-ap.xlsx</code></td><td>付款单三单匹配底稿：Matches / Exceptions 两张表</td></tr>
+    </tbody>
+  </table>
+  <p class="note"><code>output/</code> 每次运行重建，已在 .gitignore 中忽略；金标在 <code>expected/flow.json</code>，不要被覆盖。</p>
+</section>
+
+<section>
+  <h2>出错怎么办</h2>
+  <table>
+    <thead><tr><th>报错</th><th>通常原因</th><th>下一步</th></tr></thead>
+    <tbody>
+      <tr><td><code>E_IFC_UNREADABLE</code> / <code>E_IFC_UNIT_MISSING</code></td><td>不是 IFC4 文本，或缺单位声明</td><td>用设计院导出的 IFC4 文本；先跑 <code>ifc.unit_check</code> 看长度/面积/体积单位</td></tr>
+      <tr><td><code>E_PROGRESS_CSV_ROW</code></td><td>申报/合同 CSV 缺列、金额或数量格式不对</td><td>对照样例表头；数量最多 3 位小数、金额最多 2 位小数，不要带单位</td></tr>
+      <tr><td><code>E_PROGRESS_OVER_QTY</code></td><td>本期或累计完成量超过合同量</td><td>核对合同量和变更签证；超量部分走变更或结算，不在本期支付</td></tr>
+      <tr><td><code>E_PROGRESS_PRICE_MISMATCH</code></td><td>申报单价与合同基准不一致</td><td>本期金额已按合同单价重算；让申报方改正或确认合同版本</td></tr>
+      <tr><td><code>E_PROGRESS_DUP_ITEM</code></td><td>同一清单编码出现多次</td><td>确认哪一行是本期应报的；底稿里重复行已标“否”，不会重复计钱</td></tr>
+      <tr><td>AP 的 <code>po_missing</code> / <code>qty_over_grn</code></td><td>付款申请没有对应采购单或超收货量</td><td>补采购依据或退回该行；不要为了过匹配改金额</td></tr>
+      <tr><td>其他错误</td><td>文件权限、临时目录或数据版本变化</td><td>保留完整报错和 <code>output/flow.json</code>，先读错误里的“下一步”，不要删原始文件</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>三个插件</h2>
+  <div class="grid">
+    <a class="plugin" href="../packages/dsh-ifc-qto.html"><b>IFC 工程量</b><span>dsh-ifc-qto</span><span>构件清点 · 单位检查 · CSV</span></a>
+    <div class="plugin"><b>进度款审核</b><span>dsh-progress-payment</span><span>合同基准 · 整数分 · 问题清单</span></div>
+    <a class="plugin" href="../packages/dsh-ap-three-way.html"><b>付款单三单匹配</b><span>dsh-ap-three-way</span><span>付款申请/PO/GRN · 容差</span></a>
+  </div>
+  <p>仓库内完整中文说明：<code>04-build/dsh-construction-pack/README-zh.md</code>；英文简版：<code>README.md</code>。运行与测试命令：</p>
+  <pre>$ node scenario/run-scenario.mjs
+$ node --test test/*.test.mjs
+$ node scenario/run-scenario.mjs --write-expected   # 有意改动输出后重建金标</pre>
+</section>
+
+</main>
+<footer>
+  <p>建筑包（C5）是场景包，不是 npm 包。所有样例数据均为合成数据；不联网、不上传、不连接 BIM 平台或计价软件。 · <a href="../market.html">返回插件市场</a></p>
+</footer>
+</body>
+</html>

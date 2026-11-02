@@ -4,7 +4,7 @@
 <body><header class="top"><a href="index.html">PerryLink DSH 领域插件</a><span class="badge">taxonomy v1 · draft</span></header>
 <main class="wrap">
 <h1>DSH family taxonomy</h1>
-<p class="lead">127 rows · 116 active · 8 frozen · 3 retired. One primary category, one archetype, optional domain tags.</p>
+<p class="lead">133 rows · 122 active · 8 frozen · 3 retired. One primary category, one archetype, optional domain tags.</p>
 <p class="note">This is a proposal view. It does not replace <a href="https://github.com/PerryLink/dsh-kit">dsh-kit</a> install semantics or any package's own README. Source: <a href="../family.json">family.json</a> · <a href="../TAXONOMY.md">TAXONOMY.md</a>.</p>
 <div class="filters">
 <label>Collection <select id="f-collection"><option value="">all</option><option value="mainline">mainline</option><option value="compliance">compliance</option><option value="domain-ops">domain-ops</option><option value="infrastructure">infrastructure</option></select></label>
@@ -865,6 +865,14 @@
 <td><code>domain</code></td>
 <td>finance, accounts-payable</td>
 <td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="calculator" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-ar-aging.html">dsh-ar-aging</a><br><small>AR aging</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>calculator</code></td>
+<td><code>domain</code></td>
+<td>应收, 账龄, 逾期, 催收</td>
+<td><span class="status active">active</span></td></tr>
 <tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops" data-scope="domain">
 <td><a href="family/dsh-bankrec.html">dsh-bankrec</a><br><small>Bank statement reconciliation</small></td>
 <td>domain-ops</td>
@@ -872,6 +880,14 @@
 <td><code>reconciler</code></td>
 <td><code>domain</code></td>
 <td>finance, banking</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="ledger" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-contract-renewal.html">dsh-contract-renewal</a><br><small>Contract renewal tracker</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>ledger</code></td>
+<td><code>domain</code></td>
+<td>合同, 到期, 续签, 提醒</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="business-ops" data-archetype="suite" data-status="active" data-collection="domain-ops" data-scope="domain">
 <td><a href="family/dsh-contract-suite.html">dsh-contract-suite</a><br><small>Contract ops suite</small></td>
@@ -921,6 +937,14 @@
 <td><code>domain</code></td>
 <td>trade, customs</td>
 <td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="validator" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-labor-contract.html">dsh-labor-contract</a><br><small>Labor contract check</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>validator</code></td>
+<td><code>domain</code></td>
+<td>劳动合同, 试用期, 条款, 用工</td>
+<td><span class="status active">active</span></td></tr>
 <tr data-category="business-ops" data-archetype="checker" data-status="active" data-collection="domain-ops" data-scope="domain">
 <td><a href="family/dsh-legal-clause.html">dsh-legal-clause</a><br><small>Contract clause &amp; playbook review</small></td>
 <td>domain-ops</td>
@@ -937,6 +961,14 @@
 <td><code>domain</code></td>
 <td>legal, intake</td>
 <td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-progress-payment.html">dsh-progress-payment</a><br><small>Progress payment audit</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>reconciler</code></td>
+<td><code>domain</code></td>
+<td>进度款, 结算, 工程量, 造价</td>
+<td><span class="status active">active</span></td></tr>
 <tr data-category="business-ops" data-archetype="ledger" data-status="active" data-collection="domain-ops" data-scope="domain">
 <td><a href="family/dsh-qms-capa.html">dsh-qms-capa</a><br><small>QMS NCR, CAPA &amp; 8D</small></td>
 <td>domain-ops</td>
@@ -946,12 +978,28 @@
 <td>quality, manufacturing</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-rfq-compare.html">dsh-rfq-compare</a><br><small>RFQ comparison</small></td>
+<td>domain-ops</td>
+<td>业务运营 / business-ops</td>
+<td><code>reconciler</code></td>
+<td><code>domain</code></td>
+<td>询价, 比价, 报价, 采购</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="business-ops" data-archetype="reconciler" data-status="active" data-collection="domain-ops" data-scope="domain">
 <td><a href="family/dsh-travel-recon.html">dsh-travel-recon</a><br><small>Travel reconciliation &amp; policy check</small></td>
 <td>domain-ops</td>
 <td>业务运营 / business-ops</td>
 <td><code>reconciler</code></td>
 <td><code>domain</code></td>
 <td>finance, travel-expense</td>
+<td><span class="status active">active</span></td></tr>
+<tr data-category="compliance" data-archetype="checker" data-status="active" data-collection="domain-ops" data-scope="domain">
+<td><a href="family/dsh-import-customs-check.html">dsh-import-customs-check</a><br><small>Import document check</small></td>
+<td>domain-ops</td>
+<td>合规与核查 / compliance</td>
+<td><code>checker</code></td>
+<td><code>domain</code></td>
+<td>进口, 报关, 单证, 一致性</td>
 <td><span class="status active">active</span></td></tr>
 <tr data-category="content" data-archetype="inspector" data-status="active" data-collection="domain-ops" data-scope="domain">
 <td><a href="family/dsh-docx-redline.html">dsh-docx-redline</a><br><small>DOCX inspect &amp; text diff</small></td>

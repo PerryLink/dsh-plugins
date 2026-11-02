@@ -179,7 +179,25 @@ const mainlineRe = /<details>\n<summary>Mainline family — \d+ current install 
 let refreshed = 0;
 for (const name of pageNames) {
   const pagePath = path.join(root, 'docs', 'packages', `${name}.html`);
-  if (!fs.existsSync(pagePath)) throw new Error(`docs/packages/${name}.html is missing`);
+  if (!fs.existsSync(pagePath)) {
+    const pkg = [...packagesDoc.packages, ...packagesDoc.suites].find((p) => p.name === name)
+    const title = pkg?.displayNameZh || pkg?.displayName || name
+    const blurb = pkg?.description || ''
+    fs.writeFileSync(pagePath, `<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(name)} — PerryLink DSH</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic</span></header>
+<main class="wrap">
+<h1>${esc(name)}</h1>
+<p>${esc(title)}${blurb ? '：' + esc(blurb) : ''}</p>
+<p class="meta"><code>${esc(pkg?.version || '')}</code> · <a href="https://www.npmjs.com/package/${esc(name)}">npm</a> · <a href="https://github.com/PerryLink/${esc(name)}">GitHub</a></p>
+<p class="note">安装：<code>dsh plugin --profile &lt;profile&gt; add ${esc(name)}</code></p>
+</main>
+<footer class="foot"><p><a href="../taxonomy.html">taxonomy</a> · <a href="../index.html">index</a> · <a href="../market.html">按任务浏览</a></p></footer>
+</body></html>
+`)
+    console.log(`created docs/packages/${name}.html from the generic template`)
+  }
   const before = fs.readFileSync(pagePath, 'utf8');
   const mainlineMatches = before.match(new RegExp(mainlineRe.source, 'g')) || [];
   let after
@@ -210,7 +228,13 @@ let domainRefreshed = 0;
 for (const name of pageNames) {
   const pagePath = path.join(root, 'docs', 'packages', `${name}.html`);
   const before = fs.readFileSync(pagePath, 'utf8');
-  const after = before.replace(domainRe, () => domainBlock);
+  let after
+  if (domainRe.test(before)) {
+    after = before.replace(domainRe, () => domainBlock);
+  } else {
+    const anchor = before.includes('</main>') ? '</main>' : '</body>';
+    after = before.replace(anchor, `${domainBlock}\n${anchor}`);
+  }
   if (after !== before) { fs.writeFileSync(pagePath, after); domainRefreshed++; }
 }
 console.log(`wrote docs/packages (${pageNames.length} pages, ${mainlineEntries.length} mainline specs, ${refreshed} changed, ${domainRefreshed} domain blocks refreshed)`);

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HR 包（C4）：简历/合同邮件到续签提醒 — DSH 插件市场</title>
+<style>
+:root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2430;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--amber:#d29922}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+a{color:var(--accent)}
+header{max-width:1040px;margin:0 auto;padding:36px 24px 10px}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 18px}
+h1{margin:0 0 8px;font-size:32px;line-height:1.25}
+.lede{color:var(--muted);margin:0 0 14px;max-width:760px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px}
+.badge{border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:12px;color:var(--muted)}
+.badge.green{border-color:#238636;color:#7ee787;background:#0f2417}
+main{max-width:1040px;margin:0 auto;padding:0 24px 64px}
+section{margin:30px 0}
+h2{font-size:21px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:22px 0 8px}
+p{margin:8px 0}
+code{background:#1f2937;border-radius:5px;padding:1px 5px;font-size:.9em}
+pre{background:#0b0f14;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;color:#c9d1d9}
+pre .c{color:var(--muted)}
+.shot{display:block;max-width:100%;border:1px solid var(--line);border-radius:12px;margin:10px 0 6px}
+.caption{color:var(--muted);font-size:13px;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.plugin{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit}
+.plugin:hover{border-color:var(--accent)}
+.plugin b{display:block;font-size:16px;margin-bottom:2px}
+.plugin span{display:block;color:var(--muted);font-size:13px}
+.plugin code{font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-size:13px;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.note{background:#0f2417;border:1px solid #238636;border-radius:10px;padding:12px 14px;color:#b7f0c0;font-size:14px}
+.warn{background:#2a2112;border:1px solid #6b4e16;border-radius:10px;padding:12px 14px;color:#f0d58a;font-size:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.step h3{margin:0 0 4px}
+.step .who{color:var(--muted);font-size:13px;margin:0 0 8px}
+footer{max-width:1040px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
+@media (max-width:640px){h1{font-size:26px}th,td{padding:8px}pre{font-size:11.5px}}
+</style>
+</head>
+<body>
+<header>
+  <p class="crumb"><a href="../market.html">← 返回插件市场</a> / 人力资源 / 场景包</p>
+  <h1>HR 包（C4）：从简历/合同邮件到续签提醒，一条命令跑完</h1>
+  <p class="lede">把 3 个 DSH 插件串成一条可跑的 HR 场景：<b>收简历/合同邮件 → 合同条款体检 + 6 人批量核对 → 续签/到期提醒</b>。写给 HR、法务和行政，不需要写代码。</p>
+  <div class="badges">
+    <span class="badge green">合成数据 · 本地运行 · 不联网</span>
+    <span class="badge">3 个插件</span>
+    <span class="badge">1 条命令</span>
+    <span class="badge">3/3 步通过</span>
+    <span class="badge">2026-11-02 基准日</span>
+  </div>
+</header>
+<main>
+
+<section>
+  <h2>真实运行截图</h2>
+  <img class="shot" src="../assets/hr-flow.png" alt="HR 包真实运行截图：收简历/合同邮件、合同体检、续签提醒">
+  <p class="caption">上图是 <code>node scenario/run-scenario.mjs</code> 的真实输出，不是示意图（<a href="../assets/hr-flow.txt">原始终端文本</a>）。数据全部为 <code>example.test</code> / <code>DEMO</code> / <code>（合成）</code> 合成值。</p>
+</section>
+
+<section>
+  <h2>这个包解决什么</h2>
+  <p>一名候选人的简历邮件、合同邮件和 6 人合同台账，沿同一条链路走完；脚本把同一份合同和同一份员工 CSV 在三个插件之间传递，而不是三个样例各跑一遍。</p>
+  <div class="grid">
+    <a class="plugin" href="../packages/dsh-legal-intake.html">
+      <b>收简历 / 合同邮件</b>
+      <span>dsh-legal-intake · 法务需求收件</span>
+      <span>解析 EML、按 Message-ID 去重、区分简历/合同需求、导出台账</span>
+    </a>
+    <a class="plugin" href="https://github.com/PerryLink/dsh-labor-contract">
+      <b>合同体检 + 批量核对</b>
+      <span>dsh-labor-contract · 劳动合同条款核对</span>
+      <span>9 项必备条款、试用期上限、试用期工资 80%、6 人批量到期/超限</span>
+    </a>
+    <a class="plugin" href="https://github.com/PerryLink/dsh-contract-renewal">
+      <b>续签 / 到期提醒</b>
+      <span>dsh-contract-renewal · 合同到期看板</span>
+      <span>合同登记、续签窗口、到期 CSV、与 labor.batch 交叉核对</span>
+    </a>
+  </div>
+  <p class="warn">它不替你做录用、纪律或法律判断。条款提示、试用期问题、到期提醒仍需人工复核；<b>不是法律意见</b>。</p>
+</section>
+
+<section>
+  <h2>你需要准备什么</h2>
+  <p>把文件放进仓库 <code>04-build/dsh-hr-pack/scenario/data/</code> 对应目录，保持文件名（或同步改 runner 里的 <code>DATA_FILES</code>）。</p>
+  <table>
+    <thead><tr><th>输入</th><th>放在哪里</th><th>最少需要的内容</th></tr></thead>
+    <tbody>
+      <tr><td>简历 / 合同邮件</td><td><code>eml/</code></td><td><code>From</code>、<code>To</code>、<code>Subject</code>、<code>Date</code>、<code>Message-ID</code>、<code>Thread-Id</code>，空行后是正文</td></tr>
+      <tr><td>合同正文</td><td><code>contract/labor-contract-DEMO.txt</code></td><td>纯文本合同；本包不解析 PDF/DOCX/扫描件</td></tr>
+      <tr><td>员工合同 CSV</td><td><code>hr/employees.csv</code></td><td><code>employee,position,contract_start,contract_end,probation_months,monthly_salary,probation_salary</code></td></tr>
+    </tbody>
+  </table>
+  <p>日期用 <code>YYYY-MM-DD</code>；无固定期限写 <code>无固定期限</code>。附件名称、大小、SHA-256 由脚本从合同文件实时计算，EML 与盘上文件不会漂移。</p>
+</section>
+
+<section>
+  <h2>三步操作</h2>
+  <p>先运行同一条命令（脚本一次跑完）：</p>
+  <pre>$ cd 04-build/dsh-hr-pack
+$ node scenario/run-scenario.mjs</pre>
+
+  <div class="step">
+    <h3>第 1 步：收简历 / 合同邮件（dsh-legal-intake）</h3>
+    <p class="who">对应 [1/3] 段</p>
+    <pre>[1/3] 收简历/合同邮件 ...... 3 封邮件，2 个新需求，1 封重复
+      类型：COMPLIANCE=1、CONTRACT_REVIEW=1；台账 2 行</pre>
+    <p>3 封 EML 中，合同邮件重发件与原件使用同一个 <code>Message-ID</code>，被计为 1 封重复，不会重复建需求。新需求 2 个：简历邮件归为 <code>COMPLIANCE</code>，合同邮件归为 <code>CONTRACT_REVIEW</code>；台账写到 <code>output/intake/exports/intake-ledger.xlsx</code>。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 2 步：合同体检 + 批量核对（dsh-labor-contract）</h3>
+    <p class="who">对应 [2/3] 段</p>
+    <pre>[2/3] 合同体检 ............ 9 项条款命中 / 0 项注意 / 0 项缺失；试用期 3/6 个月；试用期工资 90.00%
+      批量：6 人，4 个问题
+      - 李二（合成） PROBATION_OVER_LIMIT
+      - 王三（合成） CONTRACT_EXPIRED
+      - 赵四（合成） PROBATION_PAY_BELOW_80
+      - 周六（合成） CONTRACT_EXPIRING</pre>
+    <p>合同期 36 个月，试用期 3 个月 ≤ 上限 6 个月；试用期工资 10800 / 12000 = 90.00% ≥ 80%；竞业限制 2 年且有按月补偿。批量 6 人中：1 个试用期超限（2 年合同 3 个月试用期）、1 个已到期 247 天、1 个试用期工资 79.99%、1 个 74 天后到期。问题清单写到 <code>output/labor/exports/labor-issues.csv</code>。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 3 步：续签 / 到期提醒（dsh-contract-renewal）</h3>
+    <p class="who">对应 [3/3] 段</p>
+    <pre>[3/3] 续签提醒 ............ 已过期 1、续签窗口 1、90 天内 0、较晚 4（dsh-contract-renewal）
+      交叉核对：labor.batch 的 1 过期 + 1 到期提示 → 一致</pre>
+    <p>6 份合同登记进 <code>output/renewal/contracts.jsonl</code>，按 2026-11-02 的 90 天窗口分组：王三（合成）已过期 247 天；周六（合成）在续签窗口内，还剩 74 天；其余 4 份较晚。续签报表写到 <code>output/renewal/exports/renewal-report.csv</code>，并与 <code>labor.batch</code> 的到期提示交叉核对。</p>
+  </div>
+</section>
+
+<section>
+  <h2>结果文件</h2>
+  <table>
+    <thead><tr><th>路径</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td><code>output/flow.json</code></td><td>本次运行的完整链路：每步输入、输出、耗时、状态、产物清单</td></tr>
+      <tr><td><code>expected/flow.json</code></td><td>金标；测试剔除时间字段后逐字段比对</td></tr>
+      <tr><td><code>output/intake/exports/intake-ledger.xlsx</code></td><td>收件台账，2 行</td></tr>
+      <tr><td><code>output/labor/exports/labor-issues.csv</code></td><td>合同批量问题，4 行</td></tr>
+      <tr><td><code>output/renewal/contracts.jsonl</code></td><td>续签登记表，6 条</td></tr>
+      <tr><td><code>output/renewal/exports/renewal-report.csv</code></td><td>续签/到期报表，6 行</td></tr>
+    </tbody>
+  </table>
+  <p class="note"><code>output/</code> 每次运行重建，已在 .gitignore 中忽略；金标在 <code>expected/flow.json</code>，不要被覆盖。</p>
+</section>
+
+<section>
+  <h2>出错怎么办</h2>
+  <table>
+    <thead><tr><th>报错</th><th>通常原因</th><th>下一步</th></tr></thead>
+    <tbody>
+      <tr><td><code>E_LEGAL_EML_INVALID</code></td><td>EML 缺 Subject/From，或头部不是标准 Name: value</td><td>对照样例补头；正文前保留一个空行</td></tr>
+      <tr><td><code>E_LABOR_TEXT_EMPTY</code></td><td>合同正文为空，或从 PDF 只复制到图片</td><td>确认传入纯文本正文；扫描件先 OCR</td></tr>
+      <tr><td><code>E_LABOR_CSV_ROW</code></td><td>员工 CSV 缺列、列数不一致、试用期不是非负整数、金额不是正数</td><td>对照 <code>scenario/data/hr/employees.csv</code> 的表头与列数</td></tr>
+      <tr><td><code>E_LABOR_DATE_INVALID</code></td><td>日期写成 2026/01/01、2026-1-1 或 2 月 30 日</td><td>统一 YYYY-MM-DD；无固定期限写“无固定期限”</td></tr>
+      <tr><td><code>E_CONTRACT_DUPLICATE</code></td><td>同一合同编号登记了两次</td><td>换版本号（如 -v2），不要重复登记</td></tr>
+      <tr><td><code>E_CONTRACT_DATE_INVALID</code> / <code>E_CONTRACT_DATE_RANGE</code></td><td>续签台账日期不合法或起止写反</td><td>检查 contract_start / contract_end</td></tr>
+      <tr><td><code>E_CONTRACT_PATH_INVALID</code></td><td>续签 CSV 文件名不安全</td><td>只传 [A-Za-z0-9._-] 的文件名</td></tr>
+      <tr><td>其他错误</td><td>lib/ 未构建、Node 版本不对或临时目录权限</td><td>先在各包跑 pnpm build；保留完整报错和 output/flow.json，不要删原始数据</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>三个插件</h2>
+  <div class="grid">
+    <a class="plugin" href="../packages/dsh-legal-intake.html"><b>法务需求收件</b><span>dsh-legal-intake</span><span>EML 解析 · 去重 · 分类 · 台账</span></a>
+    <a class="plugin" href="https://github.com/PerryLink/dsh-labor-contract"><b>劳动合同条款核对</b><span>dsh-labor-contract</span><span>9 项条款 · 试用期 · 80% · 批量到期</span></a>
+    <a class="plugin" href="https://github.com/PerryLink/dsh-contract-renewal"><b>合同到期看板</b><span>dsh-contract-renewal</span><span>登记 · 续签窗口 · 到期 CSV</span></a>
+  </div>
+  <p>仓库内完整中文说明：<code>04-build/dsh-hr-pack/README-zh.md</code>；英文简版：<code>README.md</code>。运行与测试命令：</p>
+  <pre>$ node scenario/run-scenario.mjs
+$ node --test test/*.test.mjs
+$ node scenario/run-scenario.mjs --write-expected   # 有意改动输出后重建金标</pre>
+</section>
+
+</main>
+<footer>
+  <p>HR 包（C4）是场景包，不是 npm 包。所有样例数据均为合成数据；不联网、不连邮箱、不调用模型。 · <a href="../market.html">返回插件市场</a></p>
+</footer>
+</body>
+</html>

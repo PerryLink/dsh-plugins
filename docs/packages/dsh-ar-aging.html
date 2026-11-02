@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>dsh-ar-aging — PerryLink DSH</title><link rel="stylesheet" href="../assets/style.css"></head>
+<body><header class="top"><a href="../index.html">PerryLink DSH 领域插件</a><span class="badge">alpha · public/synthetic</span></header>
+<main class="wrap">
+<h1>dsh-ar-aging</h1>
+<p>应收账龄：应收账龄</p>
+<p class="meta"><code>0.1.0-alpha.1</code> · <a href="https://www.npmjs.com/package/dsh-ar-aging">npm</a> · <a href="https://github.com/PerryLink/dsh-ar-aging">GitHub</a></p>
+<p class="note">安装：<code>dsh plugin --profile &lt;profile&gt; add dsh-ar-aging</code></p>
+<details>
+<summary>Mainline family — 96 current install specs</summary><table>
+<thead>
+<tr>
+<th>Package</th>
+<th>npm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-aqua-input-check">dsh-aqua-input-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-aqua-input-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-archive-check">dsh-archive-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-archive-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-bid-ca-precheck">dsh-bid-ca-precheck</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-bid-ca-precheck">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-bid-qual-check">dsh-bid-qual-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-bid-qual-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-contract-stance">dsh-contract-stance</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-contract-stance">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-customs-doc-check">dsh-customs-doc-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-customs-doc-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-demurrage-ledger">dsh-demurrage-ledger</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-demurrage-ledger">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-drill-script-check">dsh-drill-script-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-drill-script-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-eia-guide-check">dsh-eia-guide-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-eia-guide-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-emergency-plan">dsh-emergency-plan</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-emergency-plan">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-essay-rubric-check">dsh-essay-rubric-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-essay-rubric-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-evidence-check">dsh-evidence-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-evidence-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-export-ctl-check">dsh-export-ctl-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-export-ctl-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-fmea-table-check">dsh-fmea-table-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-fmea-table-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-forecast-penalty">dsh-forecast-penalty</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-forecast-penalty">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-gongwen-flow-check">dsh-gongwen-flow-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-gongwen-flow-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-gongwen-word-check">dsh-gongwen-word-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-gongwen-word-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-guard-plan-qc">dsh-guard-plan-qc</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-guard-plan-qc">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-hazchem-check">dsh-hazchem-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-hazchem-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-hazplan-check">dsh-hazplan-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-hazplan-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-hidden-risk-map">dsh-hidden-risk-map</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-hidden-risk-map">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-hs-classify">dsh-hs-classify</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-hs-classify">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-icd-rule-check">dsh-icd-rule-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-icd-rule-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-lawcite-adapter">dsh-lawcite-adapter</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-lawcite-adapter">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-lc-doc-check">dsh-lc-doc-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-lc-doc-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-learning-gap-check">dsh-learning-gap-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-learning-gap-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-medrec-qc">dsh-medrec-qc</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-medrec-qc">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-nsfc-form-check">dsh-nsfc-form-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-nsfc-form-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-nurse-record-check">dsh-nurse-record-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-nurse-record-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-origin-rvc-check">dsh-origin-rvc-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-origin-rvc-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ota-review-check">dsh-ota-review-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ota-review-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-paper-doc-adapter">dsh-paper-doc-adapter</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-paper-doc-adapter">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-permit-report-check">dsh-permit-report-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-permit-report-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-pipeline-check">dsh-pipeline-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-pipeline-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-pleading-draft">dsh-pleading-draft</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-pleading-draft">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-policy-brief-draft">dsh-policy-brief-draft</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-policy-brief-draft">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-power-loss-split">dsh-power-loss-split</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-power-loss-split">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-power-ticket-check">dsh-power-ticket-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-power-ticket-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ppap-check">dsh-ppap-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ppap-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-protest-deadline">dsh-protest-deadline</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-protest-deadline">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-railway-window">dsh-railway-window</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-railway-window">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-repair-order-qc">dsh-repair-order-qc</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-repair-order-qc">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-review-reply-check">dsh-review-reply-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-review-reply-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-rulefile-check">dsh-rulefile-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-rulefile-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-safety-brief-check">dsh-safety-brief-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-safety-brief-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-site-log-check">dsh-site-log-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-site-log-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-soe-decision-check">dsh-soe-decision-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-soe-decision-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-soilwater-check">dsh-soilwater-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-soilwater-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-sop-sync-check">dsh-sop-sync-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-sop-sync-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-spc-gbt-adapter">dsh-spc-gbt-adapter</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-spc-gbt-adapter">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-tender-extract">dsh-tender-extract</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-tender-extract">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-tender-matrix">dsh-tender-matrix</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-tender-matrix">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-warranty-calc">dsh-warranty-calc</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-warranty-calc">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-auto-review">dsh-auto-review</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-auto-review">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-autotier">dsh-autotier</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-autotier">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-budget">dsh-budget</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-budget">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-cert-mcp">dsh-cert-mcp</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-cert-mcp">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-checkpoint-rewind">dsh-checkpoint-rewind</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-checkpoint-rewind">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-claude-move">dsh-claude-move</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-claude-move">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-click">dsh-click</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-click">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-community-bench">dsh-community-bench</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-community-bench">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-composer-history">dsh-composer-history</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-composer-history">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-data-quality">dsh-data-quality</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-data-quality">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-defend">dsh-defend</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-defend">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-doublecheck">dsh-doublecheck</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-doublecheck">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-draw">dsh-draw</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-draw">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-fast">dsh-fast</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-fast">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-fund-research">dsh-fund-research</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-fund-research">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-industry-research">dsh-industry-research</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-industry-research">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-laya">dsh-laya</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-laya">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-library">dsh-library</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-library">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-local-ai">dsh-local-ai</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-local-ai">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-lsp-actions">dsh-lsp-actions</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-lsp-actions">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-mask">dsh-mask</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-mask">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-mcp-panel">dsh-mcp-panel</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-mcp-panel">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-memento">dsh-memento</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-memento">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-observe">dsh-observe</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-observe">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-output-styles">dsh-output-styles</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-output-styles">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-permission-rules">dsh-permission-rules</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-permission-rules">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-phocinae">dsh-phocinae</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-phocinae">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-phone-inbox">dsh-phone-inbox</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-phone-inbox">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-primer">dsh-primer</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-primer">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-codemod">dsh-codemod</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-codemod">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-reach">dsh-reach</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-reach">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-research-report">dsh-research-report</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-research-report">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-score">dsh-score</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-score">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-session-sync">dsh-session-sync</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-session-sync">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-talk">dsh-talk</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-talk">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-test-drive">dsh-test-drive</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-test-drive">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-translate">dsh-translate</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-translate">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-checkers">@perrylink/dsh-checkers</a></strong></td>
+<td><a href="https://www.npmjs.com/package/@perrylink/dsh-checkers">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-github-bot">dsh-github-bot</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-github-bot">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-clinic">dsh-clinic</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-clinic">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-scaffold">dsh-scaffold</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-scaffold">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-security-pack">dsh-security-pack</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-security-pack">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-dida">dsh-dida</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-dida">npm</a></td>
+</tr>
+</tbody></table>
+</details>
+<details>
+<summary>DSH domain plugin family (23 packages + 2 suites)</summary><table>
+<thead>
+<tr>
+<th>Package</th>
+<th>npm</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-einvoice">dsh-einvoice</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-einvoice">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-bankrec">dsh-bankrec</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-bankrec">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ap-three-way">dsh-ap-three-way</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ap-three-way">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-travel-recon">dsh-travel-recon</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-travel-recon">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-legal-intake">dsh-legal-intake</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-legal-intake">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-legal-clause">dsh-legal-clause</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-legal-clause">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ghg">dsh-ghg</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ghg">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-qms-capa">dsh-qms-capa</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-qms-capa">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-hs-candidate">dsh-hs-candidate</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-hs-candidate">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-freight-audit">dsh-freight-audit</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-freight-audit">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-docx-redline">dsh-docx-redline</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-docx-redline">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ifc-qto">dsh-ifc-qto</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ifc-qto">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-policy-ledger">dsh-policy-ledger</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-policy-ledger">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-pim-lint">dsh-pim-lint</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-pim-lint">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-eval-pack">dsh-eval-pack</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-eval-pack">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-provider-params">dsh-provider-params</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-provider-params">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-pdf-table">dsh-pdf-table</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-pdf-table">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-contract-renewal">dsh-contract-renewal</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-contract-renewal">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-rfq-compare">dsh-rfq-compare</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-rfq-compare">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-labor-contract">dsh-labor-contract</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-labor-contract">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-progress-payment">dsh-progress-payment</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-progress-payment">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-ar-aging">dsh-ar-aging</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-ar-aging">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-import-customs-check">dsh-import-customs-check</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-import-customs-check">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-finops-suite">dsh-finops-suite</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-finops-suite">npm</a></td>
+</tr>
+<tr>
+<td><strong><a href="https://github.com/PerryLink/dsh-contract-suite">dsh-contract-suite</a></strong></td>
+<td><a href="https://www.npmjs.com/package/dsh-contract-suite">npm</a></td>
+</tr>
+</tbody></table>
+</details>
+</main>
+<footer class="foot"><p><a href="../taxonomy.html">taxonomy</a> · <a href="../index.html">index</a> · <a href="../market.html">按任务浏览</a></p></footer>
+</body></html>

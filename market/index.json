@@ -1510,6 +1510,38 @@
       ]
     },
     {
+      "name": "dsh-ar-aging",
+      "title": {
+        "en": "AR aging",
+        "zh": "应收账龄"
+      },
+      "description": {
+        "en": "导入应收明细，按账龄分桶汇总逾期与 Top 客户并导出账龄表。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-ar-aging",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-ar-aging"
+      },
+      "metadata": {
+        "category": "finance",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793632655,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-bankrec",
       "title": {
         "en": "Bank statement reconciliation",
@@ -1628,8 +1660,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.9",
-          "publishTimestamp": 1793598620,
+          "version": "0.1.0-alpha.10",
+          "publishTimestamp": 1793633659,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1798,6 +1830,38 @@
       ]
     },
     {
+      "name": "dsh-labor-contract",
+      "title": {
+        "en": "Labor contract check",
+        "zh": "劳动合同体检"
+      },
+      "description": {
+        "en": "核对劳动合同必备条款、试用期上限与工资比例，并批量标出问题合同。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-labor-contract",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-labor-contract"
+      },
+      "metadata": {
+        "category": "hr",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793632703,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-learning-gap-check",
       "title": {
         "en": "dsh-learning-gap-check",
@@ -1862,6 +1926,38 @@
       ]
     },
     {
+      "name": "dsh-contract-renewal",
+      "title": {
+        "en": "Contract renewal tracker",
+        "zh": "合同到期续签"
+      },
+      "description": {
+        "en": "登记合同起止与续签窗口，列出即将到期与已过期合同并导出 CSV。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-contract-renewal",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-contract-renewal"
+      },
+      "metadata": {
+        "category": "legal",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793632846,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-contract-suite",
       "title": {
         "en": "Contract ops suite",
@@ -1884,7 +1980,7 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.8",
+          "version": "0.1.0-alpha.9",
           "publishTimestamp": 1793598567,
           "source": {
             "type": "npm",
@@ -2711,6 +2807,38 @@
       ]
     },
     {
+      "name": "dsh-rfq-compare",
+      "title": {
+        "en": "RFQ comparison",
+        "zh": "询价比价"
+      },
+      "description": {
+        "en": "导入多家报价，按物料比价并标出低于成本、超预算与已过期的报价。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-rfq-compare",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-rfq-compare"
+      },
+      "metadata": {
+        "category": "procurement",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793632581,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-rulefile-check",
       "title": {
         "en": "dsh-rulefile-check",
@@ -3383,6 +3511,38 @@
       ]
     },
     {
+      "name": "dsh-progress-payment",
+      "title": {
+        "en": "Progress payment audit",
+        "zh": "进度款审核"
+      },
+      "description": {
+        "en": "按合同量与单价审核本期进度款申报，标出超量、单价不符与重复清单项。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-progress-payment",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-progress-payment"
+      },
+      "metadata": {
+        "category": "quality",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793632718,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-qms-capa",
       "title": {
         "en": "QMS NCR, CAPA & 8D",
@@ -3951,6 +4111,38 @@
         {
           "version": "0.2.11",
           "publishTimestamp": 1793376720,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-import-customs-check",
+      "title": {
+        "en": "Import document check",
+        "zh": "进口单证核对"
+      },
+      "description": {
+        "en": "核对发票、箱单、提单与报关单的九个字段，并检查报关单 12 项要素是否齐全。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-import-customs-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-import-customs-check"
+      },
+      "metadata": {
+        "category": "trade",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793632729,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"

@@ -59,6 +59,12 @@ dsh plugin --profile <profile> add dsh-ghg
 | [`dsh-pim-lint`](https://github.com/PerryLink/dsh-pim-lint) | PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-pim-lint` |
 | [`dsh-eval-pack`](https://github.com/PerryLink/dsh-eval-pack) | 公开/合成 eval-pack lint 与确定性 JSON 评分。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-eval-pack` |
 | [`dsh-provider-params`](https://github.com/PerryLink/dsh-provider-params) | 厂商参数转换与确定性 JSON 修复。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-provider-params` |
+| [`dsh-import-customs-check`](https://github.com/PerryLink/dsh-import-customs-check) | 进口单证核对：核对发票、箱单、提单与报关单的九个字段，并检查报关单 12 项要素是否齐全。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-import-customs-check` |
+| [`dsh-ar-aging`](https://github.com/PerryLink/dsh-ar-aging) | 应收账龄：导入应收明细，按账龄分桶汇总逾期与 Top 客户并导出账龄表。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-ar-aging` |
+| [`dsh-progress-payment`](https://github.com/PerryLink/dsh-progress-payment) | 进度款审核：按合同量与单价审核本期进度款申报，标出超量、单价不符与重复清单项。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-progress-payment` |
+| [`dsh-labor-contract`](https://github.com/PerryLink/dsh-labor-contract) | 劳动合同体检：核对劳动合同必备条款、试用期上限与工资比例，并批量标出问题合同。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-labor-contract` |
+| [`dsh-rfq-compare`](https://github.com/PerryLink/dsh-rfq-compare) | 询价比价：导入多家报价，按物料比价并标出低于成本、超预算与已过期的报价。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-rfq-compare` |
+| [`dsh-contract-renewal`](https://github.com/PerryLink/dsh-contract-renewal) | 合同到期续签：登记合同起止与续签窗口，列出即将到期与已过期合同并导出 CSV。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-contract-renewal` |
 | [`dsh-pdf-table`](https://github.com/PerryLink/dsh-pdf-table) | PDF 文本层表格提取为 CSV（扫描件需先 OCR）。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-pdf-table` |
 
 两个 suite 也有 Gitee / GitCode 镜像：[dsh-finops-suite](https://gitee.com/perrylink/dsh-finops-suite) / [dsh-contract-suite](https://gitee.com/perrylink/dsh-contract-suite)。
@@ -71,8 +77,8 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | Suite | 包含 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-finops-suite`](https://github.com/PerryLink/dsh-finops-suite) | `dsh-einvoice` + `dsh-bankrec` + `dsh-ap-three-way` + `dsh-travel-recon` | `0.1.0-alpha.9` | `dsh plugin --profile <profile> add dsh-finops-suite` |
-| [`dsh-contract-suite`](https://github.com/PerryLink/dsh-contract-suite) | `dsh-legal-intake` + `dsh-legal-clause` | `0.1.0-alpha.8` | `dsh plugin --profile <profile> add dsh-contract-suite` |
+| [`dsh-finops-suite`](https://github.com/PerryLink/dsh-finops-suite) | `dsh-einvoice` + `dsh-bankrec` + `dsh-ap-three-way` + `dsh-travel-recon` | `0.1.0-alpha.10` | `dsh plugin --profile <profile> add dsh-finops-suite` |
+| [`dsh-contract-suite`](https://github.com/PerryLink/dsh-contract-suite) | `dsh-legal-intake` + `dsh-legal-clause` | `0.1.0-alpha.9` | `dsh plugin --profile <profile> add dsh-contract-suite` |
 
 ## 平台
 

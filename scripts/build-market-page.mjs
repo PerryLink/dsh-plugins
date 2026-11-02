@@ -66,6 +66,46 @@ const PACKS = {
       tags: ['端到端场景', '4 个插件', '合成样例可跑'],
     },
   ],
+  采购供应链: [
+    {
+      href: 'packs/procurement.html',
+      zh: '采购包：询价到三单匹配',
+      en: 'Procurement pack — quote to three-way match',
+      desc: '询价比价 → 物料主数据 → 三单匹配',
+      roles: '采购 · 应付 · 物料管理',
+      tags: ['端到端场景', '3 个插件', '合成样例可跑'],
+    },
+  ],
+  质量生产: [
+    {
+      href: 'packs/construction.html',
+      zh: '建筑包：模型工程量到进度款',
+      en: 'Construction pack — model quantities to progress payment',
+      desc: '模型工程量 → 进度款审核 → 付款单三单匹配',
+      roles: '造价 · 监理 · 项目经理',
+      tags: ['端到端场景', '3 个插件', '合成样例可跑'],
+    },
+  ],
+  法务合同: [
+    {
+      href: 'packs/contract.html',
+      zh: '合同包：收件到续签',
+      en: 'Contract pack — intake to renewal',
+      desc: '收件 → 条款覆盖 → 登记 → 到期',
+      roles: '法务 · 合同管理 · 采购',
+      tags: ['端到端场景', '3 个插件', '合成样例可跑'],
+    },
+  ],
+  人力资源: [
+    {
+      href: 'packs/hr.html',
+      zh: 'HR 包：简历/合同邮件到续签提醒',
+      en: 'HR pack — hire to renewal',
+      desc: '收简历/合同邮件 → 合同体检 → 续签/到期提醒',
+      roles: 'HR · 法务 · 行政',
+      tags: ['端到端场景', '3 个插件', '合成样例可跑'],
+    },
+  ],
 }
 
 const PACK_COUNT = Object.values(PACKS).reduce((total, packs) => total + packs.length, 0)

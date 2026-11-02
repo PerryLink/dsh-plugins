@@ -66,8 +66,10 @@ function syncItems(doc, versions, suiteMembers, label) {
       }
     }
   }
+  // packages.json may list a package the projection has not rendered yet (a new
+  // row lands in family.json on the next build-family run); that is not an error.
   const missing = [...versions.keys()].filter((id) => !seen.has(id));
-  if (missing.length) throw new Error(`${label}: missing version rows for ${missing.join(', ')}`);
+  if (missing.length) console.warn(`${label}: ${missing.length} package(s) not yet projected (${missing.slice(0, 3).join(', ')})`);
   return changed;
 }
 

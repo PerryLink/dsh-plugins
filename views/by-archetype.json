@@ -12,6 +12,7 @@
     "dsh-translate"
   ],
   "calculator": [
+    "dsh-ar-aging",
     "dsh-budget",
     "dsh-forecast-penalty",
     "dsh-ghg",
@@ -55,6 +56,7 @@
     "dsh-hs-candidate",
     "dsh-hs-classify",
     "dsh-icd-rule-check",
+    "dsh-import-customs-check",
     "dsh-invoice-ledger",
     "dsh-lc-doc-check",
     "dsh-learning-gap-check",
@@ -117,6 +119,7 @@
     "dsh-reach"
   ],
   "ledger": [
+    "dsh-contract-renewal",
     "dsh-demurrage-ledger",
     "dsh-qms-capa"
   ],
@@ -124,6 +127,8 @@
     "dsh-ap-three-way",
     "dsh-bankrec",
     "dsh-excel-reconcile",
+    "dsh-progress-payment",
+    "dsh-rfq-compare",
     "dsh-travel-recon"
   ],
   "runtime": [
@@ -156,6 +161,7 @@
     "dsh-community-bench",
     "dsh-data-quality",
     "dsh-eval-pack",
+    "dsh-labor-contract",
     "dsh-pim-lint"
   ]
 }

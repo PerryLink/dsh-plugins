@@ -1,0 +1,254 @@
+#!/usr/bin/env node
+/**
+ * Render docs/packs/procurement.html from the real procurement-pack golden flow.
+ *
+ * Every count and "what you see" code block comes from
+ * `../dsh-procurement-pack/expected/flow.json` and the shared terminal formatter,
+ * so the page cannot drift from a real `node scenario/run-scenario.mjs` run.
+ *
+ *   node scripts/build-procurement-page.mjs
+ *
+ * Do not edit docs/packs/procurement.html by hand; edit this script and re-run it.
+ */
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+import { humanOutput } from '../../dsh-procurement-pack/scenario/format.mjs'
+
+const here = path.dirname(fileURLToPath(import.meta.url))
+const root = path.resolve(here, '..')
+const packRoot = path.resolve(root, '..', 'dsh-procurement-pack')
+const flowPath = path.join(packRoot, 'expected', 'flow.json')
+const outputPath = path.join(root, 'docs', 'packs', 'procurement.html')
+const assets = ['procurement-flow.png', 'procurement-flow.txt']
+
+const flow = JSON.parse(fs.readFileSync(flowPath, 'utf8'))
+const byId = new Map(flow.steps.map((step) => [step.id, step]))
+const rfq = byId.get('01-rfq')?.output
+const pim = byId.get('02-pim')?.output
+const ap = byId.get('03-ap')?.output
+const summary = flow.summary
+const csvPath = flow.artifacts.rfq_csv
+const xlsxPath = flow.artifacts.ap_workpaper
+const exception = ap?.match.exception_detail?.[0]
+const issueCodes = Object.entries(pim?.issues_by_code ?? {})
+  .map(([code, count]) => `<code>${code}</code> ${count}`)
+  .join(' · ')
+
+const esc = (value = '') =>
+  String(value).replace(/[&<>"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[char])
+
+const humanLines = humanOutput(flow).split('\n')
+function snippet(startPrefix, stopPrefix) {
+  const start = humanLines.findIndex((line) => line.startsWith(startPrefix))
+  const stop = humanLines.findIndex((line, index) => index > start && line.startsWith(stopPrefix))
+  return humanLines.slice(start, stop < 0 ? undefined : stop).join('\n').trimEnd()
+}
+const step1 = snippet('[1/3]', '[2/3]')
+const step2 = snippet('[2/3]', '[3/3]')
+const step3 = snippet('[3/3]', '结果：')
+
+const css = `:root{--bg:#0d1117;--panel:#161b22;--panel2:#1c2430;--line:#30363d;--text:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--green:#3fb950;--amber:#d29922}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.7 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+a{color:var(--accent)}
+header{max-width:1040px;margin:0 auto;padding:36px 24px 10px}
+.crumb{font-size:13px;color:var(--muted);margin:0 0 18px}
+h1{margin:0 0 8px;font-size:32px;line-height:1.25}
+.lede{color:var(--muted);margin:0 0 14px;max-width:760px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 22px}
+.badge{border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:12px;color:var(--muted)}
+.badge.green{border-color:#238636;color:#7ee787;background:#0f2417}
+main{max-width:1040px;margin:0 auto;padding:0 24px 64px}
+section{margin:30px 0}
+h2{font-size:21px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+h3{font-size:17px;margin:22px 0 8px}
+p{margin:8px 0}
+code{background:#1f2937;border-radius:5px;padding:1px 5px;font-size:.9em}
+pre{background:#0b0f14;border:1px solid var(--line);border-radius:10px;padding:14px 16px;overflow:auto;font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;color:#c9d1d9}
+.shot{display:block;max-width:100%;border:1px solid var(--line);border-radius:12px;margin:10px 0 6px}
+.caption{color:var(--muted);font-size:13px;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.plugin{display:block;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit}
+.plugin:hover{border-color:var(--accent)}
+.plugin b{display:block;font-size:16px;margin-bottom:2px}
+.plugin span{display:block;color:var(--muted);font-size:13px}
+.plugin code{font-size:11px}
+table{width:100%;border-collapse:collapse;font-size:14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--panel2);font-size:13px;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+.note{background:#0f2417;border:1px solid #238636;border-radius:10px;padding:12px 14px;color:#b7f0c0;font-size:14px}
+.warn{background:#2a2112;border:1px solid #6b4e16;border-radius:10px;padding:12px 14px;color:#f0d58a;font-size:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:14px 0}
+.step h3{margin:0 0 4px}
+.step .who{color:var(--muted);font-size:13px;margin:0 0 8px}
+footer{max-width:1040px;margin:0 auto;padding:0 24px 48px;color:var(--muted);font-size:13px}
+@media (max-width:640px){h1{font-size:26px}th,td{padding:8px}pre{font-size:11.5px}}`
+
+const html = `<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>采购包（C3）：询价到三单匹配 — DSH 插件市场</title>
+<!-- generated by scripts/build-procurement-page.mjs from ../dsh-procurement-pack/expected/flow.json; do not edit by hand -->
+<style>
+${css}
+</style>
+</head>
+<body>
+<header>
+  <p class="crumb"><a href="../market.html">← 返回插件市场</a> / 采购供应链 / 场景包</p>
+  <h1>采购包（C3）：询价到三单匹配，一条命令跑完</h1>
+  <p class="lede">把 3 个 DSH 采购插件串成一条真实可跑的场景：<b>询价比价 → 物料主数据检查 → 三单匹配</b>。写给采购员、采购经理和应付会计，不需要写代码。</p>
+  <div class="badges">
+    <span class="badge green">合成数据 · 本地运行 · 不联网</span>
+    <span class="badge">${flow.packages.length} 个插件</span>
+    <span class="badge">1 条命令</span>
+    <span class="badge">3 段输出 / 3 步操作</span>
+    <span class="badge">${esc(flow.as_of)} · ${esc(flow.currency)}</span>
+  </div>
+</header>
+<main>
+
+<section>
+  <h2>真实运行截图</h2>
+  <img class="shot" src="../assets/procurement-flow.png" alt="采购包真实运行截图：询价比价、物料主数据检查、三单匹配">
+  <p class="caption">上图是 <code>node scenario/run-scenario.mjs</code> 的真实输出，不是示意图（<a href="../assets/procurement-flow.txt">原始终端文本</a>）。数据全部为 <code>DEMO-*</code> / <code>MAT-100*</code> 合成值。</p>
+</section>
+
+<section>
+  <h2>这个包解决什么</h2>
+  <p>同一组 4 个物料、3 家供应商的报价，在三个插件之间传递，而不是三个样例各跑一遍。</p>
+  <div class="grid">
+    <a class="plugin" href="https://github.com/PerryLink/dsh-rfq-compare">
+      <b>询价比价</b>
+      <span>dsh-rfq-compare · 询价比价</span>
+      <span>12 条报价、最低/次低/价差、三类异常、比价 CSV</span>
+    </a>
+    <a class="plugin" href="../packages/dsh-pim-lint.html">
+      <b>物料主数据检查</b>
+      <span>dsh-pim-lint · 商品目录查错</span>
+      <span>重复 SKU、GTIN 校验位、缺标题、价格</span>
+    </a>
+    <a class="plugin" href="../packages/dsh-ap-three-way.html">
+      <b>三单匹配</b>
+      <span>dsh-ap-three-way · 发票三单匹配</span>
+      <span>发票 vs 采购单 vs 收货单，1% 单价容差，例外清单</span>
+    </a>
+  </div>
+  <p class="warn">它不替采购做定标判断，也不做供应商准入、招投标评分或合同审查。三类异常、主数据问题和三单例外仍需人工复核。</p>
+</section>
+
+<section>
+  <h2>为什么第 1 步不是“招标要求提取”</h2>
+  <p>任务约定优先串 <code>dsh-tender-requirements</code> 或 <code>dsh-bid-qual-check</code>，但本工作区里 <code>dsh-tender-requirements</code> 位于 <code>_scratch/20261026-market/</code>：<code>lib/index.mjs</code> 是打包后的插件，只导出 <code>apply</code>（没有 <code>createTools</code>），入参是 <code>.docx</code>，并且要从它自己的 scratch <code>node_modules</code> 解析依赖；<code>dsh-bid-qual-check</code> 在 <code>04-build/</code> 下也没有可 import 的包。</p>
+  <p>因此按约定使用 <b>dsh-rfq-compare + dsh-pim-lint + dsh-ap-three-way</b> 回退组合，仍然覆盖采购主链路：<b>比价 → 主数据 → 三单</b>。若以后 <code>dsh-tender-requirements</code> 在 <code>04-build/</code> 下暴露稳定的 <code>createTools</code>/纯函数 API，只需替换第 1 步。详见 <a href="https://github.com/PerryLink/dsh-procurement-pack#为什么第-1-步不是招标要求提取">README-zh</a>。</p>
+</section>
+
+<section>
+  <h2>你需要准备什么</h2>
+  <p>把文件放进仓库 <code>04-build/dsh-procurement-pack/scenario/data/</code> 对应目录，保持表头不变。</p>
+  <table>
+    <thead><tr><th>文件</th><th>放在哪里</th><th>最少需要的列 / 字段</th></tr></thead>
+    <tbody>
+      <tr><td>供应商报价</td><td><code>rfq/</code></td><td><code>supplier,material,qty,unit_price_cents,currency,lead_time_days,valid_until</code>；<code>note</code> 可选</td></tr>
+      <tr><td>成本线与预算</td><td><code>rfq/</code></td><td><code>as_of</code>、<code>cost_lines[]</code>、<code>budgets[]</code>（CNY 分）</td></tr>
+      <tr><td>物料主数据</td><td><code>pim/</code></td><td><code>sku,title,gtin,price</code></td></tr>
+      <tr><td>采购单 / 收货单 / 发票</td><td><code>ap/</code></td><td>PO/GRN：<code>po_no,line_no,qty,...</code>；发票：<code>supplier,invoice_no,po_no,line_no,qty,unit_price,amount</code></td></tr>
+    </tbody>
+  </table>
+  <p>报价金额用整数分（<code>123840</code> = 1238.40 元）；AP 单据金额用元、最多两位小数；日期写 <code>YYYY-MM-DD</code>；报价币种只支持 <code>CNY</code> / <code>USD</code> / <code>EUR</code>，跨币种按占位汇率折算。</p>
+</section>
+
+<section>
+  <h2>三步操作</h2>
+  <p>先运行同一条命令（脚本一次跑完）：</p>
+  <pre>$ cd 04-build/dsh-procurement-pack
+$ node scenario/run-scenario.mjs</pre>
+  <p>屏幕上是 <code>[1/3]</code>～<code>[3/3]</code> 三段；下面每一步对应一段。</p>
+
+  <div class="step">
+    <h3>第 1 步：询价比价（dsh-rfq-compare）</h3>
+    <p class="who">对应 [1/3] 段</p>
+    <pre>${esc(step1)}</pre>
+    <p>${summary.rfq.quotes} 条报价覆盖 ${summary.rfq.materials} 个物料；最低价、次低价与价差都先按占位汇率折算成 CNY，再按交期打破同价。合计低于成本线 ${summary.rfq.below_cost} 条、超预算 ${summary.rfq.over_budget} 个物料、有效期已过 ${summary.rfq.expired} 条。异常是标记，不自动淘汰报价。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 2 步：物料主数据检查（dsh-pim-lint）</h3>
+    <p class="who">对应 [2/3] 段</p>
+    <pre>${esc(step2)}</pre>
+    <p>${pim?.rows ?? 0} 行主数据里发现 ${pim?.issues ?? 0} 个问题：${issueCodes || '无'}。${pim?.materials_checked ?? 0} 个主物料里 GTIN 通过 ${(pim?.gtin_checks ?? []).filter((item) => item.valid).length} 个、失败 ${(pim?.gtin_checks ?? []).filter((item) => item.gtin !== '' && !item.valid).length} 个、未填 ${(pim?.gtin_checks ?? []).filter((item) => item.gtin === '').length} 个；主数据问题不阻断比价，但下单前应先修。</p>
+  </div>
+
+  <div class="step">
+    <h3>第 3 步：三单匹配（dsh-ap-three-way）</h3>
+    <p class="who">对应 [3/3] 段</p>
+    <pre>${esc(step3)}</pre>
+    <p>采购单单价取第 1 步各物料的最低价（折算 CNY）；${ap?.imported.invoices ?? 0} 行发票、${ap?.imported.po ?? 0} 行采购单、${ap?.imported.grn ?? 0} 行收货单，${ap?.match.matched ?? 0} 行通过、${ap?.match.exceptions ?? 0} 行例外。${exception ? `例外是 <code>${esc(exception.po_no)}</code> 第 ${esc(exception.line_no)} 行：发票比收货多 ${exception.qty_delta} 件（<code>${esc(exception.reason)}</code>）。` : ''} 发票总额 ${((ap?.invoice_total_cents ?? 0) / 100).toFixed(2)} CNY。</p>
+  </div>
+</section>
+
+<section>
+  <h2>结果文件</h2>
+  <table>
+    <thead><tr><th>路径</th><th>内容</th></tr></thead>
+    <tbody>
+      <tr><td><code>output/flow.json</code></td><td>本次运行的完整链路：每步输入哈希、输出摘要、耗时、状态、产物清单</td></tr>
+      <tr><td><code>expected/flow.json</code></td><td>金标；测试剔除时间字段后逐字段比对</td></tr>
+      <tr><td><code>${esc(csvPath)}</code></td><td>比价表：每个物料一行，含最低/次低/价差/交期/成本线/预算/三类异常计数</td></tr>
+      <tr><td><code>${esc(xlsxPath)}</code></td><td>三单底稿：<code>Matches</code> / <code>Exceptions</code> 两张表</td></tr>
+      <tr><td><code>scenario/data/</code></td><td>合成输入：报价、假设、物料主数据、采购单、收货单、发票</td></tr>
+    </tbody>
+  </table>
+  <p class="note"><code>output/</code> 每次运行重建，已在 .gitignore 中忽略；金标在 <code>expected/flow.json</code>，不要被覆盖。</p>
+</section>
+
+<section>
+  <h2>出错怎么办</h2>
+  <table>
+    <thead><tr><th>报错</th><th>通常原因</th><th>下一步</th></tr></thead>
+    <tbody>
+      <tr><td><code>E_RFQ_EMPTY</code></td><td>报价 CSV 只有表头没有数据行</td><td>表头下至少补一行；先 ingest 再 compare</td></tr>
+      <tr><td><code>E_RFQ_QTY</code> / <code>E_RFQ_PRICE</code></td><td>数量不是正整数，或单价不是正整数分</td><td>数量写 1/10/100；金额写整数分，<code>unit_price</code> 最多两位小数</td></tr>
+      <tr><td><code>E_RFQ_CURRENCY</code></td><td>币种不是 CNY/USD/EUR</td><td>先折算成三种之一，并在 note 注明原始币种与汇率来源</td></tr>
+      <tr><td><code>E_RFQ_DATE</code></td><td><code>valid_until</code> / <code>as_of</code> 不是真实 YYYY-MM-DD</td><td>改成真实 ISO 日期；2026-02-30 会被拒绝</td></tr>
+      <tr><td><code>E_RFQ_CSV</code></td><td>表头缺列、列数对不上或引号未闭合</td><td>对照 <code>scenario/data/rfq/quotes.csv</code>；备注含逗号时整体加引号</td></tr>
+      <tr><td><code>E_PIM_CSV_EMPTY</code> / <code>E_PIM_HEADER</code> / <code>E_PIM_CSV_ROW</code></td><td>主数据 CSV 只有表头、缺四列或某行列数不对</td><td>表头固定 <code>sku,title,gtin,price</code>；用 Excel 另存为 CSV UTF-8</td></tr>
+      <tr><td><code>E_AP_CSV_INVALID</code></td><td>AP CSV 缺表头、金额读不懂、空行/坏行</td><td>对照 <code>scenario/data/ap/*.csv</code>；金额写 <code>1234.56</code></td></tr>
+      <tr><td>其他错误</td><td>文件权限、临时目录或数据版本变化</td><td>保留完整报错和 <code>output/flow.json</code>，先读错误里的“下一步”</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>三个插件</h2>
+  <div class="grid">
+    <a class="plugin" href="https://github.com/PerryLink/dsh-rfq-compare"><b>询价比价</b><span>dsh-rfq-compare</span><span>报价导入 · 按物料比价 · 三类异常 · CSV</span></a>
+    <a class="plugin" href="../packages/dsh-pim-lint.html"><b>商品目录查错</b><span>dsh-pim-lint</span><span>必填字段 · 重复 SKU · GTIN 校验</span></a>
+    <a class="plugin" href="../packages/dsh-ap-three-way.html"><b>发票三单匹配</b><span>dsh-ap-three-way</span><span>采购三单与 1% 容差 · 例外清单</span></a>
+  </div>
+  <p>仓库内完整中文说明：<code>04-build/dsh-procurement-pack/README-zh.md</code>；英文简版：<code>README.md</code>。运行与测试命令：</p>
+  <pre>$ node scenario/run-scenario.mjs
+$ node --test test/*.test.mjs
+$ node scenario/run-scenario.mjs --write-expected   # 有意改动输出后重建金标</pre>
+</section>
+
+</main>
+<footer>
+  <p>采购包（C3）是场景包，不是 npm 包。所有样例数据均为合成数据；不联网、不上传、不调用 ERP 或供应商门户。 · <a href="../market.html">返回插件市场</a></p>
+</footer>
+</body>
+</html>
+`
+
+fs.mkdirSync(path.dirname(outputPath), { recursive: true })
+fs.writeFileSync(outputPath, html)
+fs.mkdirSync(path.join(root, 'docs', 'assets'), { recursive: true })
+for (const asset of assets) {
+  fs.copyFileSync(path.join(packRoot, 'docs', 'assets', asset), path.join(root, 'docs', 'assets', asset))
+}
+console.log(`wrote docs/packs/procurement.html (${html.length} bytes, ${flow.packages.length} plugins, as_of ${flow.as_of})`)
+console.log(`copied docs/assets/{${assets.join(',')}}`)

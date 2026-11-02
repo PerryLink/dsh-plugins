@@ -38,13 +38,13 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
 <body>
 <header>
   <h1>DSH 插件市场</h1>
-  <p class="sub">124 个插件 + 1 个场景包，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
+  <p class="sub">130 个插件 + 5 个场景包，按<strong>你要做的事</strong>分组。搜索支持中文、英文包名与同义词。</p>
   <input id="q" type="search" placeholder="试试：发票、对账、报关、合同、考勤…">
 </header>
-<nav><a href="#财务报销">财务报销 7</a><a href="#人力资源">人力资源 2</a><a href="#采购供应链">采购供应链 11</a><a href="#法务合同">法务合同 6</a><a href="#质量生产">质量生产 27</a><a href="#关务物流">关务物流 8</a><a href="#行政办公">行政办公 14</a><a href="#教育培训">教育培训 5</a><a href="#医疗健康">医疗健康 3</a><a href="#零售电商">零售电商 2</a><a href="#开发者工具">开发者工具 39</a></nav>
+<nav><a href="#财务报销">财务报销 8</a><a href="#人力资源">人力资源 3</a><a href="#采购供应链">采购供应链 12</a><a href="#法务合同">法务合同 7</a><a href="#质量生产">质量生产 28</a><a href="#关务物流">关务物流 9</a><a href="#行政办公">行政办公 14</a><a href="#教育培训">教育培训 5</a><a href="#医疗健康">医疗健康 3</a><a href="#零售电商">零售电商 2</a><a href="#开发者工具">开发者工具 39</a></nav>
 <main>
 <section id="财务报销">
-  <h2>财务报销 <small>发票、对账、报销、成本 · 7 + 1 个场景包</small></h2>
+  <h2>财务报销 <small>发票、对账、报销、成本 · 8 + 1 个场景包</small></h2>
   <div class="grid"><a class="card pack" href="packs/finance.html" data-search="财务包：发票到归档 finance pack — invoice to archive 收票 → 查重 → 三单匹配 → 银行对账 → 归档 端到端场景 4 个插件 合成样例可跑 会计 · 应付 · 出纳">
   <h3>财务包：发票到归档<span class="pill pack">场景包</span></h3>
   <p class="en">Finance pack — invoice to archive</p>
@@ -90,13 +90,25 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
 <a class="card" href="packages/dsh-finops-suite.html" data-search="财务运营套件 finance ops suite 财务 报销 银行对账 三单匹配 差旅 财务经理 会计">
   <h3>财务运营套件</h3>
   <p class="en">Finance ops suite</p>
-  <p class="meta"><code>0.1.0-alpha.9</code> <span class="roles">财务经理 · 会计</span></p>
+  <p class="meta"><code>0.1.0-alpha.10</code> <span class="roles">财务经理 · 会计</span></p>
   <p class="tags"><span>财务</span><span>报销</span><span>银行对账</span><span>三单匹配</span></p>
+</a>
+<a class="card" href="packages/dsh-ar-aging.html" data-search="应收账龄 ar aging 应收 账龄 逾期 催收 应收会计 财务经理">
+  <h3>应收账龄</h3>
+  <p class="en">AR aging</p>
+  <p class="meta"><code>0.1.0-alpha.1</code> <span class="roles">应收会计 · 财务经理</span></p>
+  <p class="tags"><span>应收</span><span>账龄</span><span>逾期</span><span>催收</span></p>
 </a></div>
 </section>
 <section id="人力资源">
-  <h2>人力资源 <small>入离职、合同、考勤 · 2</small></h2>
-  <div class="grid"><a class="card" href="packages/dsh-learning-gap-check.html" data-search="能力差距培养评估 dsh-learning-gap-check 能力差距 培养计划 人才梯队 培训 培训专员 hrbp">
+  <h2>人力资源 <small>入离职、合同、考勤 · 3 + 1 个场景包</small></h2>
+  <div class="grid"><a class="card pack" href="packs/hr.html" data-search="hr 包：简历/合同邮件到续签提醒 hr pack — hire to renewal 收简历/合同邮件 → 合同体检 → 续签/到期提醒 端到端场景 3 个插件 合成样例可跑 hr · 法务 · 行政">
+  <h3>HR 包：简历/合同邮件到续签提醒<span class="pill pack">场景包</span></h3>
+  <p class="en">HR pack — hire to renewal</p>
+  <p class="meta">收简历/合同邮件 → 合同体检 → 续签/到期提醒 <span class="roles">HR · 法务 · 行政</span></p>
+  <p class="tags"><span>端到端场景</span><span>3 个插件</span><span>合成样例可跑</span></p>
+</a>
+<a class="card" href="packages/dsh-learning-gap-check.html" data-search="能力差距培养评估 dsh-learning-gap-check 能力差距 培养计划 人才梯队 培训 培训专员 hrbp">
   <h3>能力差距培养评估</h3>
   <p class="en">dsh-learning-gap-check</p>
   <p class="meta"> <span class="roles">培训专员 · HRBP</span></p>
@@ -107,11 +119,23 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <p class="en">dsh-payroll-audit</p>
   <p class="meta"><code>0.1.0</code> <span class="roles">薪酬专员 · 人力资源专员</span></p>
   <p class="tags"><span>工资</span><span>薪酬</span><span>薪资</span><span>算薪</span></p>
+</a>
+<a class="card" href="packages/dsh-labor-contract.html" data-search="劳动合同体检 labor contract check 劳动合同 试用期 条款 用工 hr hrbp">
+  <h3>劳动合同体检</h3>
+  <p class="en">Labor contract check</p>
+  <p class="meta"><code>0.1.0-alpha.1</code> <span class="roles">HR · HRBP</span></p>
+  <p class="tags"><span>劳动合同</span><span>试用期</span><span>条款</span><span>用工</span></p>
 </a></div>
 </section>
 <section id="采购供应链">
-  <h2>采购供应链 <small>询价、比价、准入、履约 · 11</small></h2>
-  <div class="grid"><a class="card" href="packages/dsh-ifc-qto.html" data-search="模型工程量提取 ifc quantity takeoff ifc bim 工程量 算量 清单 造价工程师 施工员">
+  <h2>采购供应链 <small>询价、比价、准入、履约 · 12 + 1 个场景包</small></h2>
+  <div class="grid"><a class="card pack" href="packs/procurement.html" data-search="采购包：询价到三单匹配 procurement pack — quote to three-way match 询价比价 → 物料主数据 → 三单匹配 端到端场景 3 个插件 合成样例可跑 采购 · 应付 · 物料管理">
+  <h3>采购包：询价到三单匹配<span class="pill pack">场景包</span></h3>
+  <p class="en">Procurement pack — quote to three-way match</p>
+  <p class="meta">询价比价 → 物料主数据 → 三单匹配 <span class="roles">采购 · 应付 · 物料管理</span></p>
+  <p class="tags"><span>端到端场景</span><span>3 个插件</span><span>合成样例可跑</span></p>
+</a>
+<a class="card" href="packages/dsh-ifc-qto.html" data-search="模型工程量提取 ifc quantity takeoff ifc bim 工程量 算量 清单 造价工程师 施工员">
   <h3>模型工程量提取</h3>
   <p class="en">IFC quantity takeoff</p>
   <p class="meta"><code>0.1.0-alpha.15</code> <span class="roles">造价工程师 · 施工员</span></p>
@@ -176,11 +200,23 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <p class="en">dsh-tender-requirements</p>
   <p class="meta"><code>0.2.0</code> <span class="roles">投标专员 · 采购员</span></p>
   <p class="tags"><span>招标文件</span><span>要点</span><span>资格条件</span><span>检索</span></p>
+</a>
+<a class="card" href="packages/dsh-rfq-compare.html" data-search="询价比价 rfq comparison 询价 比价 报价 采购 采购员 采购经理">
+  <h3>询价比价</h3>
+  <p class="en">RFQ comparison</p>
+  <p class="meta"><code>0.1.0-alpha.1</code> <span class="roles">采购员 · 采购经理</span></p>
+  <p class="tags"><span>询价</span><span>比价</span><span>报价</span><span>采购</span></p>
 </a></div>
 </section>
 <section id="法务合同">
-  <h2>法务合同 <small>条款、风险、到期 · 6</small></h2>
-  <div class="grid"><a class="card" href="packages/dsh-legal-intake.html" data-search="法务需求收件 legal request intake 法务需求 邮件受理 需求登记 线程去重 法务助理 法务专员">
+  <h2>法务合同 <small>条款、风险、到期 · 7 + 1 个场景包</small></h2>
+  <div class="grid"><a class="card pack" href="packs/contract.html" data-search="合同包：收件到续签 contract pack — intake to renewal 收件 → 条款覆盖 → 登记 → 到期 端到端场景 3 个插件 合成样例可跑 法务 · 合同管理 · 采购">
+  <h3>合同包：收件到续签<span class="pill pack">场景包</span></h3>
+  <p class="en">Contract pack — intake to renewal</p>
+  <p class="meta">收件 → 条款覆盖 → 登记 → 到期 <span class="roles">法务 · 合同管理 · 采购</span></p>
+  <p class="tags"><span>端到端场景</span><span>3 个插件</span><span>合成样例可跑</span></p>
+</a>
+<a class="card" href="packages/dsh-legal-intake.html" data-search="法务需求收件 legal request intake 法务需求 邮件受理 需求登记 线程去重 法务助理 法务专员">
   <h3>法务需求收件</h3>
   <p class="en">Legal request intake</p>
   <p class="meta"><code>0.1.0-alpha.11</code> <span class="roles">法务助理 · 法务专员</span></p>
@@ -213,13 +249,25 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
 <a class="card" href="packages/dsh-contract-suite.html" data-search="合同法务套件 contract ops suite 合同 法务 条款 审查 合同审查 法务 合同管理员">
   <h3>合同法务套件</h3>
   <p class="en">Contract ops suite</p>
-  <p class="meta"><code>0.1.0-alpha.8</code> <span class="roles">法务 · 合同管理员</span></p>
+  <p class="meta"><code>0.1.0-alpha.9</code> <span class="roles">法务 · 合同管理员</span></p>
   <p class="tags"><span>合同</span><span>法务</span><span>条款</span><span>审查</span></p>
+</a>
+<a class="card" href="packages/dsh-contract-renewal.html" data-search="合同到期续签 contract renewal tracker 合同 到期 续签 提醒 法务 合同管理员">
+  <h3>合同到期续签</h3>
+  <p class="en">Contract renewal tracker</p>
+  <p class="meta"><code>0.1.0-alpha.1</code> <span class="roles">法务 · 合同管理员</span></p>
+  <p class="tags"><span>合同</span><span>到期</span><span>续签</span><span>提醒</span></p>
 </a></div>
 </section>
 <section id="质量生产">
-  <h2>质量生产 <small>不合格、8D、审核、检验 · 27</small></h2>
-  <div class="grid"><a class="card" href="packages/dsh-ghg.html" data-search="用电碳排放（范围二） electricity ghg (scope 2) 碳排放 范围二 用电量 排放因子 esg 环保专员 能源管理员">
+  <h2>质量生产 <small>不合格、8D、审核、检验 · 28 + 1 个场景包</small></h2>
+  <div class="grid"><a class="card pack" href="packs/construction.html" data-search="建筑包：模型工程量到进度款 construction pack — model quantities to progress payment 模型工程量 → 进度款审核 → 付款单三单匹配 端到端场景 3 个插件 合成样例可跑 造价 · 监理 · 项目经理">
+  <h3>建筑包：模型工程量到进度款<span class="pill pack">场景包</span></h3>
+  <p class="en">Construction pack — model quantities to progress payment</p>
+  <p class="meta">模型工程量 → 进度款审核 → 付款单三单匹配 <span class="roles">造价 · 监理 · 项目经理</span></p>
+  <p class="tags"><span>端到端场景</span><span>3 个插件</span><span>合成样例可跑</span></p>
+</a>
+<a class="card" href="packages/dsh-ghg.html" data-search="用电碳排放（范围二） electricity ghg (scope 2) 碳排放 范围二 用电量 排放因子 esg 环保专员 能源管理员">
   <h3>用电碳排放（范围二）</h3>
   <p class="en">Electricity GHG (Scope 2)</p>
   <p class="meta"><code>0.1.0-alpha.18</code> <span class="roles">环保专员 · 能源管理员</span></p>
@@ -380,10 +428,16 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <p class="en">dsh-safety-ledger-check</p>
   <p class="meta"><code>0.1.0</code> <span class="roles">安全员 · 资料员</span></p>
   <p class="tags"><span>安全资质</span><span>台账</span><span>施工</span><span>证件有效期</span></p>
+</a>
+<a class="card" href="packages/dsh-progress-payment.html" data-search="进度款审核 progress payment audit 进度款 结算 工程量 造价 造价员 监理">
+  <h3>进度款审核</h3>
+  <p class="en">Progress payment audit</p>
+  <p class="meta"><code>0.1.0-alpha.1</code> <span class="roles">造价员 · 监理</span></p>
+  <p class="tags"><span>进度款</span><span>结算</span><span>工程量</span><span>造价</span></p>
 </a></div>
 </section>
 <section id="关务物流">
-  <h2>关务物流 <small>归类、单证、运费 · 8</small></h2>
+  <h2>关务物流 <small>归类、单证、运费 · 9</small></h2>
   <div class="grid"><a class="card" href="packages/dsh-hs-candidate.html" data-search="hs 候选预检 hs candidate precheck hs 编码 商品归类 预归类 申报要素 关税 关务 报关员">
   <h3>HS 候选预检</h3>
   <p class="en">HS candidate precheck</p>
@@ -431,6 +485,12 @@ footer{max-width:1120px;margin:0 auto;padding:0 24px 48px;color:var(--muted);fon
   <p class="en">dsh-origin-rvc-check</p>
   <p class="meta"> <span class="roles">关务 · 单证员</span></p>
   <p class="tags"><span>原产地证</span><span>区域价值成分</span><span>RVC</span><span>自贸协定</span></p>
+</a>
+<a class="card" href="packages/dsh-import-customs-check.html" data-search="进口单证核对 import document check 进口 报关 单证 一致性 关务 单证员">
+  <h3>进口单证核对</h3>
+  <p class="en">Import document check</p>
+  <p class="meta"><code>0.1.0-alpha.1</code> <span class="roles">关务 · 单证员</span></p>
+  <p class="tags"><span>进口</span><span>报关</span><span>单证</span><span>一致性</span></p>
 </a></div>
 </section>
 <section id="行政办公">

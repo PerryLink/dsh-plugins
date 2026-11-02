@@ -4,8 +4,8 @@
   "status": "proposal",
   "scope": "126-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-provider-params + dsh-community-bench + 3 retired + 3 infrastructure rows.",
   "counts": {
-    "total": 127,
-    "active": 116,
+    "total": 133,
+    "active": 122,
     "frozen": 8,
     "retired": 3
   },
@@ -3128,7 +3128,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.9",
+      "version": "0.1.0-alpha.10",
       "members": [
         {
           "id": "dsh-einvoice",
@@ -3185,7 +3185,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.8",
+      "version": "0.1.0-alpha.9",
       "members": [
         {
           "id": "dsh-legal-intake",
@@ -3297,6 +3297,252 @@
       ],
       "industriesZh": [
         "通用"
+      ]
+    },
+    {
+      "id": "dsh-contract-renewal",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "legal",
+      "archetype": "ledger",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "合同",
+        "到期",
+        "续签",
+        "提醒"
+      ],
+      "displayName": "Contract renewal tracker",
+      "displayNameZh": "合同到期续签",
+      "positioning": "登记合同起止与续签窗口，列出即将到期与已过期合同并导出 CSV。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-contract-renewal",
+      "npm": "dsh-contract-renewal",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "合同",
+        "到期",
+        "续签",
+        "提醒"
+      ],
+      "taskFamilyZh": "法务合同",
+      "rolesZh": [
+        "法务",
+        "合同管理员"
+      ],
+      "industriesZh": [
+        "法务"
+      ]
+    },
+    {
+      "id": "dsh-rfq-compare",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "procurement",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "询价",
+        "比价",
+        "报价",
+        "采购"
+      ],
+      "displayName": "RFQ comparison",
+      "displayNameZh": "询价比价",
+      "positioning": "导入多家报价，按物料比价并标出低于成本、超预算与已过期的报价。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-rfq-compare",
+      "npm": "dsh-rfq-compare",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "询价",
+        "比价",
+        "报价",
+        "采购"
+      ],
+      "taskFamilyZh": "采购供应链",
+      "rolesZh": [
+        "采购员",
+        "采购经理"
+      ],
+      "industriesZh": [
+        "采购"
+      ]
+    },
+    {
+      "id": "dsh-labor-contract",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "hr",
+      "archetype": "validator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "劳动合同",
+        "试用期",
+        "条款",
+        "用工"
+      ],
+      "displayName": "Labor contract check",
+      "displayNameZh": "劳动合同体检",
+      "positioning": "核对劳动合同必备条款、试用期上限与工资比例，并批量标出问题合同。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-labor-contract",
+      "npm": "dsh-labor-contract",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "劳动合同",
+        "试用期",
+        "条款",
+        "用工"
+      ],
+      "taskFamilyZh": "人力资源",
+      "rolesZh": [
+        "HR",
+        "HRBP"
+      ],
+      "industriesZh": [
+        "人力资源"
+      ]
+    },
+    {
+      "id": "dsh-progress-payment",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "construction",
+      "archetype": "reconciler",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "进度款",
+        "结算",
+        "工程量",
+        "造价"
+      ],
+      "displayName": "Progress payment audit",
+      "displayNameZh": "进度款审核",
+      "positioning": "按合同量与单价审核本期进度款申报，标出超量、单价不符与重复清单项。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-progress-payment",
+      "npm": "dsh-progress-payment",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "进度款",
+        "结算",
+        "工程量",
+        "造价"
+      ],
+      "taskFamilyZh": "质量生产",
+      "rolesZh": [
+        "造价员",
+        "监理"
+      ],
+      "industriesZh": [
+        "建筑"
+      ]
+    },
+    {
+      "id": "dsh-ar-aging",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "finance",
+      "archetype": "calculator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "应收",
+        "账龄",
+        "逾期",
+        "催收"
+      ],
+      "displayName": "AR aging",
+      "displayNameZh": "应收账龄",
+      "positioning": "导入应收明细，按账龄分桶汇总逾期与 Top 客户并导出账龄表。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-ar-aging",
+      "npm": "dsh-ar-aging",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "应收",
+        "账龄",
+        "逾期",
+        "催收"
+      ],
+      "taskFamilyZh": "财务报销",
+      "rolesZh": [
+        "应收会计",
+        "财务经理"
+      ],
+      "industriesZh": [
+        "财务"
+      ]
+    },
+    {
+      "id": "dsh-import-customs-check",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "compliance",
+      "subcategory": "trade",
+      "archetype": "checker",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "进口",
+        "报关",
+        "单证",
+        "一致性"
+      ],
+      "displayName": "Import document check",
+      "displayNameZh": "进口单证核对",
+      "positioning": "核对发票、箱单、提单与报关单的九个字段，并检查报关单 12 项要素是否齐全。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-import-customs-check",
+      "npm": "dsh-import-customs-check",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "进口",
+        "报关",
+        "单证",
+        "一致性"
+      ],
+      "taskFamilyZh": "关务物流",
+      "rolesZh": [
+        "关务",
+        "单证员"
+      ],
+      "industriesZh": [
+        "关务"
       ]
     },
     {

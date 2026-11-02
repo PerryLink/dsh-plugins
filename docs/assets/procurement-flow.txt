@@ -1,0 +1,23 @@
+$ node scenario/run-scenario.mjs
+dsh-procurement-pack · 采购包端到端场景（合成数据，本地运行）
+流程：询价比价 → 物料主数据检查 → 三单匹配
+基准日：2026-11-02 ｜ 币种：CNY ｜ 供应商：3 家
+
+[1/3] 询价比价 ............ 12 条报价 / 4 个物料；低于成本线 2 / 超预算 2 / 有效期已过 2
+      MAT-1001 最低 DEMO-SUP-B 172.00 USD = 1238.40 CNY；次低 DEMO-SUP-A 1250.00 CNY；价差 11.60 CNY
+      异常：低于成本线 1 / 超预算 no / 有效期已过 0
+      MAT-1002 最低 DEMO-SUP-B 84.50 CNY = 84.50 CNY；次低 DEMO-SUP-A 86.00 CNY；价差 1.50 CNY
+      异常：低于成本线 0 / 超预算 no / 有效期已过 1
+      MAT-1003 最低 DEMO-SUP-C 2415.00 CNY = 2415.00 CNY；次低 DEMO-SUP-A 2480.00 CNY；价差 65.00 CNY
+      异常：低于成本线 1 / 超预算 yes / 有效期已过 0
+      MAT-1004 最低 DEMO-SUP-A 330.00 CNY = 330.00 CNY；次低 DEMO-SUP-C 42.80 EUR；价差 3.84 CNY
+      异常：低于成本线 0 / 超预算 yes / 有效期已过 1
+      比价表：output/workpapers/rfq-compare.csv
+[2/3] 物料主数据检查 ...... 6 行 / 4 个问题；E_PIM_GTIN_DUPLICATE 1 · E_PIM_GTIN_INVALID 1 · E_PIM_SKU_DUPLICATE 1 · E_PIM_TITLE_REQUIRED 1
+      GTIN 通过 2 / 失败 1 / 未填 1（4 个物料）
+[3/3] 三单匹配 ............ 发票 4 行 / 采购单 4 行 / 收货 4 行；3 通过 / 1 例外
+      PO-DEMO-7003 第 1 行 数量超入库（数量差 1）
+      发票总额：146860.00 CNY；底稿：output/workpapers/ap-three-way.xlsx
+
+结果：3/3 步通过，三步耗时 50.472 ms
+flow.json：output/flow.json

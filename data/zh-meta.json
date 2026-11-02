@@ -2215,5 +2215,107 @@
     "industries": [
       "通用"
     ]
+  },
+  "dsh-contract-renewal": {
+    "nameZh": "合同到期续签",
+    "tags": [
+      "合同",
+      "到期",
+      "续签",
+      "提醒"
+    ],
+    "taskFamily": "法务合同",
+    "roles": [
+      "法务",
+      "合同管理员"
+    ],
+    "industries": [
+      "法务"
+    ]
+  },
+  "dsh-rfq-compare": {
+    "nameZh": "询价比价",
+    "tags": [
+      "询价",
+      "比价",
+      "报价",
+      "采购"
+    ],
+    "taskFamily": "采购供应链",
+    "roles": [
+      "采购员",
+      "采购经理"
+    ],
+    "industries": [
+      "采购"
+    ]
+  },
+  "dsh-labor-contract": {
+    "nameZh": "劳动合同体检",
+    "tags": [
+      "劳动合同",
+      "试用期",
+      "条款",
+      "用工"
+    ],
+    "taskFamily": "人力资源",
+    "roles": [
+      "HR",
+      "HRBP"
+    ],
+    "industries": [
+      "人力资源"
+    ]
+  },
+  "dsh-progress-payment": {
+    "nameZh": "进度款审核",
+    "tags": [
+      "进度款",
+      "结算",
+      "工程量",
+      "造价"
+    ],
+    "taskFamily": "质量生产",
+    "roles": [
+      "造价员",
+      "监理"
+    ],
+    "industries": [
+      "建筑"
+    ]
+  },
+  "dsh-ar-aging": {
+    "nameZh": "应收账龄",
+    "tags": [
+      "应收",
+      "账龄",
+      "逾期",
+      "催收"
+    ],
+    "taskFamily": "财务报销",
+    "roles": [
+      "应收会计",
+      "财务经理"
+    ],
+    "industries": [
+      "财务"
+    ]
+  },
+  "dsh-import-customs-check": {
+    "nameZh": "进口单证核对",
+    "tags": [
+      "进口",
+      "报关",
+      "单证",
+      "一致性"
+    ],
+    "taskFamily": "关务物流",
+    "roles": [
+      "关务",
+      "单证员"
+    ],
+    "industries": [
+      "关务"
+    ]
   }
 }
