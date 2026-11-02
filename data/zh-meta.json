@@ -2351,5 +2351,39 @@
     "industries": [
       "建筑"
     ]
+  },
+  "dsh-attendance-check": {
+    "nameZh": "考勤加班核对",
+    "tags": [
+      "考勤",
+      "加班",
+      "工时",
+      "缺卡"
+    ],
+    "taskFamily": "人力资源",
+    "roles": [
+      "HR",
+      "薪酬专员"
+    ],
+    "industries": [
+      "人力资源"
+    ]
+  },
+  "dsh-store-replenish": {
+    "nameZh": "门店补货建议",
+    "tags": [
+      "补货",
+      "库存",
+      "缺货",
+      "滞销"
+    ],
+    "taskFamily": "零售电商",
+    "roles": [
+      "店长",
+      "运营"
+    ],
+    "industries": [
+      "零售"
+    ]
   }
 }

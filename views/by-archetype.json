@@ -20,6 +20,7 @@
     "dsh-protest-deadline",
     "dsh-railway-window",
     "dsh-spc-gbt-adapter",
+    "dsh-store-replenish",
     "dsh-warranty-calc"
   ],
   "catalog": [
@@ -32,6 +33,7 @@
   "checker": [
     "dsh-aqua-input-check",
     "dsh-archive-check",
+    "dsh-attendance-check",
     "dsh-bid-ca-precheck",
     "dsh-bid-health-check",
     "dsh-bid-qual-check",

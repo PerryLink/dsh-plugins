@@ -1500,8 +1500,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.12",
-          "publishTimestamp": 1793623071,
+          "version": "0.1.0",
+          "publishTimestamp": 1793636795,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -1862,6 +1862,38 @@
       ]
     },
     {
+      "name": "dsh-attendance-check",
+      "title": {
+        "en": "Attendance and overtime check",
+        "zh": "考勤加班核对"
+      },
+      "description": {
+        "en": "导入打卡明细，按标准工时与加班上限核对超时、缺卡与休息不足。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-attendance-check",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-attendance-check"
+      },
+      "metadata": {
+        "category": "hr",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793637338,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
       "name": "dsh-labor-contract",
       "title": {
         "en": "Labor contract check",
@@ -2108,8 +2140,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.13",
-          "publishTimestamp": 1793623151,
+          "version": "0.1.0",
+          "publishTimestamp": 1793636649,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -3597,8 +3629,8 @@
       },
       "versions": [
         {
-          "version": "0.1.0-alpha.13",
-          "publishTimestamp": 1793623101,
+          "version": "0.1.0",
+          "publishTimestamp": 1793636629,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"
@@ -3983,6 +4015,38 @@
         {
           "version": "0.1.0-alpha.12",
           "publishTimestamp": 1793629381,
+          "source": {
+            "type": "npm",
+            "registry": "https://registry.npmjs.org"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-store-replenish",
+      "title": {
+        "en": "Store replenishment",
+        "zh": "门店补货建议"
+      },
+      "description": {
+        "en": "按销量、库存与在途计算建议补货量，标出缺货风险与滞销。"
+      },
+      "author": "PerryLink",
+      "homepage": "https://github.com/PerryLink/dsh-store-replenish",
+      "repository": {
+        "url": "https://github.com/PerryLink/dsh-store-replenish"
+      },
+      "metadata": {
+        "category": "retail",
+        "labels": [
+          "domain",
+          "active"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0-alpha.1",
+          "publishTimestamp": 1793637571,
           "source": {
             "type": "npm",
             "registry": "https://registry.npmjs.org"

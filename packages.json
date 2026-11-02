@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "boundary": "public/synthetic, partial, not counted, no GA",
   "packages": [
     {
@@ -50,10 +50,10 @@
     },
     {
       "name": "dsh-ap-three-way",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-ap-three-way",
       "npm": "https://www.npmjs.com/package/dsh-ap-three-way",
-      "release": "https://github.com/PerryLink/dsh-ap-three-way/releases/tag/v0.1.0-alpha.12",
+      "release": "https://github.com/PerryLink/dsh-ap-three-way/releases/tag/v0.1.0",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-ap-three-way",
       "description": "发票/PO/GRN 三单匹配、容差与例外底稿。",
@@ -69,7 +69,7 @@
         "finance",
         "accounts-payable"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-travel-recon",
@@ -119,10 +119,10 @@
     },
     {
       "name": "dsh-legal-clause",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-legal-clause",
       "npm": "https://www.npmjs.com/package/dsh-legal-clause",
-      "release": "https://github.com/PerryLink/dsh-legal-clause/releases/tag/v0.1.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-legal-clause/releases/tag/v0.1.0",
       "family": "法务运营 Legal Ops",
       "dir": "dsh-legal-clause",
       "description": "合同条款树、playbook 映射与未解决报告。",
@@ -138,7 +138,7 @@
         "legal",
         "contracts"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-ghg",
@@ -166,10 +166,10 @@
     },
     {
       "name": "dsh-qms-capa",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-qms-capa",
       "npm": "https://www.npmjs.com/package/dsh-qms-capa",
-      "release": "https://github.com/PerryLink/dsh-qms-capa/releases/tag/v0.1.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-qms-capa/releases/tag/v0.1.0",
       "family": "可持续与质量 ESG & Quality",
       "dir": "dsh-qms-capa",
       "description": "QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。",
@@ -185,7 +185,7 @@
         "quality",
         "manufacturing"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-hs-candidate",
@@ -517,6 +517,40 @@
       "displayNameZh": "竣工结算资料齐套",
       "category": "business-ops",
       "archetype": "validator",
+      "domains": [],
+      "status": "active"
+    },
+    {
+      "name": "dsh-attendance-check",
+      "version": "0.1.0-alpha.1",
+      "description": "考勤加班核对",
+      "repo": "https://github.com/PerryLink/dsh-attendance-check",
+      "npm": "https://www.npmjs.com/package/dsh-attendance-check",
+      "release": "https://github.com/PerryLink/dsh-attendance-check/releases/tag/v0.1.0-alpha.1",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-attendance-check.html",
+      "dir": "dsh-attendance-check",
+      "frozen": false,
+      "displayName": "Attendance and overtime check",
+      "displayNameZh": "考勤加班核对",
+      "category": "business-ops",
+      "archetype": "checker",
+      "domains": [],
+      "status": "active"
+    },
+    {
+      "name": "dsh-store-replenish",
+      "version": "0.1.0-alpha.1",
+      "description": "门店补货建议",
+      "repo": "https://github.com/PerryLink/dsh-store-replenish",
+      "npm": "https://www.npmjs.com/package/dsh-store-replenish",
+      "release": "https://github.com/PerryLink/dsh-store-replenish/releases/tag/v0.1.0-alpha.1",
+      "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-store-replenish.html",
+      "dir": "dsh-store-replenish",
+      "frozen": false,
+      "displayName": "Store replenishment",
+      "displayNameZh": "门店补货建议",
+      "category": "business-ops",
+      "archetype": "calculator",
       "domains": [],
       "status": "active"
     }

@@ -4,8 +4,8 @@
   "status": "proposal",
   "scope": "126-row working roster: 92 family mainline rows (39 default + 53 opt-in) + 9 newer compliance tools + 17 domain packages/suites + dsh-provider-params + dsh-community-bench + 3 retired + 3 infrastructure rows.",
   "counts": {
-    "total": 135,
-    "active": 124,
+    "total": 137,
+    "active": 126,
     "frozen": 8,
     "retired": 3
   },
@@ -117,7 +117,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -249,7 +249,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-contract-suite",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-contract-stance",
         "dsh-lawcite-adapter",
@@ -340,7 +340,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-fmea-table-check",
         "dsh-ppap-check",
@@ -3140,7 +3140,7 @@
         },
         {
           "id": "dsh-ap-three-way",
-          "version": "0.1.0-alpha.12"
+          "version": "0.1.0"
         },
         {
           "id": "dsh-travel-recon",
@@ -3193,7 +3193,7 @@
         },
         {
           "id": "dsh-legal-clause",
-          "version": "0.1.0-alpha.13"
+          "version": "0.1.0"
         }
       ],
       "repo": "PerryLink/dsh-contract-suite",
@@ -3625,6 +3625,88 @@
       ],
       "industriesZh": [
         "建筑"
+      ]
+    },
+    {
+      "id": "dsh-attendance-check",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "hr",
+      "archetype": "checker",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "考勤",
+        "加班",
+        "工时",
+        "缺卡"
+      ],
+      "displayName": "Attendance and overtime check",
+      "displayNameZh": "考勤加班核对",
+      "positioning": "导入打卡明细，按标准工时与加班上限核对超时、缺卡与休息不足。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-attendance-check",
+      "npm": "dsh-attendance-check",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "考勤",
+        "加班",
+        "工时",
+        "缺卡"
+      ],
+      "taskFamilyZh": "人力资源",
+      "rolesZh": [
+        "HR",
+        "薪酬专员"
+      ],
+      "industriesZh": [
+        "人力资源"
+      ]
+    },
+    {
+      "id": "dsh-store-replenish",
+      "kind": "plugin",
+      "collection": "domain-ops",
+      "category": "business-ops",
+      "subcategory": "retail",
+      "archetype": "calculator",
+      "checker": false,
+      "checkerRole": "none",
+      "domains": [
+        "补货",
+        "库存",
+        "缺货",
+        "滞销"
+      ],
+      "displayName": "Store replenishment",
+      "displayNameZh": "门店补货建议",
+      "positioning": "按销量、库存与在途计算建议补货量，标出缺货风险与滞销。",
+      "status": "active",
+      "release": "alpha",
+      "version": "0.1.0-alpha.1",
+      "relatedCheckers": [],
+      "repo": "PerryLink/dsh-store-replenish",
+      "npm": "dsh-store-replenish",
+      "source": "taxonomy.v1.json",
+      "installScope": "domain",
+      "tagsZh": [
+        "补货",
+        "库存",
+        "缺货",
+        "滞销"
+      ],
+      "taskFamilyZh": "零售电商",
+      "rolesZh": [
+        "店长",
+        "运营"
+      ],
+      "industriesZh": [
+        "零售"
       ]
     },
     {

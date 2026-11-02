@@ -20,7 +20,7 @@ dsh plugin --profile <profile> add dsh-ghg
 |---|---|---:|---|
 | [`dsh-einvoice`](https://github.com/PerryLink/dsh-einvoice) | 文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 | `0.2.0` | `dsh plugin --profile <profile> add dsh-einvoice` |
 | [`dsh-bankrec`](https://github.com/PerryLink/dsh-bankrec) | 银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-bankrec` |
-| [`dsh-ap-three-way`](https://github.com/PerryLink/dsh-ap-three-way) | 发票/PO/GRN 三单匹配、容差与例外底稿。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-ap-three-way` |
+| [`dsh-ap-three-way`](https://github.com/PerryLink/dsh-ap-three-way) | 发票/PO/GRN 三单匹配、容差与例外底稿。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-ap-three-way` |
 | [`dsh-travel-recon`](https://github.com/PerryLink/dsh-travel-recon) | 差旅订单/发票/卡流水对账、去重与只读政策检查。 | `0.1.0-alpha.14` | `dsh plugin --profile <profile> add dsh-travel-recon` |
 
 ### 法务运营 Legal Ops
@@ -28,14 +28,14 @@ dsh plugin --profile <profile> add dsh-ghg
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
 | [`dsh-legal-intake`](https://github.com/PerryLink/dsh-legal-intake) | 法务需求 EML 收件、线程去重与台账导出。 | `0.1.0-alpha.11` | `dsh plugin --profile <profile> add dsh-legal-intake` |
-| [`dsh-legal-clause`](https://github.com/PerryLink/dsh-legal-clause) | 合同条款树、playbook 映射与未解决报告。 | `0.1.0-alpha.13` | `dsh plugin --profile <profile> add dsh-legal-clause` |
+| [`dsh-legal-clause`](https://github.com/PerryLink/dsh-legal-clause) | 合同条款树、playbook 映射与未解决报告。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-legal-clause` |
 
 ### 可持续与质量 ESG & Quality
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
 | [`dsh-ghg`](https://github.com/PerryLink/dsh-ghg) | 用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。 | `0.1.0-alpha.18` | `dsh plugin --profile <profile> add dsh-ghg` |
-| [`dsh-qms-capa`](https://github.com/PerryLink/dsh-qms-capa) | QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。 | `0.1.0-alpha.13` | `dsh plugin --profile <profile> add dsh-qms-capa` |
+| [`dsh-qms-capa`](https://github.com/PerryLink/dsh-qms-capa) | QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-qms-capa` |
 
 ### 关务与物流 Trade & Logistics
 
@@ -59,6 +59,8 @@ dsh plugin --profile <profile> add dsh-ghg
 | [`dsh-pim-lint`](https://github.com/PerryLink/dsh-pim-lint) | PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-pim-lint` |
 | [`dsh-eval-pack`](https://github.com/PerryLink/dsh-eval-pack) | 公开/合成 eval-pack lint 与确定性 JSON 评分。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-eval-pack` |
 | [`dsh-provider-params`](https://github.com/PerryLink/dsh-provider-params) | 厂商参数转换与确定性 JSON 修复。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-provider-params` |
+| [`dsh-store-replenish`](https://github.com/PerryLink/dsh-store-replenish) | 门店补货建议：按销量、库存与在途计算建议补货量，标出缺货风险与滞销。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-store-replenish` |
+| [`dsh-attendance-check`](https://github.com/PerryLink/dsh-attendance-check) | 考勤加班核对：导入打卡明细，按标准工时与加班上限核对超时、缺卡与休息不足。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-attendance-check` |
 | [`dsh-settlement-docs`](https://github.com/PerryLink/dsh-settlement-docs) | 竣工结算资料齐套：按工程类型生成结算资料清单，核对缺件、份数、签字盖章与齐套率。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-settlement-docs` |
 | [`dsh-ar-collection`](https://github.com/PerryLink/dsh-ar-collection) | 应收催收：按账龄阶梯生成催收计划与中文催收函草稿，并导出催收清单。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-ar-collection` |
 | [`dsh-import-customs-check`](https://github.com/PerryLink/dsh-import-customs-check) | 进口单证核对：核对发票、箱单、提单与报关单的九个字段，并检查报关单 12 项要素是否齐全。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-import-customs-check` |

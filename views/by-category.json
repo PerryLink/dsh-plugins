@@ -3,6 +3,7 @@
     "dsh-ap-three-way",
     "dsh-ar-aging",
     "dsh-ar-collection",
+    "dsh-attendance-check",
     "dsh-bankrec",
     "dsh-contract-renewal",
     "dsh-contract-suite",
@@ -19,6 +20,7 @@
     "dsh-qms-capa",
     "dsh-rfq-compare",
     "dsh-settlement-docs",
+    "dsh-store-replenish",
     "dsh-tender-requirements",
     "dsh-travel-recon"
   ],
