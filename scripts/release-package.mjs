@@ -85,6 +85,15 @@ for (const key of ['peerDependencies', 'peerDependenciesMeta', 'engines', 'prepu
 }
 workPkg.version = nextVersion
 fs.writeFileSync(workPkgPath, JSON.stringify(workPkg, null, 2) + '\n')
+// keep the README version block in step with the package version
+for (const readme of ['README.md', 'README-zh.md']) {
+  const readmePath = path.join(workRoot, readme)
+  if (!fs.existsSync(readmePath)) continue
+  const before = fs.readFileSync(readmePath, 'utf8')
+  const after = before.split(workVersion).join(nextVersion)
+  if (after !== before) fs.writeFileSync(readmePath, after)
+}
+
 const lintPath = path.join(workRoot, 'scripts', 'lint.mjs')
 if (fs.existsSync(lintPath)) {
   const before = fs.readFileSync(lintPath, 'utf8')
