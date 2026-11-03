@@ -27,7 +27,7 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-legal-intake`](https://github.com/PerryLink/dsh-legal-intake) | 法务需求 EML 收件、线程去重与台账导出。 | `0.1.0-alpha.11` | `dsh plugin --profile <profile> add dsh-legal-intake` |
+| [`dsh-legal-intake`](https://github.com/PerryLink/dsh-legal-intake) | 法务需求 EML 收件、线程去重与台账导出。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-legal-intake` |
 | [`dsh-legal-clause`](https://github.com/PerryLink/dsh-legal-clause) | 合同条款树、playbook 映射与未解决报告。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-legal-clause` |
 
 ### 可持续与质量 ESG & Quality
@@ -41,7 +41,7 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-hs-candidate`](https://github.com/PerryLink/dsh-hs-candidate) | HS Top3 候选、12 要素完整性、RVC 与税则版本门。 | `0.1.0-alpha.13` | `dsh plugin --profile <profile> add dsh-hs-candidate` |
+| [`dsh-hs-candidate`](https://github.com/PerryLink/dsh-hs-candidate) | HS Top3 候选、12 要素完整性、RVC 与税则版本门。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-hs-candidate` |
 | [`dsh-freight-audit`](https://github.com/PerryLink/dsh-freight-audit) | 运费 ratecard 版本、账单审计、recovery 汇总与差异导出。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-freight-audit` |
 
 ### 文档与模型 Docs & Models
@@ -49,27 +49,27 @@ dsh plugin --profile <profile> add dsh-ghg
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
 | [`dsh-docx-redline`](https://github.com/PerryLink/dsh-docx-redline) | DOCX 结构检查、逐字节 roundtrip 与单 run 文本替换。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-docx-redline` |
-| [`dsh-ifc-qto`](https://github.com/PerryLink/dsh-ifc-qto) | IFC 构件/工程量清单与 CSV 导出。 | `0.1.0-alpha.15` | `dsh plugin --profile <profile> add dsh-ifc-qto` |
+| [`dsh-ifc-qto`](https://github.com/PerryLink/dsh-ifc-qto) | IFC 构件/工程量清单与 CSV 导出。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-ifc-qto` |
 
 ### 校验工具 Verify Utilities
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-policy-ledger`](https://github.com/PerryLink/dsh-policy-ledger) | 只读安装诊断：能力快照、tarball 断言与安装日志分类。 | `0.2.0-alpha.14` | `dsh plugin --profile <profile> add dsh-policy-ledger` |
-| [`dsh-pim-lint`](https://github.com/PerryLink/dsh-pim-lint) | PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-pim-lint` |
-| [`dsh-eval-pack`](https://github.com/PerryLink/dsh-eval-pack) | 公开/合成 eval-pack lint 与确定性 JSON 评分。 | `0.1.0-alpha.12` | `dsh plugin --profile <profile> add dsh-eval-pack` |
-| [`dsh-provider-params`](https://github.com/PerryLink/dsh-provider-params) | 厂商参数转换与确定性 JSON 修复。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-provider-params` |
-| [`dsh-store-replenish`](https://github.com/PerryLink/dsh-store-replenish) | 门店补货建议：按销量、库存与在途计算建议补货量，标出缺货风险与滞销。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-store-replenish` |
-| [`dsh-attendance-check`](https://github.com/PerryLink/dsh-attendance-check) | 考勤加班核对：导入打卡明细，按标准工时与加班上限核对超时、缺卡与休息不足。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-attendance-check` |
-| [`dsh-settlement-docs`](https://github.com/PerryLink/dsh-settlement-docs) | 竣工结算资料齐套：按工程类型生成结算资料清单，核对缺件、份数、签字盖章与齐套率。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-settlement-docs` |
-| [`dsh-ar-collection`](https://github.com/PerryLink/dsh-ar-collection) | 应收催收：按账龄阶梯生成催收计划与中文催收函草稿，并导出催收清单。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-ar-collection` |
-| [`dsh-import-customs-check`](https://github.com/PerryLink/dsh-import-customs-check) | 进口单证核对：核对发票、箱单、提单与报关单的九个字段，并检查报关单 12 项要素是否齐全。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-import-customs-check` |
-| [`dsh-ar-aging`](https://github.com/PerryLink/dsh-ar-aging) | 应收账龄：导入应收明细，按账龄分桶汇总逾期与 Top 客户并导出账龄表。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-ar-aging` |
-| [`dsh-progress-payment`](https://github.com/PerryLink/dsh-progress-payment) | 进度款审核：按合同量与单价审核本期进度款申报，标出超量、单价不符与重复清单项。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-progress-payment` |
-| [`dsh-labor-contract`](https://github.com/PerryLink/dsh-labor-contract) | 劳动合同体检：核对劳动合同必备条款、试用期上限与工资比例，并批量标出问题合同。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-labor-contract` |
-| [`dsh-rfq-compare`](https://github.com/PerryLink/dsh-rfq-compare) | 询价比价：导入多家报价，按物料比价并标出低于成本、超预算与已过期的报价。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-rfq-compare` |
-| [`dsh-contract-renewal`](https://github.com/PerryLink/dsh-contract-renewal) | 合同到期续签：登记合同起止与续签窗口，列出即将到期与已过期合同并导出 CSV。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-contract-renewal` |
-| [`dsh-pdf-table`](https://github.com/PerryLink/dsh-pdf-table) | PDF 文本层表格提取为 CSV（扫描件需先 OCR）。 | `0.1.0-alpha.1` | `dsh plugin --profile <profile> add dsh-pdf-table` |
+| [`dsh-policy-ledger`](https://github.com/PerryLink/dsh-policy-ledger) | 只读安装诊断：能力快照、tarball 断言与安装日志分类。 | `0.2.0` | `dsh plugin --profile <profile> add dsh-policy-ledger` |
+| [`dsh-pim-lint`](https://github.com/PerryLink/dsh-pim-lint) | PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-pim-lint` |
+| [`dsh-eval-pack`](https://github.com/PerryLink/dsh-eval-pack) | 公开/合成 eval-pack lint 与确定性 JSON 评分。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-eval-pack` |
+| [`dsh-provider-params`](https://github.com/PerryLink/dsh-provider-params) | 厂商参数转换与确定性 JSON 修复。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-provider-params` |
+| [`dsh-store-replenish`](https://github.com/PerryLink/dsh-store-replenish) | 门店补货建议：按销量、库存与在途计算建议补货量，标出缺货风险与滞销。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-store-replenish` |
+| [`dsh-attendance-check`](https://github.com/PerryLink/dsh-attendance-check) | 考勤加班核对：导入打卡明细，按标准工时与加班上限核对超时、缺卡与休息不足。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-attendance-check` |
+| [`dsh-settlement-docs`](https://github.com/PerryLink/dsh-settlement-docs) | 竣工结算资料齐套：按工程类型生成结算资料清单，核对缺件、份数、签字盖章与齐套率。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-settlement-docs` |
+| [`dsh-ar-collection`](https://github.com/PerryLink/dsh-ar-collection) | 应收催收：按账龄阶梯生成催收计划与中文催收函草稿，并导出催收清单。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-ar-collection` |
+| [`dsh-import-customs-check`](https://github.com/PerryLink/dsh-import-customs-check) | 进口单证核对：核对发票、箱单、提单与报关单的九个字段，并检查报关单 12 项要素是否齐全。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-import-customs-check` |
+| [`dsh-ar-aging`](https://github.com/PerryLink/dsh-ar-aging) | 应收账龄：导入应收明细，按账龄分桶汇总逾期与 Top 客户并导出账龄表。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-ar-aging` |
+| [`dsh-progress-payment`](https://github.com/PerryLink/dsh-progress-payment) | 进度款审核：按合同量与单价审核本期进度款申报，标出超量、单价不符与重复清单项。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-progress-payment` |
+| [`dsh-labor-contract`](https://github.com/PerryLink/dsh-labor-contract) | 劳动合同体检：核对劳动合同必备条款、试用期上限与工资比例，并批量标出问题合同。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-labor-contract` |
+| [`dsh-rfq-compare`](https://github.com/PerryLink/dsh-rfq-compare) | 询价比价：导入多家报价，按物料比价并标出低于成本、超预算与已过期的报价。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-rfq-compare` |
+| [`dsh-contract-renewal`](https://github.com/PerryLink/dsh-contract-renewal) | 合同到期续签：登记合同起止与续签窗口，列出即将到期与已过期合同并导出 CSV。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-contract-renewal` |
+| [`dsh-pdf-table`](https://github.com/PerryLink/dsh-pdf-table) | PDF 文本层表格提取为 CSV（扫描件需先 OCR）。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-pdf-table` |
 
 两个 suite 也有 Gitee / GitCode 镜像：[dsh-finops-suite](https://gitee.com/perrylink/dsh-finops-suite) / [dsh-contract-suite](https://gitee.com/perrylink/dsh-contract-suite)。
 

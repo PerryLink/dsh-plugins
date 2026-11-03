@@ -96,10 +96,10 @@
     },
     {
       "name": "dsh-legal-intake",
-      "version": "0.1.0-alpha.11",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-legal-intake",
       "npm": "https://www.npmjs.com/package/dsh-legal-intake",
-      "release": "https://github.com/PerryLink/dsh-legal-intake/releases/tag/v0.1.0-alpha.11",
+      "release": "https://github.com/PerryLink/dsh-legal-intake/releases/tag/v0.1.0",
       "family": "法务运营 Legal Ops",
       "dir": "dsh-legal-intake",
       "description": "法务需求 EML 收件、线程去重与台账导出。",
@@ -115,7 +115,7 @@
         "legal",
         "intake"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-legal-clause",
@@ -189,10 +189,10 @@
     },
     {
       "name": "dsh-hs-candidate",
-      "version": "0.1.0-alpha.13",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-hs-candidate",
       "npm": "https://www.npmjs.com/package/dsh-hs-candidate",
-      "release": "https://github.com/PerryLink/dsh-hs-candidate/releases/tag/v0.1.0-alpha.13",
+      "release": "https://github.com/PerryLink/dsh-hs-candidate/releases/tag/v0.1.0",
       "family": "关务与物流 Trade & Logistics",
       "dir": "dsh-hs-candidate",
       "description": "HS Top3 候选、12 要素完整性、RVC 与税则版本门。",
@@ -208,7 +208,7 @@
         "trade",
         "customs"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-freight-audit",
@@ -257,10 +257,10 @@
     },
     {
       "name": "dsh-ifc-qto",
-      "version": "0.1.0-alpha.15",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-ifc-qto",
       "npm": "https://www.npmjs.com/package/dsh-ifc-qto",
-      "release": "https://github.com/PerryLink/dsh-ifc-qto/releases/tag/v0.1.0-alpha.15",
+      "release": "https://github.com/PerryLink/dsh-ifc-qto/releases/tag/v0.1.0",
       "family": "文档与模型 Docs & Models",
       "dir": "dsh-ifc-qto",
       "description": "IFC 构件/工程量清单与 CSV 导出。",
@@ -276,14 +276,14 @@
         "construction",
         "bim"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-policy-ledger",
-      "version": "0.2.0-alpha.14",
+      "version": "0.2.0",
       "repo": "https://github.com/PerryLink/dsh-policy-ledger",
       "npm": "https://www.npmjs.com/package/dsh-policy-ledger",
-      "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0-alpha.14",
+      "release": "https://github.com/PerryLink/dsh-policy-ledger/releases/tag/v0.2.0",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-policy-ledger",
       "description": "只读安装诊断：能力快照、tarball 断言与安装日志分类。",
@@ -299,14 +299,14 @@
         "plugin-install",
         "supply-chain"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-pim-lint",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-pim-lint",
       "npm": "https://www.npmjs.com/package/dsh-pim-lint",
-      "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0-alpha.12",
+      "release": "https://github.com/PerryLink/dsh-pim-lint/releases/tag/v0.1.0",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-pim-lint",
       "description": "PIM 目录 lint：必填、重复 SKU、GTIN 校验位与价格。",
@@ -322,14 +322,14 @@
         "retail",
         "pim"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-eval-pack",
-      "version": "0.1.0-alpha.12",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-eval-pack",
       "npm": "https://www.npmjs.com/package/dsh-eval-pack",
-      "release": "https://github.com/PerryLink/dsh-eval-pack/releases/tag/v0.1.0-alpha.12",
+      "release": "https://github.com/PerryLink/dsh-eval-pack/releases/tag/v0.1.0",
       "family": "校验工具 Verify Utilities",
       "dir": "dsh-eval-pack",
       "description": "公开/合成 eval-pack lint 与确定性 JSON 评分。",
@@ -344,15 +344,15 @@
       "domains": [
         "evaluation"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-provider-params",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "Vendor parameter mapping and deterministic JSON repair",
       "repo": "https://github.com/PerryLink/dsh-provider-params",
       "npm": "https://www.npmjs.com/package/dsh-provider-params",
-      "release": "https://github.com/PerryLink/dsh-provider-params/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-provider-params/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-provider-params.html",
       "dir": "dsh-provider-params",
       "frozen": false,
@@ -363,15 +363,15 @@
       "domains": [
         "llm"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-pdf-table",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "Extract tables from text-layer PDFs to CSV",
       "repo": "https://github.com/PerryLink/dsh-pdf-table",
       "npm": "https://www.npmjs.com/package/dsh-pdf-table",
-      "release": "https://github.com/PerryLink/dsh-pdf-table/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-pdf-table/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-pdf-table.html",
       "dir": "dsh-pdf-table",
       "frozen": false,
@@ -382,15 +382,15 @@
       "domains": [
         "pdf"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-contract-renewal",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "合同到期续签",
       "repo": "https://github.com/PerryLink/dsh-contract-renewal",
       "npm": "https://www.npmjs.com/package/dsh-contract-renewal",
-      "release": "https://github.com/PerryLink/dsh-contract-renewal/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-contract-renewal/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-contract-renewal.html",
       "dir": "dsh-contract-renewal",
       "frozen": false,
@@ -399,15 +399,15 @@
       "category": "business-ops",
       "archetype": "ledger",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-rfq-compare",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "询价比价",
       "repo": "https://github.com/PerryLink/dsh-rfq-compare",
       "npm": "https://www.npmjs.com/package/dsh-rfq-compare",
-      "release": "https://github.com/PerryLink/dsh-rfq-compare/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-rfq-compare/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-rfq-compare.html",
       "dir": "dsh-rfq-compare",
       "frozen": false,
@@ -416,15 +416,15 @@
       "category": "business-ops",
       "archetype": "reconciler",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-labor-contract",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "劳动合同体检",
       "repo": "https://github.com/PerryLink/dsh-labor-contract",
       "npm": "https://www.npmjs.com/package/dsh-labor-contract",
-      "release": "https://github.com/PerryLink/dsh-labor-contract/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-labor-contract/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-labor-contract.html",
       "dir": "dsh-labor-contract",
       "frozen": false,
@@ -433,15 +433,15 @@
       "category": "business-ops",
       "archetype": "validator",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-progress-payment",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "进度款审核",
       "repo": "https://github.com/PerryLink/dsh-progress-payment",
       "npm": "https://www.npmjs.com/package/dsh-progress-payment",
-      "release": "https://github.com/PerryLink/dsh-progress-payment/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-progress-payment/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-progress-payment.html",
       "dir": "dsh-progress-payment",
       "frozen": false,
@@ -450,15 +450,15 @@
       "category": "business-ops",
       "archetype": "reconciler",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-ar-aging",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "应收账龄",
       "repo": "https://github.com/PerryLink/dsh-ar-aging",
       "npm": "https://www.npmjs.com/package/dsh-ar-aging",
-      "release": "https://github.com/PerryLink/dsh-ar-aging/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-ar-aging/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ar-aging.html",
       "dir": "dsh-ar-aging",
       "frozen": false,
@@ -467,15 +467,15 @@
       "category": "business-ops",
       "archetype": "calculator",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-import-customs-check",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "进口单证核对",
       "repo": "https://github.com/PerryLink/dsh-import-customs-check",
       "npm": "https://www.npmjs.com/package/dsh-import-customs-check",
-      "release": "https://github.com/PerryLink/dsh-import-customs-check/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-import-customs-check/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-import-customs-check.html",
       "dir": "dsh-import-customs-check",
       "frozen": false,
@@ -484,15 +484,15 @@
       "category": "compliance",
       "archetype": "checker",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-ar-collection",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "应收催收",
       "repo": "https://github.com/PerryLink/dsh-ar-collection",
       "npm": "https://www.npmjs.com/package/dsh-ar-collection",
-      "release": "https://github.com/PerryLink/dsh-ar-collection/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-ar-collection/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-ar-collection.html",
       "dir": "dsh-ar-collection",
       "frozen": false,
@@ -501,15 +501,15 @@
       "category": "business-ops",
       "archetype": "drafter",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-settlement-docs",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "竣工结算资料齐套",
       "repo": "https://github.com/PerryLink/dsh-settlement-docs",
       "npm": "https://www.npmjs.com/package/dsh-settlement-docs",
-      "release": "https://github.com/PerryLink/dsh-settlement-docs/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-settlement-docs/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-settlement-docs.html",
       "dir": "dsh-settlement-docs",
       "frozen": false,
@@ -518,15 +518,15 @@
       "category": "business-ops",
       "archetype": "validator",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-attendance-check",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "考勤加班核对",
       "repo": "https://github.com/PerryLink/dsh-attendance-check",
       "npm": "https://www.npmjs.com/package/dsh-attendance-check",
-      "release": "https://github.com/PerryLink/dsh-attendance-check/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-attendance-check/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-attendance-check.html",
       "dir": "dsh-attendance-check",
       "frozen": false,
@@ -535,15 +535,15 @@
       "category": "business-ops",
       "archetype": "checker",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-store-replenish",
-      "version": "0.1.0-alpha.1",
+      "version": "0.1.0",
       "description": "门店补货建议",
       "repo": "https://github.com/PerryLink/dsh-store-replenish",
       "npm": "https://www.npmjs.com/package/dsh-store-replenish",
-      "release": "https://github.com/PerryLink/dsh-store-replenish/releases/tag/v0.1.0-alpha.1",
+      "release": "https://github.com/PerryLink/dsh-store-replenish/releases/tag/v0.1.0",
       "docs": "https://perrylink.github.io/dsh-plugins/packages/dsh-store-replenish.html",
       "dir": "dsh-store-replenish",
       "frozen": false,
@@ -552,7 +552,7 @@
       "category": "business-ops",
       "archetype": "calculator",
       "domains": [],
-      "status": "active"
+      "status": "stable"
     }
   ],
   "suites": [

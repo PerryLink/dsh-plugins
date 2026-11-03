@@ -97,7 +97,11 @@ for (const readme of ['README.md', 'README-zh.md']) {
 const lintPath = path.join(workRoot, 'scripts', 'lint.mjs')
 if (fs.existsSync(lintPath)) {
   const before = fs.readFileSync(lintPath, 'utf8')
-  const after = before.split(workVersion).join(nextVersion)
+  let after = before.split(workVersion).join(nextVersion)
+  // a stable release has no -alpha suffix, so relax any pinned prerelease regex
+  after = after
+    .split('/^0\\.1\\.0-alpha\\.\\d+$/').join('/^\\d+\\.\\d+\\.\\d+(?:-alpha\\.\\d+)?$/')
+    .split('/^0\\.2\\.0-alpha\\.\\d+$/').join('/^\\d+\\.\\d+\\.\\d+(?:-alpha\\.\\d+)?$/')
   if (after === before) console.log(`  warn: ${pkg.name} lint script did not contain ${workVersion}`)
   fs.writeFileSync(lintPath, after)
 }
