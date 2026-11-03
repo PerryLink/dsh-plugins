@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F2 现场记录表 — DSH 插件首跑实验</title>
+<style>
+:root{--fg:#111;--muted:#555;--line:#bbb}
+*{box-sizing:border-box}
+body{font:14px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--fg);max-width:52rem;margin:0 auto;padding:24px}
+h1{font-size:20px;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 18px}
+h2{font-size:15px;margin:20px 0 6px;border-bottom:1px solid var(--line);padding-bottom:4px}
+table{width:100%;border-collapse:collapse;margin:8px 0 14px;font-size:13px}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
+th{background:#f4f4f4}
+.box{border:1px solid var(--line);border-radius:6px;padding:10px 12px;margin:8px 0}
+.small{font-size:12px;color:var(--muted)}
+ol,ul{margin:6px 0;padding-left:20px}
+@media print{body{max-width:none;padding:0}h2{page-break-after:avoid}table{page-break-inside:avoid}.noprint{display:none}}
+</style>
+</head>
+<body>
+<h1>F2 现场记录表 · DSH 插件首跑实验</h1>
+<p class="sub">一人一张，全程只观察、不指导。目标：验证非程序员能否在 3 分钟内完成一次真实任务。</p>
+
+<h2>一、基本信息</h2>
+<table>
+<tr><th style="width:22%">受试者编号</th><td>P＿＿</td><th style="width:22%">岗位</th><td>财务 / 法务 / HR / 采购 / 行政</td></tr>
+<tr><th>日期时间</th><td>＿＿＿＿＿＿</td><th>设备</th><td>＿＿＿＿＿＿</td></tr>
+<tr><th>预装插件</th><td colspan="3">dsh-einvoice · dsh-bankrec · dsh-legal-clause · dsh-legal-intake · dsh-contract-renewal</td></tr>
+<tr><th>工作区文件</th><td colspan="3">发票（XML/OFD）· 银行流水 CSV · 合同 TXT 各一份（合成数据）</td></tr>
+</table>
+
+<h2>二、任务卡（按岗位选一张，交给受试者）</h2>
+<div class="box"><strong>财务</strong>：把这张发票和这份流水对一下，告诉我重复的是哪张、差多少钱。</div>
+<div class="box"><strong>法务</strong>：这份合同缺哪些条款？把缺失的列出来。</div>
+<div class="box"><strong>HR</strong>：这 3 份合同里，哪份试用期有问题？</div>
+<div class="box"><strong>采购</strong>：这两家报价，哪个更便宜？差多少？</div>
+<div class="box"><strong>行政</strong>：把这份 PDF 里的表格导成 CSV。</div>
+
+<h2>三、观察记录（计时从受试者看到任务卡开始）</h2>
+<table>
+<tr><th style="width:8%">#</th><th style="width:52%">观察点</th><th style="width:10%">是/否</th><th>备注</th></tr>
+<tr><td>1</td><td>是否打开终端 / 命令提示符</td><td></td><td><span class="small">出现即判为走了开发者路径</span></td></tr>
+<tr><td>2</td><td>是否问到"工作区 / 目录怎么选"</td><td></td><td></td></tr>
+<tr><td>3</td><td>是否找到插件市场或按任务浏览页</td><td></td><td></td></tr>
+<tr><td>4</td><td>是否用一句话描述任务（而非点表单）</td><td></td><td></td></tr>
+<tr><td>5</td><td>15 分钟内拿到结果</td><td></td><td><span class="small">主判据</span></td></tr>
+<tr><td>6</td><td>能用自己的话复述结论</td><td></td><td></td></tr>
+<tr><td>7</td><td>是否主动问"数据会不会上传"</td><td></td><td></td></tr>
+</table>
+
+<h2>四、卡点原文（受试者原话，逐字记录）</h2>
+<table>
+<tr><th style="width:14%">时间点</th><th>原话</th><th style="width:26%">当时界面</th></tr>
+<tr><td>0–1 分</td><td style="height:34px"></td><td></td></tr>
+<tr><td>1–3 分</td><td style="height:34px"></td><td></td></tr>
+<tr><td>3–5 分</td><td style="height:34px"></td><td></td></tr>
+<tr><td>5 分以后</td><td style="height:34px"></td><td></td></tr>
+</table>
+
+<h2>五、结果</h2>
+<table>
+<tr><th style="width:26%">完成用时</th><td>＿＿ 分 ＿＿ 秒</td></tr>
+<tr><th>是否完成</th><td>完成 / 部分完成 / 未完成</td></tr>
+<tr><th>产出是否可用</th><td>可直接用 / 需修改 / 不可用</td></tr>
+<tr><th>结论</th><td>＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿</td></tr>
+</table>
+
+<h2>六、判定口径</h2>
+<div class="box">
+<p><strong>成功</strong>：≥3/5 在 15 分钟内完成，且全程未打开终端。</p>
+<p><strong>判为入口问题</strong>：≤1/5 完成，或多数人第一句问"点哪里 / 装在哪"→ 回到上游需求 E1（市场默认可见）与 E2（默认工作区）。</p>
+<p><strong>判为包装问题</strong>：多数人安装了但卡在"不知道说什么"→ 补一句话话术与详情页示例。</p>
+</div>
+
+<h2>七、组织者清单</h2>
+<ol>
+<li>预装 5 个插件，确认 `dsh plugin add` 成功、会话里能看到工具。</li>
+<li>工作区放入 3 个合成文件（不要真实客户数据）。</li>
+<li>打开 <code>https://perrylink.github.io/dsh-plugins/market.html</code> 作为起点页。</li>
+<li>开始录屏（仅屏幕），开始计时。</li>
+<li>只观察，不提示；受试者提问时回答"你觉得呢"（可记录该句）。</li>
+<li>结束后请受试者复述结论，再填写第五节。</li>
+</ol>
+
+<p class="small">记录表版本：2026-11-03 · 与 <a href="../EXPERIMENT-F1-F2.md">EXPERIMENT-F1-F2.md</a> 配套使用 · 打印时本页自动去掉按钮与阴影。</p>
+</body>
+</html>

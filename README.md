@@ -21,7 +21,7 @@ dsh plugin --profile <profile> add dsh-ghg
 | [`dsh-einvoice`](https://github.com/PerryLink/dsh-einvoice) | 文件级中国电子发票（OFD/XML）入库、解析、去重与本地归档。 | `0.2.0` | `dsh plugin --profile <profile> add dsh-einvoice` |
 | [`dsh-bankrec`](https://github.com/PerryLink/dsh-bankrec) | 银行流水/GL/CAMT.053/MT940 入库、对账与三表底稿。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-bankrec` |
 | [`dsh-ap-three-way`](https://github.com/PerryLink/dsh-ap-three-way) | 发票/PO/GRN 三单匹配、容差与例外底稿。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-ap-three-way` |
-| [`dsh-travel-recon`](https://github.com/PerryLink/dsh-travel-recon) | 差旅订单/发票/卡流水对账、去重与只读政策检查。 | `0.1.0-alpha.14` | `dsh plugin --profile <profile> add dsh-travel-recon` |
+| [`dsh-travel-recon`](https://github.com/PerryLink/dsh-travel-recon) | 差旅订单/发票/卡流水对账、去重与只读政策检查。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-travel-recon` |
 
 ### 法务运营 Legal Ops
 
@@ -34,7 +34,7 @@ dsh plugin --profile <profile> add dsh-ghg
 
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
-| [`dsh-ghg`](https://github.com/PerryLink/dsh-ghg) | 用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。 | `0.1.0-alpha.18` | `dsh plugin --profile <profile> add dsh-ghg` |
+| [`dsh-ghg`](https://github.com/PerryLink/dsh-ghg) | 用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-ghg` |
 | [`dsh-qms-capa`](https://github.com/PerryLink/dsh-qms-capa) | QMS NCR 入库、批次别名、影响评估、CAPA 与 8D。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-qms-capa` |
 
 ### 关务与物流 Trade & Logistics
@@ -42,7 +42,7 @@ dsh plugin --profile <profile> add dsh-ghg
 | 包 | 用途 | 版本 | 安装 |
 |---|---|---:|---|
 | [`dsh-hs-candidate`](https://github.com/PerryLink/dsh-hs-candidate) | HS Top3 候选、12 要素完整性、RVC 与税则版本门。 | `0.1.0-alpha.13` | `dsh plugin --profile <profile> add dsh-hs-candidate` |
-| [`dsh-freight-audit`](https://github.com/PerryLink/dsh-freight-audit) | 运费 ratecard 版本、账单审计、recovery 汇总与差异导出。 | `0.1.0-alpha.14` | `dsh plugin --profile <profile> add dsh-freight-audit` |
+| [`dsh-freight-audit`](https://github.com/PerryLink/dsh-freight-audit) | 运费 ratecard 版本、账单审计、recovery 汇总与差异导出。 | `0.1.0` | `dsh plugin --profile <profile> add dsh-freight-audit` |
 
 ### 文档与模型 Docs & Models
 

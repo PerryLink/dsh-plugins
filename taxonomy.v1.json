@@ -311,7 +311,7 @@
       "status": "active",
       "release": "alpha",
       "suite": "dsh-finops-suite",
-      "version": "0.1.0-alpha.14",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-invoice-ledger",
         "dsh-excel-reconcile"
@@ -388,7 +388,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.18",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-eia-guide-check",
         "dsh-soilwater-check"
@@ -466,7 +466,7 @@
       "status": "active",
       "release": "alpha",
       "suite": null,
-      "version": "0.1.0-alpha.14",
+      "version": "0.1.0",
       "relatedCheckers": [
         "dsh-demurrage-ledger",
         "dsh-lc-doc-check",
@@ -1906,7 +1906,7 @@
         },
         {
           "id": "dsh-travel-recon",
-          "version": "0.1.0-alpha.14"
+          "version": "0.1.0"
         }
       ]
     },

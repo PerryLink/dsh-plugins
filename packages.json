@@ -73,10 +73,10 @@
     },
     {
       "name": "dsh-travel-recon",
-      "version": "0.1.0-alpha.14",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-travel-recon",
       "npm": "https://www.npmjs.com/package/dsh-travel-recon",
-      "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0-alpha.14",
+      "release": "https://github.com/PerryLink/dsh-travel-recon/releases/tag/v0.1.0",
       "family": "财务运营 Finance Ops",
       "dir": "dsh-travel-recon",
       "description": "差旅订单/发票/卡流水对账、去重与只读政策检查。",
@@ -92,7 +92,7 @@
         "finance",
         "travel-expense"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-legal-intake",
@@ -142,10 +142,10 @@
     },
     {
       "name": "dsh-ghg",
-      "version": "0.1.0-alpha.18",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-ghg",
       "npm": "https://www.npmjs.com/package/dsh-ghg",
-      "release": "https://github.com/PerryLink/dsh-ghg/releases/tag/v0.1.0-alpha.18",
+      "release": "https://github.com/PerryLink/dsh-ghg/releases/tag/v0.1.0",
       "family": "可持续与质量 ESG & Quality",
       "dir": "dsh-ghg",
       "description": "用电活动入库、GHG 计算、逐行复算、底稿与部分 ESRS 包。",
@@ -162,7 +162,7 @@
         "emissions",
         "energy"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-qms-capa",
@@ -212,10 +212,10 @@
     },
     {
       "name": "dsh-freight-audit",
-      "version": "0.1.0-alpha.14",
+      "version": "0.1.0",
       "repo": "https://github.com/PerryLink/dsh-freight-audit",
       "npm": "https://www.npmjs.com/package/dsh-freight-audit",
-      "release": "https://github.com/PerryLink/dsh-freight-audit/releases/tag/v0.1.0-alpha.14",
+      "release": "https://github.com/PerryLink/dsh-freight-audit/releases/tag/v0.1.0",
       "family": "关务与物流 Trade & Logistics",
       "dir": "dsh-freight-audit",
       "description": "运费 ratecard 版本、账单审计、recovery 汇总与差异导出。",
@@ -231,7 +231,7 @@
         "logistics",
         "freight"
       ],
-      "status": "active"
+      "status": "stable"
     },
     {
       "name": "dsh-docx-redline",
