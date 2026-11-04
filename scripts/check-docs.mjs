@@ -38,6 +38,7 @@ if (packages.suites.length !== 2) errors.push(`packages.json: expected 2 suites,
 const missingZh = (family.items || []).filter((i) => !i.displayNameZh)
 if (missingZh.length) errors.push(`family.json: ${missingZh.length} item(s) without a Chinese name (${missingZh.slice(0, 3).map((i) => i.id).join(', ')})`);
 if (!fs.existsSync('docs/market.html')) errors.push('docs/market.html is missing');
+if (!fs.existsSync('docs/family.html')) errors.push('docs/family.html is missing');
 if (!fs.existsSync('market/index.json')) errors.push('market/index.json is missing');
 if (!/^\d{4}-\d{2}-\d{2}$/.test(packages.updated)) errors.push(`packages.json: updated is not an ISO date (${packages.updated})`);
 

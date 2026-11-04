@@ -23,7 +23,10 @@ jobs:
       - name: Rebuild taxonomy page
         run: node scripts/build-docs.mjs
       - name: Verify checked-in generated files
-        run: git diff --exit-code -- family.json views docs/taxonomy.html docs/family docs/packages README.md docs/index.html
+        run: git diff --exit-code -- family.json views docs/taxonomy.html docs/family docs/family.html docs/packages README.md docs/index.html
+      - name: Rebuild the family index page
+        run: node scripts/build-family-page.mjs
+
       - name: Rebuild the market page
         run: node scripts/build-market-page.mjs
       - name: Verify the market index
