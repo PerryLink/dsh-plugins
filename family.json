@@ -5122,7 +5122,7 @@
       ],
       "status": "active",
       "release": "stable",
-      "npm": "dsh-catalog",
+      "npm": null,
       "repo": "PerryLink/dsh-catalog",
       "source": "documented edge set",
       "installScope": "infrastructure",
