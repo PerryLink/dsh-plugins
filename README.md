@@ -1,6 +1,6 @@
 # PerryLink DSH 领域插件
 
-> **Status: alpha / public-synthetic / partial / not counted / not GA.** 分类：四轴模型见 [TAXONOMY.md](TAXONOMY.md)；125 行可筛选视图见 [taxonomy.html](docs/taxonomy.html)。 本索引只列公开合成演示；没有客户证据、客户数据或生产可用声明。SKU-11/14 永久 DROP。
+> **Status: alpha / public-synthetic / partial / not counted / not GA.** 全量家族分组见 [FAMILY.md](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md)；分类：四轴模型见 [TAXONOMY.md](TAXONOMY.md)；137 行（126 active）可筛选视图见 [taxonomy.html](docs/taxonomy.html)。 本索引只列公开合成演示；没有客户证据、客户数据或生产可用声明。SKU-11/14 永久 DROP。
 
 16 个 DSH 插件，全部使用**裸 npm 名**（`dsh-*`），按 6 个业务族组织。
 

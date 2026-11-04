@@ -1,5 +1,9 @@
 # Roster and install scopes
 
+> **2026-11-04 update:** `family.json` is now 137 rows — 126 active / 8 frozen / 3 retired. The 125-row
+> figures below are the 2026-11-02 snapshot; where they differ, `family.json` wins. The full family now
+> also has a group index at [FAMILY.md](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md).
+
 **Measured 2026-11-02** against `dsh-kit` origin/main `3c7bd13` (`plugins.txt`, `family.txt`) and `dsh-catalog` origin/main `61ddf3a` (`data/packages.json`). The family roster, the two `dsh-kit` installers and the npm catalog are different surfaces. This page is the closure: every number has one meaning and one source.
 
 ## 1. Family roster — 125 rows
