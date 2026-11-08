@@ -4768,32 +4768,34 @@
       ]
     },
     {
-      "id": "dsh-translate",
+      "id": "dsh-param-repair",
       "kind": "plugin",
       "collection": "mainline",
-      "category": "content",
-      "archetype": "assistant",
+      "category": "developer-tools",
+      "archetype": "runtime",
       "domains": [
-        "translation"
+        "parameter-mapping",
+        "json-repair"
       ],
       "status": "active",
       "release": "stable",
-      "npm": "dsh-translate",
-      "repo": "PerryLink/dsh-translate",
+      "npm": "dsh-param-repair",
+      "repo": "PerryLink/dsh-param-repair",
       "source": "dsh-kit/plugins.txt",
       "installScope": "mainline-default",
       "mappingConfidence": "reviewed",
-      "displayNameZh": "文本翻译校对",
+      "displayNameZh": "厂商参数映射与报文修复",
       "tagsZh": [
-        "翻译",
-        "文件翻译",
-        "质量检查",
-        "多语言",
-        "JSON修复"
+        "厂商参数",
+        "参数映射",
+        "JSON修复",
+        "工具输出",
+        "确定性"
       ],
       "taskFamilyZh": "开发者工具",
       "rolesZh": [
-        "研发工程师"
+        "研发工程师",
+        "插件作者"
       ],
       "industriesZh": [
         "通用"
@@ -5122,7 +5124,7 @@
       ],
       "status": "active",
       "release": "stable",
-      "npm": null,
+      "npm": "dsh-catalog",
       "repo": "PerryLink/dsh-catalog",
       "source": "documented edge set",
       "installScope": "infrastructure",

@@ -4,6 +4,10 @@
 > figures below are the 2026-11-02 snapshot; where they differ, `family.json` wins. The full family now
 > also has a group index at [FAMILY.md](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md).
 
+> **2026-11-08 rename:** the mainline `dsh-translate` row is now `dsh-param-repair` (vendor parameter
+> mapping + deterministic JSON repair). The new `dsh-translate` is the full-page translation plugin
+> (0.3.0); it is installable by name and is not a `family.json` row yet, so it is not counted below.
+
 **Measured 2026-11-02** against `dsh-kit` origin/main `3c7bd13` (`plugins.txt`, `family.txt`) and `dsh-catalog` origin/main `61ddf3a` (`data/packages.json`). The family roster, the two `dsh-kit` installers and the npm catalog are different surfaces. This page is the closure: every number has one meaning and one source.
 
 ## 1. Family roster — 125 rows

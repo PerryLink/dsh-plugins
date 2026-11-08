@@ -81,6 +81,7 @@
     "dsh-ota-review-check",
     "dsh-output-styles",
     "dsh-paper-doc-adapter",
+    "dsh-param-repair",
     "dsh-payroll-audit",
     "dsh-pdf-table",
     "dsh-permission-rules",
@@ -123,7 +124,6 @@
     "dsh-tender-matrix",
     "dsh-tender-requirements",
     "dsh-test-drive",
-    "dsh-translate",
     "dsh-travel-recon",
     "dsh-warranty-calc"
   ],

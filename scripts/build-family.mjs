@@ -74,7 +74,7 @@ const mainlineMeta = {
   'dsh-session-sync': ['workflow', 'runtime', ['sessions']],
   'dsh-talk': ['content', 'ui', ['chat']],
   'dsh-test-drive': ['workflow', 'assistant', ['testing']],
-  'dsh-translate': ['content', 'assistant', ['translation']],
+  'dsh-param-repair': ['developer-tools', 'runtime', ['parameter-mapping', 'json-repair']],
   'dsh-github-bot': ['workflow', 'integration', ['github']],
   'dsh-clinic': ['developer-tools', 'doctor', ['plugin-install']],
   'dsh-scaffold': ['developer-tools', 'catalog', ['plugin-dev']],

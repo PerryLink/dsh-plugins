@@ -8,8 +8,7 @@
     "dsh-research-report",
     "dsh-score",
     "dsh-security-pack",
-    "dsh-test-drive",
-    "dsh-translate"
+    "dsh-test-drive"
   ],
   "calculator": [
     "dsh-ar-aging",
@@ -142,6 +141,7 @@
     "dsh-mask",
     "dsh-memento",
     "dsh-observe",
+    "dsh-param-repair",
     "dsh-permission-rules",
     "dsh-provider-params",
     "dsh-session-sync",

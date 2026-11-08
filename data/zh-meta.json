@@ -1962,23 +1962,6 @@
       "通用"
     ]
   },
-  "dsh-translate": {
-    "nameZh": "文本翻译校对",
-    "tags": [
-      "翻译",
-      "文件翻译",
-      "质量检查",
-      "多语言",
-      "JSON修复"
-    ],
-    "taskFamily": "开发者工具",
-    "roles": [
-      "研发工程师"
-    ],
-    "industries": [
-      "通用"
-    ]
-  },
   "dsh-github-bot": {
     "nameZh": "代码评审对接",
     "tags": [
@@ -2384,6 +2367,24 @@
     ],
     "industries": [
       "零售"
+    ]
+  },
+  "dsh-param-repair": {
+    "nameZh": "厂商参数映射与报文修复",
+    "tags": [
+      "厂商参数",
+      "参数映射",
+      "JSON修复",
+      "工具输出",
+      "确定性"
+    ],
+    "taskFamily": "开发者工具",
+    "roles": [
+      "研发工程师",
+      "插件作者"
+    ],
+    "industries": [
+      "通用"
     ]
   }
 }
