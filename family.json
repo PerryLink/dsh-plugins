@@ -3634,8 +3634,8 @@
       "category": "business-ops",
       "subcategory": "hr",
       "archetype": "checker",
-      "checker": false,
-      "checkerRole": "none",
+      "checker": true,
+      "checkerRole": "adjacent",
       "domains": [
         "考勤",
         "加班",
