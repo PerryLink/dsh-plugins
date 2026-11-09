@@ -23,10 +23,20 @@ jobs:
           GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
         run: |
           set -euo pipefail
+          remote="https://gitee.com/perrylink/${{ matrix.repo }}.git"
           git clone --quiet "https://github.com/PerryLink/${{ matrix.repo }}.git" repo
           cd repo
           git -c credential.helper='!f() { echo username=perrylink; echo "password=$GITEE_TOKEN"; }; f' \
-            push "https://gitee.com/perrylink/${{ matrix.repo }}.git" HEAD:main --tags
+            push "$remote" HEAD:main
+          existing=$(git ls-remote --tags "$remote" | sed -n 's#.*refs/tags/##p' | sed 's/\^{}//' | sort -u)
+          for tag in $(git tag); do
+            if printf '%s\n' "$existing" | grep -Fqx "$tag"; then
+              echo "tag $tag already exists on the mirror; leaving it unchanged"
+            else
+              git -c credential.helper='!f() { echo username=perrylink; echo "password=$GITEE_TOKEN"; }; f' \
+                push "$remote" "refs/tags/$tag"
+            fi
+          done
 
   gitcode:
     runs-on: ubuntu-latest
@@ -42,7 +52,17 @@ jobs:
           GITCODE_TOKEN: ${{ secrets.GITCODE_TOKEN }}
         run: |
           set -euo pipefail
+          remote="https://gitcode.com/PerryLink/${{ matrix.repo }}.git"
           git clone --quiet "https://github.com/PerryLink/${{ matrix.repo }}.git" repo
           cd repo
           git -c credential.helper='!f() { echo username=PerryLink; echo "password=$GITCODE_TOKEN"; }; f' \
-            push "https://gitcode.com/PerryLink/${{ matrix.repo }}.git" HEAD:main --tags
+            push "$remote" HEAD:main
+          existing=$(git ls-remote --tags "$remote" | sed -n 's#.*refs/tags/##p' | sed 's/\^{}//' | sort -u)
+          for tag in $(git tag); do
+            if printf '%s\n' "$existing" | grep -Fqx "$tag"; then
+              echo "tag $tag already exists on the mirror; leaving it unchanged"
+            else
+              git -c credential.helper='!f() { echo username=PerryLink; echo "password=$GITCODE_TOKEN"; }; f' \
+                push "$remote" "refs/tags/$tag"
+            fi
+          done
