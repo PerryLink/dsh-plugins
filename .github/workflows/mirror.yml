@@ -28,7 +28,7 @@ jobs:
           cd repo
           git -c credential.helper='!f() { echo username=perrylink; echo "password=$GITEE_TOKEN"; }; f' \
             push "$remote" HEAD:main
-          existing=$(git ls-remote --tags "$remote" | sed -n 's#.*refs/tags/##p' | sed 's/\^{}//' | sort -u)
+          existing=$(git -c credential.helper='!f() { echo username=perrylink; echo "password=$GITEE_TOKEN"; }; f' ls-remote --tags "$remote" | sed -n 's#.*refs/tags/##p' | sed 's/\^{}//' | sort -u)
           for tag in $(git tag); do
             if printf '%s\n' "$existing" | grep -Fqx "$tag"; then
               echo "tag $tag already exists on the mirror; leaving it unchanged"
@@ -57,7 +57,7 @@ jobs:
           cd repo
           git -c credential.helper='!f() { echo username=PerryLink; echo "password=$GITCODE_TOKEN"; }; f' \
             push "$remote" HEAD:main
-          existing=$(git ls-remote --tags "$remote" | sed -n 's#.*refs/tags/##p' | sed 's/\^{}//' | sort -u)
+          existing=$(git -c credential.helper='!f() { echo username=PerryLink; echo "password=$GITCODE_TOKEN"; }; f' ls-remote --tags "$remote" | sed -n 's#.*refs/tags/##p' | sed 's/\^{}//' | sort -u)
           for tag in $(git tag); do
             if printf '%s\n' "$existing" | grep -Fqx "$tag"; then
               echo "tag $tag already exists on the mirror; leaving it unchanged"
