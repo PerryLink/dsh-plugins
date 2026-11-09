@@ -24,6 +24,8 @@
 | `infrastructure` | 3 | `dsh-kit`, `dsh-catalog`, `dsh-plugin-certification`; support surfaces, not runtime plugins, in neither installer |
 | **Total** | **125** | **114 active / 8 frozen / 3 retired** |
 
+**Research suite (catalog-only, 2026-11-08).** The 19 npm packages — 18 plugins + `@perrylink/dsh-research-core` (two scoped packages) — plus the `dsh-research-bench` data repository are **not** in `family.json`, `plugins.txt` or `family.txt`, so they are outside the 125/137-row roster. 588 tests across the 19 packages; seven benchmark suites / eight datasets; see [FAMILY §10](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md#10-research-suite-catalog-only-19) and the [bench](https://github.com/PerryLink/dsh-research-bench).
+
 ## 2. `dsh-kit/plugins.txt` — 96 install specs
 
 `plugins.txt` is deliberately the **mainline installer**, not the whole family:
