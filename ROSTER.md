@@ -6,7 +6,7 @@
 
 > **2026-11-08 rename:** the mainline `dsh-translate` row is now `dsh-param-repair` (vendor parameter
 > mapping + deterministic JSON repair, 1.0.1). The new `dsh-translate` (0.3.2) is the full-page translator;
-> like the 19-package research suite it is catalog-only, installable by name, and not counted below.
+> like the 24-package research suite it is catalog-only, installable by name, and not counted below.
 
 **Measured 2026-11-02** against `dsh-kit` origin/main `3c7bd13` (`plugins.txt`, `family.txt`) and `dsh-catalog` origin/main `61ddf3a` (`data/packages.json`). The family roster, the two `dsh-kit` installers and the npm catalog are different surfaces. This page is the closure: every number has one meaning and one source.
 
@@ -24,7 +24,7 @@
 | `infrastructure` | 3 | `dsh-kit`, `dsh-catalog`, `dsh-plugin-certification`; support surfaces, not runtime plugins, in neither installer |
 | **Total** | **125** | **114 active / 8 frozen / 3 retired** |
 
-**Research suite (catalog-only, 2026-11-08).** The 19 npm packages — 18 plugins + `@perrylink/dsh-research-core` (two scoped packages) — plus the `dsh-research-bench` data repository are **not** in `family.json`, `plugins.txt` or `family.txt`, so they are outside the 125/137-row roster. 588 tests across the 19 packages; seven benchmark suites / eight datasets; see [FAMILY §10](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md#10-research-suite-catalog-only-19) and the [bench](https://github.com/PerryLink/dsh-research-bench).
+**Research suite (catalog-only, 2026-11-08; five packages added 2026-11-10).** The 24 npm packages — 23 plugins + `@perrylink/dsh-research-core` (three scoped packages) — plus the `dsh-research-bench` data repository are **not** in `family.json`, `plugins.txt` or `family.txt`, so they are outside the 125/137-row roster. 588 tests across the original 19 packages plus 56 in the five 2026-11-10 additions (644 total); seven benchmark suites / eight datasets; see [FAMILY §10](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md#10-research-suite-catalog-only-24) and the [bench](https://github.com/PerryLink/dsh-research-bench).
 
 ## 2. `dsh-kit/plugins.txt` — 96 install specs
 
