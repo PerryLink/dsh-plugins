@@ -20,7 +20,7 @@
 
 > **Status: alpha / public-synthetic / partial / not counted / not GA.** 全量家族分组见 [FAMILY.md](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md)；分类：四轴模型见 [TAXONOMY.md](TAXONOMY.md)；137 行（126 active）可筛选视图见 [taxonomy.html](docs/taxonomy.html)。 本索引只列公开合成演示；没有客户证据、客户数据或生产可用声明。SKU-11/14 永久 DROP。
 
-16 个 DSH 插件，全部使用**裸 npm 名**（`dsh-*`），按 6 个业务族组织。
+27 个 DSH 插件，全部使用**裸 npm 名**（`dsh-*`），按 6 个业务族组织。
 
 ## 安装
 
@@ -118,10 +118,10 @@ dsh plugin --profile <profile> add dsh-ghg
 | 平台 | 地址 | 说明 |
 |---|---|---|
 | GitHub | https://github.com/PerryLink/dsh-plugins | 本索引 + 各包仓 |
-| npm | https://www.npmjs.com/~perrylink | 16 个裸名 `dsh-*` 包 |
+| npm | https://www.npmjs.com/~perrylink | 27 个裸名 `dsh-*` 包 |
 | Gitee | https://gitee.com/perrylink/dsh-plugins | 中文索引 + 5 个旗舰镜像 |
 | GitCode | https://gitcode.com/PerryLink/dsh-plugins | 中文索引 + 3 个旗舰镜像 |
-| 文档 | https://perrylink.github.io/dsh-plugins/ | 16 个包页 + 索引 |
+| 文档 | https://perrylink.github.io/dsh-plugins/ | 27 个包页 + 索引 |
 
 ## 命名说明
 
