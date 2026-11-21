@@ -1,4 +1,22 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-plugins-hero-zh-dark.webp">
+  <img src="docs/assets/dsh-plugins-hero-zh-light.webp" width="100%" alt="dsh-plugins 横幅：PerryLink DSH 插件家族的索引 —— README.md 索引表 27 个插件行 + 2 个 suite、6 个业务族，packages.json 27 包 + 2 suite 与 family.json 137 行（126 active）、taxonomy.v1.json 91 items 同仓提交，右侧是各业务族行数与版本示例">
+</picture>
+
 # PerryLink DSH 领域插件
+
+**PerryLink DSH 插件家族的索引：27 个领域包 + 2 个一键 suite，按 6 个业务族排列，全部裸 npm 名 `dsh-*`。**
+
+*README.md 的索引表是入口，`packages.json` 与 `family.json` 是数据源，`market/index.json` 供 DSH Desktop 的 Discover 读取；本仓只列公开合成演示，没有客户数据，也没有生产可用声明。*
+
+[English](README.en.md) · [简体中文](README.md) · [Español](README-es.md) · [Português](README-pt.md) · [हिन्दी](README-hi.md)
+
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![Gitee](https://img.shields.io/badge/Gitee-mirror-c71d23?logo=gitee)](https://gitee.com/perrylink/dsh-plugins)
+
+</div>
 
 > **Status: alpha / public-synthetic / partial / not counted / not GA.** 全量家族分组见 [FAMILY.md](https://github.com/PerryLink/PerryLink/blob/main/FAMILY.md)；分类：四轴模型见 [TAXONOMY.md](TAXONOMY.md)；137 行（126 active）可筛选视图见 [taxonomy.html](docs/taxonomy.html)。 本索引只列公开合成演示；没有客户证据、客户数据或生产可用声明。SKU-11/14 永久 DROP。
 
@@ -6,11 +24,22 @@
 
 ## 安装
 
+![dsh-plugins 真实终端运行：node scripts/f1-retrieval.mjs 用 16 条日常任务问句检索 market/index.json，每条问句的 Top-3 结果都能找到对口的 dsh-* 插件，命中率 16/16](docs/assets/dsh-plugins-demo.gif)
+
+*动图是仓库自带只读检索实验 `node scripts/f1-retrieval.mjs` 的真实 stdout（2026-11-21 复跑）：16 条问句检索 `market/index.json` 的 136 个插件，命中率 16/16（100.0%）。不联网、不调模型。*
+
 ```sh
 dsh plugin --profile <profile> add dsh-ghg
 ```
 
 要求 DSH `>=0.2.1-rc.3 <0.3.0`、Node `>=24.9 <25`。
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/dsh-plugins-flow-v5-dark.svg">
+  <img src="docs/assets/dsh-plugins-flow-v5-light.svg" width="100%" alt="dsh-plugins 结构图：README 索引表与 packages.json、family.json、taxonomy.v1.json 一起生成 docs/ 包页与 market/index.json，再由 check-taxonomy.mjs、check-docs.mjs、f1-retrieval.mjs 三道只读门禁把关；边界是 public/synthetic、partial、不计入统计、无 GA">
+</picture>
+
+*结构：索引表 → 数据源 JSON → docs/ 与 market/index.json → 只读门禁。图内只出现真实的文件名与脚本名，五语共用同一张图。*
 
 ## 索引
 

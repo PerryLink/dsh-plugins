@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="660" viewBox="0 0 1100 660" role="img" aria-label="dsh-plugins structure diagram">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1"><stop offset="0" stop-color="#f9f6fd"/><stop offset="1" stop-color="#e4eaf8"/></linearGradient>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="7" stdDeviation="9" flood-color="#16122c" flood-opacity="0.10"/></filter>
+<marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6.4" markerHeight="6.4" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4B67B4"/></marker>
+</defs>
+<rect width="1100" height="660" fill="url(#bg)"/>
+<text x="44" y="58" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="28" font-weight="700">dsh-plugins</text>
+<text x="44" y="88" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="15">README tables → packages.json · family.json · taxonomy.v1.json → docs/ + market/index.json</text>
+<rect x="886.765625" y="36" width="169.234375" height="26" rx="13.0" fill="#f5f2fb"/>
+<text x="898.765625" y="53.08" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="12" font-weight="700">27 + 2 rows · 137 roster</text>
+<rect x="44" y="120" width="214" height="250" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="62" y="146" fill="#8f94a4" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="12" font-weight="700">01</text>
+<text x="62" y="172" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="16.5" font-weight="700">Index</text>
+<text x="62" y="196" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">README.md · 6 families</text>
+<rect x="62" y="209" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="72" y="227" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">27 plugin rows</text>
+<rect x="62" y="241" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="72" y="259" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">2 suites</text>
+<rect x="62" y="273" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="72" y="291" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">bare npm names</text>
+<line x1="260" y1="245.0" x2="276" y2="245.0" stroke="#4B67B4" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="278" y="120" width="214" height="250" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="296" y="146" fill="#8f94a4" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="12" font-weight="700">02</text>
+<text x="296" y="172" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="16.5" font-weight="700">Data</text>
+<text x="296" y="196" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">committed JSON</text>
+<rect x="296" y="209" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="306" y="227" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">packages.json</text>
+<rect x="296" y="241" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="306" y="259" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">family.json</text>
+<rect x="296" y="273" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="306" y="291" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">taxonomy.v1.json</text>
+<line x1="494" y1="245.0" x2="510" y2="245.0" stroke="#4B67B4" stroke-width="1.8" marker-end="url(#arr)"/>
+<rect x="512" y="120" width="214" height="250" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="530" y="146" fill="#8f94a4" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="12" font-weight="700">03</text>
+<text x="530" y="172" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="16.5" font-weight="700">Gates</text>
+<text x="530" y="196" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">read-only · offline</text>
+<rect x="530" y="209" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="540" y="227" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">check-taxonomy.mjs</text>
+<rect x="530" y="241" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="540" y="259" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">check-docs.mjs</text>
+<rect x="530" y="273" width="178" height="26" rx="8" fill="#f5f2fb"/>
+<text x="540" y="291" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">f1-retrieval.mjs</text>
+<rect x="752" y="120" width="304" height="148" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="772" y="148" fill="#4B67B4" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14.5" font-weight="700">market/index.json</text>
+<rect x="964.484375" y="130" width="76.390625" height="18" rx="9.0" fill="#f5f2fb"/>
+<text x="973.484375" y="142.57" fill="#4B67B4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">136 plugins</text>
+<text x="772" y="176" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">format 1 · 11 categories</text>
+<text x="772" y="198" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">title zh/en · versions[]</text>
+<text x="772" y="220" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">metadata.labels</text>
+<rect x="752" y="288" width="304" height="122" rx="18" fill="#ffffff" stroke="#e6e2ef" stroke-width="1.5" filter="url(#soft)"/>
+<text x="772" y="316" fill="#4d5261" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="14.5" font-weight="700">docs/</text>
+<rect x="972.09375" y="298" width="69.390625" height="18" rx="9.0" fill="#f5f2fb"/>
+<text x="981.09375" y="310.57" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">generated</text>
+<text x="772" y="344" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">docs/family/{id}.html</text>
+<text x="772" y="366" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">docs/packages/{name}.html</text>
+<text x="772" y="388" fill="#141419" font-family="'Consolas','SFMono-Regular','Menlo',ui-monospace,monospace" font-size="11.5">docs/taxonomy.html</text>
+<rect x="752" y="430" width="304" height="82" rx="18" fill="#ffffff" stroke="#4B67B4" stroke-width="1.6" filter="url(#soft)"/>
+<text x="772" y="458" fill="#141419" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="13.5" font-weight="700">boundary</text>
+<text x="772" y="482" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">public/synthetic · partial</text>
+<text x="772" y="502" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="10.5">not counted · no GA</text>
+<path d="M730 245.0 H742" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M742 210 V471" fill="none" stroke="#4B67B4" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="742" y1="194" x2="750" y2="194" stroke="#4B67B4" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="742" y1="349" x2="750" y2="349" stroke="#4B67B4" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="742" y1="471" x2="750" y2="471" stroke="#4B67B4" stroke-width="1.6" marker-end="url(#arr)"/>
+<line x1="44" y1="420" x2="714" y2="420" stroke="#dcd8ea" stroke-width="1"/>
+<text x="44" y="444" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">27 plugin rows + 2 suite rows: counted from the README index tables; packages.json holds the same 27 + 2.</text>
+<text x="44" y="464" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">family.json: 137 = 126 active + 8 frozen + 3 retired; taxonomy.v1.json: 91 items, 63 checker-first.</text>
+<text x="44" y="484" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11">f1-retrieval.mjs: 16 task queries → market/index.json top-3, 16/16 hits (100.0%).</text>
+<line x1="44" y1="564" x2="1056" y2="564" stroke="#dcd8ea" stroke-width="1"/>
+<text x="44" y="588" fill="#4d5261" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">inputs: README.md · packages.json · family.json · taxonomy.v1.json · market/index.json</text>
+<text x="44" y="610" fill="#8f94a4" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC','Source Han Sans SC',sans-serif" font-size="11.5">gates: node scripts/check-taxonomy.mjs · node scripts/f1-retrieval.mjs — read-only, offline</text>
+</svg>
